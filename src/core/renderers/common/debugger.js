@@ -215,7 +215,7 @@ Debug.prototype.drawRenderedElem = function(elem, isRtl) {
 
 /**
  * Draw a circle at the location of the given connection.  Inputs and outputs
- * share the same colours, as do previous and next.  When positioned correctly
+ * share the same colors, as do previous and next.  When positioned correctly
  * a connected pair will look like a bullseye.
  * @param {RenderedConnection} conn The connection to circle.
  * @suppress {visibility} Suppress visibility of conn.offsetInBlock_ since this
@@ -227,25 +227,25 @@ Debug.prototype.drawConnection = function(conn) {
     return;
   }
 
-  let colour;
+  let color;
   let size;
   let fill;
   if (conn.type === ConnectionType.INPUT_VALUE) {
     size = 4;
-    colour = 'magenta';
+    color = 'magenta';
     fill = 'none';
   } else if (conn.type === ConnectionType.OUTPUT_VALUE) {
     size = 2;
-    colour = 'magenta';
-    fill = colour;
+    color = 'magenta';
+    fill = color;
   } else if (conn.type === ConnectionType.NEXT_STATEMENT) {
     size = 4;
-    colour = 'goldenrod';
+    color = 'goldenrod';
     fill = 'none';
   } else if (conn.type === ConnectionType.PREVIOUS_STATEMENT) {
     size = 2;
-    colour = 'goldenrod';
-    fill = colour;
+    color = 'goldenrod';
+    fill = color;
   }
   this.debugElements_.push(dom.createSvgElement(
       Svg.CIRCLE, {
@@ -254,7 +254,7 @@ Debug.prototype.drawConnection = function(conn) {
         'cy': conn.offsetInBlock_.y,
         'r': size,
         'fill': fill,
-        'stroke': colour,
+        'stroke': color,
       },
       this.svgRoot_));
 };
@@ -295,7 +295,7 @@ Debug.prototype.drawRenderedRow = function(row, cursorY, isRtl) {
           'y': row.yPos,
           'width': row.widthWithConnectedBlocks,
           'height': row.height,
-          'stroke': this.randomColour_,
+          'stroke': this.randomColor_,
           'fill': 'none',
           'stroke-width': '1px',
           'stroke-dasharray': '3,3',
@@ -385,7 +385,7 @@ Debug.prototype.drawDebug = function(block, info) {
   this.clearElems();
   this.svgRoot_ = block.getSvgRoot();
 
-  this.randomColour_ = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  this.randomColor_ = '#' + Math.floor(Math.random() * 16777215).toString(16);
 
   let cursorY = 0;
   for (let i = 0; i < info.rows.length; i++) {

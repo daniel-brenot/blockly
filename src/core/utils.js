@@ -18,7 +18,7 @@ goog.module('Blockly.utils');
 const aria = goog.require('Blockly.utils.aria');
 const arrayUtils = goog.require('Blockly.utils.array');
 const browserEvents = goog.require('Blockly.browserEvents');
-const colourUtils = goog.require('Blockly.utils.colour');
+const colorUtils = goog.require('Blockly.utils.color');
 const common = goog.require('Blockly.common');
 const deprecation = goog.require('Blockly.utils.deprecation');
 const dom = goog.require('Blockly.utils.dom');
@@ -48,7 +48,7 @@ const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
 
 
 exports.aria = aria;
-exports.colour = colourUtils;
+exports.color = colorUtils;
 exports.Coordinate = Coordinate;
 exports.deprecation = deprecation;
 exports.dom = dom;
@@ -350,23 +350,23 @@ const screenToWsCoordinates = function(ws, screenCoordinates) {
 exports.screenToWsCoordinates = screenToWsCoordinates;
 
 /**
- * Parse a block colour from a number or string, as provided in a block
+ * Parse a block color from a number or string, as provided in a block
  * definition.
- * @param {number|string} colour HSV hue value (0 to 360), #RRGGBB string,
+ * @param {number|string} color HSV hue value (0 to 360), #RRGGBB string,
  *     or a message reference string pointing to one of those two values.
- * @return {{hue: ?number, hex: string}} An object containing the colour as
+ * @return {{hue: ?number, hex: string}} An object containing the color as
  *     a #RRGGBB string, and the hue if the input was an HSV hue value.
- * @throws {Error} If the colour cannot be parsed.
+ * @throws {Error} If the color cannot be parsed.
  * @deprecated
- * @alias Blockly.utils.parseBlockColour
+ * @alias Blockly.utils.parseBlockColor
  */
-const parseBlockColour = function(colour) {
+const parseBlockColor = function(color) {
   deprecation.warn(
-      'Blockly.utils.parseBlockColour', 'December 2021', 'December 2022',
-      'Blockly.utils.parsing.parseBlockColour');
-  return parsing.parseBlockColour(colour);
+      'Blockly.utils.parseBlockColor', 'December 2021', 'December 2022',
+      'Blockly.utils.parsing.parseBlockColor');
+  return parsing.parseBlockColor(color);
 };
-exports.parseBlockColour = parseBlockColour;
+exports.parseBlockColor = parseBlockColor;
 
 /**
  * Calls a function after the page has loaded, possibly immediately.

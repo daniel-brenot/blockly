@@ -224,8 +224,8 @@ Toolbox.prototype.init = function() {
   this.render(this.toolboxDef_);
   const themeManager = workspace.getThemeManager();
   themeManager.subscribe(
-      this.HtmlDiv, 'toolboxBackgroundColour', 'background-color');
-  themeManager.subscribe(this.HtmlDiv, 'toolboxForegroundColour', 'color');
+      this.HtmlDiv, 'toolboxBackgroundColor', 'background-color');
+  themeManager.subscribe(this.HtmlDiv, 'toolboxForegroundColor', 'color');
   this.workspace_.getComponentManager().addComponent({
     component: this,
     weight: 1,
@@ -806,7 +806,7 @@ Toolbox.prototype.clearSelection = function() {
 };
 
 /**
- * Updates the category colours and background colour of selected categories.
+ * Updates the category colors and background color of selected categories.
  * @package
  */
 Toolbox.prototype.refreshTheme = function() {

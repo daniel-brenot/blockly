@@ -281,9 +281,9 @@ FieldAngle.prototype.showEditor_ = function(opt_e) {
   this.dropdownCreate_();
   DropDownDiv.getContentDiv().appendChild(this.editor_);
 
-  DropDownDiv.setColour(
-      this.sourceBlock_.style.colourPrimary,
-      this.sourceBlock_.style.colourTertiary);
+  DropDownDiv.setColor(
+      this.sourceBlock_.style.colorPrimary,
+      this.sourceBlock_.style.colorTertiary);
 
   DropDownDiv.showPositionedByField(this, this.dropdownDispose_.bind(this));
 

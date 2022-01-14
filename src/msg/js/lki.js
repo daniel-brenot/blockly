@@ -9,23 +9,23 @@ Blockly.Msg["CLEAN_UP"] = "تمیزکردن بلاکةل";
 Blockly.Msg["COLLAPSED_WARNINGS_WARNING"] = "Collapsed blocks contain warnings.";  // untranslated
 Blockly.Msg["COLLAPSE_ALL"] = "چؤیچانن/پشکانن بلاکةل";
 Blockly.Msg["COLLAPSE_BLOCK"] = "چؤیچانن/پشکانن بلاک";
-Blockly.Msg["COLOUR_BLEND_COLOUR1"] = "رةنگ 1";
-Blockly.Msg["COLOUR_BLEND_COLOUR2"] = "رةنگ 2";
-Blockly.Msg["COLOUR_BLEND_HELPURL"] = "https://meyerweb.com/eric/tools/color-blend/#:::rgbp";  // untranslated
-Blockly.Msg["COLOUR_BLEND_RATIO"] = "نسبت";
-Blockly.Msg["COLOUR_BLEND_TITLE"] = "قاتی پاتی";
-Blockly.Msg["COLOUR_BLEND_TOOLTIP"] = "دو رنگ را با نسبت مشخص‌شده مخلوط می‌کند (۰٫۰ - ۱٫۰)";
-Blockly.Msg["COLOUR_PICKER_HELPURL"] = "https://lki.wikipedia.org/wiki/ڕەنگ";
-Blockly.Msg["COLOUR_PICKER_TOOLTIP"] = "رةنگێ إژ تةختة رةنگ انتخاب کةن";
-Blockly.Msg["COLOUR_RANDOM_HELPURL"] = "http://randomcolour.com";  // untranslated
-Blockly.Msg["COLOUR_RANDOM_TITLE"] = "رةنگ بةختةکی";
-Blockly.Msg["COLOUR_RANDOM_TOOLTIP"] = ".رةنگئ بةختةکی انتخاب کةن";
-Blockly.Msg["COLOUR_RGB_BLUE"] = "کاوو";
-Blockly.Msg["COLOUR_RGB_GREEN"] = "سؤز";
-Blockly.Msg["COLOUR_RGB_HELPURL"] = "https://www.december.com/html/spec/colorpercompact.html";  // untranslated
-Blockly.Msg["COLOUR_RGB_RED"] = "سۆر";
-Blockly.Msg["COLOUR_RGB_TITLE"] = "رةنگ وة";
-Blockly.Msg["COLOUR_RGB_TOOLTIP"] = "ساخت یک رنگ با مقدار مشخص‌شده‌ای از سۆر، سؤز و کاوو. همهٔ مقادیر باید بین ۰ تا ۱۰۰ باشند.";
+Blockly.Msg["COLOR_BLEND_COLOR1"] = "رةنگ 1";
+Blockly.Msg["COLOR_BLEND_COLOR2"] = "رةنگ 2";
+Blockly.Msg["COLOR_BLEND_HELPURL"] = "https://meyerweb.com/eric/tools/color-blend/#:::rgbp";  // untranslated
+Blockly.Msg["COLOR_BLEND_RATIO"] = "نسبت";
+Blockly.Msg["COLOR_BLEND_TITLE"] = "قاتی پاتی";
+Blockly.Msg["COLOR_BLEND_TOOLTIP"] = "دو رنگ را با نسبت مشخص‌شده مخلوط می‌کند (۰٫۰ - ۱٫۰)";
+Blockly.Msg["COLOR_PICKER_HELPURL"] = "https://lki.wikipedia.org/wiki/ڕەنگ";
+Blockly.Msg["COLOR_PICKER_TOOLTIP"] = "رةنگێ إژ تةختة رةنگ انتخاب کةن";
+Blockly.Msg["COLOR_RANDOM_HELPURL"] = "http://randomcolor.com";  // untranslated
+Blockly.Msg["COLOR_RANDOM_TITLE"] = "رةنگ بةختةکی";
+Blockly.Msg["COLOR_RANDOM_TOOLTIP"] = ".رةنگئ بةختةکی انتخاب کةن";
+Blockly.Msg["COLOR_RGB_BLUE"] = "کاوو";
+Blockly.Msg["COLOR_RGB_GREEN"] = "سؤز";
+Blockly.Msg["COLOR_RGB_HELPURL"] = "https://www.december.com/html/spec/colorpercompact.html";  // untranslated
+Blockly.Msg["COLOR_RGB_RED"] = "سۆر";
+Blockly.Msg["COLOR_RGB_TITLE"] = "رةنگ وة";
+Blockly.Msg["COLOR_RGB_TOOLTIP"] = "ساخت یک رنگ با مقدار مشخص‌شده‌ای از سۆر، سؤز و کاوو. همهٔ مقادیر باید بین ۰ تا ۱۰۰ باشند.";
 Blockly.Msg["CONTROLS_FLOW_STATEMENTS_HELPURL"] = "https://github.com/google/blockly/wiki/Loops#loop-termination-blocks";  // untranslated
 Blockly.Msg["CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK"] = "شکانِن حلقه";
 Blockly.Msg["CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE"] = "ادامه با تکرار بعدی حلقه";
@@ -271,7 +271,7 @@ Blockly.Msg["MATH_TRIG_TOOLTIP_ATAN"] = "بازگرداندن آرک‌تانژ�
 Blockly.Msg["MATH_TRIG_TOOLTIP_COS"] = "بازگرداندن کسینوس درجه (نه رادیان).";
 Blockly.Msg["MATH_TRIG_TOOLTIP_SIN"] = "بازگرداندن سینوس درجه (نه رادیان).";
 Blockly.Msg["MATH_TRIG_TOOLTIP_TAN"] = "بازگرداندن تانژانت یک درجه (نه رادیان).";
-Blockly.Msg["NEW_COLOUR_VARIABLE"] = "Create colour variable...";  // untranslated
+Blockly.Msg["NEW_COLOR_VARIABLE"] = "Create color variable...";  // untranslated
 Blockly.Msg["NEW_NUMBER_VARIABLE"] = "Create number variable...";  // untranslated
 Blockly.Msg["NEW_STRING_VARIABLE"] = "Create string variable...";  // untranslated
 Blockly.Msg["NEW_VARIABLE"] = "متغیر تازه...";
@@ -419,5 +419,5 @@ Blockly.Msg["LOGIC_HUE"] = "210";
 Blockly.Msg["VARIABLES_HUE"] = "330";
 Blockly.Msg["TEXTS_HUE"] = "160";
 Blockly.Msg["PROCEDURES_HUE"] = "290";
-Blockly.Msg["COLOUR_HUE"] = "20";
+Blockly.Msg["COLOR_HUE"] = "20";
 Blockly.Msg["VARIABLES_DYNAMIC_HUE"] = "310";

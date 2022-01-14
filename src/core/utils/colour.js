@@ -5,27 +5,27 @@
  */
 
 /**
- * @fileoverview Utility methods for colour manipulation.
+ * @fileoverview Utility methods for color manipulation.
  */
 'use strict';
 
 /**
- * Utility methods for colour manipulation.
- * @namespace Blockly.utils.colour
+ * Utility methods for color manipulation.
+ * @namespace Blockly.utils.color
  */
-goog.module('Blockly.utils.colour');
+goog.module('Blockly.utils.color');
 
 /**
- * The richness of block colours, regardless of the hue.
+ * The richness of block colors, regardless of the hue.
  * Must be in the range of 0 (inclusive) to 1 (exclusive).
- * @alias Blockly.utils.colour.hsvSaturation
+ * @alias Blockly.utils.color.hsvSaturation
  * @package
  */
 let hsvSaturation = 0.45;
 
 /**
- * Get the richness of block colours, regardless of the hue.
- * @alias Blockly.utils.colour.getHsvSaturation
+ * Get the richness of block colors, regardless of the hue.
+ * @alias Blockly.utils.color.getHsvSaturation
  * @return {number} The current richness.
  * @package
  */
@@ -35,10 +35,10 @@ const getHsvSaturation = function() {
 exports.getHsvSaturation = getHsvSaturation;
 
 /**
- * Set the richness of block colours, regardless of the hue.
+ * Set the richness of block colors, regardless of the hue.
  * @param {number} newSaturation The new richness, in the range of  0
  *     (inclusive) to 1 (exclusive)
- * @alias Blockly.utils.colour.setHsvSaturation
+ * @alias Blockly.utils.color.setHsvSaturation
  * @package
  */
 const setHsvSaturation = function(newSaturation) {
@@ -47,16 +47,16 @@ const setHsvSaturation = function(newSaturation) {
 exports.setHsvSaturation = setHsvSaturation;
 
 /**
- * The intensity of block colours, regardless of the hue.
+ * The intensity of block colors, regardless of the hue.
  * Must be in the range of 0 (inclusive) to 1 (exclusive).
- * @alias Blockly.utils.colour.hsvValue
+ * @alias Blockly.utils.color.hsvValue
  * @package
  */
 let hsvValue = 0.65;
 
 /**
- * Get the intensity of block colours, regardless of the hue.
- * @alias Blockly.utils.colour.getHsvValue
+ * Get the intensity of block colors, regardless of the hue.
+ * @alias Blockly.utils.color.getHsvValue
  * @return {number} The current intensity.
  * @package
  */
@@ -66,10 +66,10 @@ const getHsvValue = function() {
 exports.getHsvValue = getHsvValue;
 
 /**
- * Set the intensity of block colours, regardless of the hue.
+ * Set the intensity of block colors, regardless of the hue.
  * @param {number} newValue The new intensity, in the range of  0
  *     (inclusive) to 1 (exclusive)
- * @alias Blockly.utils.colour.setHsvValue
+ * @alias Blockly.utils.color.setHsvValue
  * @package
  */
 const setHsvValue = function(newValue) {
@@ -78,16 +78,16 @@ const setHsvValue = function(newValue) {
 exports.setHsvValue = setHsvValue;
 
 /**
- * Parses a colour from a string.
+ * Parses a color from a string.
  * .parse('red') -> '#ff0000'
  * .parse('#f00') -> '#ff0000'
  * .parse('#ff0000') -> '#ff0000'
  * .parse('0xff0000') -> '#ff0000'
  * .parse('rgb(255, 0, 0)') -> '#ff0000'
- * @param {string|number} str Colour in some CSS format.
- * @return {?string} A string containing a hex representation of the colour,
+ * @param {string|number} str Color in some CSS format.
+ * @return {?string} A string containing a hex representation of the color,
  *   or null if can't be parsed.
- * @alias Blockly.utils.colour.parse
+ * @alias Blockly.utils.color.parse
  */
 const parse = function(str) {
   str = String(str).toLowerCase().trim();
@@ -121,12 +121,12 @@ const parse = function(str) {
 exports.parse = parse;
 
 /**
- * Converts a colour from RGB to hex representation.
+ * Converts a color from RGB to hex representation.
  * @param {number} r Amount of red, int between 0 and 255.
  * @param {number} g Amount of green, int between 0 and 255.
  * @param {number} b Amount of blue, int between 0 and 255.
- * @return {string} Hex representation of the colour.
- * @alias Blockly.utils.colour.rgbToHex
+ * @return {string} Hex representation of the color.
+ * @alias Blockly.utils.color.rgbToHex
  */
 const rgbToHex = function(r, g, b) {
   const rgb = (r << 16) | (g << 8) | b;
@@ -138,14 +138,14 @@ const rgbToHex = function(r, g, b) {
 exports.rgbToHex = rgbToHex;
 
 /**
- * Converts a colour to RGB.
- * @param {string} colour String representing colour in any
- *     colour format ('#ff0000', 'red', '0xff000', etc).
- * @return {!Array<number>} RGB representation of the colour.
- * @alias Blockly.utils.colour.hexToRgb
+ * Converts a color to RGB.
+ * @param {string} color String representing color in any
+ *     color format ('#ff0000', 'red', '0xff000', etc).
+ * @return {!Array<number>} RGB representation of the color.
+ * @alias Blockly.utils.color.hexToRgb
  */
-const hexToRgb = function(colour) {
-  const hex = parse(colour);
+const hexToRgb = function(color) {
+  const hex = parse(color);
   if (!hex) {
     return [0, 0, 0];
   }
@@ -164,8 +164,8 @@ exports.hexToRgb = hexToRgb;
  * @param {number} h Hue value in [0, 360].
  * @param {number} s Saturation value in [0, 1].
  * @param {number} v Brightness in [0, 255].
- * @return {string} Hex representation of the colour.
- * @alias Blockly.utils.colour.hsvToHex
+ * @return {string} Hex representation of the color.
+ * @alias Blockly.utils.color.hsvToHex
  */
 const hsvToHex = function(h, s, v) {
   let red = 0;
@@ -220,21 +220,21 @@ const hsvToHex = function(h, s, v) {
 exports.hsvToHex = hsvToHex;
 
 /**
- * Blend two colours together, using the specified factor to indicate the
- * weight given to the first colour.
- * @param {string} colour1 First colour.
- * @param {string} colour2 Second colour.
- * @param {number} factor The weight to be given to colour1 over colour2.
+ * Blend two colors together, using the specified factor to indicate the
+ * weight given to the first color.
+ * @param {string} color1 First color.
+ * @param {string} color2 Second color.
+ * @param {number} factor The weight to be given to color1 over color2.
  *     Values should be in the range [0, 1].
- * @return {?string} Combined colour represented in hex.
- * @alias Blockly.utils.colour.blend
+ * @return {?string} Combined color represented in hex.
+ * @alias Blockly.utils.color.blend
  */
-const blend = function(colour1, colour2, factor) {
-  const hex1 = parse(colour1);
+const blend = function(color1, color2, factor) {
+  const hex1 = parse(color1);
   if (!hex1) {
     return null;
   }
-  const hex2 = parse(colour2);
+  const hex2 = parse(color2);
   if (!hex2) {
     return null;
   }
@@ -248,13 +248,13 @@ const blend = function(colour1, colour2, factor) {
 exports.blend = blend;
 
 /**
- * A map that contains the 16 basic colour keywords as defined by W3C:
+ * A map that contains the 16 basic color keywords as defined by W3C:
  * https://www.w3.org/TR/2018/REC-css-color-3-20180619/#html4
- * The keys of this map are the lowercase "readable" names of the colours,
+ * The keys of this map are the lowercase "readable" names of the colors,
  * while the values are the "hex" values.
  *
  * @type {!Object<string, string>}
- * @alias Blockly.utils.colour.names
+ * @alias Blockly.utils.color.names
  */
 const names = {
   'aqua': '#00ffff',
@@ -278,9 +278,9 @@ exports.names = names;
 
 /**
  * Convert a hue (HSV model) into an RGB hex triplet.
- * @param {number} hue Hue on a colour wheel (0-360).
+ * @param {number} hue Hue on a color wheel (0-360).
  * @return {string} RGB code, e.g. '#5ba65b'.
- * @alias Blockly.utils.colour.hueToHex
+ * @alias Blockly.utils.color.hueToHex
  */
 const hueToHex = function(hue) {
   return hsvToHex(hue, hsvSaturation, hsvValue * 255);

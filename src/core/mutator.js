@@ -353,7 +353,7 @@ Mutator.prototype.setVisible = function(visible) {
     this.workspace_.addChangeListener(this.workspaceChanged_.bind(this));
     // Update the source block immediately after the bubble becomes visible.
     this.updateWorkspace_();
-    this.applyColour();
+    this.applyColor();
   } else {
     // Dispose of the bubble.
     this.svgDialog_ = null;

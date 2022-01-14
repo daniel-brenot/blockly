@@ -13,7 +13,7 @@
 
 goog.module('Blockly.JavaScript.all');
 
-goog.require('Blockly.JavaScript.colour');
+goog.require('Blockly.JavaScript.color');
 goog.require('Blockly.JavaScript.lists');
 goog.require('Blockly.JavaScript.logic');
 goog.require('Blockly.JavaScript.loops');

@@ -561,13 +561,13 @@ declare module "internal_constants" {
      */
     export const DRAG_STACK: true;
     /**
-     * The richness of block colours, regardless of the hue.
+     * The richness of block colors, regardless of the hue.
      * Must be in the range of 0 (inclusive) to 1 (exclusive).
      * @alias Blockly.internalConstants.HSV_SATURATION
      */
     export const HSV_SATURATION: 0.45;
     /**
-     * The intensity of block colours, regardless of the hue.
+     * The intensity of block colors, regardless of the hue.
      * Must be in the range of 0 (inclusive) to 1 (exclusive).
      * @alias Blockly.internalConstants.HSV_VALUE
      */
@@ -1319,74 +1319,74 @@ declare module "utils/aria" {
      */
     export function setState(element: Element, stateName: State, value: string | boolean | number | Array<string>): void;
 }
-declare module "utils/colour" {
+declare module "utils/color" {
     /**
-     * Parses a colour from a string.
+     * Parses a color from a string.
      * .parse('red') -> '#ff0000'
      * .parse('#f00') -> '#ff0000'
      * .parse('#ff0000') -> '#ff0000'
      * .parse('0xff0000') -> '#ff0000'
      * .parse('rgb(255, 0, 0)') -> '#ff0000'
-     * @param {string|number} str Colour in some CSS format.
-     * @return {?string} A string containing a hex representation of the colour,
+     * @param {string|number} str Color in some CSS format.
+     * @return {?string} A string containing a hex representation of the color,
      *   or null if can't be parsed.
-     * @alias Blockly.utils.colour.parse
+     * @alias Blockly.utils.color.parse
      */
     export function parse(str: string | number): string | null;
     /**
-     * Converts a colour from RGB to hex representation.
+     * Converts a color from RGB to hex representation.
      * @param {number} r Amount of red, int between 0 and 255.
      * @param {number} g Amount of green, int between 0 and 255.
      * @param {number} b Amount of blue, int between 0 and 255.
-     * @return {string} Hex representation of the colour.
-     * @alias Blockly.utils.colour.rgbToHex
+     * @return {string} Hex representation of the color.
+     * @alias Blockly.utils.color.rgbToHex
      */
     export function rgbToHex(r: number, g: number, b: number): string;
     /**
-     * Converts a colour to RGB.
-     * @param {string} colour String representing colour in any
-     *     colour format ('#ff0000', 'red', '0xff000', etc).
-     * @return {!Array<number>} RGB representation of the colour.
-     * @alias Blockly.utils.colour.hexToRgb
+     * Converts a color to RGB.
+     * @param {string} color String representing color in any
+     *     color format ('#ff0000', 'red', '0xff000', etc).
+     * @return {!Array<number>} RGB representation of the color.
+     * @alias Blockly.utils.color.hexToRgb
      */
-    export function hexToRgb(colour: string): Array<number>;
+    export function hexToRgb(color: string): Array<number>;
     /**
      * Converts an HSV triplet to hex representation.
      * @param {number} h Hue value in [0, 360].
      * @param {number} s Saturation value in [0, 1].
      * @param {number} v Brightness in [0, 255].
-     * @return {string} Hex representation of the colour.
-     * @alias Blockly.utils.colour.hsvToHex
+     * @return {string} Hex representation of the color.
+     * @alias Blockly.utils.color.hsvToHex
      */
     export function hsvToHex(h: number, s: number, v: number): string;
     /**
-     * Blend two colours together, using the specified factor to indicate the
-     * weight given to the first colour.
-     * @param {string} colour1 First colour.
-     * @param {string} colour2 Second colour.
-     * @param {number} factor The weight to be given to colour1 over colour2.
+     * Blend two colors together, using the specified factor to indicate the
+     * weight given to the first color.
+     * @param {string} color1 First color.
+     * @param {string} color2 Second color.
+     * @param {number} factor The weight to be given to color1 over color2.
      *     Values should be in the range [0, 1].
-     * @return {?string} Combined colour represented in hex.
-     * @alias Blockly.utils.colour.blend
+     * @return {?string} Combined color represented in hex.
+     * @alias Blockly.utils.color.blend
      */
-    export function blend(colour1: string, colour2: string, factor: number): string | null;
+    export function blend(color1: string, color2: string, factor: number): string | null;
     /**
-     * A map that contains the 16 basic colour keywords as defined by W3C:
+     * A map that contains the 16 basic color keywords as defined by W3C:
      * https://www.w3.org/TR/2018/REC-css-color-3-20180619/#html4
-     * The keys of this map are the lowercase "readable" names of the colours,
+     * The keys of this map are the lowercase "readable" names of the colors,
      * while the values are the "hex" values.
      *
      * @type {!Object<string, string>}
-     * @alias Blockly.utils.colour.names
+     * @alias Blockly.utils.color.names
      */
     export const names: {
         [x: string]: string;
     };
     /**
      * Convert a hue (HSV model) into an RGB hex triplet.
-     * @param {number} hue Hue on a colour wheel (0-360).
+     * @param {number} hue Hue on a color wheel (0-360).
      * @return {string} RGB code, e.g. '#5ba65b'.
-     * @alias Blockly.utils.colour.hueToHex
+     * @alias Blockly.utils.color.hueToHex
      */
     export function hueToHex(hue: number): string;
 }
@@ -1423,16 +1423,16 @@ declare module "utils/parsing" {
      */
     export function checkMessageReferences(message: string): boolean;
     /**
-     * Parse a block colour from a number or string, as provided in a block
+     * Parse a block color from a number or string, as provided in a block
      * definition.
-     * @param {number|string} colour HSV hue value (0 to 360), #RRGGBB string,
+     * @param {number|string} color HSV hue value (0 to 360), #RRGGBB string,
      *     or a message reference string pointing to one of those two values.
-     * @return {{hue: ?number, hex: string}} An object containing the colour as
+     * @return {{hue: ?number, hex: string}} An object containing the color as
      *     a #RRGGBB string, and the hue if the input was an HSV hue value.
-     * @throws {Error} If the colour cannot be parsed.
-     * @alias Blockly.parsing.parseBlockColour
+     * @throws {Error} If the color cannot be parsed.
+     * @alias Blockly.parsing.parseBlockColor
      */
-    export function parseBlockColour(colour: number | string): {
+    export function parseBlockColor(color: number | string): {
         hue: number | null;
         hex: string;
     };
@@ -1777,11 +1777,11 @@ declare module "toolbox/category" {
          */
         protected name_: string;
         /**
-         * The colour of the category.
+         * The color of the category.
          * @type {string}
          * @protected
          */
-        protected colour_: string;
+        protected color_: string;
         /**
          * The html container for the category.
          * @type {?Element}
@@ -1896,32 +1896,32 @@ declare module "toolbox/category" {
          */
         protected createLabelDom_(name: string): Element;
         /**
-         * Updates the colour for this category.
+         * Updates the color for this category.
          * @public
          */
         public refreshTheme(): void;
         /**
-         * Add the strip of colour to the toolbox category.
-         * @param {string} colour The category colour.
+         * Add the strip of color to the toolbox category.
+         * @param {string} color The category color.
          * @protected
          */
-        protected addColourBorder_(colour: string): void;
+        protected addColorBorder_(color: string): void;
         /**
-         * Gets either the colour or the style for a category.
+         * Gets either the color or the style for a category.
          * @param {!toolbox.CategoryInfo} categoryDef The object holding
          *    information on the category.
-         * @return {string} The hex colour for the category.
+         * @return {string} The hex color for the category.
          * @protected
          */
-        protected getColour_(categoryDef: toolbox.CategoryInfo): string;
+        protected getColor_(categoryDef: toolbox.CategoryInfo): string;
         /**
-         * Sets the colour for the category using the style name and returns the new
-         * colour as a hex string.
+         * Sets the color for the category using the style name and returns the new
+         * color as a hex string.
          * @param {string} styleName Name of the style.
-         * @return {string} The hex colour for the category.
+         * @return {string} The hex color for the category.
          * @private
          */
-        private getColourfromStyle_;
+        private getColorfromStyle_;
         /**
          * Gets the HTML element that is clickable.
          * The parent toolbox element receives clicks. The parent toolbox will add an ID
@@ -1931,13 +1931,13 @@ declare module "toolbox/category" {
          */
         public getClickTarget(): Element;
         /**
-         * Parses the colour on the category.
-         * @param {number|string} colourValue HSV hue value (0 to 360), #RRGGBB string,
+         * Parses the color on the category.
+         * @param {number|string} colorValue HSV hue value (0 to 360), #RRGGBB string,
          *     or a message reference string pointing to one of those two values.
-         * @return {string} The hex colour for the category.
+         * @return {string} The hex color for the category.
          * @private
          */
-        private parseColour_;
+        private parseColor_;
         /**
          * Adds appropriate classes to display an open icon.
          * @param {?Element} iconDiv The div that holds the icon.
@@ -2044,7 +2044,7 @@ declare module "toolbox/category" {
         const registrationName: string;
         const nestedPadding: number;
         const borderWidth: number;
-        const defaultBackgroundColour: string;
+        const defaultBackgroundColor: string;
         /**
          * All the CSS class names that are used to create a category.
          */
@@ -2224,7 +2224,7 @@ export type BlockInfo = any;
         contents: Array<ToolboxItemInfo>;
         id: (string | undefined);
         categorystyle: (string | undefined);
-        colour: (string | undefined);
+        color: (string | undefined);
         cssconfig: (ToolboxCategory.CssConfig | undefined);
         hidden: (string | undefined);
     };
@@ -2236,7 +2236,7 @@ export type BlockInfo = any;
      *            contents:!Array<!ToolboxItemInfo>,
      *            id:(string|undefined),
      *            categorystyle:(string|undefined),
-     *            colour:(string|undefined),
+     *            color:(string|undefined),
      *            cssconfig:(!ToolboxCategory.CssConfig|undefined),
      *            hidden:(string|undefined)
      *          }}
@@ -2251,7 +2251,7 @@ export type BlockInfo = any;
         custom: string;
         id: (string | undefined);
         categorystyle: (string | undefined);
-        colour: (string | undefined);
+        color: (string | undefined);
         cssconfig: (ToolboxCategory.CssConfig | undefined);
         hidden: (string | undefined);
     };
@@ -2262,7 +2262,7 @@ export type BlockInfo = any;
      *            custom:string,
      *            id:(string|undefined),
      *            categorystyle:(string|undefined),
-     *            colour:(string|undefined),
+     *            color:(string|undefined),
      *            cssconfig:(!ToolboxCategory.CssConfig|undefined),
      *            hidden:(string|undefined)
      *          }}
@@ -3314,36 +3314,36 @@ declare module "theme" {
          * A block style.
          */
         type BlockStyle = {
-            colourPrimary: string;
-            colourSecondary: string;
-            colourTertiary: string;
+            colorPrimary: string;
+            colorSecondary: string;
+            colorTertiary: string;
             hat: string;
         };
         /**
          * A category style.
          */
         type CategoryStyle = {
-            colour: string;
+            color: string;
         };
         /**
          * A component style.
          */
         type ComponentStyle = {
-            workspaceBackgroundColour: string | null;
-            toolboxBackgroundColour: string | null;
-            toolboxForegroundColour: string | null;
-            flyoutBackgroundColour: string | null;
-            flyoutForegroundColour: string | null;
+            workspaceBackgroundColor: string | null;
+            toolboxBackgroundColor: string | null;
+            toolboxForegroundColor: string | null;
+            flyoutBackgroundColor: string | null;
+            flyoutForegroundColor: string | null;
             flyoutOpacity: number | null;
-            scrollbarColour: string | null;
+            scrollbarColor: string | null;
             scrollbarOpacity: number | null;
-            insertionMarkerColour: string | null;
+            insertionMarkerColor: string | null;
             insertionMarkerOpacity: number | null;
-            markerColour: string | null;
-            cursorColour: string | null;
-            selectedGlowColour: string | null;
+            markerColor: string | null;
+            cursorColor: string | null;
+            selectedGlowColor: string | null;
             selectedGlowOpacity: number | null;
-            replacementGlowColour: string | null;
+            replacementGlowColor: string | null;
             replacementGlowOpacity: number | null;
         };
         /**
@@ -3359,7 +3359,7 @@ declare module "theme" {
 declare module "theme/classic" {
     /**
      * Classic theme.
-     * Contains multi-coloured border to create shadow effect.
+     * Contains multi-colored border to create shadow effect.
      * @type {Theme}
      * @alias Blockly.Themes.Classic
      */
@@ -3617,7 +3617,7 @@ declare module "options" {
          * Grid Options.
          */
         type GridOptions = {
-            colour: string;
+            color: string;
             length: number;
             snap: boolean;
             spacing: number;
@@ -5440,7 +5440,7 @@ declare module "procedures" {
 declare module "variables_dynamic" {
     function stringButtonClickHandler(button: any): void;
     function numberButtonClickHandler(button: any): void;
-    function colourButtonClickHandler(button: any): void;
+    function colorButtonClickHandler(button: any): void;
     /**
      * Construct the elements (blocks and button) required by the flyout for the
      * variable category.
@@ -5457,7 +5457,7 @@ declare module "variables_dynamic" {
      */
     export function flyoutCategoryBlocks(workspace: Workspace): Array<Element>;
     import { Workspace } from "workspace";
-    export { stringButtonClickHandler as onCreateVariableButtonClick_String, numberButtonClickHandler as onCreateVariableButtonClick_Number, colourButtonClickHandler as onCreateVariableButtonClick_Colour };
+    export { stringButtonClickHandler as onCreateVariableButtonClick_String, numberButtonClickHandler as onCreateVariableButtonClick_Number, colorButtonClickHandler as onCreateVariableButtonClick_Color };
 }
 declare module "renderers/common/debug" {
     /**
@@ -5703,11 +5703,11 @@ declare module "renderers/common/constants" {
          */
         FIELD_BORDER_RECT_Y_PADDING: number;
         /**
-         * The backing colour of a field's border rect.
+         * The backing color of a field's border rect.
          * @type {string}
          * @package
          */
-        FIELD_BORDER_RECT_COLOUR: string;
+        FIELD_BORDER_RECT_COLOR: string;
         /**
          * A field's text element's dominant baseline.
          * @type {boolean}
@@ -5725,11 +5725,11 @@ declare module "renderers/common/constants" {
          */
         FIELD_DROPDOWN_NO_BORDER_RECT_SHADOW: boolean;
         /**
-         * Whether or not a dropdown field's div should be coloured to match the
-         * block colours.
+         * Whether or not a dropdown field's div should be colored to match the
+         * block colors.
          * @type {boolean}
          */
-        FIELD_DROPDOWN_COLOURED_DIV: boolean;
+        FIELD_DROPDOWN_COLORED_DIV: boolean;
         /**
          * Whether or not a dropdown field uses a text or SVG arrow.
          * @type {boolean}
@@ -5757,21 +5757,21 @@ declare module "renderers/common/constants" {
          */
         FIELD_TEXTINPUT_BOX_SHADOW: boolean;
         /**
-         * Whether or not the colour field should display its colour value on the
+         * Whether or not the color field should display its color value on the
          * entire block.
          * @type {boolean}
          */
-        FIELD_COLOUR_FULL_BLOCK: boolean;
+        FIELD_COLOR_FULL_BLOCK: boolean;
         /**
-         * A colour field's default width.
+         * A color field's default width.
          * @type {number}
          */
-        FIELD_COLOUR_DEFAULT_WIDTH: number;
+        FIELD_COLOR_DEFAULT_WIDTH: number;
         /**
-         * A colour field's default height.
+         * A color field's default height.
          * @type {number}
          */
-        FIELD_COLOUR_DEFAULT_HEIGHT: number;
+        FIELD_COLOR_DEFAULT_HEIGHT: number;
         /**
          * A checkbox field's X offset.
          * @type {number}
@@ -5834,17 +5834,17 @@ declare module "renderers/common/constants" {
          */
         private cssNode_;
         /**
-         * Cursor colour.
+         * Cursor color.
          * @type {string}
          * @package
          */
-        CURSOR_COLOUR: string;
+        CURSOR_COLOR: string;
         /**
-         * Immovable marker colour.
+         * Immovable marker color.
          * @type {string}
          * @package
          */
-        MARKER_COLOUR: string;
+        MARKER_COLOR: string;
         /**
          * Width of the horizontal cursor.
          * @type {number}
@@ -5876,18 +5876,18 @@ declare module "renderers/common/constants" {
          */
         CURSOR_STROKE_WIDTH: number;
         /**
-         * Whether text input and colour fields fill up the entire source block.
+         * Whether text input and color fields fill up the entire source block.
          * @type {boolean}
          * @package
          */
         FULL_BLOCK_FIELDS: boolean;
         /**
-         * The main colour of insertion markers, in hex.  The block is rendered a
+         * The main color of insertion markers, in hex.  The block is rendered a
          * transparent grey by changing the fill opacity in CSS.
          * @type {string}
          * @package
          */
-        INSERTION_MARKER_COLOUR: string;
+        INSERTION_MARKER_COLOR: string;
         /**
          * The insertion marker opacity.
          * @type {number}
@@ -5971,14 +5971,14 @@ declare module "renderers/common/constants" {
          */
         protected setComponentConstants_(theme: Theme): void;
         /**
-         * Get or create a block style based on a single colour value.  Generate a name
-         * for the style based on the colour.
-         * @param {string} colour #RRGGBB colour string.
+         * Get or create a block style based on a single color value.  Generate a name
+         * for the style based on the color.
+         * @param {string} color #RRGGBB color string.
          * @return {{style: !Theme.BlockStyle, name: string}} An object
          *     containing the style and an autogenerated name for that style.
          * @package
          */
-        getBlockStyleForColour(colour: string): {
+        getBlockStyleForColor(color: string): {
             style: Theme.BlockStyle;
             name: string;
         };
@@ -5990,20 +5990,20 @@ declare module "renderers/common/constants" {
          */
         getBlockStyle(blockStyleName: string | null): Theme.BlockStyle;
         /**
-         * Create a block style object based on the given colour.
-         * @param {string} colour #RRGGBB colour string.
+         * Create a block style object based on the given color.
+         * @param {string} color #RRGGBB color string.
          * @return {!Theme.BlockStyle} A populated block style based on the
-         *     given colour.
+         *     given color.
          * @protected
          */
-        protected createBlockStyle_(colour: string): Theme.BlockStyle;
+        protected createBlockStyle_(color: string): Theme.BlockStyle;
         /**
          * Get a full block style object based on the input style object.  Populate
          * any missing values.
          * @param {{
-         *     colourPrimary:string,
-         *     colourSecondary:(string|undefined),
-         *     colourTertiary:(string|undefined),
+         *     colorPrimary:string,
+         *     colorSecondary:(string|undefined),
+         *     colorTertiary:(string|undefined),
          *     hat:(string|undefined)
          * }} blockStyle A full or partial block style object.
        
@@ -6012,25 +6012,25 @@ declare module "renderers/common/constants" {
          * @protected
          */
         protected validatedBlockStyle_(blockStyle: {
-            colourPrimary: string;
-            colourSecondary: (string | undefined);
-            colourTertiary: (string | undefined);
+            colorPrimary: string;
+            colorSecondary: (string | undefined);
+            colorTertiary: (string | undefined);
             hat: (string | undefined);
         }): Theme.BlockStyle;
         /**
-         * Generate a secondary colour from the passed in primary colour.
-         * @param {string} inputColour Primary colour.
-         * @return {string} The generated secondary colour.
+         * Generate a secondary color from the passed in primary color.
+         * @param {string} inputColor Primary color.
+         * @return {string} The generated secondary color.
          * @protected
          */
-        protected generateSecondaryColour_(inputColour: string): string;
+        protected generateSecondaryColor_(inputColor: string): string;
         /**
-         * Generate a tertiary colour from the passed in primary colour.
-         * @param {string} inputColour Primary colour.
-         * @return {string} The generated tertiary colour.
+         * Generate a tertiary color from the passed in primary color.
+         * @param {string} inputColor Primary color.
+         * @return {string} The generated tertiary color.
          * @protected
          */
-        protected generateTertiaryColour_(inputColour: string): string;
+        protected generateTertiaryColor_(inputColor: string): string;
         /**
          * Dispose of this constants provider.
          * Delete all DOM elements that this provider created.
@@ -7877,10 +7877,10 @@ declare module "bubble" {
          */
         private renderArrow_;
         /**
-         * Change the colour of a bubble.
-         * @param {string} hexColour Hex code of colour.
+         * Change the color of a bubble.
+         * @param {string} hexColor Hex code of color.
          */
-        setColour(hexColour: string): void;
+        setColor(hexColor: string): void;
         /**
          * Dispose of this bubble.
          */
@@ -7971,9 +7971,9 @@ declare module "icon" {
          */
         protected iconClick_(e: Event): void;
         /**
-         * Change the colour of the associated bubble to match its block.
+         * Change the color of the associated bubble to match its block.
          */
-        applyColour(): void;
+        applyColor(): void;
         /**
          * Notification that the icon has moved.  Update the arrow accordingly.
          * @param {!Coordinate} xy Absolute location in workspace coordinates.
@@ -8842,10 +8842,10 @@ declare module "keyboard_nav/marker" {
      */
     export class Marker {
         /**
-         * The colour of the marker.
+         * The color of the marker.
          * @type {?string}
          */
-        colour: string | null;
+        color: string | null;
         /**
          * The current location of the marker.
          * @type {ASTNode}
@@ -9037,10 +9037,10 @@ declare module "renderers/common/marker_svg" {
          */
         currentMarkerSvg: Element;
         /**
-         * The colour of the marker.
+         * The color of the marker.
          * @type {string}
          */
-        colour_: string;
+        color_: string;
         /**
          * Return the root node of the SVG or null if none exists.
          * @return {SVGElement} The root SVG node.
@@ -9245,12 +9245,12 @@ declare module "renderers/common/marker_svg" {
         markerInput_: SVGPathElement;
         markerBlock_: SVGPathElement;
         /**
-         * Apply the marker's colour.
+         * Apply the marker's color.
          * @param {!ASTNode} _curNode The node that we want to draw the marker
          *    for.
          * @protected
          */
-        protected applyColour_(_curNode: ASTNode): void;
+        protected applyColor_(_curNode: ASTNode): void;
         /**
          * Dispose of this marker.
          */
@@ -9270,7 +9270,7 @@ declare module "renderers/common/path_object" {
          * used by the renderer.
          * @param {!SVGElement} root The root SVG element.
          * @param {!Theme.BlockStyle} style The style object to use for
-         *     colouring.
+         *     coloring.
          * @param {!ConstantProvider} constants The renderer's
          *     constants.
          * @constructor
@@ -9293,7 +9293,7 @@ declare module "renderers/common/path_object" {
          */
         svgPath: SVGElement;
         /**
-         * The style object to use when colouring block paths.
+         * The style object to use when coloring block paths.
          * @type {!Theme.BlockStyle}
          * @package
          */
@@ -9338,12 +9338,12 @@ declare module "renderers/common/path_object" {
          */
         setMarkerSvg(markerSvg: SVGElement): void;
         /**
-         * Apply the stored colours to the block's path, taking into account whether
+         * Apply the stored colors to the block's path, taking into account whether
          * the paths belong to a shadow block.
          * @param {!Block} block The source block.
          * @package
          */
-        applyColour(block: Block): void;
+        applyColor(block: Block): void;
         /**
          * Set the style.
          * @param {!Theme.BlockStyle} blockStyle The block style to use.
@@ -9529,7 +9529,7 @@ declare module "renderers/common/renderer" {
          * Create a new instance of a renderer path object.
          * @param {!SVGElement} root The root SVG element.
          * @param {!Theme.BlockStyle} style The style object to use for
-         *     colouring.
+         *     coloring.
          * @return {!IPathObject} The renderer path object.
          * @package
          */
@@ -10089,7 +10089,7 @@ declare module "renderers/common/debugger" {
         drawRenderedElem(elem: Measurable, isRtl: boolean): void;
         /**
          * Draw a circle at the location of the given connection.  Inputs and outputs
-         * share the same colours, as do previous and next.  When positioned correctly
+         * share the same colors, as do previous and next.  When positioned correctly
          * a connected pair will look like a bullseye.
          * @param {RenderedConnection} conn The connection to circle.
          * @suppress {visibility} Suppress visibility of conn.offsetInBlock_ since this
@@ -10128,7 +10128,7 @@ declare module "renderers/common/debugger" {
          * @package
          */
         drawDebug(block: BlockSvg, info: RenderInfo): void;
-        randomColour_: string;
+        randomColor_: string;
         /**
          * Show a debug filter to highlight that a block has been rendered.
          * @param {!SVGElement} svgPath The block's SVG path.
@@ -10632,7 +10632,7 @@ declare module "utils/keycodes" {
 }
 declare module "utils" {
     import * as aria from "utils/aria";
-    import * as colourUtils from "utils/colour";
+    import * as colorUtils from "utils/color";
     import { Coordinate } from "utils/coordinate";
     import * as deprecation from "utils/deprecation";
     import * as dom from "utils/dom";
@@ -10817,17 +10817,17 @@ declare module "utils" {
      */
     export function screenToWsCoordinates(ws: WorkspaceSvg, screenCoordinates: Coordinate): Coordinate;
     /**
-     * Parse a block colour from a number or string, as provided in a block
+     * Parse a block color from a number or string, as provided in a block
      * definition.
-     * @param {number|string} colour HSV hue value (0 to 360), #RRGGBB string,
+     * @param {number|string} color HSV hue value (0 to 360), #RRGGBB string,
      *     or a message reference string pointing to one of those two values.
-     * @return {{hue: ?number, hex: string}} An object containing the colour as
+     * @return {{hue: ?number, hex: string}} An object containing the color as
      *     a #RRGGBB string, and the hue if the input was an HSV hue value.
-     * @throws {Error} If the colour cannot be parsed.
+     * @throws {Error} If the color cannot be parsed.
      * @deprecated
-     * @alias Blockly.utils.parseBlockColour
+     * @alias Blockly.utils.parseBlockColor
      */
-    export function parseBlockColour(colour: number | string): {
+    export function parseBlockColor(color: number | string): {
         hue: number | null;
         hex: string;
     };
@@ -10841,7 +10841,7 @@ declare module "utils" {
     export function runAfterPageLoad(fn: () => any): void;
     import { Block } from "block";
     import { WorkspaceSvg } from "workspace_svg";
-    export { aria, colourUtils as colour, Coordinate, deprecation, dom, idGenerator, KeyCodes, math, Metrics, object, parsing, Rect, Size, stringUtils as string, style, Svg, svgPaths, svgMath, toolbox, userAgent, xmlUtils as xml, getInjectionDivXY as getInjectionDivXY_ };
+    export { aria, colorUtils as color, Coordinate, deprecation, dom, idGenerator, KeyCodes, math, Metrics, object, parsing, Rect, Size, stringUtils as string, style, Svg, svgPaths, svgMath, toolbox, userAgent, xmlUtils as xml, getInjectionDivXY as getInjectionDivXY_ };
 }
 declare module "contextmenu_registry" {
     /**
@@ -10964,11 +10964,11 @@ declare module "dropdowndiv" {
          */
         static clearContent(): void;
         /**
-         * Set the colour for the drop-down.
-         * @param {string} backgroundColour Any CSS colour for the background.
-         * @param {string} borderColour Any CSS colour for the border.
+         * Set the color for the drop-down.
+         * @param {string} backgroundColor Any CSS color for the background.
+         * @param {string} borderColor Any CSS color for the border.
          */
-        static setColour(backgroundColour: string, borderColour: string): void;
+        static setColor(backgroundColor: string, borderColor: string): void;
         /**
          * Shortcut to show and place the drop-down with positioning determined
          * by a particular block. The primary position will be below the block,
@@ -15151,15 +15151,15 @@ declare module "block_svg" {
         initSvg(): void;
         eventsInit_: boolean;
         /**
-         * Get the secondary colour of a block.
+         * Get the secondary color of a block.
          * @return {?string} #RRGGBB string.
          */
-        getColourSecondary(): string | null;
+        getColorSecondary(): string | null;
         /**
-         * Get the tertiary colour of a block.
+         * Get the tertiary color of a block.
          * @return {?string} #RRGGBB string.
          */
-        getColourTertiary(): string | null;
+        getColorTertiary(): string | null;
         /**
          * Selects this block. Highlights the block visually and fires a select event
          * if the block is not already selected.
@@ -15371,10 +15371,10 @@ declare module "block_svg" {
          */
         toCopyData(): ICopyable.CopyData | null;
         /**
-         * Updates the colour of the block to match the block's state.
+         * Updates the color of the block to match the block's state.
          * @package
          */
-        applyColour(): void;
+        applyColor(): void;
         /**
          * Updates the color of the block (and children) to match the current disabled
          * state.
@@ -15439,24 +15439,24 @@ declare module "block_svg" {
          */
         setDeleteStyle(enable: boolean): void;
         /**
-         * Get the colour of a block.
+         * Get the color of a block.
          * @return {string} #RRGGBB string.
          */
-        getColour(): string;
+        getColor(): string;
         /**
-         * Change the colour of a block.
-         * @param {number|string} colour HSV hue value, or #RRGGBB string.
+         * Change the color of a block.
+         * @param {number|string} color HSV hue value, or #RRGGBB string.
          */
-        setColour(colour: number | string): void;
+        setColor(color: number | string): void;
         styleName_: string;
         /**
-         * Set the style and colour values of a block.
+         * Set the style and color values of a block.
          * @param {string} blockStyleName Name of the block style.
          * @throws {Error} if the block style does not exist.
          */
         setStyle(blockStyleName: string): void;
         hat: string;
-        colour_: string;
+        color_: string;
         /**
          * Move this block to the front of the visible workspace.
          * <g> tags do not respect z-index so SVG renders them in the
@@ -17463,11 +17463,11 @@ declare module "field" {
          */
         getSvgRoot(): SVGGElement;
         /**
-         * Updates the field to match the colour/style of the block. Should only be
-         * called by BlockSvg.applyColour().
+         * Updates the field to match the color/style of the block. Should only be
+         * called by BlockSvg.applyColor().
          * @package
          */
-        applyColour(): void;
+        applyColor(): void;
         /**
          * Used by getSize() to move/resize any DOM elements, and get the new size.
          *
@@ -19316,10 +19316,10 @@ declare module "block" {
          */
         getTooltip(): string;
         /**
-         * Get the colour of a block.
+         * Get the color of a block.
          * @return {string} #RRGGBB string.
          */
-        getColour(): string;
+        getColor(): string;
         /**
          * Get the name of the block style.
          * @return {string} Name of the block style.
@@ -19331,15 +19331,15 @@ declare module "block" {
          */
         getHue(): number | null;
         /**
-         * Change the colour of a block.
-         * @param {number|string} colour HSV hue value (0 to 360), #RRGGBB string,
+         * Change the color of a block.
+         * @param {number|string} color HSV hue value (0 to 360), #RRGGBB string,
          *     or a message reference string pointing to one of those two values.
          */
-        setColour(colour: number | string): void;
+        setColor(color: number | string): void;
         hue_: number | null;
-        colour_: string;
+        color_: string;
         /**
-         * Set the style and colour values of a block.
+         * Set the style and color values of a block.
          * @param {string} blockStyleName Name of the block style.
          */
         setStyle(blockStyleName: string): void;
@@ -19505,12 +19505,12 @@ declare module "block" {
         jsonInit(json: any): void;
         suppressPrefixSuffix: boolean | null;
         /**
-         * Initialize the colour of this block from the JSON description.
+         * Initialize the color of this block from the JSON description.
          * @param {!Object} json Structured data describing the block.
          * @param {string} warningPrefix Warning prefix string identifying block.
          * @private
          */
-        private jsonInitColour_;
+        private jsonInitColor_;
         /**
          * Initialize the style of this block from the JSON description.
          * @param {!Object} json Structured data describing the block.
@@ -20278,7 +20278,7 @@ declare module "renderers/geras/path_object" {
      * used by the renderer.
      * @param {!SVGElement} root The root SVG element.
      * @param {!Theme.BlockStyle} style The style object to use for
-     *     colouring.
+     *     coloring.
      * @param {!ConstantProvider} constants The renderer's constants.
      * @constructor
      * @extends {BasePathObject}
@@ -20312,13 +20312,13 @@ declare module "renderers/geras/path_object" {
          */
         svgPathLight: SVGElement;
         /**
-         * The colour of the dark path on the block in '#RRGGBB' format.
+         * The color of the dark path on the block in '#RRGGBB' format.
          * @type {string}
          * @package
          */
-        colourDark: string;
+        colorDark: string;
         /**
-         * The style object to use when colouring block paths.
+         * The style object to use when coloring block paths.
          * @type {!Theme.BlockStyle}
          * @package
          */
@@ -20340,7 +20340,7 @@ declare module "renderers/geras/path_object" {
         /**
          * @override
          */
-        override applyColour(block: any): void;
+        override applyColor(block: any): void;
         /**
          * @override
          */
@@ -20416,7 +20416,7 @@ declare module "renderers/geras/renderer" {
          * Create a new instance of a renderer path object.
          * @param {!SVGElement} root The root SVG element.
          * @param {!Theme.BlockStyle} style The style object to use for
-         *     colouring.
+         *     coloring.
          * @return {!PathObject} The renderer path object.
          * @package
          * @override
@@ -21017,7 +21017,7 @@ declare module "renderers/zelos/constants" {
         /**
          * @override
          */
-        override CURSOR_COLOUR: string;
+        override CURSOR_COLOR: string;
         /**
          * Radius of the cursor for input and output connections.
          * @type {number}
@@ -21122,7 +21122,7 @@ declare module "renderers/zelos/constants" {
         /**
          * @override
          */
-        override FIELD_DROPDOWN_COLOURED_DIV: boolean;
+        override FIELD_DROPDOWN_COLORED_DIV: boolean;
         /**
          * @override
          */
@@ -21138,15 +21138,15 @@ declare module "renderers/zelos/constants" {
         /**
          * @override
          */
-        override FIELD_COLOUR_FULL_BLOCK: boolean;
+        override FIELD_COLOR_FULL_BLOCK: boolean;
         /**
          * @override
          */
-        override FIELD_COLOUR_DEFAULT_WIDTH: number;
+        override FIELD_COLOR_DEFAULT_WIDTH: number;
         /**
          * @override
          */
-        override FIELD_COLOUR_DEFAULT_HEIGHT: number;
+        override FIELD_COLOR_DEFAULT_HEIGHT: number;
         /**
          * @override
          */
@@ -21157,20 +21157,20 @@ declare module "renderers/zelos/constants" {
          */
         MAX_DYNAMIC_CONNECTION_SHAPE_WIDTH: number;
         /**
-         * The selected glow colour.
+         * The selected glow color.
          * @type {string}
          */
-        SELECTED_GLOW_COLOUR: string;
+        SELECTED_GLOW_COLOR: string;
         /**
          * The size of the selected glow.
          * @type {number}
          */
         SELECTED_GLOW_SIZE: number;
         /**
-         * The replacement glow colour.
+         * The replacement glow color.
          * @type {string}
          */
-        REPLACEMENT_GLOW_COLOUR: string;
+        REPLACEMENT_GLOW_COLOR: string;
         /**
          * The size of the selected glow.
          * @type {number}
@@ -21280,11 +21280,11 @@ declare module "renderers/zelos/constants" {
         /**
          * @override
          */
-        override generateSecondaryColour_(colour: any): any;
+        override generateSecondaryColor_(color: any): any;
         /**
          * @override
          */
-        override generateTertiaryColour_(colour: any): any;
+        override generateTertiaryColor_(color: any): any;
         /**
          * @override
          */
@@ -21303,7 +21303,7 @@ declare module "renderers/zelos/path_object" {
          * used by the renderer.
          * @param {!SVGElement} root The root SVG element.
          * @param {!Theme.BlockStyle} style The style object to use for
-         *     colouring.
+         *     coloring.
          * @param {!ConstantProvider} constants The renderer's constants.
          * @constructor
          * @extends {BasePathObject}
@@ -21350,7 +21350,7 @@ declare module "renderers/zelos/path_object" {
         /**
          * @override
          */
-        override applyColour(block: any): void;
+        override applyColor(block: any): void;
         /**
          * @override
          */
@@ -21663,12 +21663,12 @@ declare module "field_textinput" {
         protected doValueUpdate_(newValue: any): void;
         isDirty_: boolean;
         /**
-         * Updates text field to match the colour/style of the block.
+         * Updates text field to match the color/style of the block.
          * @package
          */
-        applyColour(): void;
+        applyColor(): void;
         /**
-         * Updates the colour of the htmlInput given the current validity of the
+         * Updates the color of the htmlInput given the current validity of the
          * field's value.
          * @protected
          */
@@ -21862,7 +21862,7 @@ declare module "renderers/zelos/marker_svg" {
         /**
          * @override
          */
-        override applyColour_(curNode: any): void;
+        override applyColor_(curNode: any): void;
     }
     import { ASTNode } from "keyboard_nav/ast_node";
     import { WorkspaceSvg } from "workspace_svg";
@@ -21920,7 +21920,7 @@ declare module "renderers/zelos/renderer" {
          * Create a new instance of a renderer path object.
          * @param {!SVGElement} root The root SVG element.
          * @param {!Theme.BlockStyle} style The style object to use for
-         *     colouring.
+         *     coloring.
          * @return {!PathObject} The renderer path object.
          * @package
          * @override
@@ -22707,35 +22707,35 @@ declare module "field_checkbox" {
 
     import { Field } from "field";
 }
-declare module "field_colour" {
-    export class FieldColour extends Field {
+declare module "field_color" {
+    export class FieldColor extends Field {
         /**
-         * Construct a FieldColour from a JSON arg object.
-         * @param {!Object} options A JSON object with options (colour).
-         * @return {!FieldColour} The new field instance.
+         * Construct a FieldColor from a JSON arg object.
+         * @param {!Object} options A JSON object with options (color).
+         * @return {!FieldColor} The new field instance.
          * @package
          * @nocollapse
          */
-        static fromJson(options: any): FieldColour;
+        static fromJson(options: any): FieldColor;
         /**
-         * Class for a colour input field.
+         * Class for a color input field.
          * @param {string=} opt_value The initial value of the field. Should be in
-         *    '#rrggbb' format. Defaults to the first value in the default colour array.
+         *    '#rrggbb' format. Defaults to the first value in the default color array.
          * @param {Function=} opt_validator A function that is called to validate
-         *    changes to the field's value. Takes in a colour string & returns a
-         *    validated colour string ('#rrggbb' format), or null to abort the
+         *    changes to the field's value. Takes in a color string & returns a
+         *    validated color string ('#rrggbb' format), or null to abort the
          *    change.Blockly.
          * @param {Object=} opt_config A map of options used to configure the field.
          *    See the [field creation documentation]{@link
-         *    https://developers.google.com/blockly/guides/create-custom-blocks/fields/built-in-fields/colour}
+         *    https://developers.google.com/blockly/guides/create-custom-blocks/fields/built-in-fields/color}
          *    for a list of properties this parameter supports.
          * @extends {Field}
          * @constructor
-         * @alias Blockly.FieldColour
+         * @alias Blockly.FieldColor
          */
         constructor(opt_value?: string | undefined, opt_validator?: Function | undefined, opt_config?: any | undefined);
         /**
-         * The field's colour picker element.
+         * The field's color picker element.
          * @type {?Element}
          * @private
          */
@@ -22783,11 +22783,11 @@ declare module "field_colour" {
          * @override
          */
         protected override configure_(config: any): void;
-        colours_: Array<string>;
+        colors_: Array<string>;
         titles_: Array<string>;
         columns_: number;
         /**
-         * Create the block UI for this colour field.
+         * Create the block UI for this color field.
          * @package
          */
         initView(): void;
@@ -22796,18 +22796,18 @@ declare module "field_colour" {
         /**
          * @override
          */
-        override applyColour(): void;
+        override applyColor(): void;
         /**
-         * Ensure that the input value is a valid colour.
+         * Ensure that the input value is a valid color.
          * @param {*=} opt_newValue The input value.
-         * @return {?string} A valid colour, or null if invalid.
+         * @return {?string} A valid color, or null if invalid.
          * @protected
          */
         protected doClassValidation_(opt_newValue?: any | undefined): string | null;
         /**
-         * Update the value of this colour field, and update the displayed colour.
+         * Update the value of this color field, and update the displayed color.
          * @param {*} newValue The value to be saved. The default validator guarantees
-         * that this is a colour in '#rrggbb' format.
+         * that this is a color in '#rrggbb' format.
          * @protected
          */
         protected doValueUpdate_(newValue: any): void;
@@ -22818,35 +22818,35 @@ declare module "field_colour" {
          */
         getText(): string;
         /**
-         * Set a custom colour grid for this field.
-         * @param {Array<string>} colours Array of colours for this block,
-         *     or null to use default (FieldColour.COLOURS).
-         * @param {Array<string>=} opt_titles Optional array of colour tooltips,
-         *     or null to use default (FieldColour.TITLES).
-         * @return {!FieldColour} Returns itself (for method chaining).
+         * Set a custom color grid for this field.
+         * @param {Array<string>} colors Array of colors for this block,
+         *     or null to use default (FieldColor.COLORS).
+         * @param {Array<string>=} opt_titles Optional array of color tooltips,
+         *     or null to use default (FieldColor.TITLES).
+         * @return {!FieldColor} Returns itself (for method chaining).
          */
-        setColours(colours: Array<string>, opt_titles?: Array<string> | undefined): FieldColour;
+        setColors(colors: Array<string>, opt_titles?: Array<string> | undefined): FieldColor;
         /**
          * Set a custom grid size for this field.
          * @param {number} columns Number of columns for this block,
-         *     or 0 to use default (FieldColour.COLUMNS).
-         * @return {!FieldColour} Returns itself (for method chaining).
+         *     or 0 to use default (FieldColor.COLUMNS).
+         * @return {!FieldColor} Returns itself (for method chaining).
          */
-        setColumns(columns: number): FieldColour;
+        setColumns(columns: number): FieldColor;
         /**
-         * Create and show the colour field's editor.
+         * Create and show the color field's editor.
          * @protected
          */
         protected showEditor_(): void;
         /**
-         * Handle a click on a colour cell.
+         * Handle a click on a color cell.
          * @param {!MouseEvent} e Mouse event.
          * @private
          */
         private onClick_;
         /**
          * Handle a key down event. Navigate around the grid with the
-         * arrow keys. Enter selects the highlighted colour.
+         * arrow keys. Enter selects the highlighted color.
          * @param {!KeyboardEvent} e Keyboard event.
          * @private
          */
@@ -22859,7 +22859,7 @@ declare module "field_colour" {
          */
         private moveHighlightBy_;
         /**
-         * Handle a mouse move event. Highlight the hovered colour.
+         * Handle a mouse move event. Highlight the hovered color.
          * @param {!MouseEvent} e Mouse event.
          * @private
          */
@@ -22871,7 +22871,7 @@ declare module "field_colour" {
         private onMouseEnter_;
         /**
          * Handle a mouse leave event. Blur the picker and unhighlight
-         * the currently highlighted colour.
+         * the currently highlighted color.
          * @private
          */
         private onMouseLeave_;
@@ -22889,12 +22889,12 @@ declare module "field_colour" {
          */
         private setHighlightedCell_;
         /**
-         * Create a colour picker dropdown editor.
+         * Create a color picker dropdown editor.
          * @private
          */
         private dropdownCreate_;
         /**
-         * Disposes of events and DOM-references belonging to the colour editor.
+         * Disposes of events and DOM-references belonging to the color editor.
          * @private
          */
         private dropdownDispose_;
@@ -22910,7 +22910,7 @@ declare module "field_colour" {
         CURSOR: string;
         /**
          * Used to tell if the field needs to be rendered the next time the block is
-         * rendered. Colour fields are statically sized, and only need to be
+         * rendered. Color fields are statically sized, and only need to be
          * rendered at initialization.
          * @type {boolean}
          * @protected
@@ -22923,8 +22923,8 @@ declare module "field_colour" {
          */
         protected DEFAULT_VALUE: any;
     }
-    export namespace FieldColour {
-        const COLOURS: Array<string>;
+    export namespace FieldColor {
+        const COLORS: Array<string>;
         const TITLES: Array<string>;
         const COLUMNS: number;
     }
@@ -23134,10 +23134,10 @@ declare module "field_dropdown" {
          */
         protected doValueUpdate_(newValue: any): void;
         /**
-         * Updates the dropdown arrow to match the colour/style of the block.
+         * Updates the dropdown arrow to match the color/style of the block.
          * @package
          */
-        applyColour(): void;
+        applyColor(): void;
         /**
          * Draws the border with the correct width.
          * @protected
@@ -24359,7 +24359,7 @@ declare module "generator" {
          * same desiredName have no effect but have the same return value.
          *
          * It is up to the caller to make sure the same desiredName is not
-         * used for different helper functions (e.g. use "colourRandom" and
+         * used for different helper functions (e.g. use "colorRandom" and
          * "listRandom", not "random").  There is no danger of colliding with reserved
          * words, or user-defined variable or procedure names.
          *
@@ -24954,7 +24954,7 @@ declare module "toolbox/toolbox" {
          */
         public clearSelection(): void;
         /**
-         * Updates the category colours and background colour of selected categories.
+         * Updates the category colors and background color of selected categories.
          * @package
          */
         refreshTheme(): void;
@@ -25260,8 +25260,8 @@ declare module "blockly" {
     export const setParentContainer: (newParent: Element) => void;
     /** Aliases. */
     /**
-     * @see colour.hueToHex
-     * @deprecated Use Blockly.utils.colour.hueToHex (September 2021).
+     * @see color.hueToHex
+     * @deprecated Use Blockly.utils.color.hueToHex (September 2021).
      * @alias Blockly.hueToHex
      */
     export const hueToHex: (hue: number) => string;
@@ -25439,7 +25439,7 @@ declare module "blockly" {
     import { Field } from "field";
     import { FieldAngle } from "field_angle";
     import { FieldCheckbox } from "field_checkbox";
-    import { FieldColour } from "field_colour";
+    import { FieldColor } from "field_color";
     import { FieldDropdown } from "field_dropdown";
     import { FieldImage } from "field_image";
     import { FieldLabel } from "field_label";
@@ -25542,7 +25542,7 @@ declare module "blockly" {
     import * as thrasos from "renderers/thrasos/thrasos";
     import * as uiPosition from "positionable_helpers";
     import * as zelos from "renderers/zelos/zelos";
-    export { resizeSvgContentsLocal as resizeSvgContents, ASTNode, BasicCursor, Block, BlocklyOptions, BlockDragger, BlockDragSurfaceSvg, BlockSvg, Blocks, Bubble, BubbleDragger, CollapsibleToolboxCategory, Comment, ComponentManager, Connection, ConnectionType, ConnectionChecker, ConnectionDB, ContextMenu, ContextMenuItems, ContextMenuRegistry, Css, Cursor, DeleteArea, DragTarget, DropDownDiv, Events, Extensions, Field, FieldAngle, FieldCheckbox, FieldColour, FieldDropdown, FieldImage, FieldLabel, FieldLabelSerializable, FieldMultilineInput, FieldNumber, FieldTextInput, FieldVariable, Flyout, FlyoutButton, FlyoutMetricsManager, Generator, Gesture, Grid, HorizontalFlyout, IASTNodeLocation, IASTNodeLocationSvg, IASTNodeLocationWithBlock, IAutoHideable, IBlockDragger, IBoundedElement, IBubble, ICollapsibleToolboxItem, IComponent, IConnectionChecker, IContextMenu, Icon, ICopyable, IDeletable, IDeleteArea, IDragTarget, IDraggable, IFlyout, IKeyboardAccessible, IMetricsManager, IMovable, Input, InsertionMarkerManager, IPositionable, IRegistrable, IRegistrableField, ISelectable, ISelectableToolboxItem, IStyleable, IToolbox, IToolboxItem, Marker, MarkerManager, Menu, MenuItem, MetricsManager, Mutator, Names, Options, Procedures, RenderedConnection, Scrollbar, ScrollbarPair, ShortcutItems, ShortcutRegistry, TabNavigateCursor, Theme, Themes, ThemeManager, Toolbox, ToolboxCategory, ToolboxItem, ToolboxSeparator, Tooltip, Touch, TouchGesture, Trashcan, VariableMap, VariableModel, Variables, VariablesDynamic, VerticalFlyout, Warning, WidgetDiv, Workspace, WorkspaceAudio, WorkspaceComment, WorkspaceCommentSvg, WorkspaceDragSurfaceSvg, WorkspaceDragger, WorkspaceSvg, Xml, ZoomControls, blockAnimations, blockRendering, browserEvents, bumpObjects, clipboard, common, ConnectionType as connectionTypes, constants, dialog, fieldRegistry, geras, inject, inputTypes, minimalist, registry, thrasos, uiPosition, utils, zelos };
+    export { resizeSvgContentsLocal as resizeSvgContents, ASTNode, BasicCursor, Block, BlocklyOptions, BlockDragger, BlockDragSurfaceSvg, BlockSvg, Blocks, Bubble, BubbleDragger, CollapsibleToolboxCategory, Comment, ComponentManager, Connection, ConnectionType, ConnectionChecker, ConnectionDB, ContextMenu, ContextMenuItems, ContextMenuRegistry, Css, Cursor, DeleteArea, DragTarget, DropDownDiv, Events, Extensions, Field, FieldAngle, FieldCheckbox, FieldColor, FieldDropdown, FieldImage, FieldLabel, FieldLabelSerializable, FieldMultilineInput, FieldNumber, FieldTextInput, FieldVariable, Flyout, FlyoutButton, FlyoutMetricsManager, Generator, Gesture, Grid, HorizontalFlyout, IASTNodeLocation, IASTNodeLocationSvg, IASTNodeLocationWithBlock, IAutoHideable, IBlockDragger, IBoundedElement, IBubble, ICollapsibleToolboxItem, IComponent, IConnectionChecker, IContextMenu, Icon, ICopyable, IDeletable, IDeleteArea, IDragTarget, IDraggable, IFlyout, IKeyboardAccessible, IMetricsManager, IMovable, Input, InsertionMarkerManager, IPositionable, IRegistrable, IRegistrableField, ISelectable, ISelectableToolboxItem, IStyleable, IToolbox, IToolboxItem, Marker, MarkerManager, Menu, MenuItem, MetricsManager, Mutator, Names, Options, Procedures, RenderedConnection, Scrollbar, ScrollbarPair, ShortcutItems, ShortcutRegistry, TabNavigateCursor, Theme, Themes, ThemeManager, Toolbox, ToolboxCategory, ToolboxItem, ToolboxSeparator, Tooltip, Touch, TouchGesture, Trashcan, VariableMap, VariableModel, Variables, VariablesDynamic, VerticalFlyout, Warning, WidgetDiv, Workspace, WorkspaceAudio, WorkspaceComment, WorkspaceCommentSvg, WorkspaceDragSurfaceSvg, WorkspaceDragger, WorkspaceSvg, Xml, ZoomControls, blockAnimations, blockRendering, browserEvents, bumpObjects, clipboard, common, ConnectionType as connectionTypes, constants, dialog, fieldRegistry, geras, inject, inputTypes, minimalist, registry, thrasos, uiPosition, utils, zelos };
 }
 declare module "serialization/variables" {
     /**

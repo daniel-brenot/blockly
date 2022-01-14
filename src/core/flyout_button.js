@@ -179,7 +179,7 @@ FlyoutButton.prototype.createDom = function() {
   if (this.isLabel_) {
     this.svgText_ = svgText;
     this.workspace_.getThemeManager().subscribe(
-        this.svgText_, 'flyoutForegroundColour', 'fill');
+        this.svgText_, 'flyoutForegroundColor', 'fill');
   }
 
   const fontSize = style.getComputedStyle(svgText, 'fontSize');

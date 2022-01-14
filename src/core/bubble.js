@@ -814,12 +814,12 @@ Bubble.prototype.renderArrow_ = function() {
 };
 
 /**
- * Change the colour of a bubble.
- * @param {string} hexColour Hex code of colour.
+ * Change the color of a bubble.
+ * @param {string} hexColor Hex code of color.
  */
-Bubble.prototype.setColour = function(hexColour) {
-  this.bubbleBack_.setAttribute('fill', hexColour);
-  this.bubbleArrow_.setAttribute('fill', hexColour);
+Bubble.prototype.setColor = function(hexColor) {
+  this.bubbleBack_.setAttribute('fill', hexColor);
+  this.bubbleArrow_.setAttribute('fill', hexColor);
 };
 
 /**

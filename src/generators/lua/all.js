@@ -13,7 +13,7 @@
 
 goog.module('Blockly.Lua.all');
 
-goog.require('Blockly.Lua.colour');
+goog.require('Blockly.Lua.color');
 goog.require('Blockly.Lua.lists');
 goog.require('Blockly.Lua.logic');
 goog.require('Blockly.Lua.loops');

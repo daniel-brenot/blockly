@@ -247,7 +247,7 @@ BlockSvg.prototype.initSvg = function() {
   for (let i = 0; i < icons.length; i++) {
     icons[i].createIcon();
   }
-  this.applyColour();
+  this.applyColor();
   this.pathObject.updateMovable(this.isMovable());
   const svg = this.getSvgRoot();
   if (!this.workspace.options.readOnly && !this.eventsInit_ && svg) {
@@ -261,19 +261,19 @@ BlockSvg.prototype.initSvg = function() {
 };
 
 /**
- * Get the secondary colour of a block.
+ * Get the secondary color of a block.
  * @return {?string} #RRGGBB string.
  */
-BlockSvg.prototype.getColourSecondary = function() {
-  return this.style.colourSecondary;
+BlockSvg.prototype.getColorSecondary = function() {
+  return this.style.colorSecondary;
 };
 
 /**
- * Get the tertiary colour of a block.
+ * Get the tertiary color of a block.
  * @return {?string} #RRGGBB string.
  */
-BlockSvg.prototype.getColourTertiary = function() {
-  return this.style.colourTertiary;
+BlockSvg.prototype.getColorTertiary = function() {
+  return this.style.colorTertiary;
 };
 
 /**
@@ -404,7 +404,7 @@ BlockSvg.prototype.setParent = function(newParent) {
     this.translate(oldXY.x, oldXY.y);
   }
 
-  this.applyColour();
+  this.applyColor();
 };
 
 /**
@@ -848,7 +848,7 @@ BlockSvg.prototype.setEditable = function(editable) {
  */
 BlockSvg.prototype.setShadow = function(shadow) {
   BlockSvg.superClass_.setShadow.call(this, shadow);
-  this.applyColour();
+  this.applyColor();
 };
 
 /**
@@ -863,8 +863,8 @@ BlockSvg.prototype.setInsertionMarker = function(insertionMarker) {
   }
   this.isInsertionMarker_ = insertionMarker;
   if (this.isInsertionMarker_) {
-    this.setColour(
-        this.workspace.getRenderer().getConstants().INSERTION_MARKER_COLOUR);
+    this.setColor(
+        this.workspace.getRenderer().getConstants().INSERTION_MARKER_COLOR);
     this.pathObject.updateInsertionMarker(true);
   }
 };
@@ -976,20 +976,20 @@ BlockSvg.prototype.toCopyData = function() {
 };
 
 /**
- * Updates the colour of the block to match the block's state.
+ * Updates the color of the block to match the block's state.
  * @package
  */
-BlockSvg.prototype.applyColour = function() {
-  this.pathObject.applyColour(this);
+BlockSvg.prototype.applyColor = function() {
+  this.pathObject.applyColor(this);
 
   const icons = this.getIcons();
   for (let i = 0; i < icons.length; i++) {
-    icons[i].applyColour();
+    icons[i].applyColor();
   }
 
   for (let x = 0, input; (input = this.inputList[x]); x++) {
     for (let y = 0, field; (field = input.fieldRow[y]); y++) {
-      field.applyColour();
+      field.applyColor();
     }
   }
 };
@@ -1001,7 +1001,7 @@ BlockSvg.prototype.applyColour = function() {
  */
 BlockSvg.prototype.updateDisabled = function() {
   const children = this.getChildren(false);
-  this.applyColour();
+  this.applyColor();
   if (this.isCollapsed()) {
     return;
   }
@@ -1221,32 +1221,32 @@ BlockSvg.prototype.setDeleteStyle = function(enable) {
 // Overrides of functions on Blockly.Block that take into account whether the
 // block has been rendered.
 /**
- * Get the colour of a block.
+ * Get the color of a block.
  * @return {string} #RRGGBB string.
  */
-BlockSvg.prototype.getColour = function() {
-  return this.style.colourPrimary;
+BlockSvg.prototype.getColor = function() {
+  return this.style.colorPrimary;
 };
 
 /**
- * Change the colour of a block.
- * @param {number|string} colour HSV hue value, or #RRGGBB string.
+ * Change the color of a block.
+ * @param {number|string} color HSV hue value, or #RRGGBB string.
  */
-BlockSvg.prototype.setColour = function(colour) {
-  BlockSvg.superClass_.setColour.call(this, colour);
+BlockSvg.prototype.setColor = function(color) {
+  BlockSvg.superClass_.setColor.call(this, color);
   const styleObj =
-      this.workspace.getRenderer().getConstants().getBlockStyleForColour(
-          this.colour_);
+      this.workspace.getRenderer().getConstants().getBlockStyleForColor(
+          this.color_);
 
   this.pathObject.setStyle(styleObj.style);
   this.style = styleObj.style;
   this.styleName_ = styleObj.name;
 
-  this.applyColour();
+  this.applyColor();
 };
 
 /**
- * Set the style and colour values of a block.
+ * Set the style and color values of a block.
  * @param {string} blockStyleName Name of the block style.
  * @throws {Error} if the block style does not exist.
  */
@@ -1258,11 +1258,11 @@ BlockSvg.prototype.setStyle = function(blockStyleName) {
   if (blockStyle) {
     this.hat = blockStyle.hat;
     this.pathObject.setStyle(blockStyle);
-    // Set colour to match Block.
-    this.colour_ = blockStyle.colourPrimary;
+    // Set color to match Block.
+    this.color_ = blockStyle.colorPrimary;
     this.style = blockStyle;
 
-    this.applyColour();
+    this.applyColor();
   } else {
     throw Error('Invalid style name: ' + blockStyleName);
   }

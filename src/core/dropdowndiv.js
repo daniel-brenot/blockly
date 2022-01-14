@@ -248,13 +248,13 @@ DropDownDiv.clearContent = function() {
 };
 
 /**
- * Set the colour for the drop-down.
- * @param {string} backgroundColour Any CSS colour for the background.
- * @param {string} borderColour Any CSS colour for the border.
+ * Set the color for the drop-down.
+ * @param {string} backgroundColor Any CSS color for the background.
+ * @param {string} borderColor Any CSS color for the border.
  */
-DropDownDiv.setColour = function(backgroundColour, borderColour) {
-  DropDownDiv.DIV_.style.backgroundColor = backgroundColour;
-  DropDownDiv.DIV_.style.borderColor = borderColour;
+DropDownDiv.setColor = function(backgroundColor, borderColor) {
+  DropDownDiv.DIV_.style.backgroundColor = backgroundColor;
+  DropDownDiv.DIV_.style.borderColor = borderColor;
 };
 
 /**

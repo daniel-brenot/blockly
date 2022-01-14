@@ -297,7 +297,7 @@ Comment.prototype.createEditableBubble_ = function() {
   // Expose this comment's block's ID on its top-level SVG group.
   this.bubble_.setSvgId(this.block_.id);
   this.bubble_.registerResizeEvent(this.onBubbleResize_.bind(this));
-  this.applyColour();
+  this.applyColor();
 };
 
 /**
@@ -311,7 +311,7 @@ Comment.prototype.createNonEditableBubble_ = function() {
   this.bubble_ = Bubble.createNonEditableBubble(
       this.paragraphElement_, /** @type {!BlockSvg} */ (this.block_),
       /** @type {!Coordinate} */ (this.iconXY_));
-  this.applyColour();
+  this.applyColor();
 };
 
 /**

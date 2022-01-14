@@ -181,7 +181,7 @@ const createMainWorkspace = function(
   }
   // Register the workspace svg as a UI component.
   mainWorkspace.getThemeManager().subscribe(
-      svg, 'workspaceBackgroundColour', 'background-color');
+      svg, 'workspaceBackgroundColor', 'background-color');
 
   // A null translation will also apply the correct initial scale.
   mainWorkspace.translate(0, 0);

@@ -20,7 +20,7 @@ goog.module('Blockly.zelos.ConstantProvider');
 const dom = goog.require('Blockly.utils.dom');
 const object = goog.require('Blockly.utils.object');
 const svgPaths = goog.require('Blockly.utils.svgPaths');
-const utilsColour = goog.require('Blockly.utils.colour');
+const utilsColor = goog.require('Blockly.utils.color');
 const {ConnectionType} = goog.require('Blockly.ConnectionType');
 const {ConstantProvider: BaseConstantProvider} = goog.require('Blockly.blockRendering.ConstantProvider');
 const {Svg} = goog.require('Blockly.utils.Svg');
@@ -167,7 +167,7 @@ const ConstantProvider = function() {
   /**
    * @override
    */
-  this.CURSOR_COLOUR = '#ffa200';
+  this.CURSOR_COLOR = '#ffa200';
 
   /**
    * Radius of the cursor for input and output connections.
@@ -288,7 +288,7 @@ const ConstantProvider = function() {
   /**
    * @override
    */
-  this.FIELD_DROPDOWN_COLOURED_DIV = true;
+  this.FIELD_DROPDOWN_COLORED_DIV = true;
 
   /**
    * @override
@@ -308,17 +308,17 @@ const ConstantProvider = function() {
   /**
    * @override
    */
-  this.FIELD_COLOUR_FULL_BLOCK = true;
+  this.FIELD_COLOR_FULL_BLOCK = true;
 
   /**
    * @override
    */
-  this.FIELD_COLOUR_DEFAULT_WIDTH = 2 * this.GRID_UNIT;
+  this.FIELD_COLOR_DEFAULT_WIDTH = 2 * this.GRID_UNIT;
 
   /**
    * @override
    */
-  this.FIELD_COLOUR_DEFAULT_HEIGHT = 4 * this.GRID_UNIT;
+  this.FIELD_COLOR_DEFAULT_HEIGHT = 4 * this.GRID_UNIT;
 
   /**
    * @override
@@ -332,10 +332,10 @@ const ConstantProvider = function() {
   this.MAX_DYNAMIC_CONNECTION_SHAPE_WIDTH = 12 * this.GRID_UNIT;
 
   /**
-   * The selected glow colour.
+   * The selected glow color.
    * @type {string}
    */
-  this.SELECTED_GLOW_COLOUR = '#fff200';
+  this.SELECTED_GLOW_COLOR = '#fff200';
 
   /**
    * The size of the selected glow.
@@ -344,10 +344,10 @@ const ConstantProvider = function() {
   this.SELECTED_GLOW_SIZE = 0.5;
 
   /**
-   * The replacement glow colour.
+   * The replacement glow color.
    * @type {string}
    */
-  this.REPLACEMENT_GLOW_COLOUR = '#fff200';
+  this.REPLACEMENT_GLOW_COLOR = '#fff200';
 
   /**
    * The size of the selected glow.
@@ -417,15 +417,15 @@ ConstantProvider.prototype.init = function() {
 ConstantProvider.prototype.setDynamicProperties_ = function(theme) {
   ConstantProvider.superClass_.setDynamicProperties_.call(this, theme);
 
-  this.SELECTED_GLOW_COLOUR = theme.getComponentStyle('selectedGlowColour') ||
-      this.SELECTED_GLOW_COLOUR;
+  this.SELECTED_GLOW_COLOR = theme.getComponentStyle('selectedGlowColor') ||
+      this.SELECTED_GLOW_COLOR;
   const selectedGlowSize = Number(theme.getComponentStyle('selectedGlowSize'));
   this.SELECTED_GLOW_SIZE = selectedGlowSize && !isNaN(selectedGlowSize) ?
       selectedGlowSize :
       this.SELECTED_GLOW_SIZE;
-  this.REPLACEMENT_GLOW_COLOUR =
-      theme.getComponentStyle('replacementGlowColour') ||
-      this.REPLACEMENT_GLOW_COLOUR;
+  this.REPLACEMENT_GLOW_COLOR =
+      theme.getComponentStyle('replacementGlowColor') ||
+      this.REPLACEMENT_GLOW_COLOR;
   const replacementGlowSize =
       Number(theme.getComponentStyle('replacementGlowSize'));
   this.REPLACEMENT_GLOW_SIZE =
@@ -800,15 +800,15 @@ ConstantProvider.prototype.makeInsideCorners = function() {
 /**
  * @override
  */
-ConstantProvider.prototype.generateSecondaryColour_ = function(colour) {
-  return utilsColour.blend('#000', colour, 0.15) || colour;
+ConstantProvider.prototype.generateSecondaryColor_ = function(color) {
+  return utilsColor.blend('#000', color, 0.15) || color;
 };
 
 /**
  * @override
  */
-ConstantProvider.prototype.generateTertiaryColour_ = function(colour) {
-  return utilsColour.blend('#000', colour, 0.25) || colour;
+ConstantProvider.prototype.generateTertiaryColor_ = function(color) {
+  return utilsColor.blend('#000', color, 0.25) || color;
 };
 
 /**
@@ -847,7 +847,7 @@ ConstantProvider.prototype.createDom = function(svg, tagName, selector) {
   // Color the highlight
   dom.createSvgElement(
       Svg.FEFLOOD, {
-        'flood-color': this.SELECTED_GLOW_COLOUR,
+        'flood-color': this.SELECTED_GLOW_COLOR,
         'flood-opacity': 1,
         'result': 'outColor',
       },
@@ -888,7 +888,7 @@ ConstantProvider.prototype.createDom = function(svg, tagName, selector) {
   // Color the highlight
   dom.createSvgElement(
       Svg.FEFLOOD, {
-        'flood-color': this.REPLACEMENT_GLOW_COLOUR,
+        'flood-color': this.REPLACEMENT_GLOW_COLOR,
         'flood-opacity': 1,
         'result': 'outColor',
       },
@@ -928,7 +928,7 @@ ConstantProvider.prototype.getCSS_ = function(selector) {
     selector + ' .blocklyText {', 'fill: #fff;', '}',
     selector + ' .blocklyNonEditableText>rect:not(.blocklyDropdownRect),',
     selector + ' .blocklyEditableText>rect:not(.blocklyDropdownRect) {',
-    'fill: ' + this.FIELD_BORDER_RECT_COLOUR + ';', '}',
+    'fill: ' + this.FIELD_BORDER_RECT_COLOR + ';', '}',
     selector + ' .blocklyNonEditableText>text,',
     selector + ' .blocklyEditableText>text,',
     selector + ' .blocklyNonEditableText>g>text,',
@@ -963,7 +963,7 @@ ConstantProvider.prototype.getCSS_ = function(selector) {
 
     // Connection highlight.
     selector + ' .blocklyHighlightedConnectionPath {',
-    'stroke: ' + this.SELECTED_GLOW_COLOUR + ';', '}',
+    'stroke: ' + this.SELECTED_GLOW_COLOR + ';', '}',
 
     // Disabled outline paths.
     selector + ' .blocklyDisabled > .blocklyOutlinePath {',

@@ -100,7 +100,7 @@ IToolbox.prototype.handleToolboxItemResize;
 IToolbox.prototype.clearSelection;
 
 /**
- * Updates the category colours and background colour of selected categories.
+ * Updates the category colors and background color of selected categories.
  * @return {void}
  */
 IToolbox.prototype.refreshTheme;

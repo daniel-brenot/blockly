@@ -50,11 +50,11 @@ const numberButtonClickHandler = function(button) {
 };
 exports.onCreateVariableButtonClick_Number = numberButtonClickHandler;
 
-const colourButtonClickHandler = function(button) {
+const colorButtonClickHandler = function(button) {
   Variables.createVariableButtonHandler(
-      button.getTargetWorkspace(), undefined, 'Colour');
+      button.getTargetWorkspace(), undefined, 'Color');
 };
-exports.onCreateVariableButtonClick_Colour = colourButtonClickHandler;
+exports.onCreateVariableButtonClick_Color = colorButtonClickHandler;
 
 /**
  * Construct the elements (blocks and button) required by the flyout for the
@@ -74,8 +74,8 @@ const flyoutCategory = function(workspace) {
   button.setAttribute('callbackKey', 'CREATE_VARIABLE_NUMBER');
   xmlList.push(button);
   button = document.createElement('button');
-  button.setAttribute('text', Msg['NEW_COLOUR_VARIABLE']);
-  button.setAttribute('callbackKey', 'CREATE_VARIABLE_COLOUR');
+  button.setAttribute('text', Msg['NEW_COLOR_VARIABLE']);
+  button.setAttribute('callbackKey', 'CREATE_VARIABLE_COLOR');
   xmlList.push(button);
 
   workspace.registerButtonCallback(
@@ -83,7 +83,7 @@ const flyoutCategory = function(workspace) {
   workspace.registerButtonCallback(
       'CREATE_VARIABLE_NUMBER', numberButtonClickHandler);
   workspace.registerButtonCallback(
-      'CREATE_VARIABLE_COLOUR', colourButtonClickHandler);
+      'CREATE_VARIABLE_COLOR', colorButtonClickHandler);
 
 
   const blockList = flyoutCategoryBlocks(workspace);

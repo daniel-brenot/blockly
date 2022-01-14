@@ -5,24 +5,24 @@
  */
 
 /**
- * @fileoverview Generating JavaScript for colour blocks.
+ * @fileoverview Generating JavaScript for color blocks.
  */
 'use strict';
 
-goog.module('Blockly.JavaScript.colour');
+goog.module('Blockly.JavaScript.color');
 
 const JavaScript = goog.require('Blockly.JavaScript');
 
 
-JavaScript['colour_picker'] = function(block) {
-  // Colour picker.
-  const code = JavaScript.quote_(block.getFieldValue('COLOUR'));
+JavaScript['color_picker'] = function(block) {
+  // Color picker.
+  const code = JavaScript.quote_(block.getFieldValue('COLOR'));
   return [code, JavaScript.ORDER_ATOMIC];
 };
 
-JavaScript['colour_random'] = function(block) {
-  // Generate a random colour.
-  const functionName = JavaScript.provideFunction_('colourRandom', [
+JavaScript['color_random'] = function(block) {
+  // Generate a random color.
+  const functionName = JavaScript.provideFunction_('colorRandom', [
     'function ' + JavaScript.FUNCTION_NAME_PLACEHOLDER_ + '() {',
     '  var num = Math.floor(Math.random() * Math.pow(2, 24));',
     '  return \'#\' + (\'00000\' + num.toString(16)).substr(-6);', '}'
@@ -31,14 +31,14 @@ JavaScript['colour_random'] = function(block) {
   return [code, JavaScript.ORDER_FUNCTION_CALL];
 };
 
-JavaScript['colour_rgb'] = function(block) {
-  // Compose a colour from RGB components expressed as percentages.
+JavaScript['color_rgb'] = function(block) {
+  // Compose a color from RGB components expressed as percentages.
   const red = JavaScript.valueToCode(block, 'RED', JavaScript.ORDER_NONE) || 0;
   const green =
       JavaScript.valueToCode(block, 'GREEN', JavaScript.ORDER_NONE) || 0;
   const blue =
       JavaScript.valueToCode(block, 'BLUE', JavaScript.ORDER_NONE) || 0;
-  const functionName = JavaScript.provideFunction_('colourRgb', [
+  const functionName = JavaScript.provideFunction_('colorRgb', [
     'function ' + JavaScript.FUNCTION_NAME_PLACEHOLDER_ + '(r, g, b) {',
     '  r = Math.max(Math.min(Number(r), 100), 0) * 2.55;',
     '  g = Math.max(Math.min(Number(g), 100), 0) * 2.55;',
@@ -52,15 +52,15 @@ JavaScript['colour_rgb'] = function(block) {
   return [code, JavaScript.ORDER_FUNCTION_CALL];
 };
 
-JavaScript['colour_blend'] = function(block) {
-  // Blend two colours together.
-  const c1 = JavaScript.valueToCode(block, 'COLOUR1', JavaScript.ORDER_NONE) ||
+JavaScript['color_blend'] = function(block) {
+  // Blend two colors together.
+  const c1 = JavaScript.valueToCode(block, 'COLOR1', JavaScript.ORDER_NONE) ||
       '\'#000000\'';
-  const c2 = JavaScript.valueToCode(block, 'COLOUR2', JavaScript.ORDER_NONE) ||
+  const c2 = JavaScript.valueToCode(block, 'COLOR2', JavaScript.ORDER_NONE) ||
       '\'#000000\'';
   const ratio =
       JavaScript.valueToCode(block, 'RATIO', JavaScript.ORDER_NONE) || 0.5;
-  const functionName = JavaScript.provideFunction_('colourBlend', [
+  const functionName = JavaScript.provideFunction_('colorBlend', [
     'function ' + JavaScript.FUNCTION_NAME_PLACEHOLDER_ + '(c1, c2, ratio) {',
     '  ratio = Math.max(Math.min(Number(ratio), 1), 0);',
     '  var r1 = parseInt(c1.substring(1, 3), 16);',

@@ -207,10 +207,10 @@ Grid.createDom = function(rnd, gridOptions, defs) {
       defs);
   if (gridOptions['length'] > 0 && gridOptions['spacing'] > 0) {
     dom.createSvgElement(
-        Svg.LINE, {'stroke': gridOptions['colour']}, gridPattern);
+        Svg.LINE, {'stroke': gridOptions['color']}, gridPattern);
     if (gridOptions['length'] > 1) {
       dom.createSvgElement(
-          Svg.LINE, {'stroke': gridOptions['colour']}, gridPattern);
+          Svg.LINE, {'stroke': gridOptions['color']}, gridPattern);
     }
     // x1, y1, x1, x2 properties will be set later in update.
   } else {

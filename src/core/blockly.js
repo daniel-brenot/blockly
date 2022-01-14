@@ -35,7 +35,7 @@ const blockRendering = goog.require('Blockly.blockRendering');
 const browserEvents = goog.require('Blockly.browserEvents');
 const bumpObjects = goog.require('Blockly.bumpObjects');
 const clipboard = goog.require('Blockly.clipboard');
-const colour = goog.require('Blockly.utils.colour');
+const color = goog.require('Blockly.utils.color');
 const common = goog.require('Blockly.common');
 const constants = goog.require('Blockly.constants');
 const deprecation = goog.require('Blockly.utils.deprecation');
@@ -82,7 +82,7 @@ const {DragTarget} = goog.require('Blockly.DragTarget');
 const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
 const {FieldAngle} = goog.require('Blockly.FieldAngle');
 const {FieldCheckbox} = goog.require('Blockly.FieldCheckbox');
-const {FieldColour} = goog.require('Blockly.FieldColour');
+const {FieldColor} = goog.require('Blockly.FieldColor');
 const {FieldDropdown} = goog.require('Blockly.FieldDropdown');
 const {FieldImage} = goog.require('Blockly.FieldImage');
 const {FieldLabelSerializable} = goog.require('Blockly.FieldLabelSerializable');
@@ -445,7 +445,7 @@ Object.defineProperties(exports, {
     },
   },
   /**
-   * The richness of block colours, regardless of the hue.
+   * The richness of block colors, regardless of the hue.
    * Must be in the range of 0 (inclusive) to 1 (exclusive).
    * @name Blockly.HSV_SATURATION
    * @type {number}
@@ -453,14 +453,14 @@ Object.defineProperties(exports, {
    */
   HSV_SATURATION: {
     get: function() {
-      return utils.colour.getHsvSaturation();
+      return utils.color.getHsvSaturation();
     },
     set: function(newValue) {
-      utils.colour.setHsvSaturation(newValue);
+      utils.color.setHsvSaturation(newValue);
     },
   },
   /**
-   * The intensity of block colours, regardless of the hue.
+   * The intensity of block colors, regardless of the hue.
    * Must be in the range of 0 (inclusive) to 1 (exclusive).
    * @name Blockly.HSV_VALUE
    * @type {number}
@@ -468,10 +468,10 @@ Object.defineProperties(exports, {
    */
   HSV_VALUE: {
     get: function() {
-      return utils.colour.getHsvValue();
+      return utils.color.getHsvValue();
     },
     set: function(newValue) {
-      utils.colour.setHsvValue(newValue);
+      utils.color.setHsvValue(newValue);
     },
   },
 });
@@ -566,17 +566,17 @@ exports.isNumber = isNumber;
 
 /**
  * Convert a hue (HSV model) into an RGB hex triplet.
- * @param {number} hue Hue on a colour wheel (0-360).
+ * @param {number} hue Hue on a color wheel (0-360).
  * @return {string} RGB code, e.g. '#5ba65b'.
- * @deprecated Use Blockly.utils.colour.hueToHex(). (2021 December)
- * @see Blockly.utils.colour.hueToHex
+ * @deprecated Use Blockly.utils.color.hueToHex(). (2021 December)
+ * @see Blockly.utils.color.hueToHex
  * @alias Blockly.hueToHex
  */
 const hueToHex = function(hue) {
   deprecation.warn(
       'Blockly.hueToHex', 'December 2021', 'December 2022',
-      'Blockly.utils.colour.hueToHex');
-  return colour.hueToHex(hue);
+      'Blockly.utils.color.hueToHex');
+  return color.hueToHex(hue);
 };
 exports.hueToHex = hueToHex;
 
@@ -737,7 +737,7 @@ exports.Extensions = Extensions;
 exports.Field = Field;
 exports.FieldAngle = FieldAngle;
 exports.FieldCheckbox = FieldCheckbox;
-exports.FieldColour = FieldColour;
+exports.FieldColor = FieldColor;
 exports.FieldDropdown = FieldDropdown;
 exports.FieldImage = FieldImage;
 exports.FieldLabel = FieldLabel;

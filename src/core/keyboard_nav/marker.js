@@ -31,10 +31,10 @@ const {MarkerSvg} = goog.requireType('Blockly.blockRendering.MarkerSvg');
  */
 const Marker = function() {
   /**
-   * The colour of the marker.
+   * The color of the marker.
    * @type {?string}
    */
-  this.colour = null;
+  this.color = null;
 
   /**
    * The current location of the marker.

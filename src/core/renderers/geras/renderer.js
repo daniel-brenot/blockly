@@ -110,7 +110,7 @@ Renderer.prototype.makeDrawer_ = function(block, info) {
  * Create a new instance of a renderer path object.
  * @param {!SVGElement} root The root SVG element.
  * @param {!Theme.BlockStyle} style The style object to use for
- *     colouring.
+ *     coloring.
  * @return {!PathObject} The renderer path object.
  * @package
  * @override

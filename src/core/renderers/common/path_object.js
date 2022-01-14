@@ -35,7 +35,7 @@ const {Theme} = goog.requireType('Blockly.Theme');
  * used by the renderer.
  * @param {!SVGElement} root The root SVG element.
  * @param {!Theme.BlockStyle} style The style object to use for
- *     colouring.
+ *     coloring.
  * @param {!ConstantProvider} constants The renderer's
  *     constants.
  * @constructor
@@ -62,7 +62,7 @@ const PathObject = function(root, style, constants) {
       dom.createSvgElement(Svg.PATH, {'class': 'blocklyPath'}, this.svgRoot);
 
   /**
-   * The style object to use when colouring block paths.
+   * The style object to use when coloring block paths.
    * @type {!Theme.BlockStyle}
    * @package
    */
@@ -140,14 +140,14 @@ PathObject.prototype.setMarkerSvg = function(markerSvg) {
 };
 
 /**
- * Apply the stored colours to the block's path, taking into account whether
+ * Apply the stored colors to the block's path, taking into account whether
  * the paths belong to a shadow block.
  * @param {!Block} block The source block.
  * @package
  */
-PathObject.prototype.applyColour = function(block) {
-  this.svgPath.setAttribute('stroke', this.style.colourTertiary);
-  this.svgPath.setAttribute('fill', this.style.colourPrimary);
+PathObject.prototype.applyColor = function(block) {
+  this.svgPath.setAttribute('stroke', this.style.colorTertiary);
+  this.svgPath.setAttribute('fill', this.style.colorPrimary);
 
   this.updateShadow_(block.isShadow());
   this.updateDisabled_(!block.isEnabled() || block.getInheritedDisabled());
@@ -200,7 +200,7 @@ PathObject.prototype.updateHighlighted = function(enable) {
 PathObject.prototype.updateShadow_ = function(shadow) {
   if (shadow) {
     this.svgPath.setAttribute('stroke', 'none');
-    this.svgPath.setAttribute('fill', this.style.colourSecondary);
+    this.svgPath.setAttribute('fill', this.style.colorSecondary);
   }
 };
 

@@ -13,7 +13,7 @@
 
 goog.module('Blockly.Dart.all');
 
-goog.require('Blockly.Dart.colour');
+goog.require('Blockly.Dart.color');
 goog.require('Blockly.Dart.lists');
 goog.require('Blockly.Dart.logic');
 goog.require('Blockly.Dart.loops');

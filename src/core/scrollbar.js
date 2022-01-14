@@ -602,7 +602,7 @@ Scrollbar.prototype.createDom_ = function(opt_class) {
       Svg.RECT, {'class': 'blocklyScrollbarHandle', 'rx': radius, 'ry': radius},
       this.svgGroup_);
   this.workspace_.getThemeManager().subscribe(
-      this.svgHandle_, 'scrollbarColour', 'fill');
+      this.svgHandle_, 'scrollbarColor', 'fill');
   this.workspace_.getThemeManager().subscribe(
       this.svgHandle_, 'scrollbarOpacity', 'fill-opacity');
   dom.insertAfter(this.outerSvg_, this.workspace_.getParentSvg());

@@ -105,7 +105,7 @@ exports.ButtonOrLabelInfo = ButtonOrLabelInfo;
  *            contents:!Array<!ToolboxItemInfo>,
  *            id:(string|undefined),
  *            categorystyle:(string|undefined),
- *            colour:(string|undefined),
+ *            color:(string|undefined),
  *            cssconfig:(!ToolboxCategory.CssConfig|undefined),
  *            hidden:(string|undefined)
  *          }}
@@ -121,7 +121,7 @@ exports.StaticCategoryInfo = StaticCategoryInfo;
  *            custom:string,
  *            id:(string|undefined),
  *            categorystyle:(string|undefined),
- *            colour:(string|undefined),
+ *            color:(string|undefined),
  *            cssconfig:(!ToolboxCategory.CssConfig|undefined),
  *            hidden:(string|undefined)
  *          }}

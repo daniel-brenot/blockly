@@ -12,7 +12,7 @@
 
 goog.module('Blockly.blocks.all');
 
-goog.require('Blockly.blocks.colour');
+goog.require('Blockly.blocks.color');
 goog.require('Blockly.blocks.lists');
 goog.require('Blockly.blocks.logic');
 goog.require('Blockly.blocks.loops');

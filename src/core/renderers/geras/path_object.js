@@ -16,7 +16,7 @@
  */
 goog.module('Blockly.geras.PathObject');
 
-const colour = goog.require('Blockly.utils.colour');
+const color = goog.require('Blockly.utils.color');
 const dom = goog.require('Blockly.utils.dom');
 const object = goog.require('Blockly.utils.object');
 /* eslint-disable-next-line no-unused-vars */
@@ -32,7 +32,7 @@ const {Theme} = goog.requireType('Blockly.Theme');
  * used by the renderer.
  * @param {!SVGElement} root The root SVG element.
  * @param {!Theme.BlockStyle} style The style object to use for
- *     colouring.
+ *     coloring.
  * @param {!ConstantProvider} constants The renderer's constants.
  * @constructor
  * @extends {BasePathObject}
@@ -77,14 +77,14 @@ const PathObject = function(root, style, constants) {
       Svg.PATH, {'class': 'blocklyPathLight'}, this.svgRoot);
 
   /**
-   * The colour of the dark path on the block in '#RRGGBB' format.
+   * The color of the dark path on the block in '#RRGGBB' format.
    * @type {string}
    * @package
    */
-  this.colourDark = '#000000';
+  this.colorDark = '#000000';
 
   /**
-   * The style object to use when colouring block paths.
+   * The style object to use when coloring block paths.
    * @type {!Theme.BlockStyle}
    * @package
    */
@@ -122,13 +122,13 @@ PathObject.prototype.flipRTL = function() {
 /**
  * @override
  */
-PathObject.prototype.applyColour = function(block) {
+PathObject.prototype.applyColor = function(block) {
   this.svgPathLight.style.display = '';
   this.svgPathDark.style.display = '';
-  this.svgPathLight.setAttribute('stroke', this.style.colourTertiary);
-  this.svgPathDark.setAttribute('fill', this.colourDark);
+  this.svgPathLight.setAttribute('stroke', this.style.colorTertiary);
+  this.svgPathDark.setAttribute('fill', this.colorDark);
 
-  PathObject.superClass_.applyColour.call(this, block);
+  PathObject.superClass_.applyColor.call(this, block);
 
   this.svgPath.setAttribute('stroke', 'none');
 };
@@ -138,8 +138,8 @@ PathObject.prototype.applyColour = function(block) {
  */
 PathObject.prototype.setStyle = function(blockStyle) {
   this.style = blockStyle;
-  this.colourDark =
-      colour.blend('#000', this.style.colourPrimary, 0.2) || this.colourDark;
+  this.colorDark =
+      color.blend('#000', this.style.colorPrimary, 0.2) || this.colorDark;
 };
 
 /**
@@ -162,9 +162,9 @@ PathObject.prototype.updateHighlighted = function(highlighted) {
 PathObject.prototype.updateShadow_ = function(shadow) {
   if (shadow) {
     this.svgPathLight.style.display = 'none';
-    this.svgPathDark.setAttribute('fill', this.style.colourSecondary);
+    this.svgPathDark.setAttribute('fill', this.style.colorSecondary);
     this.svgPath.setAttribute('stroke', 'none');
-    this.svgPath.setAttribute('fill', this.style.colourSecondary);
+    this.svgPath.setAttribute('fill', this.style.colorSecondary);
   }
 };
 

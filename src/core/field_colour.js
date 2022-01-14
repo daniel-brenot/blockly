@@ -5,20 +5,20 @@
  */
 
 /**
- * @fileoverview Colour input field.
+ * @fileoverview Color input field.
  */
 'use strict';
 
 /**
- * Colour input field.
+ * Color input field.
  * @class
  */
-goog.module('Blockly.FieldColour');
+goog.module('Blockly.FieldColor');
 
 const Css = goog.require('Blockly.Css');
 const aria = goog.require('Blockly.utils.aria');
 const browserEvents = goog.require('Blockly.browserEvents');
-const colour = goog.require('Blockly.utils.colour');
+const color = goog.require('Blockly.utils.color');
 const dom = goog.require('Blockly.utils.dom');
 const fieldRegistry = goog.require('Blockly.fieldRegistry');
 const idGenerator = goog.require('Blockly.utils.idGenerator');
@@ -32,27 +32,27 @@ goog.require('Blockly.Events.BlockChange');
 
 
 /**
- * Class for a colour input field.
+ * Class for a color input field.
  * @param {string=} opt_value The initial value of the field. Should be in
- *    '#rrggbb' format. Defaults to the first value in the default colour array.
+ *    '#rrggbb' format. Defaults to the first value in the default color array.
  * @param {Function=} opt_validator A function that is called to validate
- *    changes to the field's value. Takes in a colour string & returns a
- *    validated colour string ('#rrggbb' format), or null to abort the
+ *    changes to the field's value. Takes in a color string & returns a
+ *    validated color string ('#rrggbb' format), or null to abort the
  *    change.Blockly.
  * @param {Object=} opt_config A map of options used to configure the field.
  *    See the [field creation documentation]{@link
- *    https://developers.google.com/blockly/guides/create-custom-blocks/fields/built-in-fields/colour}
+ *    https://developers.google.com/blockly/guides/create-custom-blocks/fields/built-in-fields/color}
  *    for a list of properties this parameter supports.
  * @extends {Field}
  * @constructor
- * @alias Blockly.FieldColour
+ * @alias Blockly.FieldColor
  */
-const FieldColour = function(opt_value, opt_validator, opt_config) {
-  FieldColour.superClass_.constructor.call(
+const FieldColor = function(opt_value, opt_validator, opt_config) {
+  FieldColor.superClass_.constructor.call(
       this, opt_value, opt_validator, opt_config);
 
   /**
-   * The field's colour picker element.
+   * The field's color picker element.
    * @type {?Element}
    * @private
    */
@@ -100,19 +100,19 @@ const FieldColour = function(opt_value, opt_validator, opt_config) {
    */
   this.onKeyDownWrapper_ = null;
 };
-object.inherits(FieldColour, Field);
+object.inherits(FieldColor, Field);
 
 /**
- * Construct a FieldColour from a JSON arg object.
- * @param {!Object} options A JSON object with options (colour).
- * @return {!FieldColour} The new field instance.
+ * Construct a FieldColor from a JSON arg object.
+ * @param {!Object} options A JSON object with options (color).
+ * @return {!FieldColor} The new field instance.
  * @package
  * @nocollapse
  */
-FieldColour.fromJson = function(options) {
-  // `this` might be a subclass of FieldColour if that class doesn't override
+FieldColor.fromJson = function(options) {
+  // `this` might be a subclass of FieldColor if that class doesn't override
   // the static fromJson method.
-  return new this(options['colour'], undefined, options);
+  return new this(options['color'], undefined, options);
 };
 
 /**
@@ -120,43 +120,43 @@ FieldColour.fromJson = function(options) {
  * are not. Editable fields should also be serializable.
  * @type {boolean}
  */
-FieldColour.prototype.SERIALIZABLE = true;
+FieldColor.prototype.SERIALIZABLE = true;
 
 /**
  * Mouse cursor style when over the hotspot that initiates the editor.
  */
-FieldColour.prototype.CURSOR = 'default';
+FieldColor.prototype.CURSOR = 'default';
 
 /**
  * Used to tell if the field needs to be rendered the next time the block is
- * rendered. Colour fields are statically sized, and only need to be
+ * rendered. Color fields are statically sized, and only need to be
  * rendered at initialization.
  * @type {boolean}
  * @protected
  */
-FieldColour.prototype.isDirty_ = false;
+FieldColor.prototype.isDirty_ = false;
 
 /**
- * Array of colours used by this field.  If null, use the global list.
+ * Array of colors used by this field.  If null, use the global list.
  * @type {Array<string>}
  * @private
  */
-FieldColour.prototype.colours_ = null;
+FieldColor.prototype.colors_ = null;
 
 /**
- * Array of colour tooltips used by this field.  If null, use the global list.
+ * Array of color tooltips used by this field.  If null, use the global list.
  * @type {Array<string>}
  * @private
  */
-FieldColour.prototype.titles_ = null;
+FieldColor.prototype.titles_ = null;
 
 /**
- * Number of colour columns used by this field.  If 0, use the global setting.
+ * Number of color columns used by this field.  If 0, use the global setting.
  * By default use the global constants for columns.
  * @type {number}
  * @private
  */
-FieldColour.prototype.columns_ = 0;
+FieldColor.prototype.columns_ = 0;
 
 /**
  * Configure the field based on the given map of options.
@@ -164,11 +164,11 @@ FieldColour.prototype.columns_ = 0;
  * @protected
  * @override
  */
-FieldColour.prototype.configure_ = function(config) {
-  FieldColour.superClass_.configure_.call(this, config);
-  if (config['colourOptions']) {
-    this.colours_ = config['colourOptions'];
-    this.titles_ = config['colourTitles'];
+FieldColor.prototype.configure_ = function(config) {
+  FieldColor.superClass_.configure_.call(this, config);
+  if (config['colorOptions']) {
+    this.colors_ = config['colorOptions'];
+    this.titles_ = config['colorTitles'];
   }
   if (config['columns']) {
     this.columns_ = config['columns'];
@@ -176,14 +176,14 @@ FieldColour.prototype.configure_ = function(config) {
 };
 
 /**
- * Create the block UI for this colour field.
+ * Create the block UI for this color field.
  * @package
  */
-FieldColour.prototype.initView = function() {
+FieldColor.prototype.initView = function() {
   this.size_ = new Size(
-      this.getConstants().FIELD_COLOUR_DEFAULT_WIDTH,
-      this.getConstants().FIELD_COLOUR_DEFAULT_HEIGHT);
-  if (!this.getConstants().FIELD_COLOUR_FULL_BLOCK) {
+      this.getConstants().FIELD_COLOR_DEFAULT_WIDTH,
+      this.getConstants().FIELD_COLOR_DEFAULT_HEIGHT);
+  if (!this.getConstants().FIELD_COLOR_FULL_BLOCK) {
     this.createBorderRect_();
     this.borderRect_.style['fillOpacity'] = '1';
   } else {
@@ -194,8 +194,8 @@ FieldColour.prototype.initView = function() {
 /**
  * @override
  */
-FieldColour.prototype.applyColour = function() {
-  if (!this.getConstants().FIELD_COLOUR_FULL_BLOCK) {
+FieldColor.prototype.applyColor = function() {
+  if (!this.getConstants().FIELD_COLOR_FULL_BLOCK) {
     if (this.borderRect_) {
       this.borderRect_.style.fill = /** @type {string} */ (this.getValue());
     }
@@ -206,25 +206,25 @@ FieldColour.prototype.applyColour = function() {
 };
 
 /**
- * Ensure that the input value is a valid colour.
+ * Ensure that the input value is a valid color.
  * @param {*=} opt_newValue The input value.
- * @return {?string} A valid colour, or null if invalid.
+ * @return {?string} A valid color, or null if invalid.
  * @protected
  */
-FieldColour.prototype.doClassValidation_ = function(opt_newValue) {
+FieldColor.prototype.doClassValidation_ = function(opt_newValue) {
   if (typeof opt_newValue !== 'string') {
     return null;
   }
-  return colour.parse(opt_newValue);
+  return color.parse(opt_newValue);
 };
 
 /**
- * Update the value of this colour field, and update the displayed colour.
+ * Update the value of this color field, and update the displayed color.
  * @param {*} newValue The value to be saved. The default validator guarantees
- * that this is a colour in '#rrggbb' format.
+ * that this is a color in '#rrggbb' format.
  * @protected
  */
-FieldColour.prototype.doValueUpdate_ = function(newValue) {
+FieldColor.prototype.doValueUpdate_ = function(newValue) {
   this.value_ = newValue;
   if (this.borderRect_) {
     this.borderRect_.style.fill = /** @type {string} */ (newValue);
@@ -238,22 +238,22 @@ FieldColour.prototype.doValueUpdate_ = function(newValue) {
  * Get the text for this field.  Used when the block is collapsed.
  * @return {string} Text representing the value of this field.
  */
-FieldColour.prototype.getText = function() {
-  let colour = /** @type {string} */ (this.value_);
+FieldColor.prototype.getText = function() {
+  let color = /** @type {string} */ (this.value_);
   // Try to use #rgb format if possible, rather than #rrggbb.
-  if (/^#(.)\1(.)\2(.)\3$/.test(colour)) {
-    colour = '#' + colour[1] + colour[3] + colour[5];
+  if (/^#(.)\1(.)\2(.)\3$/.test(color)) {
+    color = '#' + color[1] + color[3] + color[5];
   }
-  return colour;
+  return color;
 };
 
 /**
- * An array of colour strings for the palette.
+ * An array of color strings for the palette.
  * Copied from goog.ui.ColorPicker.SIMPLE_GRID_COLORS
- * All colour pickers use this unless overridden with setColours.
+ * All color pickers use this unless overridden with setColors.
  * @type {!Array<string>}
  */
-FieldColour.COLOURS = [
+FieldColor.COLORS = [
   // grays
   '#ffffff',
   '#cccccc',
@@ -341,32 +341,32 @@ FieldColour.COLOURS = [
  * @type {*}
  * @protected
  */
-FieldColour.prototype.DEFAULT_VALUE = FieldColour.COLOURS[0];
+FieldColor.prototype.DEFAULT_VALUE = FieldColor.COLORS[0];
 
 /**
  * An array of tooltip strings for the palette.  If not the same length as
- * COLOURS, the colour's hex code will be used for any missing titles.
- * All colour pickers use this unless overridden with setColours.
+ * COLORS, the color's hex code will be used for any missing titles.
+ * All color pickers use this unless overridden with setColors.
  * @type {!Array<string>}
  */
-FieldColour.TITLES = [];
+FieldColor.TITLES = [];
 
 /**
  * Number of columns in the palette.
- * All colour pickers use this unless overridden with setColumns.
+ * All color pickers use this unless overridden with setColumns.
  */
-FieldColour.COLUMNS = 7;
+FieldColor.COLUMNS = 7;
 
 /**
- * Set a custom colour grid for this field.
- * @param {Array<string>} colours Array of colours for this block,
- *     or null to use default (FieldColour.COLOURS).
- * @param {Array<string>=} opt_titles Optional array of colour tooltips,
- *     or null to use default (FieldColour.TITLES).
- * @return {!FieldColour} Returns itself (for method chaining).
+ * Set a custom color grid for this field.
+ * @param {Array<string>} colors Array of colors for this block,
+ *     or null to use default (FieldColor.COLORS).
+ * @param {Array<string>=} opt_titles Optional array of color tooltips,
+ *     or null to use default (FieldColor.TITLES).
+ * @return {!FieldColor} Returns itself (for method chaining).
  */
-FieldColour.prototype.setColours = function(colours, opt_titles) {
-  this.colours_ = colours;
+FieldColor.prototype.setColors = function(colors, opt_titles) {
+  this.colors_ = colors;
   if (opt_titles) {
     this.titles_ = opt_titles;
   }
@@ -376,19 +376,19 @@ FieldColour.prototype.setColours = function(colours, opt_titles) {
 /**
  * Set a custom grid size for this field.
  * @param {number} columns Number of columns for this block,
- *     or 0 to use default (FieldColour.COLUMNS).
- * @return {!FieldColour} Returns itself (for method chaining).
+ *     or 0 to use default (FieldColor.COLUMNS).
+ * @return {!FieldColor} Returns itself (for method chaining).
  */
-FieldColour.prototype.setColumns = function(columns) {
+FieldColor.prototype.setColumns = function(columns) {
   this.columns_ = columns;
   return this;
 };
 
 /**
- * Create and show the colour field's editor.
+ * Create and show the color field's editor.
  * @protected
  */
-FieldColour.prototype.showEditor_ = function() {
+FieldColor.prototype.showEditor_ = function() {
   this.dropdownCreate_();
   DropDownDiv.getContentDiv().appendChild(this.picker_);
 
@@ -399,26 +399,26 @@ FieldColour.prototype.showEditor_ = function() {
 };
 
 /**
- * Handle a click on a colour cell.
+ * Handle a click on a color cell.
  * @param {!MouseEvent} e Mouse event.
  * @private
  */
-FieldColour.prototype.onClick_ = function(e) {
+FieldColor.prototype.onClick_ = function(e) {
   const cell = /** @type {!Element} */ (e.target);
-  const colour = cell && cell.label;
-  if (colour !== null) {
-    this.setValue(colour);
+  const color = cell && cell.label;
+  if (color !== null) {
+    this.setValue(color);
     DropDownDiv.hideIfOwner(this);
   }
 };
 
 /**
  * Handle a key down event. Navigate around the grid with the
- * arrow keys. Enter selects the highlighted colour.
+ * arrow keys. Enter selects the highlighted color.
  * @param {!KeyboardEvent} e Keyboard event.
  * @private
  */
-FieldColour.prototype.onKeyDown_ = function(e) {
+FieldColor.prototype.onKeyDown_ = function(e) {
   let handled = false;
   if (e.keyCode === KeyCodes.UP) {
     this.moveHighlightBy_(0, -1);
@@ -433,12 +433,12 @@ FieldColour.prototype.onKeyDown_ = function(e) {
     this.moveHighlightBy_(1, 0);
     handled = true;
   } else if (e.keyCode === KeyCodes.ENTER) {
-    // Select the highlighted colour.
+    // Select the highlighted color.
     const highlighted = this.getHighlighted_();
     if (highlighted) {
-      const colour = highlighted && highlighted.label;
-      if (colour !== null) {
-        this.setValue(colour);
+      const color = highlighted && highlighted.label;
+      if (color !== null) {
+        this.setValue(color);
       }
     }
     DropDownDiv.hideWithoutAnimation();
@@ -455,9 +455,9 @@ FieldColour.prototype.onKeyDown_ = function(e) {
  * @param {number} dy Change of y
  * @private
  */
-FieldColour.prototype.moveHighlightBy_ = function(dx, dy) {
-  const colours = this.colours_ || FieldColour.COLOURS;
-  const columns = this.columns_ || FieldColour.COLUMNS;
+FieldColor.prototype.moveHighlightBy_ = function(dx, dy) {
+  const colors = this.colors_ || FieldColor.COLORS;
+  const columns = this.columns_ || FieldColor.COLUMNS;
 
   // Get the current x and y coordinates
   let x = this.highlightedIndex_ % columns;
@@ -479,7 +479,7 @@ FieldColour.prototype.moveHighlightBy_ = function(dx, dy) {
   } else if (dx > 0) {
     // Move right one grid cell, even in RTL.
     // Loop to the start of the next row, if there's room.
-    if (x > columns - 1 && y < Math.floor(colours.length / columns) - 1) {
+    if (x > columns - 1 && y < Math.floor(colors.length / columns) - 1) {
       x = 0;
       y++;
     } else if (x > columns - 1) {
@@ -492,8 +492,8 @@ FieldColour.prototype.moveHighlightBy_ = function(dx, dy) {
     }
   } else if (dy > 0) {
     // Move down one grid cell, stop at the bottom.
-    if (y > Math.floor(colours.length / columns) - 1) {
-      y = Math.floor(colours.length / columns) - 1;
+    if (y > Math.floor(colors.length / columns) - 1) {
+      y = Math.floor(colors.length / columns) - 1;
     }
   }
 
@@ -505,11 +505,11 @@ FieldColour.prototype.moveHighlightBy_ = function(dx, dy) {
 };
 
 /**
- * Handle a mouse move event. Highlight the hovered colour.
+ * Handle a mouse move event. Highlight the hovered color.
  * @param {!MouseEvent} e Mouse event.
  * @private
  */
-FieldColour.prototype.onMouseMove_ = function(e) {
+FieldColor.prototype.onMouseMove_ = function(e) {
   const cell = /** @type {!Element} */ (e.target);
   const index = cell && Number(cell.getAttribute('data-index'));
   if (index !== null && index !== this.highlightedIndex_) {
@@ -521,20 +521,20 @@ FieldColour.prototype.onMouseMove_ = function(e) {
  * Handle a mouse enter event. Focus the picker.
  * @private
  */
-FieldColour.prototype.onMouseEnter_ = function() {
+FieldColor.prototype.onMouseEnter_ = function() {
   this.picker_.focus({preventScroll: true});
 };
 
 /**
  * Handle a mouse leave event. Blur the picker and unhighlight
- * the currently highlighted colour.
+ * the currently highlighted color.
  * @private
  */
-FieldColour.prototype.onMouseLeave_ = function() {
+FieldColor.prototype.onMouseLeave_ = function() {
   this.picker_.blur();
   const highlighted = this.getHighlighted_();
   if (highlighted) {
-    dom.removeClass(highlighted, 'blocklyColourHighlighted');
+    dom.removeClass(highlighted, 'blocklyColorHighlighted');
   }
 };
 
@@ -543,8 +543,8 @@ FieldColour.prototype.onMouseLeave_ = function() {
  * @return {?HTMLElement} Highlighted item (null if none).
  * @private
  */
-FieldColour.prototype.getHighlighted_ = function() {
-  const columns = this.columns_ || FieldColour.COLUMNS;
+FieldColor.prototype.getHighlighted_ = function() {
+  const columns = this.columns_ || FieldColor.COLUMNS;
   const x = this.highlightedIndex_ % columns;
   const y = Math.floor(this.highlightedIndex_ / columns);
   const row = this.picker_.childNodes[y];
@@ -561,14 +561,14 @@ FieldColour.prototype.getHighlighted_ = function() {
  * @param {number} index the index of the new cell
  * @private
  */
-FieldColour.prototype.setHighlightedCell_ = function(cell, index) {
+FieldColor.prototype.setHighlightedCell_ = function(cell, index) {
   // Unhighlight the current item.
   const highlighted = this.getHighlighted_();
   if (highlighted) {
-    dom.removeClass(highlighted, 'blocklyColourHighlighted');
+    dom.removeClass(highlighted, 'blocklyColorHighlighted');
   }
   // Highlight new item.
-  dom.addClass(cell, 'blocklyColourHighlighted');
+  dom.addClass(cell, 'blocklyColorHighlighted');
   // Set new highlighted index.
   this.highlightedIndex_ = index;
 
@@ -579,26 +579,26 @@ FieldColour.prototype.setHighlightedCell_ = function(cell, index) {
 };
 
 /**
- * Create a colour picker dropdown editor.
+ * Create a color picker dropdown editor.
  * @private
  */
-FieldColour.prototype.dropdownCreate_ = function() {
-  const columns = this.columns_ || FieldColour.COLUMNS;
-  const colours = this.colours_ || FieldColour.COLOURS;
-  const titles = this.titles_ || FieldColour.TITLES;
-  const selectedColour = this.getValue();
+FieldColor.prototype.dropdownCreate_ = function() {
+  const columns = this.columns_ || FieldColor.COLUMNS;
+  const colors = this.colors_ || FieldColor.COLORS;
+  const titles = this.titles_ || FieldColor.TITLES;
+  const selectedColor = this.getValue();
   // Create the palette.
   const table = document.createElement('table');
-  table.className = 'blocklyColourTable';
+  table.className = 'blocklyColorTable';
   table.tabIndex = 0;
   table.dir = 'ltr';
   aria.setRole(table, aria.Role.GRID);
   aria.setState(table, aria.State.EXPANDED, true);
   aria.setState(
-      table, aria.State.ROWCOUNT, Math.floor(colours.length / columns));
+      table, aria.State.ROWCOUNT, Math.floor(colors.length / columns));
   aria.setState(table, aria.State.COLCOUNT, columns);
   let row;
-  for (let i = 0; i < colours.length; i++) {
+  for (let i = 0; i < colors.length; i++) {
     if (i % columns === 0) {
       row = document.createElement('tr');
       aria.setRole(row, aria.Role.ROW);
@@ -606,16 +606,16 @@ FieldColour.prototype.dropdownCreate_ = function() {
     }
     const cell = document.createElement('td');
     row.appendChild(cell);
-    cell.label = colours[i];  // This becomes the value, if clicked.
-    cell.title = titles[i] || colours[i];
+    cell.label = colors[i];  // This becomes the value, if clicked.
+    cell.title = titles[i] || colors[i];
     cell.id = idGenerator.getNextUniqueId();
     cell.setAttribute('data-index', i);
     aria.setRole(cell, aria.Role.GRIDCELL);
-    aria.setState(cell, aria.State.LABEL, colours[i]);
-    aria.setState(cell, aria.State.SELECTED, colours[i] === selectedColour);
-    cell.style.backgroundColor = colours[i];
-    if (colours[i] === selectedColour) {
-      cell.className = 'blocklyColourSelected';
+    aria.setState(cell, aria.State.LABEL, colors[i]);
+    aria.setState(cell, aria.State.SELECTED, colors[i] === selectedColor);
+    cell.style.backgroundColor = colors[i];
+    if (colors[i] === selectedColor) {
+      cell.className = 'blocklyColorSelected';
       this.highlightedIndex_ = i;
     }
   }
@@ -636,10 +636,10 @@ FieldColour.prototype.dropdownCreate_ = function() {
 };
 
 /**
- * Disposes of events and DOM-references belonging to the colour editor.
+ * Disposes of events and DOM-references belonging to the color editor.
  * @private
  */
-FieldColour.prototype.dropdownDispose_ = function() {
+FieldColor.prototype.dropdownDispose_ = function() {
   if (this.onClickWrapper_) {
     browserEvents.unbind(this.onClickWrapper_);
     this.onClickWrapper_ = null;
@@ -665,17 +665,17 @@ FieldColour.prototype.dropdownDispose_ = function() {
 };
 
 /**
- * CSS for colour picker.  See css.js for use.
+ * CSS for color picker.  See css.js for use.
  */
 Css.register(`
-  .blocklyColourTable {
+  .blocklyColorTable {
     border-collapse: collapse;
     display: block;
     outline: none;
     padding: 1px;
   }
 
-  .blocklyColourTable>tr>td {
+  .blocklyColorTable>tr>td {
     border: .5px solid #888;
     box-sizing: border-box;
     cursor: pointer;
@@ -685,19 +685,19 @@ Css.register(`
     width: 20px;
   }
 
-  .blocklyColourTable>tr>td.blocklyColourHighlighted {
+  .blocklyColorTable>tr>td.blocklyColorHighlighted {
     border-color: #eee;
     box-shadow: 2px 2px 7px 2px rgba(0,0,0,.3);
     position: relative;
   }
 
-  .blocklyColourSelected, .blocklyColourSelected:hover {
+  .blocklyColorSelected, .blocklyColorSelected:hover {
     border-color: #eee !important;
     outline: 1px solid #333;
     position: relative;
   }
 `);
 
-fieldRegistry.register('field_colour', FieldColour);
+fieldRegistry.register('field_color', FieldColor);
 
-exports.FieldColour = FieldColour;
+exports.FieldColor = FieldColor;

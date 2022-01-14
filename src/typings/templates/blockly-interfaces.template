@@ -25,7 +25,7 @@ declare module Blockly {
     };
     grid?: {
       spacing?: number;
-      colour?: string;
+      color?: string;
       length?: number;
       snap?: boolean;
     };

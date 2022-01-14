@@ -33,7 +33,7 @@
 	"NEW_VARIABLE": "Ger variabul...",
 	"NEW_STRING_VARIABLE": "Ger strongvariabul...",
 	"NEW_NUMBER_VARIABLE": "Ger talvariabul...",
-	"NEW_COLOUR_VARIABLE": "Ger litvariabul...",
+	"NEW_COLOR_VARIABLE": "Ger litvariabul...",
 	"NEW_VARIABLE_TYPE_TITLE": "Nýtt variabulslag:",
 	"NEW_VARIABLE_TITLE": "Navn á nýggjum variabli:",
 	"VARIABLE_ALREADY_EXISTS": "Ein variabul við navninum '%1' finst longu.",

@@ -17,7 +17,7 @@ goog.module('Blockly.ToolboxCategory');
 
 const Css = goog.require('Blockly.Css');
 const aria = goog.require('Blockly.utils.aria');
-const colourUtils = goog.require('Blockly.utils.colour');
+const colorUtils = goog.require('Blockly.utils.color');
 const dom = goog.require('Blockly.utils.dom');
 const object = goog.require('Blockly.utils.object');
 const parsing = goog.require('Blockly.utils.parsing');
@@ -56,11 +56,11 @@ const ToolboxCategory = function(categoryDef, toolbox, opt_parent) {
   this.name_ = parsing.replaceMessageReferences(categoryDef['name']);
 
   /**
-   * The colour of the category.
+   * The color of the category.
    * @type {string}
    * @protected
    */
-  this.colour_ = this.getColour_(categoryDef);
+  this.color_ = this.getColor_(categoryDef);
 
   /**
    * The html container for the category.
@@ -161,17 +161,17 @@ ToolboxCategory.registrationName = 'category';
 ToolboxCategory.nestedPadding = 19;
 
 /**
- * The width in pixels of the strip of colour next to each category.
+ * The width in pixels of the strip of color next to each category.
  * @type {number}
  */
 ToolboxCategory.borderWidth = 8;
 
 /**
- * The default colour of the category. This is used as the background colour of
+ * The default color of the category. This is used as the background color of
  * the category when it is selected.
  * @type {string}
  */
-ToolboxCategory.defaultBackgroundColour = '#57e';
+ToolboxCategory.defaultBackgroundColor = '#57e';
 
 /**
  * Creates an object holding the default classes for a category.
@@ -256,7 +256,7 @@ ToolboxCategory.prototype.createDom_ = function() {
       /** @type {!Element} */ (this.htmlDiv_), aria.State.LABELLEDBY,
       this.labelDom_.getAttribute('id'));
 
-  this.addColourBorder_(this.colour_);
+  this.addColorBorder_(this.color_);
 
   return this.htmlDiv_;
 };
@@ -331,24 +331,24 @@ ToolboxCategory.prototype.createLabelDom_ = function(name) {
 };
 
 /**
- * Updates the colour for this category.
+ * Updates the color for this category.
  * @public
  */
 ToolboxCategory.prototype.refreshTheme = function() {
-  this.colour_ = this.getColour_(/** @type {toolbox.CategoryInfo} **/
+  this.color_ = this.getColor_(/** @type {toolbox.CategoryInfo} **/
                                  (this.toolboxItemDef_));
-  this.addColourBorder_(this.colour_);
+  this.addColorBorder_(this.color_);
 };
 
 /**
- * Add the strip of colour to the toolbox category.
- * @param {string} colour The category colour.
+ * Add the strip of color to the toolbox category.
+ * @param {string} color The category color.
  * @protected
  */
-ToolboxCategory.prototype.addColourBorder_ = function(colour) {
-  if (colour) {
+ToolboxCategory.prototype.addColorBorder_ = function(color) {
+  if (color) {
     const border =
-        ToolboxCategory.borderWidth + 'px solid ' + (colour || '#ddd');
+        ToolboxCategory.borderWidth + 'px solid ' + (color || '#ddd');
     if (this.workspace_.RTL) {
       this.rowDiv_.style.borderRight = border;
     } else {
@@ -358,45 +358,45 @@ ToolboxCategory.prototype.addColourBorder_ = function(colour) {
 };
 
 /**
- * Gets either the colour or the style for a category.
+ * Gets either the color or the style for a category.
  * @param {!toolbox.CategoryInfo} categoryDef The object holding
  *    information on the category.
- * @return {string} The hex colour for the category.
+ * @return {string} The hex color for the category.
  * @protected
  */
-ToolboxCategory.prototype.getColour_ = function(categoryDef) {
+ToolboxCategory.prototype.getColor_ = function(categoryDef) {
   const styleName =
       categoryDef['categorystyle'] || categoryDef['categoryStyle'];
-  const colour = categoryDef['colour'];
+  const color = categoryDef['color'];
 
-  if (colour && styleName) {
+  if (color && styleName) {
     console.warn(
         'Toolbox category "' + this.name_ +
-        '" must not have both a style and a colour');
+        '" must not have both a style and a color');
   } else if (styleName) {
-    return this.getColourfromStyle_(styleName);
+    return this.getColorfromStyle_(styleName);
   } else {
-    return this.parseColour_(colour);
+    return this.parseColor_(color);
   }
   return '';
 };
 
 /**
- * Sets the colour for the category using the style name and returns the new
- * colour as a hex string.
+ * Sets the color for the category using the style name and returns the new
+ * color as a hex string.
  * @param {string} styleName Name of the style.
- * @return {string} The hex colour for the category.
+ * @return {string} The hex color for the category.
  * @private
  */
-ToolboxCategory.prototype.getColourfromStyle_ = function(styleName) {
+ToolboxCategory.prototype.getColorfromStyle_ = function(styleName) {
   const theme = this.workspace_.getTheme();
   if (styleName && theme) {
     const style = theme.categoryStyles[styleName];
-    if (style && style.colour) {
-      return this.parseColour_(style.colour);
+    if (style && style.color) {
+      return this.parseColor_(style.color);
     } else {
       console.warn(
-          'Style "' + styleName + '" must exist and contain a colour value');
+          'Style "' + styleName + '" must exist and contain a color value');
     }
   }
   return '';
@@ -414,31 +414,31 @@ ToolboxCategory.prototype.getClickTarget = function() {
 };
 
 /**
- * Parses the colour on the category.
- * @param {number|string} colourValue HSV hue value (0 to 360), #RRGGBB string,
+ * Parses the color on the category.
+ * @param {number|string} colorValue HSV hue value (0 to 360), #RRGGBB string,
  *     or a message reference string pointing to one of those two values.
- * @return {string} The hex colour for the category.
+ * @return {string} The hex color for the category.
  * @private
  */
-ToolboxCategory.prototype.parseColour_ = function(colourValue) {
-  // Decode the colour for any potential message references
+ToolboxCategory.prototype.parseColor_ = function(colorValue) {
+  // Decode the color for any potential message references
   // (eg. `%{BKY_MATH_HUE}`).
-  const colour = parsing.replaceMessageReferences(colourValue);
-  if (colour == null || colour === '') {
-    // No attribute. No colour.
+  const color = parsing.replaceMessageReferences(colorValue);
+  if (color == null || color === '') {
+    // No attribute. No color.
     return '';
   } else {
-    const hue = Number(colour);
+    const hue = Number(color);
     if (!isNaN(hue)) {
-      return colourUtils.hueToHex(hue);
+      return colorUtils.hueToHex(hue);
     } else {
-      const hex = colourUtils.parse(colour);
+      const hex = colorUtils.parse(color);
       if (hex) {
         return hex;
       } else {
         console.warn(
             'Toolbox category "' + this.name_ +
-            '" has unrecognized colour attribute: ' + colour);
+            '" has unrecognized color attribute: ' + color);
         return '';
       }
     }
@@ -553,9 +553,9 @@ ToolboxCategory.prototype.onClick = function(_e) {
  */
 ToolboxCategory.prototype.setSelected = function(isSelected) {
   if (isSelected) {
-    const defaultColour =
-        this.parseColour_(ToolboxCategory.defaultBackgroundColour);
-    this.rowDiv_.style.backgroundColor = this.colour_ || defaultColour;
+    const defaultColor =
+        this.parseColor_(ToolboxCategory.defaultBackgroundColor);
+    this.rowDiv_.style.backgroundColor = this.color_ || defaultColor;
     dom.addClass(this.rowDiv_, this.cssConfig_['selected']);
   } else {
     this.rowDiv_.style.backgroundColor = '';

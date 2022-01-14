@@ -239,23 +239,23 @@ FieldTextInput.prototype.doValueUpdate_ = function(newValue) {
 };
 
 /**
- * Updates text field to match the colour/style of the block.
+ * Updates text field to match the color/style of the block.
  * @package
  */
-FieldTextInput.prototype.applyColour = function() {
+FieldTextInput.prototype.applyColor = function() {
   if (this.sourceBlock_ && this.getConstants().FULL_BLOCK_FIELDS) {
     if (this.borderRect_) {
       this.borderRect_.setAttribute(
-          'stroke', this.sourceBlock_.style.colourTertiary);
+          'stroke', this.sourceBlock_.style.colorTertiary);
     } else {
       this.sourceBlock_.pathObject.svgPath.setAttribute(
-          'fill', this.getConstants().FIELD_BORDER_RECT_COLOUR);
+          'fill', this.getConstants().FIELD_BORDER_RECT_COLOR);
     }
   }
 };
 
 /**
- * Updates the colour of the htmlInput given the current validity of the
+ * Updates the color of the htmlInput given the current validity of the
  * field's value.
  * @protected
  */
@@ -366,11 +366,11 @@ FieldTextInput.prototype.widgetCreate_ = function() {
 
     // Override border radius.
     borderRadius = (bBox.bottom - bBox.top) / 2 + 'px';
-    // Pull stroke colour from the existing shadow block
-    const strokeColour = this.sourceBlock_.getParent() ?
-        this.sourceBlock_.getParent().style.colourTertiary :
-        this.sourceBlock_.style.colourTertiary;
-    htmlInput.style.border = (1 * scale) + 'px solid ' + strokeColour;
+    // Pull stroke color from the existing shadow block
+    const strokeColor = this.sourceBlock_.getParent() ?
+        this.sourceBlock_.getParent().style.colorTertiary :
+        this.sourceBlock_.style.colorTertiary;
+    htmlInput.style.border = (1 * scale) + 'px solid ' + strokeColor;
     div.style.borderRadius = borderRadius;
     div.style.transition = 'box-shadow 0.25s ease 0s';
     if (this.getConstants().FIELD_TEXTINPUT_BOX_SHADOW) {

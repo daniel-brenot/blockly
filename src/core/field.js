@@ -673,11 +673,11 @@ Field.prototype.getSvgRoot = function() {
 };
 
 /**
- * Updates the field to match the colour/style of the block. Should only be
- * called by BlockSvg.applyColour().
+ * Updates the field to match the color/style of the block. Should only be
+ * called by BlockSvg.applyColor().
  * @package
  */
-Field.prototype.applyColour = function() {
+Field.prototype.applyColor = function() {
   // Non-abstract sub-classes may wish to implement this. See FieldDropdown.
 };
 

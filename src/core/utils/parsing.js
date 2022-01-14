@@ -14,7 +14,7 @@
  */
 goog.module('Blockly.utils.parsing');
 
-const colourUtils = goog.require('Blockly.utils.colour');
+const colorUtils = goog.require('Blockly.utils.color');
 const stringUtils = goog.require('Blockly.utils.string');
 const {Msg} = goog.require('Blockly.Msg');
 
@@ -224,38 +224,38 @@ const checkMessageReferences = function(message) {
 exports.checkMessageReferences = checkMessageReferences;
 
 /**
- * Parse a block colour from a number or string, as provided in a block
+ * Parse a block color from a number or string, as provided in a block
  * definition.
- * @param {number|string} colour HSV hue value (0 to 360), #RRGGBB string,
+ * @param {number|string} color HSV hue value (0 to 360), #RRGGBB string,
  *     or a message reference string pointing to one of those two values.
- * @return {{hue: ?number, hex: string}} An object containing the colour as
+ * @return {{hue: ?number, hex: string}} An object containing the color as
  *     a #RRGGBB string, and the hue if the input was an HSV hue value.
- * @throws {Error} If the colour cannot be parsed.
- * @alias Blockly.utils.parsing.parseBlockColour
+ * @throws {Error} If the color cannot be parsed.
+ * @alias Blockly.utils.parsing.parseBlockColor
  */
-const parseBlockColour = function(colour) {
+const parseBlockColor = function(color) {
   const dereferenced =
-      (typeof colour === 'string') ? replaceMessageReferences(colour) : colour;
+      (typeof color === 'string') ? replaceMessageReferences(color) : color;
 
   const hue = Number(dereferenced);
   if (!isNaN(hue) && 0 <= hue && hue <= 360) {
     return {
       hue: hue,
-      hex: colourUtils.hsvToHex(
-          hue, colourUtils.getHsvSaturation(), colourUtils.getHsvValue() * 255),
+      hex: colorUtils.hsvToHex(
+          hue, colorUtils.getHsvSaturation(), colorUtils.getHsvValue() * 255),
     };
   } else {
-    const hex = colourUtils.parse(dereferenced);
+    const hex = colorUtils.parse(dereferenced);
     if (hex) {
-      // Only store hue if colour is set as a hue.
+      // Only store hue if color is set as a hue.
       return {hue: null, hex: hex};
     } else {
-      let errorMsg = 'Invalid colour: "' + dereferenced + '"';
-      if (colour !== dereferenced) {
-        errorMsg += ' (from "' + colour + '")';
+      let errorMsg = 'Invalid color: "' + dereferenced + '"';
+      if (color !== dereferenced) {
+        errorMsg += ' (from "' + color + '")';
       }
       throw Error(errorMsg);
     }
   }
 };
-exports.parseBlockColour = parseBlockColour;
+exports.parseBlockColor = parseBlockColor;

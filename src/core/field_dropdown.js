@@ -322,14 +322,14 @@ FieldDropdown.prototype.showEditor_ = function(opt_e) {
   const menuElement = /** @type {!Element} */ (this.menu_.getElement());
   dom.addClass(menuElement, 'blocklyDropdownMenu');
 
-  if (this.getConstants().FIELD_DROPDOWN_COLOURED_DIV) {
-    const primaryColour = (this.sourceBlock_.isShadow()) ?
-        this.sourceBlock_.getParent().getColour() :
-        this.sourceBlock_.getColour();
-    const borderColour = (this.sourceBlock_.isShadow()) ?
-        this.sourceBlock_.getParent().style.colourTertiary :
-        this.sourceBlock_.style.colourTertiary;
-    DropDownDiv.setColour(primaryColour, borderColour);
+  if (this.getConstants().FIELD_DROPDOWN_COLORED_DIV) {
+    const primaryColor = (this.sourceBlock_.isShadow()) ?
+        this.sourceBlock_.getParent().getColor() :
+        this.sourceBlock_.getColor();
+    const borderColor = (this.sourceBlock_.isShadow()) ?
+        this.sourceBlock_.getParent().style.colorTertiary :
+        this.sourceBlock_.style.colorTertiary;
+    DropDownDiv.setColor(primaryColor, borderColor);
   }
 
   DropDownDiv.showPositionedByField(this, this.dropdownDispose_.bind(this));
@@ -343,7 +343,7 @@ FieldDropdown.prototype.showEditor_ = function(opt_e) {
     this.menu_.setHighlighted(this.selectedMenuItem_);
   }
 
-  this.applyColour();
+  this.applyColor();
 };
 
 /**
@@ -390,7 +390,7 @@ FieldDropdown.prototype.dropdownDispose_ = function() {
   }
   this.menu_ = null;
   this.selectedMenuItem_ = null;
-  this.applyColour();
+  this.applyColor();
 };
 
 /**
@@ -558,26 +558,26 @@ FieldDropdown.prototype.doValueUpdate_ = function(newValue) {
 };
 
 /**
- * Updates the dropdown arrow to match the colour/style of the block.
+ * Updates the dropdown arrow to match the color/style of the block.
  * @package
  */
-FieldDropdown.prototype.applyColour = function() {
+FieldDropdown.prototype.applyColor = function() {
   if (this.borderRect_) {
     this.borderRect_.setAttribute(
-        'stroke', this.sourceBlock_.style.colourTertiary);
+        'stroke', this.sourceBlock_.style.colorTertiary);
     if (this.menu_) {
       this.borderRect_.setAttribute(
-          'fill', this.sourceBlock_.style.colourTertiary);
+          'fill', this.sourceBlock_.style.colorTertiary);
     } else {
       this.borderRect_.setAttribute('fill', 'transparent');
     }
   }
-  // Update arrow's colour.
+  // Update arrow's color.
   if (this.sourceBlock_ && this.arrow_) {
     if (this.sourceBlock_.isShadow()) {
-      this.arrow_.style.fill = this.sourceBlock_.style.colourSecondary;
+      this.arrow_.style.fill = this.sourceBlock_.style.colorSecondary;
     } else {
-      this.arrow_.style.fill = this.sourceBlock_.style.colourPrimary;
+      this.arrow_.style.fill = this.sourceBlock_.style.colorPrimary;
     }
   }
 };

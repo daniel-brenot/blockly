@@ -451,7 +451,7 @@ Object.defineProperties(Generator.prototype, {
  * same desiredName have no effect but have the same return value.
  *
  * It is up to the caller to make sure the same desiredName is not
- * used for different helper functions (e.g. use "colourRandom" and
+ * used for different helper functions (e.g. use "colorRandom" and
  * "listRandom", not "random").  There is no danger of colliding with reserved
  * words, or user-defined variable or procedure names.
  *

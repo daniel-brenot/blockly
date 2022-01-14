@@ -150,14 +150,14 @@ MarkerSvg.prototype.createDomInternal_ = function() {
 /**
  * @override
  */
-MarkerSvg.prototype.applyColour_ = function(curNode) {
-  MarkerSvg.superClass_.applyColour_.call(this, curNode);
+MarkerSvg.prototype.applyColor_ = function(curNode) {
+  MarkerSvg.superClass_.applyColor_.call(this, curNode);
 
-  this.markerCircle_.setAttribute('fill', this.colour_);
-  this.markerCircle_.setAttribute('stroke', this.colour_);
+  this.markerCircle_.setAttribute('fill', this.color_);
+  this.markerCircle_.setAttribute('stroke', this.color_);
 
   if (this.isCursor()) {
-    const values = this.colour_ + ';transparent;transparent;';
+    const values = this.color_ + ';transparent;transparent;';
     this.markerCircle_.firstChild.setAttribute('values', values);
   }
 };

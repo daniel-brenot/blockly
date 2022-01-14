@@ -13,7 +13,7 @@
 
 goog.module('Blockly.PHP.all');
 
-goog.require('Blockly.PHP.colour');
+goog.require('Blockly.PHP.color');
 goog.require('Blockly.PHP.lists');
 goog.require('Blockly.PHP.logic');
 goog.require('Blockly.PHP.loops');

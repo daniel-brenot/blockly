@@ -192,7 +192,7 @@ const Options = function(options) {
 /**
  * Grid Options.
  * @typedef {{
- *     colour: string,
+ *     color: string,
  *     length: number,
  *     snap: boolean,
  *     spacing: number
@@ -356,7 +356,7 @@ Options.parseGridOptions_ = function(options) {
   const grid = options['grid'] || {};
   const gridOptions = {};
   gridOptions.spacing = Number(grid['spacing']) || 0;
-  gridOptions.colour = grid['colour'] || '#888';
+  gridOptions.color = grid['color'] || '#888';
   gridOptions.length =
       (grid['length'] === undefined) ? 1 : Number(grid['length']);
   gridOptions.snap = gridOptions.spacing > 0 && !!grid['snap'];

@@ -24,7 +24,7 @@
 	"NEW_VARIABLE": "Skep veranderlike",
 	"NEW_STRING_VARIABLE": "Skep teks veranderlike",
 	"NEW_NUMBER_VARIABLE": "Skep numeriese veranderlike",
-	"NEW_COLOUR_VARIABLE": "Skep kleur veranderlike",
+	"NEW_COLOR_VARIABLE": "Skep kleur veranderlike",
 	"NEW_VARIABLE_TYPE_TITLE": "Nuwe veranderlike tipe:",
 	"NEW_VARIABLE_TITLE": "Nuwe veranderlike naam:",
 	"VARIABLE_ALREADY_EXISTS": "'n Veranderlike met die naam '%1' bestaan reeds.",

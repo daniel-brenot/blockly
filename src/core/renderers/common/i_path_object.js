@@ -76,12 +76,12 @@ IPathObject.prototype.markerSvg;
 IPathObject.prototype.setPath;
 
 /**
- * Apply the stored colours to the block's path, taking into account whether
+ * Apply the stored colors to the block's path, taking into account whether
  * the paths belong to a shadow block.
  * @param {!Block} block The source block.
  * @package
  */
-IPathObject.prototype.applyColour;
+IPathObject.prototype.applyColor;
 
 /**
  * Update the style.

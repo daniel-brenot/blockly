@@ -31,7 +31,7 @@ const {Theme} = goog.requireType('Blockly.Theme');
  * used by the renderer.
  * @param {!SVGElement} root The root SVG element.
  * @param {!Theme.BlockStyle} style The style object to use for
- *     colouring.
+ *     coloring.
  * @param {!ConstantProvider} constants The renderer's constants.
  * @constructor
  * @extends {BasePathObject}
@@ -93,16 +93,16 @@ PathObject.prototype.setPath = function(pathString) {
 /**
  * @override
  */
-PathObject.prototype.applyColour = function(block) {
-  PathObject.superClass_.applyColour.call(this, block);
-  // Set shadow stroke colour.
+PathObject.prototype.applyColor = function(block) {
+  PathObject.superClass_.applyColor.call(this, block);
+  // Set shadow stroke color.
   if (block.isShadow() && block.getParent()) {
-    this.svgPath.setAttribute('stroke', block.getParent().style.colourTertiary);
+    this.svgPath.setAttribute('stroke', block.getParent().style.colorTertiary);
   }
 
-  // Apply colour to outlines.
+  // Apply color to outlines.
   for (const key in this.outlines_) {
-    this.outlines_[key].setAttribute('fill', this.style.colourTertiary);
+    this.outlines_[key].setAttribute('fill', this.style.colorTertiary);
   }
 };
 
@@ -207,7 +207,7 @@ PathObject.prototype.endDrawing = function() {
 PathObject.prototype.setOutlinePath = function(name, pathString) {
   const outline = this.getOutlinePath_(name);
   outline.setAttribute('d', pathString);
-  outline.setAttribute('fill', this.style.colourTertiary);
+  outline.setAttribute('fill', this.style.colorTertiary);
 };
 
 /**

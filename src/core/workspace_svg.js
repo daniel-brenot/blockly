@@ -906,7 +906,7 @@ WorkspaceSvg.prototype.createDom = function(opt_backgroundClass) {
           'url(#' + this.grid_.getPatternId() + ')';
     } else {
       this.themeManager_.subscribe(
-          this.svgBackground_, 'workspaceBackgroundColour', 'fill');
+          this.svgBackground_, 'workspaceBackgroundColor', 'fill');
     }
   }
   /** @type {SVGElement} */

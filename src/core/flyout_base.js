@@ -284,7 +284,7 @@ Flyout.prototype.createDom = function(tagName) {
       Svg.PATH, {'class': 'blocklyFlyoutBackground'}, this.svgGroup_);
   this.svgGroup_.appendChild(this.workspace_.createDom());
   this.workspace_.getThemeManager().subscribe(
-      this.svgBackground_, 'flyoutBackgroundColour', 'fill');
+      this.svgBackground_, 'flyoutBackgroundColor', 'fill');
   this.workspace_.getThemeManager().subscribe(
       this.svgBackground_, 'flyoutOpacity', 'fill-opacity');
   return this.svgGroup_;

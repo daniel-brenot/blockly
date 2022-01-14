@@ -106,14 +106,14 @@ const MarkerSvg = function(workspace, constants, marker) {
    */
   this.currentMarkerSvg = null;
 
-  const defaultColour = this.isCursor() ? this.constants_.CURSOR_COLOUR :
-                                          this.constants_.MARKER_COLOUR;
+  const defaultColor = this.isCursor() ? this.constants_.CURSOR_COLOR :
+                                          this.constants_.MARKER_COLOR;
 
   /**
-   * The colour of the marker.
+   * The color of the marker.
    * @type {string}
    */
-  this.colour_ = marker.colour || defaultColour;
+  this.color_ = marker.color || defaultColor;
 };
 
 /**
@@ -189,10 +189,10 @@ MarkerSvg.prototype.draw = function(oldNode, curNode) {
 
   this.constants_ = this.workspace_.getRenderer().getConstants();
 
-  const defaultColour = this.isCursor() ? this.constants_.CURSOR_COLOUR :
-                                          this.constants_.MARKER_COLOUR;
-  this.colour_ = this.marker_.colour || defaultColour;
-  this.applyColour_(curNode);
+  const defaultColor = this.isCursor() ? this.constants_.CURSOR_COLOR :
+                                          this.constants_.MARKER_COLOR;
+  this.color_ = this.marker_.color || defaultColor;
+  this.applyColor_(curNode);
 
   this.showAtLocation_(curNode);
 
@@ -575,7 +575,7 @@ MarkerSvg.prototype.getBlinkProperties_ = function() {
     'attributeType': 'XML',
     'attributeName': 'fill',
     'dur': '1s',
-    'values': this.colour_ + ';transparent;transparent;',
+    'values': this.color_ + ';transparent;transparent;',
     'repeatCount': 'indefinite',
   };
 };
@@ -652,19 +652,19 @@ MarkerSvg.prototype.createDomInternal_ = function() {
 };
 
 /**
- * Apply the marker's colour.
+ * Apply the marker's color.
  * @param {!ASTNode} _curNode The node that we want to draw the marker
  *    for.
  * @protected
  */
-MarkerSvg.prototype.applyColour_ = function(_curNode) {
-  this.markerSvgLine_.setAttribute('fill', this.colour_);
-  this.markerSvgRect_.setAttribute('stroke', this.colour_);
-  this.markerInput_.setAttribute('fill', this.colour_);
-  this.markerBlock_.setAttribute('stroke', this.colour_);
+MarkerSvg.prototype.applyColor_ = function(_curNode) {
+  this.markerSvgLine_.setAttribute('fill', this.color_);
+  this.markerSvgRect_.setAttribute('stroke', this.color_);
+  this.markerInput_.setAttribute('fill', this.color_);
+  this.markerBlock_.setAttribute('stroke', this.color_);
 
   if (this.isCursor()) {
-    const values = this.colour_ + ';transparent;transparent;';
+    const values = this.color_ + ';transparent;transparent;';
     this.markerSvgLine_.firstChild.setAttribute('values', values);
     this.markerInput_.firstChild.setAttribute('values', values);
     this.markerBlock_.firstChild.setAttribute('values', values);

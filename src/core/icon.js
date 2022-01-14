@@ -144,11 +144,11 @@ Icon.prototype.iconClick_ = function(e) {
 };
 
 /**
- * Change the colour of the associated bubble to match its block.
+ * Change the color of the associated bubble to match its block.
  */
-Icon.prototype.applyColour = function() {
+Icon.prototype.applyColor = function() {
   if (this.isVisible()) {
-    this.bubble_.setColour(this.block_.style.colourPrimary);
+    this.bubble_.setColor(this.block_.style.colorPrimary);
   }
 };
 

@@ -298,19 +298,19 @@ Block.prototype.data = null;
 Block.prototype.disposed = false;
 
 /**
- * Colour of the block as HSV hue value (0-360)
- * This may be null if the block colour was not set via a hue number.
+ * Color of the block as HSV hue value (0-360)
+ * This may be null if the block color was not set via a hue number.
  * @type {?number}
  * @private
  */
 Block.prototype.hue_ = null;
 
 /**
- * Colour of the block in '#RRGGBB' format.
+ * Color of the block in '#RRGGBB' format.
  * @type {string}
  * @protected
  */
-Block.prototype.colour_ = '#000000';
+Block.prototype.color_ = '#000000';
 
 /**
  * Name of the block style.
@@ -990,11 +990,11 @@ Block.prototype.getTooltip = function() {
 };
 
 /**
- * Get the colour of a block.
+ * Get the color of a block.
  * @return {string} #RRGGBB string.
  */
-Block.prototype.getColour = function() {
-  return this.colour_;
+Block.prototype.getColor = function() {
+  return this.color_;
 };
 
 /**
@@ -1014,18 +1014,18 @@ Block.prototype.getHue = function() {
 };
 
 /**
- * Change the colour of a block.
- * @param {number|string} colour HSV hue value (0 to 360), #RRGGBB string,
+ * Change the color of a block.
+ * @param {number|string} color HSV hue value (0 to 360), #RRGGBB string,
  *     or a message reference string pointing to one of those two values.
  */
-Block.prototype.setColour = function(colour) {
-  const parsed = parsing.parseBlockColour(colour);
+Block.prototype.setColor = function(color) {
+  const parsed = parsing.parseBlockColor(color);
   this.hue_ = parsed.hue;
-  this.colour_ = parsed.hex;
+  this.color_ = parsed.hex;
 };
 
 /**
- * Set the style and colour values of a block.
+ * Set the style and color values of a block.
  * @param {string} blockStyleName Name of the block style.
  */
 Block.prototype.setStyle = function(blockStyleName) {
@@ -1537,16 +1537,16 @@ Block.prototype.jsonInit = function(json) {
   // Makes styles backward compatible with old way of defining hat style.
   if (json['style'] && json['style'].hat) {
     this.hat = json['style'].hat;
-    // Must set to null so it doesn't error when checking for style and colour.
+    // Must set to null so it doesn't error when checking for style and color.
     json['style'] = null;
   }
 
-  if (json['style'] && json['colour']) {
-    throw Error(warningPrefix + 'Must not have both a colour and a style.');
+  if (json['style'] && json['color']) {
+    throw Error(warningPrefix + 'Must not have both a color and a style.');
   } else if (json['style']) {
     this.jsonInitStyle_(json, warningPrefix);
   } else {
-    this.jsonInitColour_(json, warningPrefix);
+    this.jsonInitColor_(json, warningPrefix);
   }
 
   // Interpolate the message blocks.
@@ -1612,21 +1612,21 @@ Block.prototype.jsonInit = function(json) {
 };
 
 /**
- * Initialize the colour of this block from the JSON description.
+ * Initialize the color of this block from the JSON description.
  * @param {!Object} json Structured data describing the block.
  * @param {string} warningPrefix Warning prefix string identifying block.
  * @private
  */
-Block.prototype.jsonInitColour_ = function(json, warningPrefix) {
-  if ('colour' in json) {
-    if (json['colour'] === undefined) {
-      console.warn(warningPrefix + 'Undefined colour value.');
+Block.prototype.jsonInitColor_ = function(json, warningPrefix) {
+  if ('color' in json) {
+    if (json['color'] === undefined) {
+      console.warn(warningPrefix + 'Undefined color value.');
     } else {
-      const rawValue = json['colour'];
+      const rawValue = json['color'];
       try {
-        this.setColour(rawValue);
+        this.setColor(rawValue);
       } catch (e) {
-        console.warn(warningPrefix + 'Illegal colour value: ', rawValue);
+        console.warn(warningPrefix + 'Illegal color value: ', rawValue);
       }
     }
   }

@@ -111,7 +111,7 @@ Warning.prototype.createBubble_ = function() {
   this.bubble_ = Bubble.createNonEditableBubble(
       this.paragraphElement_, /** @type {!BlockSvg} */ (this.block_),
       /** @type {!Coordinate} */ (this.iconXY_));
-  this.applyColour();
+  this.applyColor();
 };
 
 /**

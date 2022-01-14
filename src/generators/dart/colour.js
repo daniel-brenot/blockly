@@ -5,29 +5,29 @@
  */
 
 /**
- * @fileoverview Generating Dart for colour blocks.
+ * @fileoverview Generating Dart for color blocks.
  */
 'use strict';
 
-goog.module('Blockly.Dart.colour');
+goog.module('Blockly.Dart.color');
 
 const Dart = goog.require('Blockly.Dart');
 
 
 Dart.addReservedWords('Math');
 
-Dart['colour_picker'] = function(block) {
-  // Colour picker.
-  const code = Dart.quote_(block.getFieldValue('COLOUR'));
+Dart['color_picker'] = function(block) {
+  // Color picker.
+  const code = Dart.quote_(block.getFieldValue('COLOR'));
   return [code, Dart.ORDER_ATOMIC];
 };
 
-Dart['colour_random'] = function(block) {
-  // Generate a random colour.
+Dart['color_random'] = function(block) {
+  // Generate a random color.
   Dart.definitions_['import_dart_math'] =
       'import \'dart:math\' as Math;';
   const functionName = Dart.provideFunction_(
-      'colour_random',
+      'color_random',
       ['String ' + Dart.FUNCTION_NAME_PLACEHOLDER_ + '() {',
        '  String hex = \'0123456789abcdef\';',
        '  var rnd = new Math.Random();',
@@ -39,8 +39,8 @@ Dart['colour_random'] = function(block) {
   return [code, Dart.ORDER_UNARY_POSTFIX];
 };
 
-Dart['colour_rgb'] = function(block) {
-  // Compose a colour from RGB components expressed as percentages.
+Dart['color_rgb'] = function(block) {
+  // Compose a color from RGB components expressed as percentages.
   const red = Dart.valueToCode(block, 'RED',
       Dart.ORDER_NONE) || 0;
   const green = Dart.valueToCode(block, 'GREEN',
@@ -51,7 +51,7 @@ Dart['colour_rgb'] = function(block) {
   Dart.definitions_['import_dart_math'] =
       'import \'dart:math\' as Math;';
   const functionName = Dart.provideFunction_(
-      'colour_rgb',
+      'color_rgb',
       ['String ' + Dart.FUNCTION_NAME_PLACEHOLDER_ +
           '(num r, num g, num b) {',
        '  num rn = (Math.max(Math.min(r, 100), 0) * 2.55).round();',
@@ -72,11 +72,11 @@ Dart['colour_rgb'] = function(block) {
   return [code, Dart.ORDER_UNARY_POSTFIX];
 };
 
-Dart['colour_blend'] = function(block) {
-  // Blend two colours together.
-  const c1 = Dart.valueToCode(block, 'COLOUR1',
+Dart['color_blend'] = function(block) {
+  // Blend two colors together.
+  const c1 = Dart.valueToCode(block, 'COLOR1',
       Dart.ORDER_NONE) || '\'#000000\'';
-  const c2 = Dart.valueToCode(block, 'COLOUR2',
+  const c2 = Dart.valueToCode(block, 'COLOR2',
       Dart.ORDER_NONE) || '\'#000000\'';
   const ratio = Dart.valueToCode(block, 'RATIO',
       Dart.ORDER_NONE) || 0.5;
@@ -84,7 +84,7 @@ Dart['colour_blend'] = function(block) {
   Dart.definitions_['import_dart_math'] =
       'import \'dart:math\' as Math;';
   const functionName = Dart.provideFunction_(
-      'colour_blend',
+      'color_blend',
       ['String ' + Dart.FUNCTION_NAME_PLACEHOLDER_ +
           '(String c1, String c2, num ratio) {',
        '  ratio = Math.max(Math.min(ratio, 1), 0);',

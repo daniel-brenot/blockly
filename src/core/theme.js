@@ -84,9 +84,9 @@ const Theme = function(
 /**
  * A block style.
  * @typedef {{
- *            colourPrimary:string,
- *            colourSecondary:string,
- *            colourTertiary:string,
+ *            colorPrimary:string,
+ *            colorSecondary:string,
+ *            colorTertiary:string,
  *            hat:string
  *          }}
  */
@@ -95,7 +95,7 @@ Theme.BlockStyle;
 /**
  * A category style.
  * @typedef {{
- *            colour:string
+ *            color:string
  *          }}
  */
 Theme.CategoryStyle;
@@ -103,21 +103,21 @@ Theme.CategoryStyle;
 /**
  * A component style.
  * @typedef {{
- *            workspaceBackgroundColour:?string,
- *            toolboxBackgroundColour:?string,
- *            toolboxForegroundColour:?string,
- *            flyoutBackgroundColour:?string,
- *            flyoutForegroundColour:?string,
+ *            workspaceBackgroundColor:?string,
+ *            toolboxBackgroundColor:?string,
+ *            toolboxForegroundColor:?string,
+ *            flyoutBackgroundColor:?string,
+ *            flyoutForegroundColor:?string,
  *            flyoutOpacity:?number,
- *            scrollbarColour:?string,
+ *            scrollbarColor:?string,
  *            scrollbarOpacity:?number,
- *            insertionMarkerColour:?string,
+ *            insertionMarkerColor:?string,
  *            insertionMarkerOpacity:?number,
- *            markerColour:?string,
- *            cursorColour:?string,
- *            selectedGlowColour:?string,
+ *            markerColor:?string,
+ *            cursorColor:?string,
+ *            selectedGlowColor:?string,
  *            selectedGlowOpacity:?number,
- *            replacementGlowColour:?string,
+ *            replacementGlowColor:?string,
  *            replacementGlowOpacity:?number
  *          }}
  */
