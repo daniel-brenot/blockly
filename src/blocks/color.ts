@@ -4,46 +4,52 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {defineBlocksWithJsonArray} from './common';
-import 
+/**
+ * @fileoverview Colour blocks for Blockly.
+ */
+'use strict';
+
+goog.module('Blockly.blocks.colour');
+
+const {defineBlocksWithJsonArray} = goog.require('Blockly.common');
 /** @suppress {extraRequire} */
-goog.require('Blockly.FieldColor');
+goog.require('Blockly.FieldColour');
 
 
 defineBlocksWithJsonArray([
-  // Block for color picker.
+  // Block for colour picker.
   {
-    'type': 'color_picker',
+    'type': 'colour_picker',
     'message0': '%1',
     'args0': [
       {
-        'type': 'field_color',
-        'name': 'COLOR',
-        'color': '#ff0000',
+        'type': 'field_colour',
+        'name': 'COLOUR',
+        'colour': '#ff0000',
       },
     ],
-    'output': 'Color',
-    'helpUrl': '%{BKY_COLOR_PICKER_HELPURL}',
-    'style': 'color_blocks',
-    'tooltip': '%{BKY_COLOR_PICKER_TOOLTIP}',
+    'output': 'Colour',
+    'helpUrl': '%{BKY_COLOUR_PICKER_HELPURL}',
+    'style': 'colour_blocks',
+    'tooltip': '%{BKY_COLOUR_PICKER_TOOLTIP}',
     'extensions': ['parent_tooltip_when_inline'],
   },
 
-  // Block for random color.
+  // Block for random colour.
   {
-    'type': 'color_random',
-    'message0': '%{BKY_COLOR_RANDOM_TITLE}',
-    'output': 'Color',
-    'helpUrl': '%{BKY_COLOR_RANDOM_HELPURL}',
-    'style': 'color_blocks',
-    'tooltip': '%{BKY_COLOR_RANDOM_TOOLTIP}',
+    'type': 'colour_random',
+    'message0': '%{BKY_COLOUR_RANDOM_TITLE}',
+    'output': 'Colour',
+    'helpUrl': '%{BKY_COLOUR_RANDOM_HELPURL}',
+    'style': 'colour_blocks',
+    'tooltip': '%{BKY_COLOUR_RANDOM_TOOLTIP}',
   },
 
-  // Block for composing a color from RGB components.
+  // Block for composing a colour from RGB components.
   {
-    'type': 'color_rgb',
+    'type': 'colour_rgb',
     'message0':
-        '%{BKY_COLOR_RGB_TITLE} %{BKY_COLOR_RGB_RED} %1 %{BKY_COLOR_RGB_GREEN} %2 %{BKY_COLOR_RGB_BLUE} %3',
+        '%{BKY_COLOUR_RGB_TITLE} %{BKY_COLOUR_RGB_RED} %1 %{BKY_COLOUR_RGB_GREEN} %2 %{BKY_COLOUR_RGB_BLUE} %3',
     'args0': [
       {
         'type': 'input_value',
@@ -64,28 +70,28 @@ defineBlocksWithJsonArray([
         'align': 'RIGHT',
       },
     ],
-    'output': 'Color',
-    'helpUrl': '%{BKY_COLOR_RGB_HELPURL}',
-    'style': 'color_blocks',
-    'tooltip': '%{BKY_COLOR_RGB_TOOLTIP}',
+    'output': 'Colour',
+    'helpUrl': '%{BKY_COLOUR_RGB_HELPURL}',
+    'style': 'colour_blocks',
+    'tooltip': '%{BKY_COLOUR_RGB_TOOLTIP}',
   },
 
-  // Block for blending two colors together.
+  // Block for blending two colours together.
   {
-    'type': 'color_blend',
-    'message0': '%{BKY_COLOR_BLEND_TITLE} %{BKY_COLOR_BLEND_COLOR1} ' +
-        '%1 %{BKY_COLOR_BLEND_COLOR2} %2 %{BKY_COLOR_BLEND_RATIO} %3',
+    'type': 'colour_blend',
+    'message0': '%{BKY_COLOUR_BLEND_TITLE} %{BKY_COLOUR_BLEND_COLOUR1} ' +
+        '%1 %{BKY_COLOUR_BLEND_COLOUR2} %2 %{BKY_COLOUR_BLEND_RATIO} %3',
     'args0': [
       {
         'type': 'input_value',
-        'name': 'COLOR1',
-        'check': 'Color',
+        'name': 'COLOUR1',
+        'check': 'Colour',
         'align': 'RIGHT',
       },
       {
         'type': 'input_value',
-        'name': 'COLOR2',
-        'check': 'Color',
+        'name': 'COLOUR2',
+        'check': 'Colour',
         'align': 'RIGHT',
       },
       {
@@ -95,9 +101,9 @@ defineBlocksWithJsonArray([
         'align': 'RIGHT',
       },
     ],
-    'output': 'Color',
-    'helpUrl': '%{BKY_COLOR_BLEND_HELPURL}',
-    'style': 'color_blocks',
-    'tooltip': '%{BKY_COLOR_BLEND_TOOLTIP}',
+    'output': 'Colour',
+    'helpUrl': '%{BKY_COLOUR_BLEND_HELPURL}',
+    'style': 'colour_blocks',
+    'tooltip': '%{BKY_COLOUR_BLEND_TOOLTIP}',
   },
 ]);
