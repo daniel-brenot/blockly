@@ -88,9 +88,9 @@ export function allProcedures(root) {
  * @param {!Array} tb Second tuple.
  * @return {number} -1, 0, or 1 to signify greater than, equality, or less than.
  */
-const procTupleComparator = function(ta, tb) {
+function procTupleComparator(ta, tb) {
   return ta[0].localeCompare(tb[0], undefined, {sensitivity: 'base'});
-};
+}
 
 /**
  * Ensure two identically-named procedures don't exist.
@@ -128,9 +128,9 @@ export function findLegalName(name, block) {
  *     comparisons (one doesn't want to collide with oneself).
  * @return {boolean} True if the name is legal.
  */
-const isLegalName = function(name, workspace, opt_exclude) {
+function isLegalName(name, workspace, opt_exclude) {
   return !isNameUsed(name, workspace, opt_exclude);
-};
+}
 
 /**
  * Return if the given name is already a procedure name.
@@ -332,7 +332,7 @@ export function mutatorOpenListener(e) {
  * necessary.
  * @param {!Abstract} e The event that triggered this listener.
  */
-const mutatorChangeListener = function(e) {
+function mutatorChangeListener(e) {
   if (e.type !== eventUtils.BLOCK_CREATE &&
       e.type !== eventUtils.BLOCK_DELETE &&
       e.type !== eventUtils.BLOCK_CHANGE) {
@@ -342,7 +342,7 @@ const mutatorChangeListener = function(e) {
   const workspace = /** @type {!WorkspaceSvg} */
       (Workspace.getById(workspaceId));
   updateMutatorFlyout(workspace);
-};
+}
 
 /**
  * Find all the callers of a named procedure.

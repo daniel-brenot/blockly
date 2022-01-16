@@ -298,7 +298,7 @@ const internal = {};
  * @param {!BlockSvg} block The block.
  * @return {!Rect} The scaled bounding box of the block.
  */
-const getScaledBboxOfBlock = function(block) {
+function getScaledBboxOfBlock(block) {
   const blockSvg = block.getSvgRoot();
   const bBox = blockSvg.getBBox();
   const scale = block.workspace.scale;
@@ -306,17 +306,17 @@ const getScaledBboxOfBlock = function(block) {
   const scaledWidth = bBox.width * scale;
   const xy = style.getPageOffset(blockSvg);
   return new Rect(xy.y, xy.y + scaledHeight, xy.x, xy.x + scaledWidth);
-};
+}
 
 /**
  * Get the scaled bounding box of a field.
  * @param {!Field} field The field.
  * @return {!Rect} The scaled bounding box of the field.
  */
-const getScaledBboxOfField = function(field) {
+function getScaledBboxOfField(field) {
   const bBox = field.getScaledBBox();
   return new Rect(bBox.top, bBox.bottom, bBox.left, bBox.right);
-};
+}
 
 /**
  * Helper method to show and place the drop-down with positioning determined

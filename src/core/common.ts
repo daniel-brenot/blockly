@@ -178,11 +178,11 @@ export function getBlockTypeCounts(block, opt_stripFollowing) {
  * @return {function()} A function that calls jsonInit with the correct value
  *     of jsonDef.
  */
-const jsonInitFactory = function(jsonDef) {
+function jsonInitFactory(jsonDef) {
   return /** @this {Block} */ function() {
     this.jsonInit(jsonDef);
   };
-};
+}
 
 /**
  * Define blocks from an array of JSON block definitions, as might be generated

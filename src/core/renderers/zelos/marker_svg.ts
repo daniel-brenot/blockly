@@ -32,9 +32,9 @@ import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
  * @extends {BaseMarkerSvg}
  * @alias Blockly.zelos.MarkerSvg
  */
-const MarkerSvg = function(workspace, constants, marker) {
+function MarkerSvg(workspace, constants, marker) {
   MarkerSvg.superClass_.constructor.call(this, workspace, constants, marker);
-};
+}
 object.inherits(MarkerSvg, BaseMarkerSvg);
 
 /**

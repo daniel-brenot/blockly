@@ -30,11 +30,11 @@ import {RenderInfo} from 'Blockly.geras.RenderInfo';
  * @extends {BaseDrawer}
  * @alias Blockly.geras.Drawer
  */
-const Drawer = function(block, info) {
+function Drawer(block, info) {
   Drawer.superClass_.constructor.call(this, block, info);
   // Unlike Thrasos, Geras has highlights and drop shadows.
   this.highlighter_ = new Highlighter(info);
-};
+}
 object.inherits(Drawer, BaseDrawer);
 
 /**

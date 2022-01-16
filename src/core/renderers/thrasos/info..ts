@@ -34,9 +34,9 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {BaseRenderInfo}
  * @alias Blockly.thrasos.RenderInfo
  */
-const RenderInfo = function(renderer, block) {
+function RenderInfo(renderer, block) {
   RenderInfo.superClass_.constructor.call(this, renderer, block);
-};
+}
 object.inherits(RenderInfo, BaseRenderInfo);
 
 /**

@@ -121,7 +121,7 @@ exports.show = show;
  * @return {!Menu} The menu that will be shown on right click.
  * @private
  */
-const populate_ = function(options, rtl) {
+function populate_(options, rtl) {
   /* Here's what one option object looks like:
     {text: 'Make It So',
      enabled: true,
@@ -148,7 +148,7 @@ const populate_ = function(options, rtl) {
     }
   }
   return menu;
-};
+}
 
 /**
  * Add the menu to the page and position it correctly.
@@ -189,7 +189,7 @@ const position_ = function(menu, e, rtl) {
  * @param {!Menu} menu The menu to add to the widget div.
  * @private
  */
-const createWidget_ = function(menu) {
+function createWidget_(menu) {
   const div = WidgetDiv.getDiv();
   if (!div) {
     throw Error('Attempting to create a context menu when widget div is null');
@@ -204,17 +204,17 @@ const createWidget_ = function(menu) {
       haltPropagation);
   // Focus only after the initial render to avoid issue #1329.
   menu.focus();
-};
+}
 
 /**
  * Halts the propagation of the event without doing anything else.
  * @param {!Event} e An event.
  */
-const haltPropagation = function(e) {
+function haltPropagation(e) {
   // This event has been handled.  No need to bubble up to the document.
   e.preventDefault();
   e.stopPropagation();
-};
+}
 
 /**
  * Hide the context menu.

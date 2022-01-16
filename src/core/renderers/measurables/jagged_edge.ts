@@ -32,12 +32,12 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Measurable}
  * @alias Blockly.blockRendering.JaggedEdge
  */
-const JaggedEdge = function(constants) {
+function JaggedEdge(constants) {
   JaggedEdge.superClass_.constructor.call(this, constants);
   this.type |= Types.JAGGED_EDGE;
   this.height = this.constants_.JAGGED_TEETH.height;
   this.width = this.constants_.JAGGED_TEETH.width;
-};
+}
 object.inherits(JaggedEdge, Measurable);
 
 exports.JaggedEdge = JaggedEdge;

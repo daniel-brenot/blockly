@@ -239,7 +239,7 @@ const wrapScore = function(words, wordBreaks, limit) {
  * @param {number} limit Width to wrap each line.
  * @return {!Array<boolean>} New array of optimal line breaks.
  */
-const wrapMutate = function(words, wordBreaks, limit) {
+function wrapMutate(words, wordBreaks, limit) {
   let bestScore = wrapScore(words, wordBreaks, limit);
   let bestBreaks;
   // Try shifting every line break forward or backward.
@@ -262,7 +262,7 @@ const wrapMutate = function(words, wordBreaks, limit) {
   }
   // No improvements found.  Done.
   return wordBreaks;
-};
+}
 
 /**
  * Reassemble the array of words into text, with the specified line breaks.
@@ -270,7 +270,7 @@ const wrapMutate = function(words, wordBreaks, limit) {
  * @param {!Array<boolean>} wordBreaks Array of line breaks.
  * @return {string} Plain text.
  */
-const wrapToText = function(words, wordBreaks) {
+function wrapToText(words, wordBreaks) {
   const text = [];
   for (let i = 0; i < words.length; i++) {
     text.push(words[i]);
@@ -279,7 +279,7 @@ const wrapToText = function(words, wordBreaks) {
     }
   }
   return text.join('');
-};
+}
 
 /**
  * Is the given string a number (includes negative and decimals).

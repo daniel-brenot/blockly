@@ -23,9 +23,9 @@ import {Field} from 'Blockly.Field';
  * @extends {BasicCursor}
  * @alias Blockly.TabNavigateCursor
  */
-const TabNavigateCursor = function() {
+function TabNavigateCursor() {
   TabNavigateCursor.superClass_.constructor.call(this);
-};
+}
 object.inherits(TabNavigateCursor, BasicCursor);
 
 /**

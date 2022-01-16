@@ -22,12 +22,12 @@ const strRegExp = /^\s*'([^']|\\')*'\s*$/;
  * @return {Array<string|number>} Array containing code evaluating to a string
  *     and the order of the returned code.[string, number]
  */
-const forceString = function(value) {
+function forceString(value) {
   if (strRegExp.test(value)) {
     return [value, JavaScript.ORDER_ATOMIC];
   }
   return ['String(' + value + ')', JavaScript.ORDER_FUNCTION_CALL];
-};
+}
 
 /**
  * Returns an expression calculating the index into a string.
@@ -36,7 +36,7 @@ const forceString = function(value) {
  * @param {string=} opt_at The optional offset when indexing from start/end.
  * @return {string|undefined} Index expression.
  */
-const getSubstringIndex = function(stringName, where, opt_at) {
+function getSubstringIndex(stringName, where, opt_at) {
   if (where === 'FIRST') {
     return '0';
   } else if (where === 'FROM_END') {
@@ -46,7 +46,7 @@ const getSubstringIndex = function(stringName, where, opt_at) {
   } else {
     return opt_at;
   }
-};
+}
 
 JavaScript['text'] = function(block) {
   // Text value.

@@ -26,9 +26,9 @@ import {RenderInfo} from 'Blockly.minimalist.RenderInfo';
  * @extends {BaseDrawer}
  * @alias Blockly.minimalist.Drawer
  */
-const Drawer = function(block, info) {
+function Drawer(block, info) {
   Drawer.superClass_.constructor.call(this, block, info);
-};
+}
 object.inherits(Drawer, BaseDrawer);
 
 exports.Drawer = Drawer;

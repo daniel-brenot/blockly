@@ -22,9 +22,9 @@ import {ConstantProvider: BaseConstantProvider} from 'Blockly.blockRendering.Con
  * @extends {BaseConstantProvider}
  * @alias Blockly.minimalist.ConstantProvider
  */
-const ConstantProvider = function() {
+function ConstantProvider() {
   ConstantProvider.superClass_.constructor.call(this);
-};
+}
 object.inherits(ConstantProvider, BaseConstantProvider);
 
 exports.ConstantProvider = ConstantProvider;

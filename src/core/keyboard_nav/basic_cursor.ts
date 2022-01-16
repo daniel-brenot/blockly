@@ -25,9 +25,9 @@ import {Cursor} from 'Blockly.Cursor';
  * @extends {Cursor}
  * @alias Blockly.BasicCursor
  */
-const BasicCursor = function() {
+function BasicCursor() {
   BasicCursor.superClass_.constructor.call(this);
-};
+}
 object.inherits(BasicCursor, Cursor);
 
 /**

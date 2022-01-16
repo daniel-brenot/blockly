@@ -30,7 +30,7 @@ goog.require('Blockly.constants');
  * @implements {IASTNodeLocationWithBlock}
  * @alias Blockly.Connection
  */
-const Connection = function(source, type) {
+function Connection(source, type) {
   /**
    * @type {!Block}
    * @protected
@@ -38,7 +38,7 @@ const Connection = function(source, type) {
   this.sourceBlock_ = source;
   /** @type {number} */
   this.type = type;
-};
+}
 
 /**
  * Constants for checking whether two connections are compatible.
@@ -257,13 +257,13 @@ Connection.prototype.connect = function(otherConnection) {
  * @param {Connection} first The first connection to update.
  * @param {Connection} second The second connection to update.
  */
-const connectReciprocally = function(first, second) {
+function connectReciprocally(first, second) {
   if (!first || !second) {
     throw Error('Cannot connect null connections.');
   }
   first.targetConnection = second;
   second.targetConnection = first;
-};
+}
 
 /**
  * Returns the single connection on the block that will accept the orphaned
@@ -303,7 +303,7 @@ const getSingleConnection = function(block, orphanBlock) {
  * @return {?Connection} The suitable connection point on the chain
  *     of blocks, or null.
  */
-const getConnectionForOrphanedOutput = function(startBlock, orphanBlock) {
+function getConnectionForOrphanedOutput(startBlock, orphanBlock) {
   let newBlock = startBlock;
   let connection;
   while (
@@ -315,7 +315,7 @@ const getConnectionForOrphanedOutput = function(startBlock, orphanBlock) {
     }
   }
   return null;
-};
+}
 
 /**
  * Returns the connection (starting at the startBlock) which will accept

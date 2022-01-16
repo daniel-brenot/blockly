@@ -483,7 +483,7 @@ const IS_DIVISIBLEBY_MUTATOR_MIXIN = {
  * @this {Block}
  * @package
  */
-const IS_DIVISIBLE_MUTATOR_EXTENSION = function() {
+function IS_DIVISIBLE_MUTATOR_EXTENSION() {
   this.getField('PROPERTY')
       .setValidator(
           /**
@@ -494,7 +494,7 @@ const IS_DIVISIBLE_MUTATOR_EXTENSION = function() {
             const divisorInput = (option === 'DIVISIBLE_BY');
             this.getSourceBlock().updateShape_(divisorInput);
           });
-};
+}
 
 Extensions.registerMutator(
     'math_is_divisibleby_mutator', IS_DIVISIBLEBY_MUTATOR_MIXIN,
@@ -560,11 +560,11 @@ const LIST_MODES_MUTATOR_MIXIN = {
  * @this {Block}
  * @package
  */
-const LIST_MODES_MUTATOR_EXTENSION = function() {
+function LIST_MODES_MUTATOR_EXTENSION() {
   this.getField('OP').setValidator(function(newOp) {
     this.updateType_(newOp);
   }.bind(this));
-};
+}
 
 Extensions.registerMutator(
     'math_modes_of_list_mutator', LIST_MODES_MUTATOR_MIXIN,

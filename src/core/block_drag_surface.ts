@@ -39,14 +39,14 @@ import {Svg} from 'Blockly.utils.Svg';
  * @constructor
  * @alias Blockly.BlockDragSurfaceSvg
  */
-const BlockDragSurfaceSvg = function(container) {
+function BlockDragSurfaceSvg(container) {
   /**
    * @type {!Element}
    * @private
    */
   this.container_ = container;
   this.createDom();
-};
+}
 
 /**
  * The SVG drag surface. Set once by BlockDragSurfaceSvg.createDom.

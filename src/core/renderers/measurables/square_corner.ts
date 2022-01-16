@@ -33,7 +33,7 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Measurable}
  * @alias Blockly.blockRendering.SquareCorner
  */
-const SquareCorner = function(constants, opt_position) {
+function SquareCorner(constants, opt_position) {
   SquareCorner.superClass_.constructor.call(this, constants);
   this.type =
       ((!opt_position || opt_position === 'left') ? Types.LEFT_SQUARE_CORNER :
@@ -41,7 +41,7 @@ const SquareCorner = function(constants, opt_position) {
       Types.CORNER;
   this.height = this.constants_.NO_PADDING;
   this.width = this.constants_.NO_PADDING;
-};
+}
 object.inherits(SquareCorner, Measurable);
 
 exports.SquareCorner = SquareCorner;

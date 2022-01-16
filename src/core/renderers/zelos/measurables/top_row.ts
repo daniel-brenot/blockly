@@ -29,9 +29,9 @@ import {TopRow: BaseTopRow} from 'Blockly.blockRendering.TopRow';
  * @extends {BaseTopRow}
  * @alias Blockly.zelos.TopRow
  */
-const TopRow = function(constants) {
+function TopRow(constants) {
   TopRow.superClass_.constructor.call(this, constants);
-};
+}
 object.inherits(TopRow, BaseTopRow);
 
 /**

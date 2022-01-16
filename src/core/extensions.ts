@@ -188,7 +188,7 @@ exports.apply = apply;
  * @param {!Block} block The block to check.
  * @throws {Error} if any of the properties already exist on the block.
  */
-const checkNoMutatorProperties = function(mutationName, block) {
+function checkNoMutatorProperties(mutationName, block) {
   const properties = getMutatorProperties(block);
   if (properties.length) {
     throw Error(
@@ -196,7 +196,7 @@ const checkNoMutatorProperties = function(mutationName, block) {
         '" to a block that already has mutator functions.' +
         '  Block id: ' + block.id);
   }
-};
+}
 
 /**
  * Checks if the given object has both the 'mutationToDom' and 'domToMutation'
@@ -208,11 +208,11 @@ const checkNoMutatorProperties = function(mutationName, block) {
  * @throws {Error} if the object has only one of the functions, or either is
  *     not actually a function.
  */
-const checkXmlHooks = function(object, errorPrefix) {
+function checkXmlHooks(object, errorPrefix) {
   return checkHasFunctionPair(
       object.mutationToDom, object.domToMutation,
       errorPrefix + ' mutationToDom/domToMutation');
-};
+}
 
 /**
  * Checks if the given object has both the 'saveExtraState' and 'loadExtraState'
@@ -224,11 +224,11 @@ const checkXmlHooks = function(object, errorPrefix) {
  * @throws {Error} if the object has only one of the functions, or either is
  *     not actually a function.
  */
-const checkJsonHooks = function(object, errorPrefix) {
+function checkJsonHooks(object, errorPrefix) {
   return checkHasFunctionPair(
       object.saveExtraState, object.loadExtraState,
       errorPrefix + ' saveExtraState/loadExtraState');
-};
+}
 
 /**
  * Checks if the given object has both the 'compose' and 'decompose' functions.
@@ -239,10 +239,10 @@ const checkJsonHooks = function(object, errorPrefix) {
  * @throws {Error} if the object has only one of the functions, or either is
  *     not actually a function.
  */
-const checkMutatorDialog = function(object, errorPrefix) {
+function checkMutatorDialog(object, errorPrefix) {
   return checkHasFunctionPair(
       object.compose, object.decompose, errorPrefix + ' compose/decompose');
-};
+}
 
 /**
  * Checks that both or neither of the given functions exist and that they are
@@ -255,7 +255,7 @@ const checkMutatorDialog = function(object, errorPrefix) {
  * @throws {Error} If the object has only one of the functions, or either is
  *     not actually a function.
  */
-const checkHasFunctionPair = function(func1, func2, errorPrefix) {
+function checkHasFunctionPair(func1, func2, errorPrefix) {
   if (func1 && func2) {
     if (typeof func1 !== 'function' || typeof func2 !== 'function') {
       throw Error(errorPrefix + ' must be a function');
@@ -265,14 +265,14 @@ const checkHasFunctionPair = function(func1, func2, errorPrefix) {
     return false;
   }
   throw Error(errorPrefix + 'Must have both or neither functions');
-};
+}
 
 /**
  * Checks that the given object required mutator properties.
  * @param {string} errorPrefix The string to prepend to any error message.
  * @param {!Object} object The object to inspect.
  */
-const checkHasMutatorProperties = function(errorPrefix, object) {
+function checkHasMutatorProperties(errorPrefix, object) {
   const hasXmlHooks = checkXmlHooks(object, errorPrefix);
   const hasJsonHooks = checkJsonHooks(object, errorPrefix);
   if (!hasXmlHooks && !hasJsonHooks) {
@@ -283,7 +283,7 @@ const checkHasMutatorProperties = function(errorPrefix, object) {
   // A block with a mutator isn't required to have a mutation dialog, but
   // it should still have both or neither of compose and decompose.
   checkMutatorDialog(object, errorPrefix);
-};
+}
 
 /**
  * Get a list of values of mutator properties on the given block.
@@ -291,7 +291,7 @@ const checkHasMutatorProperties = function(errorPrefix, object) {
  * @return {!Array<Object>} A list with all of the defined properties, which
  *     should be functions, but may be anything other than undefined.
  */
-const getMutatorProperties = function(block) {
+function getMutatorProperties(block) {
   const result = [];
   // List each function explicitly by reference to allow for renaming
   // during compilation.
@@ -314,7 +314,7 @@ const getMutatorProperties = function(block) {
     result.push(block.decompose);
   }
   return result;
-};
+}
 
 /**
  * Check that the current mutator properties match a list of old mutator
@@ -324,7 +324,7 @@ const getMutatorProperties = function(block) {
  * @param {!Block} block The block to inspect for new values.
  * @return {boolean} True if the property lists match.
  */
-const mutatorPropertiesMatch = function(oldProperties, block) {
+function mutatorPropertiesMatch(oldProperties, block) {
   const newProperties = getMutatorProperties(block);
   if (newProperties.length !== oldProperties.length) {
     return false;
@@ -335,7 +335,7 @@ const mutatorPropertiesMatch = function(oldProperties, block) {
     }
   }
   return true;
-};
+}
 
 /**
  * Calls a function after the page has loaded, possibly immediately.
@@ -437,7 +437,7 @@ exports.buildTooltipForDropdown = buildTooltipForDropdown;
  * @param {string} dropdownName The name of the dropdown
  * @param {!Object<string, string>} lookupTable The string lookup table
  */
-const checkDropdownOptionsInTable = function(block, dropdownName, lookupTable) {
+function checkDropdownOptionsInTable(block, dropdownName, lookupTable) {
   // Validate all dropdown options have values.
   const dropdown = block.getField(dropdownName);
   if (!dropdown.isOptionListDynamic()) {
@@ -451,7 +451,7 @@ const checkDropdownOptionsInTable = function(block, dropdownName, lookupTable) {
       }
     }
   }
-};
+}
 
 /**
  * Builds an extension function that will install a dynamic tooltip. The
@@ -496,12 +496,12 @@ const buildTooltipWithFieldText = function(msgTemplate, fieldName) {
  * extensions.
  * @this {Block}
  */
-const extensionParentTooltip = function() {
+function extensionParentTooltip() {
   this.tooltipWhenNotConnected = this.tooltip;
   this.setTooltip(function() {
     const parent = this.getParent();
     return (parent && parent.getInputsInline() && parent.tooltip) ||
         this.tooltipWhenNotConnected;
   }.bind(this));
-};
+}
 register('parent_tooltip_when_inline', extensionParentTooltip);

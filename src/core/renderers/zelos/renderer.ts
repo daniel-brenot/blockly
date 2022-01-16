@@ -35,9 +35,9 @@ import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
  * @extends {BaseRenderer}
  * @alias Blockly.zelos.Renderer
  */
-const Renderer = function(name) {
+function Renderer(name) {
   Renderer.superClass_.constructor.call(this, name);
-};
+}
 object.inherits(Renderer, BaseRenderer);
 
 /**

@@ -185,11 +185,11 @@ export function hideIfOwner(oldOwner) {
  * @param {number} y Vertical location (window coordinates, not body).
  * @param {number} height The height of the widget div (pixels).
  */
-const positionInternal = function(x, y, height) {
+function positionInternal(x, y, height) {
   DIV.style.left = x + 'px';
   DIV.style.top = y + 'px';
   DIV.style.height = height + 'px';
-};
+}
 
 /**
  * Position the widget div based on an anchor rectangle.
@@ -232,7 +232,7 @@ exports.positionWithAnchor = positionWithAnchor;
  * @return {number} A valid x-coordinate for the top left corner of the widget
  *     div, in window coordinates.
  */
-const calculateX = function(viewportBBox, anchorBBox, widgetSize, rtl) {
+function calculateX(viewportBBox, anchorBBox, widgetSize, rtl) {
   if (rtl) {
     // Try to align the right side of the field and the right side of widget.
     const widgetLeft = anchorBBox.right - widgetSize.width;
@@ -247,7 +247,7 @@ const calculateX = function(viewportBBox, anchorBBox, widgetSize, rtl) {
     // But left is more important, because that's where the text is.
     return Math.max(x, viewportBBox.left);
   }
-};
+}
 
 /**
  * Calculate a y position (in window coordinates) such that the widget will not
@@ -261,7 +261,7 @@ const calculateX = function(viewportBBox, anchorBBox, widgetSize, rtl) {
  * @return {number} A valid y-coordinate for the top left corner of the widget
  *     div, in window coordinates.
  */
-const calculateY = function(viewportBBox, anchorBBox, widgetSize) {
+function calculateY(viewportBBox, anchorBBox, widgetSize) {
   // Flip the widget vertically if off the bottom.
   if (anchorBBox.bottom + widgetSize.height >= viewportBBox.bottom) {
     // The bottom of the widget is at the top of the field.
@@ -272,4 +272,4 @@ const calculateY = function(viewportBBox, anchorBBox, widgetSize) {
     // The top of the widget is at the bottom of the field.
     return anchorBBox.bottom;
   }
-};
+}

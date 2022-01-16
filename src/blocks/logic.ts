@@ -507,7 +507,7 @@ Extensions.registerMutator(
  * dynamic tooltip to "controls_if" blocks.
  * @this {Block}
  */
-const CONTROLS_IF_TOOLTIP_EXTENSION = function() {
+function CONTROLS_IF_TOOLTIP_EXTENSION() {
   this.setTooltip(function() {
     if (!this.elseifCount_ && !this.elseCount_) {
       return Msg['CONTROLS_IF_TOOLTIP_1'];
@@ -520,7 +520,7 @@ const CONTROLS_IF_TOOLTIP_EXTENSION = function() {
     }
     return '';
   }.bind(this));
-};
+}
 
 Extensions.register('controls_if_tooltip', CONTROLS_IF_TOOLTIP_EXTENSION);
 
@@ -582,10 +582,10 @@ const LOGIC_COMPARE_ONCHANGE_MIXIN = {
  * @this {Block}
  * @readonly
  */
-const LOGIC_COMPARE_EXTENSION = function() {
+function LOGIC_COMPARE_EXTENSION() {
   // Add onchange handler to ensure types are compatible.
   this.mixin(LOGIC_COMPARE_ONCHANGE_MIXIN);
-};
+}
 
 Extensions.register('logic_compare', LOGIC_COMPARE_EXTENSION);
 

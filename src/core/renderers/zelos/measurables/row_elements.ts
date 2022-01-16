@@ -32,13 +32,13 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Measurable}
  * @alias Blockly.zelos.RightConnectionShape
  */
-const RightConnectionShape = function(constants) {
+function RightConnectionShape(constants) {
   RightConnectionShape.superClass_.constructor.call(this, constants);
   this.type |= Types.getType('RIGHT_CONNECTION');
   // Size is dynamic
   this.height = 0;
   this.width = 0;
-};
+}
 object.inherits(RightConnectionShape, Measurable);
 
 exports.RightConnectionShape = RightConnectionShape;

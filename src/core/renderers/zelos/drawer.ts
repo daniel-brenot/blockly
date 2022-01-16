@@ -30,9 +30,9 @@ import {Row} from 'Blockly.blockRendering.Row';
  * @extends {BaseDrawer}
  * @alias Blockly.zelos.Drawer
  */
-const Drawer = function(block, info) {
+function Drawer(block, info) {
   Drawer.superClass_.constructor.call(this, block, info);
-};
+}
 object.inherits(Drawer, BaseDrawer);
 
 

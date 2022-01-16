@@ -36,10 +36,10 @@ import {Svg} from 'Blockly.utils.Svg';
  * @constructor
  * @alias Blockly.WorkspaceDragSurfaceSvg
  */
-const WorkspaceDragSurfaceSvg = function(container) {
+function WorkspaceDragSurfaceSvg(container) {
   this.container_ = container;
   this.createDom();
-};
+}
 
 /**
  * The SVG drag surface. Set once by WorkspaceDragSurfaceSvg.createDom.

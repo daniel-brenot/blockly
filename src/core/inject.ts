@@ -300,7 +300,7 @@ let documentEventsBound = false;
  * Also, 'keydown' has to be on the whole document since the browser doesn't
  * understand a concept of focus on the SVG image.
  */
-const bindDocumentEvents = function() {
+function bindDocumentEvents() {
   if (!documentEventsBound) {
     browserEvents.conditionalBind(document, 'scroll', null, function() {
       const workspaces = Workspace.getAll();
@@ -326,7 +326,7 @@ const bindDocumentEvents = function() {
     }
   }
   documentEventsBound = true;
-};
+}
 
 /**
  * Load sounds for the given workspace.

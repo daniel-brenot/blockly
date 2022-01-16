@@ -41,7 +41,7 @@ goog.require('Blockly.FieldLabel');
  * @constructor
  * @alias Blockly.Input
  */
-const Input = function(type, name, block, connection) {
+function Input(type, name, block, connection) {
   if (type !== inputTypes.DUMMY && !name) {
     throw Error('Value inputs and statement inputs must have non-empty name.');
   }
@@ -58,7 +58,7 @@ const Input = function(type, name, block, connection) {
   this.connection = connection;
   /** @type {!Array<!Field>} */
   this.fieldRow = [];
-};
+}
 
 /**
  * Alignment of input's fields (left, right or centre).

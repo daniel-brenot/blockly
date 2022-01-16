@@ -27,9 +27,9 @@ import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
  * @extends {BaseBottomRow}
  * @alias Blockly.zelos.BottomRow
  */
-const BottomRow = function(constants) {
+function BottomRow(constants) {
   BottomRow.superClass_.constructor.call(this, constants);
-};
+}
 object.inherits(BottomRow, BaseBottomRow);
 
 /**

@@ -727,7 +727,7 @@ FieldDropdown.prototype.getText_ = function() {
  * @param {?} options The proposed dropdown options.
  * @throws {TypeError} If proposed options are incorrectly structured.
  */
-const validateOptions = function(options) {
+function validateOptions(options) {
   if (!Array.isArray(options)) {
     throw TypeError('FieldDropdown options must be an array.');
   }
@@ -762,7 +762,7 @@ const validateOptions = function(options) {
   if (foundError) {
     throw TypeError('Found invalid FieldDropdown options.');
   }
-};
+}
 
 fieldRegistry.register('field_dropdown', FieldDropdown);
 

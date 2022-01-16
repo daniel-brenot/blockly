@@ -33,7 +33,7 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Measurable}
  * @alias Blockly.blockRendering.RoundCorner
  */
-const RoundCorner = function(constants, opt_position) {
+function RoundCorner(constants, opt_position) {
   RoundCorner.superClass_.constructor.call(this, constants);
   this.type =
       ((!opt_position || opt_position === 'left') ? Types.LEFT_ROUND_CORNER :
@@ -43,7 +43,7 @@ const RoundCorner = function(constants, opt_position) {
   // The rounded corner extends into the next row by 4 so we only take the
   // height that is aligned with this row.
   this.height = this.constants_.CORNER_RADIUS / 2;
-};
+}
 object.inherits(RoundCorner, Measurable);
 
 exports.RoundCorner = RoundCorner;

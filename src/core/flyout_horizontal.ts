@@ -31,10 +31,10 @@ import {Scrollbar} from 'Blockly.Scrollbar';
  * @constructor
  * @alias Blockly.HorizontalFlyout
  */
-const HorizontalFlyout = function(workspaceOptions) {
+function HorizontalFlyout(workspaceOptions) {
   HorizontalFlyout.superClass_.constructor.call(this, workspaceOptions);
   this.horizontalLayout = true;
-};
+}
 object.inherits(HorizontalFlyout, Flyout);
 
 /**

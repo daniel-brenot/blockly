@@ -29,7 +29,7 @@ goog.require('Blockly.constants');
  * @constructor
  * @alias Blockly.ConnectionDB
  */
-const ConnectionDB = function(checker) {
+function ConnectionDB(checker) {
   /**
    * Array of connections sorted by y position in workspace units.
    * @type {!Array<!RenderedConnection>}
@@ -43,7 +43,7 @@ const ConnectionDB = function(checker) {
    * @private
    */
   this.connectionChecker_ = checker;
-};
+}
 
 /**
  * Add a connection to the database. Should not already exist in the database.

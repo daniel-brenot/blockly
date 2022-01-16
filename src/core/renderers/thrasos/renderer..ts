@@ -25,9 +25,9 @@ import {Renderer: BaseRenderer} from 'Blockly.blockRendering.Renderer';
  * @extends {BaseRenderer}
  * @alias Blockly.thrasos.Renderer
  */
-const Renderer = function(name) {
+function Renderer(name) {
   Renderer.superClass_.constructor.call(this, name);
-};
+}
 object.inherits(Renderer, BaseRenderer);
 
 /**

@@ -28,14 +28,14 @@ import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
  * @constructor
  * @alias Blockly.MetricsManager
  */
-const MetricsManager = function(workspace) {
+function MetricsManager(workspace) {
   /**
    * The workspace to calculate metrics for.
    * @type {!WorkspaceSvg}
    * @protected
    */
   this.workspace_ = workspace;
-};
+}
 
 /**
  * Describes the width, height and location of the toolbox on the main

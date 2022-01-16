@@ -54,11 +54,11 @@ exports.getSize = getSize;
  * @param {!Element} element Element to get size of.
  * @return {!Size} Object with width/height properties.
  */
-const getSizeWithDisplay = function(element) {
+function getSizeWithDisplay(element) {
   const offsetWidth = /** @type {!HTMLElement} */ (element).offsetWidth;
   const offsetHeight = /** @type {!HTMLElement} */ (element).offsetHeight;
   return new Size(offsetWidth, offsetHeight);
-};
+}
 
 /**
  * Cross-browser pseudo get computed style. It returns the computed style where
@@ -73,10 +73,10 @@ const getSizeWithDisplay = function(element) {
  * @param {string} style Property to get (must be camelCase, not CSS-style).
  * @return {string} Style value.
  */
-const getStyle = function(element, style) {
+function getStyle(element, style) {
   return getComputedStyle(element, style) || getCascadedStyle(element, style) ||
       (element.style && element.style[style]);
-};
+}
 
 /**
  * Retrieves a computed style value of a node. It returns empty string if the

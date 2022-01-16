@@ -128,7 +128,7 @@ exports.bumpIntoBoundsHandler = bumpIntoBoundsHandler;
  * @return {?BlockSvg|?WorkspaceCommentSvg} The extracted
  *    object.
  */
-const extractObjectFromEvent = function(workspace, e) {
+function extractObjectFromEvent(workspace, e) {
   let object = null;
   switch (e.type) {
     case eventUtils.BLOCK_CREATE:
@@ -146,7 +146,7 @@ const extractObjectFromEvent = function(workspace, e) {
       break;
   }
   return object;
-};
+}
 
 /**
  * Bumps the top objects in the given workspace into bounds.

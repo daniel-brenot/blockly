@@ -20,13 +20,13 @@ goog.module('Blockly.utils.Svg');
  * @private
  * @alias Blockly.utils.Svg
  */
-const Svg = function(tagName) {
+function Svg(tagName) {
   /**
    * @type {string}
    * @private
    */
   this.tagName_ = tagName;
-};
+}
 
 /**
  * Returns the SVG element tag name.

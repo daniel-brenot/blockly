@@ -209,7 +209,7 @@ export function getTooltipOfObject(object) {
  *     object of.
  * @return {?{tooltip}} The target tooltip object.
  */
-const getTargetObject = function(obj) {
+function getTargetObject(obj) {
   while (obj && obj.tooltip) {
     if ((typeof obj.tooltip === 'string') ||
         (typeof obj.tooltip === 'function')) {
@@ -218,7 +218,7 @@ const getTargetObject = function(obj) {
     obj = obj.tooltip;
   }
   return null;
-};
+}
 
 /**
  * Create the tooltip div and inject it onto the page.
@@ -272,7 +272,7 @@ export function unbindMouseEvents(element) {
  * Initialize the tooltip to potentially appear for this object.
  * @param {!Event} e Mouse event.
  */
-const onMouseOver = function(e) {
+function onMouseOver(e) {
   if (blocked) {
     // Someone doesn't want us to show tooltips.
     return;
@@ -287,13 +287,13 @@ const onMouseOver = function(e) {
   }
   // Forget about any immediately preceding mouseOut event.
   clearTimeout(mouseOutPid);
-};
+}
 
 /**
  * Hide the tooltip if the mouse leaves the object and enters the workspace.
  * @param {!Event} _e Mouse event.
  */
-const onMouseOut = function(_e) {
+function onMouseOut(_e) {
   if (blocked) {
     // Someone doesn't want us to show tooltips.
     return;
@@ -308,14 +308,14 @@ const onMouseOut = function(_e) {
     hide();
   }, 1);
   clearTimeout(showPid);
-};
+}
 
 /**
  * When hovering over an element, schedule a tooltip to be shown.  If a tooltip
  * is already visible, hide it if the mouse strays out of a certain radius.
  * @param {!Event} e Mouse event.
  */
-const onMouseMove = function(e) {
+function onMouseMove(e) {
   if (!element || !element.tooltip) {
     // No tooltip here to show.
     return;
@@ -340,7 +340,7 @@ const onMouseMove = function(e) {
     lastY = e.pageY;
     showPid = setTimeout(show, HOVER_MS);
   }
-};
+}
 
 /**
  * Dispose of the tooltip.

@@ -29,12 +29,12 @@ goog.require('Blockly.Events.BubbleOpen');
  * @constructor
  * @alias Blockly.Warning
  */
-const Warning = function(block) {
+function Warning(block) {
   Warning.superClass_.constructor.call(this, block);
   this.createIcon();
   // The text_ object can contain multiple warnings.
   this.text_ = Object.create(null);
-};
+}
 object.inherits(Warning, Icon);
 
 /**

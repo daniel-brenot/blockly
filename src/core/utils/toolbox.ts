@@ -351,7 +351,7 @@ exports.isCategoryCollapsible = isCategoryCollapsible;
  * @return {!ToolboxInfo} Object holding information
  *     for creating a toolbox.
  */
-const convertToToolboxJson = function(toolboxDef) {
+function convertToToolboxJson(toolboxDef) {
   const contents = xmlToJsonArray(
       /** @type {!Node|!Array<Node>} */ (toolboxDef));
   const toolboxJson = {'contents': contents};
@@ -359,7 +359,7 @@ const convertToToolboxJson = function(toolboxDef) {
     addAttributes(toolboxDef, toolboxJson);
   }
   return toolboxJson;
-};
+}
 
 /**
  * Converts the xml for a toolbox to JSON.
@@ -405,7 +405,7 @@ const xmlToJsonArray = function(toolboxDef) {
  * @param {!Node} node The node to copy the attributes from.
  * @param {!Object} obj The object to copy the attributes to.
  */
-const addAttributes = function(node, obj) {
+function addAttributes(node, obj) {
   for (let j = 0; j < node.attributes.length; j++) {
     const attr = node.attributes[j];
     if (attr.nodeName.indexOf('css-') > -1) {
@@ -415,7 +415,7 @@ const addAttributes = function(node, obj) {
       obj[attr.nodeName] = attr.value;
     }
   }
-};
+}
 
 /**
  * Parse the provided toolbox tree into a consistent DOM format.

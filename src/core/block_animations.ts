@@ -60,7 +60,7 @@ exports.disposeUiEffect = disposeUiEffect;
  * @param {!Date} start Date of animation's start.
  * @param {number} workspaceScale Scale of workspace.
  */
-const disposeUiStep = function(clone, rtl, start, workspaceScale) {
+function disposeUiStep(clone, rtl, start, workspaceScale) {
   const ms = new Date - start;
   const percent = ms / 150;
   if (percent > 1) {
@@ -76,7 +76,7 @@ const disposeUiStep = function(clone, rtl, start, workspaceScale) {
             ' scale(' + scale + ')');
     setTimeout(disposeUiStep, 10, clone, rtl, start, workspaceScale);
   }
-};
+}
 
 /**
  * Play some UI effects (sound, ripple) after a connection has been established.
@@ -121,7 +121,7 @@ export function connectionUiEffect(block) {
  * @param {!Date} start Date of animation's start.
  * @param {number} scale Scale of workspace.
  */
-const connectionUiStep = function(ripple, start, scale) {
+function connectionUiStep(ripple, start, scale) {
   const ms = new Date - start;
   const percent = ms / 150;
   if (percent > 1) {
@@ -131,7 +131,7 @@ const connectionUiStep = function(ripple, start, scale) {
     ripple.style.opacity = 1 - percent;
     disconnectPid = setTimeout(connectionUiStep, 10, ripple, start, scale);
   }
-};
+}
 
 /**
  * Play some UI effects (sound, animation) when disconnecting a block.

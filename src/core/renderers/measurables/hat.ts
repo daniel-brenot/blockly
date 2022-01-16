@@ -32,13 +32,13 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Measurable}
  * @alias Blockly.blockRendering.Hat
  */
-const Hat = function(constants) {
+function Hat(constants) {
   Hat.superClass_.constructor.call(this, constants);
   this.type |= Types.HAT;
   this.height = this.constants_.START_HAT.height;
   this.width = this.constants_.START_HAT.width;
   this.ascenderHeight = this.height;
-};
+}
 object.inherits(Hat, Measurable);
 
 exports.Hat = Hat;

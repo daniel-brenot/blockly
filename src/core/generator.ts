@@ -24,11 +24,11 @@ import {Workspace} from 'Blockly.Workspace';
  * @constructor
  * @alias Blockly.Generator
  */
-const Generator = function(name) {
+function Generator(name) {
   this.name_ = name;
   this.FUNCTION_NAME_PLACEHOLDER_REGEXP_ =
       new RegExp(this.FUNCTION_NAME_PLACEHOLDER_, 'g');
-};
+}
 
 /**
  * Arbitrary code to inject into locations that risk causing infinite loops.

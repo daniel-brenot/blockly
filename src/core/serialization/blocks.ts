@@ -122,7 +122,7 @@ exports.save = save;
  * @param {!Block} block The block to base the attributes on.
  * @param {!State} state The state object to append to.
  */
-const saveAttributes = function(block, state) {
+function saveAttributes(block, state) {
   if (block.isCollapsed()) {
     state['collapsed'] = true;
   }
@@ -137,26 +137,26 @@ const saveAttributes = function(block, state) {
   if (block.data) {
     state['data'] = block.data;
   }
-};
+}
 
 /**
  * Adds the coordinates of the given block to the given state object.
  * @param {!Block} block The block to base the coordinates on.
  * @param {!State} state The state object to append to.
  */
-const saveCoords = function(block, state) {
+function saveCoords(block, state) {
   const workspace = block.workspace;
   const xy = block.getRelativeToSurfaceXY();
   state['x'] = Math.round(workspace.RTL ? workspace.getWidth() - xy.x : xy.x);
   state['y'] = Math.round(xy.y);
-};
+}
 
 /**
  * Adds any extra state the block may provide to the given state object.
  * @param {!Block} block The block to serialize the extra state of.
  * @param {!State} state The state object to append to.
  */
-const saveExtraState = function(block, state) {
+function saveExtraState(block, state) {
   if (block.saveExtraState) {
     const extraState = block.saveExtraState();
     if (extraState !== null) {
@@ -171,14 +171,14 @@ const saveExtraState = function(block, state) {
                   ' xmlns="https://developers.google.com/blockly/xml"', '');
     }
   }
-};
+}
 
 /**
  * Adds the state of all of the icons on the block to the given state object.
  * @param {!Block} block The block to serialize the icon state of.
  * @param {!State} state The state object to append to.
  */
-const saveIcons = function(block, state) {
+function saveIcons(block, state) {
   // TODO(#2105): Remove this logic and put it in the icon.
   if (block.getCommentText()) {
     state['icons'] = {
@@ -190,7 +190,7 @@ const saveIcons = function(block, state) {
       },
     };
   }
-};
+}
 
 /**
  * Adds the state of all of the fields on the block to the given state object.
@@ -200,7 +200,7 @@ const saveIcons = function(block, state) {
  *     state of the field (rather than possibly saving a reference to some
  *     state).
  */
-const saveFields = function(block, state, doFullSerialization) {
+function saveFields(block, state, doFullSerialization) {
   const fields = Object.create(null);
   for (let i = 0; i < block.inputList.length; i++) {
     const input = block.inputList[i];
@@ -214,7 +214,7 @@ const saveFields = function(block, state, doFullSerialization) {
   if (Object.keys(fields).length) {
     state['fields'] = fields;
   }
-};
+}
 
 /**
  * Adds the state of all of the child blocks of the given block (which are
@@ -249,7 +249,7 @@ const saveInputBlocks = function(block, state, doFullSerialization) {
  * @param {!State} state The state object to append to.
  * @param {boolean} doFullSerialization Whether or not to do full serialization.
  */
-const saveNextBlocks = function(block, state, doFullSerialization) {
+function saveNextBlocks(block, state, doFullSerialization) {
   if (!block.nextConnection) {
     return;
   }
@@ -258,7 +258,7 @@ const saveNextBlocks = function(block, state, doFullSerialization) {
   if (connectionState) {
     state['next'] = connectionState;
   }
-};
+}
 
 /**
  * Returns the state of the given connection (ie the state of any connected
@@ -269,7 +269,7 @@ const saveNextBlocks = function(block, state, doFullSerialization) {
  *     shadow block, or any connected real block.
  * @param {boolean} doFullSerialization Whether or not to do full serialization.
  */
-const saveConnection = function(connection, doFullSerialization) {
+function saveConnection(connection, doFullSerialization) {
   const shadow = connection.getShadowState(true);
   const child = connection.targetBlock();
   if (!shadow && !child) {
@@ -283,7 +283,7 @@ const saveConnection = function(connection, doFullSerialization) {
     state['block'] = save(child, {doFullSerialization});
   }
   return state;
-};
+}
 
 /**
  * Loads the block represented by the given state into the given workspace.
@@ -412,7 +412,7 @@ const loadCoords = function(block, state) {
  * @param {!Block} block The block to set the attributes of.
  * @param {!State} state The state object to reference.
  */
-const loadAttributes = function(block, state) {
+function loadAttributes(block, state) {
   if (state['collapsed']) {
     block.setCollapsed(true);
   }
@@ -425,7 +425,7 @@ const loadAttributes = function(block, state) {
   if (state['data'] !== undefined) {
     block.data = state['data'];
   }
-};
+}
 
 /**
  * Applies any extra state information available on the state object to the
@@ -433,7 +433,7 @@ const loadAttributes = function(block, state) {
  * @param {!Block} block The block to set the extra state of.
  * @param {!State} state The state object to reference.
  */
-const loadExtraState = function(block, state) {
+function loadExtraState(block, state) {
   if (!state['extraState']) {
     return;
   }
@@ -442,7 +442,7 @@ const loadExtraState = function(block, state) {
   } else {
     block.domToMutation(Xml.textToDom(state['extraState']));
   }
-};
+}
 
 /**
  * Attempts to connect the block to the parent connection, if it exists.
@@ -495,7 +495,7 @@ const tryToConnectParent = function(parentConnection, child, state) {
  * @param {!Block} block The block to set the icon state of.
  * @param {!State} state The state object to reference.
  */
-const loadIcons = function(block, state) {
+function loadIcons(block, state) {
   if (!state['icons']) {
     return;
   }
@@ -510,14 +510,14 @@ const loadIcons = function(block, state) {
       setTimeout(() => block.getCommentIcon().setVisible(true), 1);
     }
   }
-};
+}
 
 /**
  * Applies any field information available on the state object to the block.
  * @param {!Block} block The block to set the field state of.
  * @param {!State} state The state object to reference.
  */
-const loadFields = function(block, state) {
+function loadFields(block, state) {
   if (!state['fields']) {
     return;
   }
@@ -533,7 +533,7 @@ const loadFields = function(block, state) {
     }
     field.loadState(fieldState);
   }
-};
+}
 
 /**
  * Creates any child blocks (attached to inputs) defined by the given state
@@ -541,7 +541,7 @@ const loadFields = function(block, state) {
  * @param {!Block} block The block to attach input blocks to.
  * @param {!State} state The state object to reference.
  */
-const loadInputBlocks = function(block, state) {
+function loadInputBlocks(block, state) {
   if (!state['inputs']) {
     return;
   }
@@ -554,7 +554,7 @@ const loadInputBlocks = function(block, state) {
     }
     loadConnection(input.connection, state['inputs'][inputName]);
   }
-};
+}
 
 /**
  * Creates any next blocks defined by the given state and attaches them to the
@@ -562,7 +562,7 @@ const loadInputBlocks = function(block, state) {
  * @param {!Block} block The block to attach next blocks to.
  * @param {!State} state The state object to reference.
  */
-const loadNextBlocks = function(block, state) {
+function loadNextBlocks(block, state) {
   if (!state['next']) {
     return;
   }
@@ -570,7 +570,7 @@ const loadNextBlocks = function(block, state) {
     throw new MissingConnection('next', block, state);
   }
   loadConnection(block.nextConnection, state['next']);
-};
+}
 
 /**
  * Applies the state defined by connectionState to the given connection, ie
@@ -580,7 +580,7 @@ const loadNextBlocks = function(block, state) {
  * @param {!ConnectionState} connectionState The object containing the state of
  *     any connected shadow block, or any connected real block.
  */
-const loadConnection = function(connection, connectionState) {
+function loadConnection(connection, connectionState) {
   if (connectionState['shadow']) {
     connection.setShadowState(connectionState['shadow']);
   }
@@ -589,7 +589,7 @@ const loadConnection = function(connection, connectionState) {
         connectionState['block'], connection.getSourceBlock().workspace,
         {parentConnection: connection});
   }
-};
+}
 
 // TODO(#5146): Remove this from the serialization system.
 /**

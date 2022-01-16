@@ -237,7 +237,7 @@ JavaScript['lists_setIndex'] = function(block) {
  * @param {string=} opt_at The optional offset when indexing from start/end.
  * @return {string|undefined} Index expression.
  */
-const getSubstringIndex = function(listName, where, opt_at) {
+function getSubstringIndex(listName, where, opt_at) {
   if (where === 'FIRST') {
     return '0';
   } else if (where === 'FROM_END') {
@@ -247,7 +247,7 @@ const getSubstringIndex = function(listName, where, opt_at) {
   } else {
     return opt_at;
   }
-};
+}
 
 JavaScript['lists_getSublist'] = function(block) {
   // Get sublist.

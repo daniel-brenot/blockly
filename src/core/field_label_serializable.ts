@@ -32,10 +32,10 @@ import {FieldLabel} from 'Blockly.FieldLabel';
  *
  * @alias Blockly.FieldLabelSerializable
  */
-const FieldLabelSerializable = function(opt_value, opt_class, opt_config) {
+function FieldLabelSerializable(opt_value, opt_class, opt_config) {
   FieldLabelSerializable.superClass_.constructor.call(
       this, opt_value, opt_class, opt_config);
-};
+}
 object.inherits(FieldLabelSerializable, FieldLabel);
 
 /**

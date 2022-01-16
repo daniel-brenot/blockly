@@ -33,12 +33,12 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Measurable}
  * @alias Blockly.blockRendering.InRowSpacer
  */
-const InRowSpacer = function(constants, width) {
+function InRowSpacer(constants, width) {
   InRowSpacer.superClass_.constructor.call(this, constants);
   this.type |= Types.SPACER | Types.IN_ROW_SPACER;
   this.width = width;
   this.height = this.constants_.SPACER_DEFAULT_HEIGHT;
-};
+}
 object.inherits(InRowSpacer, Measurable);
 
 exports.InRowSpacer = InRowSpacer;

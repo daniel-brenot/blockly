@@ -35,13 +35,13 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Connection}
  * @alias Blockly.blockRendering.PreviousConnection
  */
-const PreviousConnection = function(constants, connectionModel) {
+function PreviousConnection(constants, connectionModel) {
   PreviousConnection.superClass_.constructor.call(
       this, constants, connectionModel);
   this.type |= Types.PREVIOUS_CONNECTION;
   this.height = this.shape.height;
   this.width = this.shape.width;
-};
+}
 object.inherits(PreviousConnection, Connection);
 
 exports.PreviousConnection = PreviousConnection;

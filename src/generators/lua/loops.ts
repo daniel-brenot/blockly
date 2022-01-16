@@ -28,14 +28,14 @@ const CONTINUE_STATEMENT = 'goto continue\n';
  * @param {string} branch Generated code of the loop body
  * @return {string} Generated label or '' if unnecessary
  */
-const addContinueLabel = function(branch) {
+function addContinueLabel(branch) {
   if (branch.indexOf(CONTINUE_STATEMENT) !== -1) {
     // False positives are possible (e.g. a string literal), but are harmless.
     return branch + Lua.INDENT + '::continue::\n';
   } else {
     return branch;
   }
-};
+}
 
 Lua['controls_repeat_ext'] = function(block) {
   // Repeat n times.

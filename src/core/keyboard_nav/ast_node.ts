@@ -228,14 +228,14 @@ ASTNode.createWorkspaceNode = function(workspace, wsCoordinate) {
  *     block.
  * @private
  */
-const getParentConnection = function(block) {
+function getParentConnection(block) {
   let topConnection = block.outputConnection;
   if (!topConnection ||
       (block.previousConnection && block.previousConnection.isConnected())) {
     topConnection = block.previousConnection;
   }
   return topConnection;
-};
+}
 
 /**
  * Creates an AST node for the top position on a block.

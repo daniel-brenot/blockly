@@ -35,13 +35,13 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Measurable}
  * @alias Blockly.blockRendering.Connection
  */
-const Connection = function(constants, connectionModel) {
+function Connection(constants, connectionModel) {
   Connection.superClass_.constructor.call(this, constants);
   this.connectionModel = connectionModel;
   this.shape = this.constants_.shapeFor(connectionModel);
   this.isDynamicShape = !!this.shape['isDynamic'];
   this.type |= Types.CONNECTION;
-};
+}
 object.inherits(Connection, Measurable);
 
 exports.Connection = Connection;

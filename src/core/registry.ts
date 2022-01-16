@@ -180,7 +180,7 @@ exports.register = register;
  * @param {Function|Object} registryItem A class or object that we are checking
  *     for the required properties.
  */
-const validate = function(type, registryItem) {
+function validate(type, registryItem) {
   switch (type) {
     case String(Type.FIELD):
       if (typeof registryItem.fromJson !== 'function') {
@@ -188,7 +188,7 @@ const validate = function(type, registryItem) {
       }
       break;
   }
-};
+}
 
 /**
  * Unregisters the registry item with the given type and name.
@@ -224,7 +224,7 @@ export function unregister(type, name) {
  *     name and type or null if none exists.
  * @template T
  */
-const getItem = function(type, name, opt_throwIfMissing) {
+function getItem(type, name, opt_throwIfMissing) {
   type = String(type).toLowerCase();
   name = name.toLowerCase();
   const typeRegistry = typeMap[type];
@@ -239,7 +239,7 @@ const getItem = function(type, name, opt_throwIfMissing) {
     return null;
   }
   return typeRegistry[name];
-};
+}
 
 /**
  * Returns whether or not the registry contains an item with the given type and

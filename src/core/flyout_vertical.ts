@@ -33,9 +33,9 @@ goog.require('Blockly.constants');
  * @constructor
  * @alias Blockly.VerticalFlyout
  */
-const VerticalFlyout = function(workspaceOptions) {
+function VerticalFlyout(workspaceOptions) {
   VerticalFlyout.superClass_.constructor.call(this, workspaceOptions);
-};
+}
 object.inherits(VerticalFlyout, Flyout);
 
 /**

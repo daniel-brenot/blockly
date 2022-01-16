@@ -26,7 +26,7 @@ goog.requireType('Blockly.Procedures');
  * @constructor
  * @alias Blockly.Names
  */
-const Names = function(reservedWords, opt_variablePrefix) {
+function Names(reservedWords, opt_variablePrefix) {
   this.variablePrefix_ = opt_variablePrefix || '';
   this.reservedDict_ = Object.create(null);
   if (reservedWords) {
@@ -36,7 +36,7 @@ const Names = function(reservedWords, opt_variablePrefix) {
     }
   }
   this.reset();
-};
+}
 
 /**
  * Enum for the type of a name. Different name types may have different rules

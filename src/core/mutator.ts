@@ -40,10 +40,10 @@ goog.require('Blockly.Events.BubbleOpen');
  * @constructor
  * @alias Blockly.Mutator
  */
-const Mutator = function(quarkNames) {
+function Mutator(quarkNames) {
   Mutator.superClass_.constructor.call(this, null);
   this.quarkNames_ = quarkNames;
-};
+}
 object.inherits(Mutator, Icon);
 
 /**

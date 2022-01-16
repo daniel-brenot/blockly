@@ -126,13 +126,13 @@ const CUSTOM_CONTEXT_MENU_VARIABLE_GETTER_SETTER_MIXIN = {
  * @param {!Block} block The block with the variable to rename.
  * @return {!function()} A function that renames the variable.
  */
-const renameOptionCallbackFactory = function(block) {
+function renameOptionCallbackFactory(block) {
   return function() {
     const workspace = block.workspace;
     const variable = block.getField('VAR').getVariable();
     Variables.renameVariable(workspace, variable);
   };
-};
+}
 
 /**
  * Factory for callbacks for delete variable dropdown menu option
@@ -140,14 +140,14 @@ const renameOptionCallbackFactory = function(block) {
  * @param {!Block} block The block with the variable to delete.
  * @return {!function()} A function that deletes the variable.
  */
-const deleteOptionCallbackFactory = function(block) {
+function deleteOptionCallbackFactory(block) {
   return function() {
     const workspace = block.workspace;
     const variable = block.getField('VAR').getVariable();
     workspace.deleteVariableById(variable.getId());
     workspace.refreshToolboxSelection();
   };
-};
+}
 
 Extensions.registerMixin(
     'contextMenu_variableSetterGetter',

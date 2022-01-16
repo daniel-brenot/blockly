@@ -116,7 +116,7 @@ export function registerCleanup() {
  * @param {!Array<BlockSvg>} topBlocks Top blocks in the workspace.
  * @private
  */
-const toggleOption_ = function(shouldCollapse, topBlocks) {
+function toggleOption_(shouldCollapse, topBlocks) {
   const DELAY = 10;
   let ms = 0;
   let timeoutCounter = 0;
@@ -137,7 +137,7 @@ const toggleOption_ = function(shouldCollapse, topBlocks) {
       ms += DELAY;
     }
   }
-};
+}
 
 /**
  * Option to collapse all blocks.
@@ -223,7 +223,7 @@ export function registerExpand() {
  *    modified in place with the given block and its descendants.
  * @private
  */
-const addDeletableBlocks_ = function(block, deleteList) {
+function addDeletableBlocks_(block, deleteList) {
   if (block.isDeletable()) {
     Array.prototype.push.apply(deleteList, block.getDescendants(false));
   } else {
@@ -233,7 +233,7 @@ const addDeletableBlocks_ = function(block, deleteList) {
       addDeletableBlocks_(children[i], deleteList);
     }
   }
-};
+}
 
 /**
  * Constructs a list of blocks that can be deleted in the given workspace.
@@ -241,14 +241,14 @@ const addDeletableBlocks_ = function(block, deleteList) {
  * @return {!Array<!BlockSvg>} list of blocks to delete.
  * @private
  */
-const getDeletableBlocks_ = function(workspace) {
+function getDeletableBlocks_(workspace) {
   const deleteList = [];
   const topBlocks = workspace.getTopBlocks(true);
   for (let i = 0; i < topBlocks.length; i++) {
     addDeletableBlocks_(topBlocks[i], deleteList);
   }
   return deleteList;
-};
+}
 
 /**
  * Deletes the given blocks. Used to delete all blocks in the workspace.
@@ -257,7 +257,7 @@ const getDeletableBlocks_ = function(workspace) {
  *     be associated.
  * @private
  */
-const deleteNext_ = function(deleteList, eventGroup) {
+function deleteNext_(deleteList, eventGroup) {
   const DELAY = 10;
   eventUtils.setGroup(eventGroup);
   const block = deleteList.shift();
@@ -270,7 +270,7 @@ const deleteNext_ = function(deleteList, eventGroup) {
     }
   }
   eventUtils.setGroup(false);
-};
+}
 
 /**
  * Option to delete all blocks.
@@ -332,14 +332,14 @@ export function registerDeleteAll() {
  * Registers all workspace-scoped context menu items.
  * @private
  */
-const registerWorkspaceOptions_ = function() {
+function registerWorkspaceOptions_() {
   registerUndo();
   registerRedo();
   registerCleanup();
   registerCollapse();
   registerExpand();
   registerDeleteAll();
-};
+}
 
 /**
  * Option to duplicate a block.
@@ -607,7 +607,7 @@ export function registerHelp() {
  * Registers all block-scoped context menu items.
  * @private
  */
-const registerBlockOptions_ = function() {
+function registerBlockOptions_() {
   registerDuplicate();
   registerComment();
   registerInline();
@@ -615,7 +615,7 @@ const registerBlockOptions_ = function() {
   registerDisable();
   registerDelete();
   registerHelp();
-};
+}
 
 /**
  * Registers all default context menu items. This should be called once per

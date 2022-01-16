@@ -32,7 +32,7 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @extends {Row}
  * @alias Blockly.blockRendering.SpacerRow
  */
-const SpacerRow = function(constants, height, width) {
+function SpacerRow(constants, height, width) {
   SpacerRow.superClass_.constructor.call(this, constants);
   this.type |= Types.SPACER | Types.BETWEEN_ROW_SPACER;
   this.width = width;
@@ -40,7 +40,7 @@ const SpacerRow = function(constants, height, width) {
   this.followsStatement = false;
   this.widthWithConnectedBlocks = 0;
   this.elements = [new InRowSpacer(this.constants_, width)];
-};
+}
 object.inherits(SpacerRow, Row);
 
 /**

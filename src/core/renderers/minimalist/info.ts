@@ -30,9 +30,9 @@ import {Renderer} from 'Blockly.minimalist.Renderer';
  * @extends {BaseRenderInfo}
  * @alias Blockly.minimalist.RenderInfo
  */
-const RenderInfo = function(renderer, block) {
+function RenderInfo(renderer, block) {
   RenderInfo.superClass_.constructor.call(this, renderer, block);
-};
+}
 object.inherits(RenderInfo, BaseRenderInfo);
 
 /**

@@ -80,7 +80,7 @@ Lua['lists_indexOf'] = function(block) {
  * @param {string=} opt_at The optional offset when indexing from start/end.
  * @return {string|undefined} Index expression.
  */
-const getListIndex = function(listName, where, opt_at) {
+function getListIndex(listName, where, opt_at) {
   if (where === 'FIRST') {
     return '1';
   } else if (where === 'FROM_END') {
@@ -92,7 +92,7 @@ const getListIndex = function(listName, where, opt_at) {
   } else {
     return opt_at;
   }
-};
+}
 
 Lua['lists_getIndex'] = function(block) {
   // Get element at index.

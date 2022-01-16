@@ -314,7 +314,7 @@ export function fire(event) {
 /**
  * Fire all queued events.
  */
-const fireNow = function() {
+function fireNow() {
   const queue = filter(FIRE_QUEUE, true);
   FIRE_QUEUE.length = 0;
   for (let i = 0, event; (event = queue[i]); i++) {
@@ -327,7 +327,7 @@ const fireNow = function() {
       eventWorkspace.fireChangeListener(event);
     }
   }
-};
+}
 
 /**
  * Filter the queued events and merge duplicates.

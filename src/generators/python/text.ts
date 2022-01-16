@@ -38,12 +38,12 @@ const strRegExp = /^\s*'([^']|\\')*'\s*$/;
  *     and
  *    the order of the returned code.[string, number]
  */
-const forceString = function(value) {
+function forceString(value) {
   if (strRegExp.test(value)) {
     return [value, Python.ORDER_ATOMIC];
   }
   return ['str(' + value + ')', Python.ORDER_FUNCTION_CALL];
-};
+}
 
 Python['text_join'] = function(block) {
   // Create a string made up of any number of elements of any type.

@@ -687,10 +687,10 @@ const QUOTE_IMAGE_MIXIN = {
  * Wraps TEXT field with images of double quote characters.
  * @this {Block}
  */
-const TEXT_QUOTES_EXTENSION = function() {
+function TEXT_QUOTES_EXTENSION() {
   this.mixin(QUOTE_IMAGE_MIXIN);
   this.quoteField_('TEXT');
-};
+}
 
 /**
  * Mixin for mutator functions in the 'text_join_mutator' extension.
@@ -832,7 +832,7 @@ const TEXT_JOIN_MUTATOR_MIXIN = {
  * Performs final setup of a text_join block.
  * @this {Block}
  */
-const TEXT_JOIN_EXTENSION = function() {
+function TEXT_JOIN_EXTENSION() {
   // Add the quote mixin for the itemCount_ = 0 case.
   this.mixin(QUOTE_IMAGE_MIXIN);
   // Initialize the mutator values.
@@ -840,7 +840,7 @@ const TEXT_JOIN_EXTENSION = function() {
   this.updateShape_();
   // Configure the mutator UI.
   this.setMutator(new Mutator(['text_create_join_item']));
-};
+}
 
 // Update the tooltip of 'text_append' block to reference the variable.
 Extensions.register(
@@ -851,14 +851,14 @@ Extensions.register(
  * Update the tooltip of 'text_append' block to reference the variable.
  * @this {Block}
  */
-const TEXT_INDEXOF_TOOLTIP_EXTENSION = function() {
+function TEXT_INDEXOF_TOOLTIP_EXTENSION() {
   // Assign 'this' to a variable for use in the tooltip closure below.
   const thisBlock = this;
   this.setTooltip(function() {
     return Msg['TEXT_INDEXOF_TOOLTIP'].replace(
         '%1', thisBlock.workspace.options.oneBasedIndex ? '0' : '-1');
   });
-};
+}
 
 /**
  * Mixin for mutator functions in the 'text_charAt_mutator' extension.
@@ -927,7 +927,7 @@ const TEXT_CHARAT_MUTATOR_MIXIN = {
  * Does the initial mutator update of text_charAt and adds the tooltip
  * @this {Block}
  */
-const TEXT_CHARAT_EXTENSION = function() {
+function TEXT_CHARAT_EXTENSION() {
   const dropdown = this.getField('WHERE');
   dropdown.setValidator(
       /**
@@ -959,7 +959,7 @@ const TEXT_CHARAT_EXTENSION = function() {
     }
     return tooltip;
   });
-};
+}
 
 Extensions.register('text_indexOf_tooltip', TEXT_INDEXOF_TOOLTIP_EXTENSION);
 
