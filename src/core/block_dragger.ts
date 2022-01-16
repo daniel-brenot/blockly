@@ -12,7 +12,7 @@ goog.module('Blockly.BlockDragger');
 
 import blockAnimation from 'Blockly.blockAnimations';
 import bumpObjects from 'Blockly.bumpObjects';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import dom from 'Blockly.utils.dom';
 import eventUtils from 'Blockly.Events.utils';
 import registry from 'Blockly.registry';

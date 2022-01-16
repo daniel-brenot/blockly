@@ -15,7 +15,7 @@ import {Msg} from 'Blockly.Msg';
 import {Mutator} from 'Blockly.Mutator';
 import {RenderedConnection} from 'Blockly.RenderedConnection';
 import {Workspace} from 'Blockly.Workspace';
-import {defineBlocksWithJsonArray} from 'Blockly.common';
+import {defineBlocksWithJsonArray} from 'blockly/core/common';
 goog.require('Blockly.FieldDropdown');
 goog.require('Blockly.FieldLabel');
 

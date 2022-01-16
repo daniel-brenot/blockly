@@ -15,7 +15,7 @@ import Tooltip from 'Blockly.Tooltip';
 import Touch from 'Blockly.Touch';
 import blockAnimations from 'Blockly.blockAnimations';
 import browserEvents from 'Blockly.browserEvents';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import eventUtils from 'Blockly.Events.utils';
 import internalConstants from 'Blockly.internalConstants';
 import registry from 'Blockly.registry';
@@ -101,7 +101,7 @@ const Gesture = function(e, creatorWorkspace) {
   /**
    * The workspace that the gesture started on.  There may be multiple
    * workspaces on a page; this is more accurate than using
-   * Blockly.common.getMainWorkspace().
+   * blockly/core/common.getMainWorkspace().
    * @type {WorkspaceSvg}
    * @protected
    */

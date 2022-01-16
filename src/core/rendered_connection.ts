@@ -10,7 +10,7 @@
  */
 goog.module('Blockly.RenderedConnection');
 
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import dom from 'Blockly.utils.dom';
 import eventUtils from 'Blockly.Events.utils';
 import internalConstants from 'Blockly.internalConstants';

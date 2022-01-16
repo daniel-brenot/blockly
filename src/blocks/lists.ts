@@ -9,13 +9,13 @@ goog.module('Blockly.blocks.lists');
 import xmlUtils from 'Blockly.utils.xml';
 import {Align} from 'Blockly.Input';
 import {Block} from 'Blockly.Block';
-import {Blocks} from 'Blockly.blocks';
+import {Blocks} from 'blockly/core/blocks';
 import {ConnectionType} from 'Blockly.ConnectionType';
 import {FieldDropdown} from 'Blockly.FieldDropdown';
 import {Msg} from 'Blockly.Msg';
 import {Mutator} from 'Blockly.Mutator';
 import {Workspace} from 'Blockly.Workspace';
-import {defineBlocksWithJsonArray} from 'Blockly.common';
+import {defineBlocksWithJsonArray} from 'blockly/core/common';
 goog.require('Blockly.FieldDropdown');
 
 

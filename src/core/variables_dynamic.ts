@@ -13,7 +13,7 @@ goog.module('Blockly.VariablesDynamic');
 
 import Variables from 'Blockly.Variables';
 import xml from 'Blockly.utils.xml';
-import {Blocks} from 'Blockly.blocks';
+import {Blocks} from 'blockly/core/blocks';
 import {Msg} from 'Blockly.Msg';
 import {VariableModel} from 'Blockly.VariableModel';
 import {Workspace} from 'Blockly.Workspace';

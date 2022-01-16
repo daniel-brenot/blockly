@@ -18,7 +18,7 @@
  */
 goog.module('Blockly.DropDownDiv');
 
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import dom from 'Blockly.utils.dom';
 import math from 'Blockly.utils.math';
 import style from 'Blockly.utils.style';

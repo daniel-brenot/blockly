@@ -10,7 +10,7 @@
  */
 goog.module('Blockly.WorkspaceDragger');
 
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import {Coordinate} from 'Blockly.utils.Coordinate';
 import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 

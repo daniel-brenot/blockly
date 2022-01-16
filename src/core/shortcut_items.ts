@@ -11,7 +11,7 @@
 goog.module('Blockly.ShortcutItems');
 
 import clipboard from 'Blockly.clipboard';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import {BlockSvg} from 'Blockly.BlockSvg';
 import {Gesture} from 'Blockly.Gesture';
 import {ICopyable} from 'Blockly.ICopyable';

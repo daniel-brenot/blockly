@@ -11,7 +11,7 @@ import ContextMenu from 'Blockly.ContextMenu';
 import Events from 'Blockly.Events';
 import Extensions from 'Blockly.Extensions';
 import Variables from 'Blockly.Variables';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import xmlUtils from 'Blockly.utils.xml';
 import {Block} from 'Blockly.Block';
 import {Msg} from 'Blockly.Msg';

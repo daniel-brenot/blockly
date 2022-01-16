@@ -15,7 +15,7 @@ import Variables from 'Blockly.Variables';
 import Xml from 'Blockly.Xml';
 import blocks from 'Blockly.serialization.blocks';
 import browserEvents from 'Blockly.browserEvents';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import dom from 'Blockly.utils.dom';
 import eventUtils from 'Blockly.Events.utils';
 import idGenerator from 'Blockly.utils.idGenerator';

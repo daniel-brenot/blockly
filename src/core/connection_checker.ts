@@ -11,7 +11,7 @@
  */
 goog.module('Blockly.ConnectionChecker');
 
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import internalConstants from 'Blockly.internalConstants';
 import registry from 'Blockly.registry';
 import {ConnectionType} from 'Blockly.ConnectionType';

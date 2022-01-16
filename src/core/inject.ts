@@ -17,7 +17,7 @@ import WidgetDiv from 'Blockly.WidgetDiv';
 import aria from 'Blockly.utils.aria';
 import browserEvents from 'Blockly.browserEvents';
 import bumpObjects from 'Blockly.bumpObjects';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import dom from 'Blockly.utils.dom';
 import userAgent from 'Blockly.utils.userAgent';
 import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';

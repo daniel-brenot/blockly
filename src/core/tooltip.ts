@@ -17,7 +17,7 @@ goog.module('Blockly.Tooltip');
 
 import blocklyString from 'Blockly.utils.string';
 import browserEvents from 'Blockly.browserEvents';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import deprecation from 'Blockly.utils.deprecation';
 
 

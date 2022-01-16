@@ -21,7 +21,7 @@ import arrayUtils from 'Blockly.utils.array';
 import blockRendering from 'Blockly.blockRendering';
 import blocks from 'Blockly.serialization.blocks';
 import browserEvents from 'Blockly.browserEvents';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import dom from 'Blockly.utils.dom';
 import eventUtils from 'Blockly.Events.utils';
 import internalConstants from 'Blockly.internalConstants';

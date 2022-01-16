@@ -4,14 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.blocks.colour');
-
-import {defineBlocksWithJsonArray} from 'Blockly.common';
-goog.require('Blockly.FieldColour');
+import {defineBlocksWithJsonArray} from 'blockly/core/common';
+goog.require('Blockly.FieldColor');
 
 
 defineBlocksWithJsonArray([
-  // Block for colour picker.
+  // Block for color picker.
   {
     'type': 'colour_picker',
     'message0': '%1',
@@ -19,27 +17,27 @@ defineBlocksWithJsonArray([
       {
         'type': 'field_colour',
         'name': 'COLOUR',
-        'colour': '#ff0000',
+        'color': '#ff0000',
       },
     ],
-    'output': 'Colour',
+    'output': 'Color',
     'helpUrl': '%{BKY_COLOUR_PICKER_HELPURL}',
     'style': 'colour_blocks',
     'tooltip': '%{BKY_COLOUR_PICKER_TOOLTIP}',
     'extensions': ['parent_tooltip_when_inline'],
   },
 
-  // Block for random colour.
+  // Block for random color.
   {
     'type': 'colour_random',
     'message0': '%{BKY_COLOUR_RANDOM_TITLE}',
-    'output': 'Colour',
+    'output': 'Color',
     'helpUrl': '%{BKY_COLOUR_RANDOM_HELPURL}',
     'style': 'colour_blocks',
     'tooltip': '%{BKY_COLOUR_RANDOM_TOOLTIP}',
   },
 
-  // Block for composing a colour from RGB components.
+  // Block for composing a color from RGB components.
   {
     'type': 'colour_rgb',
     'message0':
@@ -64,7 +62,7 @@ defineBlocksWithJsonArray([
         'align': 'RIGHT',
       },
     ],
-    'output': 'Colour',
+    'output': 'Color',
     'helpUrl': '%{BKY_COLOUR_RGB_HELPURL}',
     'style': 'colour_blocks',
     'tooltip': '%{BKY_COLOUR_RGB_TOOLTIP}',
@@ -79,13 +77,13 @@ defineBlocksWithJsonArray([
       {
         'type': 'input_value',
         'name': 'COLOUR1',
-        'check': 'Colour',
+        'check': 'Color',
         'align': 'RIGHT',
       },
       {
         'type': 'input_value',
         'name': 'COLOUR2',
-        'check': 'Colour',
+        'check': 'Color',
         'align': 'RIGHT',
       },
       {
@@ -95,7 +93,7 @@ defineBlocksWithJsonArray([
         'align': 'RIGHT',
       },
     ],
-    'output': 'Colour',
+    'output': 'Color',
     'helpUrl': '%{BKY_COLOUR_BLEND_HELPURL}',
     'style': 'colour_blocks',
     'tooltip': '%{BKY_COLOUR_BLEND_TOOLTIP}',

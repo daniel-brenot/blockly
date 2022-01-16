@@ -15,7 +15,7 @@ import Tooltip from 'Blockly.Tooltip';
 import blockAnimations from 'Blockly.blockAnimations';
 import blocks from 'Blockly.serialization.blocks';
 import browserEvents from 'Blockly.browserEvents';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import constants from 'Blockly.constants';
 import dom from 'Blockly.utils.dom';
 import eventUtils from 'Blockly.Events.utils';

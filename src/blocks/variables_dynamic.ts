@@ -13,7 +13,7 @@ import Variables from 'Blockly.Variables';
 import xml from 'Blockly.utils.xml';
 import {Block} from 'Blockly.Block';
 import {Msg} from 'Blockly.Msg';
-import {defineBlocksWithJsonArray} from 'Blockly.common';
+import {defineBlocksWithJsonArray} from 'blockly/core/common';
 goog.require('Blockly.FieldLabel');
 goog.require('Blockly.FieldVariable');
 

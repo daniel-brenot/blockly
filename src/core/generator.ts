@@ -11,7 +11,7 @@
  */
 goog.module('Blockly.Generator');
 
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import deprecation from 'Blockly.utils.deprecation';
 import {Block} from 'Blockly.Block';
 import {Names, NameType} from 'Blockly.Names';

@@ -14,7 +14,7 @@ import aria from 'Blockly.utils.aria';
 import arrayUtils from 'Blockly.utils.array';
 import browserEvents from 'Blockly.browserEvents';
 import colorUtils from 'Blockly.utils.color';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import deprecation from 'Blockly.utils.deprecation';
 import dom from 'Blockly.utils.dom';
 import extensions from 'Blockly.Extensions';
@@ -321,7 +321,7 @@ exports.getDocumentScroll = getDocumentScroll;
 const getBlockTypeCounts = function(block, opt_stripFollowing) {
   deprecation.warn(
       'Blockly.utils.getBlockTypeCounts', 'December 2021', 'December 2022',
-      'Blockly.common.getBlockTypeCounts');
+      'blockly/core/common.getBlockTypeCounts');
   return common.getBlockTypeCounts(block, opt_stripFollowing);
 };
 exports.getBlockTypeCounts = getBlockTypeCounts;

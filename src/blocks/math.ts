@@ -11,7 +11,7 @@ import Extensions from 'Blockly.Extensions';
 import FieldDropdown from 'Blockly.FieldDropdown';
 import xmlUtils from 'Blockly.utils.xml';
 import {Block} from 'Blockly.Block';
-import {defineBlocksWithJsonArray} from 'Blockly.common';
+import {defineBlocksWithJsonArray} from 'blockly/core/common';
 goog.require('Blockly.FieldLabel');
 goog.require('Blockly.FieldNumber');
 goog.require('Blockly.FieldVariable');

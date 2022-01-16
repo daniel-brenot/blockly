@@ -16,7 +16,7 @@ import internalConstants from 'Blockly.internalConstants';
 import xmlUtils from 'Blockly.utils.xml';
 import {Align} from 'Blockly.Input';
 import {Block} from 'Blockly.Block';
-import {Blocks} from 'Blockly.blocks';
+import {Blocks} from 'blockly/core/blocks';
 import {FieldCheckbox} from 'Blockly.FieldCheckbox';
 import {FieldLabel} from 'Blockly.FieldLabel';
 import {FieldTextInput} from 'Blockly.FieldTextInput';

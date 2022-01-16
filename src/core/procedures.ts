@@ -15,7 +15,7 @@ import Variables from 'Blockly.Variables';
 import Xml from 'Blockly.Xml';
 import eventUtils from 'Blockly.Events.utils';
 import utilsXml from 'Blockly.utils.xml';
-import {Blocks} from 'Blockly.blocks';
+import {Blocks} from 'blockly/core/blocks';
 import {Block} from 'Blockly.Block';
 import {Field} from 'Blockly.Field';
 import {Msg} from 'Blockly.Msg';

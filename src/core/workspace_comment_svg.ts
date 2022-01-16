@@ -14,7 +14,7 @@ import ContextMenu from 'Blockly.ContextMenu';
 import Css from 'Blockly.Css';
 import Touch from 'Blockly.Touch';
 import browserEvents from 'Blockly.browserEvents';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import dom from 'Blockly.utils.dom';
 import eventUtils from 'Blockly.Events.utils';
 import object from 'Blockly.utils.object';

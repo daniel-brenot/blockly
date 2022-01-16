@@ -7,11 +7,11 @@
 /**
  * Common functions used both internally and externally, but which
  * must not be at the top level to avoid circular dependencies.
- * @namespace Blockly.common
+ * @namespace blockly/core/common
  */
-goog.module('Blockly.common');
+goog.module('blockly/core/common');
 
-import {Blocks} from 'Blockly.blocks';
+import {Blocks} from 'blockly/core/blocks';
 import {Connection} from 'Blockly.Connection';
 import {ICopyable} from 'Blockly.ICopyable';
 import {Block} from 'Blockly.Block';
@@ -31,7 +31,7 @@ let mainWorkspace;
  * this function, particularly if there are multiple Blockly instances on a
  * page.
  * @return {!Workspace} The main workspace.
- * @alias Blockly.common.getMainWorkspace
+ * @alias blockly/core/common.getMainWorkspace
  */
 const getMainWorkspace = function() {
   return mainWorkspace;
@@ -41,7 +41,7 @@ exports.getMainWorkspace = getMainWorkspace;
 /**
  * Sets last used main workspace.
  * @param {!Workspace} workspace The most recently used top level workspace.
- * @alias Blockly.common.setMainWorkspace
+ * @alias blockly/core/common.setMainWorkspace
  */
 const setMainWorkspace = function(workspace) {
   mainWorkspace = workspace;
@@ -57,7 +57,7 @@ let selected = null;
 /**
  * Returns the currently selected block.
  * @return {?ICopyable} The currently selected block.
- * @alias Blockly.common.getSelected
+ * @alias blockly/core/common.getSelected
  */
 const getSelected = function() {
   return selected;
@@ -69,7 +69,7 @@ exports.getSelected = getSelected;
  * block as selected or fire the required events. If you wish to
  * programmatically select a block, use `BlockSvg#select`.
  * @param {?ICopyable} newSelection The newly selected block.
- * @alias Blockly.common.setSelected
+ * @alias blockly/core/common.setSelected
  * @package
  */
 const setSelected = function(newSelection) {
@@ -87,7 +87,7 @@ let parentContainer;
  * Get the container element in which to render the WidgetDiv, DropDownDiv and\
  * Tooltip.
  * @return {?Element} The parent container.
- * @alias Blockly.common.getParentContainer
+ * @alias blockly/core/common.getParentContainer
  */
 const getParentContainer = function() {
   return parentContainer;
@@ -100,7 +100,7 @@ exports.getParentContainer = getParentContainer;
  * is called.
  * This method is a NOP if called after the first ``Blockly.inject``.
  * @param {!Element} newParent The container element.
- * @alias Blockly.common.setParentContainer
+ * @alias blockly/core/common.setParentContainer
  */
 const setParentContainer = function(newParent) {
   parentContainer = newParent;
@@ -114,7 +114,7 @@ exports.setParentContainer = setParentContainer;
  * change (e.g. when a block is added or removed).
  * Record the height/width of the SVG image.
  * @param {!WorkspaceSvg} workspace Any workspace in the SVG.
- * @alias Blockly.common.svgResize
+ * @alias blockly/core/common.svgResize
  */
 const svgResize = function(workspace) {
   let mainWorkspace = workspace;
@@ -156,7 +156,7 @@ exports.draggingConnections = [];
  *    statements (blocks that are not inside a value or statement input
  *    of the block).
  * @return {!Object} Map of types to type counts for descendants of the bock.
- * @alias Blockly.common.getBlockTypeCounts
+ * @alias blockly/core/common.getBlockTypeCounts
  */
 const getBlockTypeCounts = function(block, opt_stripFollowing) {
   const typeCountsMap = Object.create(null);
@@ -196,9 +196,9 @@ const jsonInitFactory = function(jsonDef) {
  * Define blocks from an array of JSON block definitions, as might be generated
  * by the Blockly Developer Tools.
  * @param {!Array<!Object>} jsonArray An array of JSON block definitions.
- * @alias Blockly.common.defineBlocksWithJsonArray
+ * @alias blockly/core/common.defineBlocksWithJsonArray
  */
-const defineBlocksWithJsonArray = function(jsonArray) {
+export function defineBlocksWithJsonArray(jsonArray) {
   for (let i = 0; i < jsonArray.length; i++) {
     const elem = jsonArray[i];
     if (!elem) {
@@ -221,5 +221,4 @@ const defineBlocksWithJsonArray = function(jsonArray) {
       }
     }
   }
-};
-exports.defineBlocksWithJsonArray = defineBlocksWithJsonArray;
+}

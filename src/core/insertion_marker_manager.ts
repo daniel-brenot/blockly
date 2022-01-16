@@ -11,7 +11,7 @@
 goog.module('Blockly.InsertionMarkerManager');
 
 import blockAnimations from 'Blockly.blockAnimations';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import constants from 'Blockly.constants';
 import eventUtils from 'Blockly.Events.utils';
 import internalConstants from 'Blockly.internalConstants';

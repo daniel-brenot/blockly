@@ -31,7 +31,7 @@ import browserEvents from 'Blockly.browserEvents';
 import bumpObjects from 'Blockly.bumpObjects';
 import clipboard from 'Blockly.clipboard';
 import color from 'Blockly.utils.color';
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import constants from 'Blockly.constants';
 import deprecation from 'Blockly.utils.deprecation';
 import dialog from 'Blockly.dialog';
@@ -59,7 +59,7 @@ import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
 import {BlockDragger} from 'Blockly.BlockDragger';
 import {BlockSvg} from 'Blockly.BlockSvg';
 import {BlocklyOptions} from 'Blockly.BlocklyOptions';
-import {Blocks} from 'Blockly.blocks';
+import {Blocks} from 'blockly/core/blocks';
 import {Block} from 'Blockly.Block';
 import {BubbleDragger} from 'Blockly.BubbleDragger';
 import {Bubble} from 'Blockly.Bubble';
@@ -284,7 +284,7 @@ exports.TOOLBOX_AT_RIGHT = toolbox.Position.RIGHT;
  * change (e.g. when a block is added or removed).
  * Record the height/width of the SVG image.
  * @param {!WorkspaceSvg} workspace Any workspace in the SVG.
- * @see Blockly.common.svgResize
+ * @see blockly/core/common.svgResize
  * @alias Blockly.svgResize
  */
 exports.svgResize = common.svgResize;
@@ -305,7 +305,7 @@ exports.hideChaff = hideChaff;
  * focus).  Try not to use this function, particularly if there are multiple
  * Blockly instances on a page.
  * @return {!Workspace} The main workspace.
- * @see Blockly.common.getMainWorkspace
+ * @see blockly/core/common.getMainWorkspace
  * @alias Blockly.getMainWorkspace
  */
 exports.getMainWorkspace = common.getMainWorkspace;
@@ -314,7 +314,7 @@ exports.getMainWorkspace = common.getMainWorkspace;
  * Define blocks from an array of JSON block definitions, as might be generated
  * by the Blockly Developer Tools.
  * @param {!Array<!Object>} jsonArray An array of JSON block definitions.
- * @see Blockly.common.defineBlocksWithJsonArray
+ * @see blockly/core/common.defineBlocksWithJsonArray
  * @alias Blockly.defineBlocksWithJsonArray
  */
 exports.defineBlocksWithJsonArray = common.defineBlocksWithJsonArray;
@@ -325,7 +325,7 @@ exports.defineBlocksWithJsonArray = common.defineBlocksWithJsonArray;
  * is called.
  * This method is a NOP if called after the first ``Blockly.inject``.
  * @param {!Element} container The container element.
- * @see Blockly.common.setParentContainer
+ * @see blockly/core/common.setParentContainer
  * @alias Blockly.setParentContainer
  */
 exports.setParentContainer = common.setParentContainer;

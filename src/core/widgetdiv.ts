@@ -12,7 +12,7 @@
  */
 goog.module('Blockly.WidgetDiv');
 
-import common from 'Blockly.common';
+import common from 'blockly/core/common';
 import deprecation from 'Blockly.utils.deprecation';
 import dom from 'Blockly.utils.dom';
 import {Rect} from 'Blockly.utils.Rect';
