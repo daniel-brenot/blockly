@@ -295,10 +295,9 @@ exports.svgResize = common.svgResize;
  * @see Blockly.WorkspaceSvg.hideChaff
  * @alias Blockly.hideChaff
  */
-const hideChaff = function(opt_onlyClosePopups) {
+export function hideChaff(opt_onlyClosePopups) {
   common.getMainWorkspace().hideChaff(opt_onlyClosePopups);
-};
-exports.hideChaff = hideChaff;
+}
 
 /**
  * Returns the main workspace.  Returns the last used main workspace (based on
@@ -484,13 +483,12 @@ exports.svgSize = svgMath.svgSize;
  * @see Blockly.WorkspaceSvg.resizeContents
  * @alias Blockly.resizeSvgContents
  */
-const resizeSvgContentsLocal = function(workspace) {
+export function resizeSvgContentsLocal(workspace) {
   deprecation.warn(
       'Blockly.resizeSvgContents', 'December 2021', 'December 2022',
       'Blockly.WorkspaceSvg.resizeSvgContents');
   resizeSvgContents(workspace);
-};
-exports.resizeSvgContents = resizeSvgContentsLocal;
+}
 
 /**
  * Copy a block or workspace comment onto the local clipboard.
@@ -499,13 +497,12 @@ exports.resizeSvgContents = resizeSvgContentsLocal;
  * @see Blockly.clipboard.copy
  * @alias Blockly.copy
  */
-const copy = function(toCopy) {
+export function copy(toCopy) {
   deprecation.warn(
       'Blockly.copy', 'December 2021', 'December 2022',
       'Blockly.clipboard.copy');
   clipboard.copy(toCopy);
-};
-exports.copy = copy;
+}
 
 /**
  * Paste a block or workspace comment on to the main workspace.
@@ -514,13 +511,12 @@ exports.copy = copy;
  * @see Blockly.clipboard.paste
  * @alias Blockly.paste
  */
-const paste = function() {
+export function paste() {
   deprecation.warn(
       'Blockly.paste', 'December 2021', 'December 2022',
       'Blockly.clipboard.paste');
   return clipboard.paste();
-};
-exports.paste = paste;
+}
 
 /**
  * Duplicate this block and its children, or a workspace comment.
@@ -530,13 +526,12 @@ exports.paste = paste;
  * @see Blockly.clipboard.duplicate
  * @alias Blockly.duplicate
  */
-const duplicate = function(toDuplicate) {
+export function duplicate(toDuplicate) {
   deprecation.warn(
       'Blockly.duplicate', 'December 2021', 'December 2022',
       'Blockly.clipboard.duplicate');
   clipboard.duplicate(toDuplicate);
-};
-exports.duplicate = duplicate;
+}
 
 /**
  * Is the given string a number (includes negative and decimals).
@@ -546,13 +541,12 @@ exports.duplicate = duplicate;
  * @see Blockly.utils.string.isNumber
  * @alias Blockly.isNumber
  */
-const isNumber = function(str) {
+export function isNumber(str) {
   deprecation.warn(
       'Blockly.isNumber', 'December 2021', 'December 2022',
       'Blockly.utils.string.isNumber');
   return utils.string.isNumber(str);
-};
-exports.isNumber = isNumber;
+}
 
 /**
  * Convert a hue (HSV model) into an RGB hex triplet.
@@ -562,13 +556,12 @@ exports.isNumber = isNumber;
  * @see Blockly.utils.color.hueToHex
  * @alias Blockly.hueToHex
  */
-const hueToHex = function(hue) {
+export function hueToHex(hue) {
   deprecation.warn(
       'Blockly.hueToHex', 'December 2021', 'December 2022',
       'Blockly.utils.color.hueToHex');
   return color.hueToHex(hue);
-};
-exports.hueToHex = hueToHex;
+}
 
 /**
  * Bind an event handler that should be called regardless of whether it is part
@@ -585,13 +578,12 @@ exports.hueToHex = hueToHex;
  * @see Blockly.browserEvents.bind
  * @alias Blockly.bindEvent_
  */
-const bindEvent_ = function(node, name, thisObject, func) {
+export function bindEvent_(node, name, thisObject, func) {
   deprecation.warn(
       'Blockly.bindEvent_', 'December 2021', 'December 2022',
       'Blockly.browserEvents.bind');
   return browserEvents.bind(node, name, thisObject, func);
-};
-exports.bindEvent_ = bindEvent_;
+}
 
 /**
  * Unbind one or more events event from a function call.
@@ -602,13 +594,12 @@ exports.bindEvent_ = bindEvent_;
  * @see browserEvents.unbind
  * @alias Blockly.unbindEvent_
  */
-const unbindEvent_ = function(bindData) {
+export function unbindEvent_(bindData) {
   deprecation.warn(
       'Blockly.unbindEvent_', 'December 2021', 'December 2022',
       'Blockly.browserEvents.unbind');
   return browserEvents.unbind(bindData);
-};
-exports.unbindEvent_ = unbindEvent_;
+}
 
 /**
  * Bind an event handler that can be ignored if it is not part of the active

@@ -66,7 +66,7 @@ exports.ProcedureBlock = ProcedureBlock;
  *     list, and return value boolean.
  * @alias Blockly.Procedures.allProcedures
  */
-const allProcedures = function(root) {
+export function allProcedures(root) {
   const proceduresNoReturn =
       root.getBlocksByType('procedures_defnoreturn', false)
           .map(function(block) {
@@ -79,8 +79,7 @@ const allProcedures = function(root) {
   proceduresNoReturn.sort(procTupleComparator);
   proceduresReturn.sort(procTupleComparator);
   return [proceduresNoReturn, proceduresReturn];
-};
-exports.allProcedures = allProcedures;
+}
 
 /**
  * Comparison function for case-insensitive sorting of the first element of
@@ -102,7 +101,7 @@ const procTupleComparator = function(ta, tb) {
  * @return {string} Non-colliding name.
  * @alias Blockly.Procedures.findLegalName
  */
-const findLegalName = function(name, block) {
+export function findLegalName(name, block) {
   if (block.isInFlyout) {
     // Flyouts can have multiple procedures called 'do something'.
     return name;
@@ -118,8 +117,7 @@ const findLegalName = function(name, block) {
     }
   }
   return name;
-};
-exports.findLegalName = findLegalName;
+}
 
 /**
  * Does this procedure have a legal name?  Illegal names include names of
@@ -143,7 +141,7 @@ const isLegalName = function(name, workspace, opt_exclude) {
  * @return {boolean} True if the name is used, otherwise return false.
  * @alias Blockly.Procedures.isNameUsed
  */
-const isNameUsed = function(name, workspace, opt_exclude) {
+export function isNameUsed(name, workspace, opt_exclude) {
   const blocks = workspace.getAllBlocks(false);
   // Iterate through every block and check the name.
   for (let i = 0; i < blocks.length; i++) {
@@ -159,8 +157,7 @@ const isNameUsed = function(name, workspace, opt_exclude) {
     }
   }
   return false;
-};
-exports.isNameUsed = isNameUsed;
+}
 
 /**
  * Rename a procedure.  Called by the editable field.
@@ -314,7 +311,7 @@ const updateMutatorFlyout = function(workspace) {
  * @alias Blockly.Procedures.mutatorOpenListener
  * @package
  */
-const mutatorOpenListener = function(e) {
+export function mutatorOpenListener(e) {
   if (!(e.type === eventUtils.BUBBLE_OPEN && e.bubbleType === 'mutator' &&
         e.isOpen)) {
     return;
@@ -328,8 +325,7 @@ const mutatorOpenListener = function(e) {
   const workspace = block.mutator.getWorkspace();
   updateMutatorFlyout(workspace);
   workspace.addChangeListener(mutatorChangeListener);
-};
-exports.mutatorOpenListener = mutatorOpenListener;
+}
 
 /**
  * Listens for changes in a procedure mutator and triggers flyout updates when
@@ -355,7 +351,7 @@ const mutatorChangeListener = function(e) {
  * @return {!Array<!Block>} Array of caller blocks.
  * @alias Blockly.Procedures.getCallers
  */
-const getCallers = function(name, workspace) {
+export function getCallers(name, workspace) {
   const callers = [];
   const blocks = workspace.getAllBlocks(false);
   // Iterate through every block and check the name.
@@ -370,8 +366,7 @@ const getCallers = function(name, workspace) {
     }
   }
   return callers;
-};
-exports.getCallers = getCallers;
+}
 
 /**
  * When a procedure definition changes its parameters, find and edit all its
@@ -379,7 +374,7 @@ exports.getCallers = getCallers;
  * @param {!Block} defBlock Procedure definition block.
  * @alias Blockly.Procedures.mutateCallers
  */
-const mutateCallers = function(defBlock) {
+export function mutateCallers(defBlock) {
   const oldRecordUndo = eventUtils.getRecordUndo();
   const procedureBlock = /** @type {!ProcedureBlock} */ (defBlock);
   const name = procedureBlock.getProcedureDef()[0];
@@ -401,8 +396,7 @@ const mutateCallers = function(defBlock) {
       eventUtils.setRecordUndo(oldRecordUndo);
     }
   }
-};
-exports.mutateCallers = mutateCallers;
+}
 
 /**
  * Find the definition block for the named procedure.
@@ -411,7 +405,7 @@ exports.mutateCallers = mutateCallers;
  * @return {?Block} The procedure definition block, or null not found.
  * @alias Blockly.Procedures.getDefinition
  */
-const getDefinition = function(name, workspace) {
+export function getDefinition(name, workspace) {
   // Do not assume procedure is a top block. Some languages allow nested
   // procedures. Also do not assume it is one of the built-in blocks. Only
   // rely on getProcedureDef.
@@ -426,5 +420,4 @@ const getDefinition = function(name, workspace) {
     }
   }
   return null;
-};
-exports.getDefinition = getDefinition;
+}

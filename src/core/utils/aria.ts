@@ -141,10 +141,9 @@ exports.State = State;
  * @param {!Role} roleName Role name.
  * @alias Blockly.utils.aria.setRole
  */
-const setRole = function(element, roleName) {
+export function setRole(element, roleName) {
   element.setAttribute(ROLE_ATTRIBUTE, roleName);
-};
-exports.setRole = setRole;
+}
 
 /**
  * Sets the state or property of an element.
@@ -157,11 +156,10 @@ exports.setRole = setRole;
  * for the state attribute.
  * @alias Blockly.utils.aria.setState
  */
-const setState = function(element, stateName, value) {
+export function setState(element, stateName, value) {
   if (Array.isArray(value)) {
     value = value.join(' ');
   }
   const attrStateName = ARIA_PREFIX + stateName;
   element.setAttribute(attrStateName, value);
-};
-exports.setState = setState;
+}

@@ -51,13 +51,12 @@ import {Types} from 'Blockly.blockRendering.Types';
  * @alias Blockly.blockRendering.isDebuggerEnabled
  * @package
  */
-const isDebuggerEnabled = function() {
+export function isDebuggerEnabled() {
   deprecation.warn(
       'Blockly.blockRendering.isDebuggerEnabled()', 'September 2021',
       'September 2022', 'Blockly.blockRendering.debug.isDebuggerEnabled()');
   return debug.isDebuggerEnabled();
-};
-exports.isDebuggerEnabled = isDebuggerEnabled;
+}
 
 /**
  * Registers a new renderer.
@@ -66,46 +65,42 @@ exports.isDebuggerEnabled = isDebuggerEnabled;
  *     to register.
  * @throws {Error} if a renderer with the same name has already been registered.
  */
-const register = function(name, rendererClass) {
+export function register(name, rendererClass) {
   registry.register(registry.Type.RENDERER, name, rendererClass);
-};
-exports.register = register;
+}
 
 /**
  * Unregisters the renderer registered with the given name.
  * @param {string} name The name of the renderer.
  * @alias Blockly.blockRendering.unregister
  */
-const unregister = function(name) {
+export function unregister(name) {
   registry.unregister(registry.Type.RENDERER, name);
-};
-exports.unregister = unregister;
+}
 
 /**
  * Turn on the blocks debugger.
  * @package
  * @alias Blockly.blockRendering.startDebugger
  */
-const startDebugger = function() {
+export function startDebugger() {
   deprecation.warn(
       'Blockly.blockRendering.startDebugger()', 'September 2021',
       'September 2022', 'Blockly.blockRendering.debug.startDebugger()');
   debug.startDebugger();
-};
-exports.startDebugger = startDebugger;
+}
 
 /**
  * Turn off the blocks debugger.
  * @package
  * @alias Blockly.blockRendering.stopDebugger
  */
-const stopDebugger = function() {
+export function stopDebugger() {
   deprecation.warn(
       'Blockly.blockRendering.stopDebugger()', 'September 2021',
       'September 2022', 'Blockly.blockRendering.debug.stopDebugger()');
   debug.stopDebugger();
-};
-exports.stopDebugger = stopDebugger;
+}
 
 /**
  * Initialize anything needed for rendering (constants, etc).
@@ -117,13 +112,12 @@ exports.stopDebugger = stopDebugger;
  * @package
  * @alias Blockly.blockRendering.init
  */
-const init = function(name, theme, opt_rendererOverrides) {
+export function init(name, theme, opt_rendererOverrides) {
   const rendererClass = registry.getClass(registry.Type.RENDERER, name);
   const renderer = new rendererClass(name);
   renderer.init(theme, opt_rendererOverrides);
   return renderer;
-};
-exports.init = init;
+}
 
 exports.BottomRow = BottomRow;
 exports.Connection = Connection;

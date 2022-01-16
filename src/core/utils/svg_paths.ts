@@ -21,10 +21,9 @@ goog.module('Blockly.utils.svgPaths');
  * @return {string} A string of the format ' x,y '
  * @alias Blockly.utils.svgPaths.point
  */
-const point = function(x, y) {
+export function point(x, y) {
   return ' ' + x + ',' + y + ' ';
-};
-exports.point = point;
+}
 
 /**
  * Draw a cubic or quadratic curve.  See
@@ -39,10 +38,9 @@ exports.point = point;
  *     documentation for exact format.
  * @alias Blockly.utils.svgPaths.curve
  */
-const curve = function(command, points) {
+export function curve(command, points) {
   return ' ' + command + points.join('');
-};
-exports.curve = curve;
+}
 
 /**
  * Move the cursor to the given position without drawing a line.
@@ -54,10 +52,9 @@ exports.curve = curve;
  * @return {string} A string of the format ' M x,y '
  * @alias Blockly.utils.svgPaths.moveTo
  */
-const moveTo = function(x, y) {
+export function moveTo(x, y) {
   return ' M ' + x + ',' + y + ' ';
-};
-exports.moveTo = moveTo;
+}
 
 /**
  * Move the cursor to the given position without drawing a line.
@@ -69,10 +66,9 @@ exports.moveTo = moveTo;
  * @return {string} A string of the format ' m dx,dy '
  * @alias Blockly.utils.svgPaths.moveBy
  */
-const moveBy = function(dx, dy) {
+export function moveBy(dx, dy) {
   return ' m ' + dx + ',' + dy + ' ';
-};
-exports.moveBy = moveBy;
+}
 
 /**
  * Draw a line from the current point to the end point, which is the current
@@ -84,10 +80,9 @@ exports.moveBy = moveBy;
  * @return {string} A string of the format ' l dx,dy '
  * @alias Blockly.utils.svgPaths.lineTo
  */
-const lineTo = function(dx, dy) {
+export function lineTo(dx, dy) {
   return ' l ' + dx + ',' + dy + ' ';
-};
-exports.lineTo = lineTo;
+}
 
 /**
  * Draw multiple lines connecting all of the given points in order.  This is
@@ -100,10 +95,9 @@ exports.lineTo = lineTo;
  * @return {string} A string of the format ' l (dx,dy)+ '
  * @alias Blockly.utils.svgPaths.line
  */
-const line = function(points) {
+export function line(points) {
   return ' l' + points.join('');
-};
-exports.line = line;
+}
 
 /**
  * Draw a horizontal or vertical line.
@@ -118,10 +112,9 @@ exports.line = line;
  * @return {string} A string of the format ' command val '
  * @alias Blockly.utils.svgPaths.lineOnAxis
  */
-const lineOnAxis = function(command, val) {
+export function lineOnAxis(command, val) {
   return ' ' + command + ' ' + val + ' ';
-};
-exports.lineOnAxis = lineOnAxis;
+}
 
 /**
  * Draw an elliptical arc curve.
@@ -137,7 +130,6 @@ exports.lineOnAxis = lineOnAxis;
  * @return {string} A string of the format 'command radius radius flags point'
  * @alias Blockly.utils.svgPaths.arc
  */
-const arc = function(command, flags, radius, point) {
+export function arc(command, flags, radius, point) {
   return command + ' ' + radius + ' ' + radius + ' ' + flags + point;
-};
-exports.arc = arc;
+}

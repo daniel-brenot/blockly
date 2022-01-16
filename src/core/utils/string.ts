@@ -21,10 +21,9 @@ goog.module('Blockly.utils.string');
  * @return {boolean} True if `str` begins with `prefix`.
  * @alias Blockly.utils.string.startsWith
  */
-const startsWith = function(str, prefix) {
+export function startsWith(str, prefix) {
   return str.lastIndexOf(prefix, 0) === 0;
-};
-exports.startsWith = startsWith;
+}
 
 /**
  * Given an array of strings, return the length of the shortest one.
@@ -32,7 +31,7 @@ exports.startsWith = startsWith;
  * @return {number} Length of shortest string.
  * @alias Blockly.utils.string.shortestStringLength
  */
-const shortestStringLength = function(array) {
+export function shortestStringLength(array) {
   if (!array.length) {
     return 0;
   }
@@ -41,8 +40,7 @@ const shortestStringLength = function(array) {
         return a.length < b.length ? a : b;
       })
       .length;
-};
-exports.shortestStringLength = shortestStringLength;
+}
 
 /**
  * Given an array of strings, return the length of the common prefix.
@@ -52,7 +50,7 @@ exports.shortestStringLength = shortestStringLength;
  * @return {number} Length of common prefix.
  * @alias Blockly.utils.string.commonWordPrefix
  */
-const commonWordPrefix = function(array, opt_shortest) {
+export function commonWordPrefix(array, opt_shortest) {
   if (!array.length) {
     return 0;
   } else if (array.length === 1) {
@@ -79,8 +77,7 @@ const commonWordPrefix = function(array, opt_shortest) {
     }
   }
   return max;
-};
-exports.commonWordPrefix = commonWordPrefix;
+}
 
 /**
  * Given an array of strings, return the length of the common suffix.
@@ -90,7 +87,7 @@ exports.commonWordPrefix = commonWordPrefix;
  * @return {number} Length of common suffix.
  * @alias Blockly.utils.string.commonWordSuffix
  */
-const commonWordSuffix = function(array, opt_shortest) {
+export function commonWordSuffix(array, opt_shortest) {
   if (!array.length) {
     return 0;
   } else if (array.length === 1) {
@@ -117,8 +114,7 @@ const commonWordSuffix = function(array, opt_shortest) {
     }
   }
   return max;
-};
-exports.commonWordSuffix = commonWordSuffix;
+}
 
 /**
  * Wrap text to the specified width.
@@ -127,14 +123,13 @@ exports.commonWordSuffix = commonWordSuffix;
  * @return {string} Wrapped text.
  * @alias Blockly.utils.string.wrap
  */
-const wrap = function(text, limit) {
+export function wrap(text, limit) {
   const lines = text.split('\n');
   for (let i = 0; i < lines.length; i++) {
     lines[i] = wrapLine(lines[i], limit);
   }
   return lines.join('\n');
-};
-exports.wrap = wrap;
+}
 
 /**
  * Wrap single line of text to the specified width.
@@ -292,7 +287,6 @@ const wrapToText = function(words, wordBreaks) {
  * @return {boolean} True if number, false otherwise.
  * @alias Blockly.utils.string.isNumber
  */
-const isNumber = function(str) {
+export function isNumber(str) {
   return /^\s*-?\d+(\.\d+)?\s*$/.test(str);
-};
-exports.isNumber = isNumber;
+}

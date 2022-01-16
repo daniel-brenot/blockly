@@ -39,10 +39,9 @@ let promptImplementation = function(message, defaultValue, callback) {
  * @param {function()=} opt_callback The callback when the alert is dismissed.
  * @alias Blockly.dialog.alert
  */
-const alert = function(message, opt_callback) {
+export function alert(message, opt_callback) {
   alertImplementation(message, opt_callback);
-};
-exports.alert = alert;
+}
 
 /**
  * Sets the function to be run when Blockly.dialog.alert() is called.
@@ -50,10 +49,9 @@ exports.alert = alert;
  * @see Blockly.dialog.alert
  * @alias Blockly.dialog.setAlert
  */
-const setAlert = function(alertFunction) {
+export function setAlert(alertFunction) {
   alertImplementation = alertFunction;
-};
-exports.setAlert = setAlert;
+}
 
 /**
  * Wrapper to window.confirm() that app developers may override via setConfirm
@@ -62,10 +60,9 @@ exports.setAlert = setAlert;
  * @param {!function(boolean)} callback The callback for handling user response.
  * @alias Blockly.dialog.confirm
  */
-const confirm = function(message, callback) {
+export function confirm(message, callback) {
   confirmImplementation(message, callback);
-};
-exports.confirm = confirm;
+}
 
 /**
  * Sets the function to be run when Blockly.dialog.confirm() is called.
@@ -74,10 +71,9 @@ exports.confirm = confirm;
  * @see Blockly.dialog.confirm
  * @alias Blockly.dialog.setConfirm
  */
-const setConfirm = function(confirmFunction) {
+export function setConfirm(confirmFunction) {
   confirmImplementation = confirmFunction;
-};
-exports.setConfirm = setConfirm;
+}
 
 /**
  * Wrapper to window.prompt() that app developers may override via setPrompt to
@@ -89,10 +85,9 @@ exports.setConfirm = setConfirm;
  * @param {!function(?string)} callback The callback for handling user response.
  * @alias Blockly.dialog.prompt
  */
-const prompt = function(message, defaultValue, callback) {
+export function prompt(message, defaultValue, callback) {
   promptImplementation(message, defaultValue, callback);
-};
-exports.prompt = prompt;
+}
 
 /**
  * Sets the function to be run when Blockly.dialog.prompt() is called.
@@ -101,7 +96,6 @@ exports.prompt = prompt;
  * @see Blockly.dialog.prompt
  * @alias Blockly.dialog.setPrompt
  */
-const setPrompt = function(promptFunction) {
+export function setPrompt(promptFunction) {
   promptImplementation = promptFunction;
-};
-exports.setPrompt = setPrompt;
+}

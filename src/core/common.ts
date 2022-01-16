@@ -33,20 +33,18 @@ let mainWorkspace;
  * @return {!Workspace} The main workspace.
  * @alias blockly/core/common.getMainWorkspace
  */
-const getMainWorkspace = function() {
+export function getMainWorkspace() {
   return mainWorkspace;
-};
-exports.getMainWorkspace = getMainWorkspace;
+}
 
 /**
  * Sets last used main workspace.
  * @param {!Workspace} workspace The most recently used top level workspace.
  * @alias blockly/core/common.setMainWorkspace
  */
-const setMainWorkspace = function(workspace) {
+export function setMainWorkspace(workspace) {
   mainWorkspace = workspace;
-};
-exports.setMainWorkspace = setMainWorkspace;
+}
 
 /**
  * Currently selected block.
@@ -59,10 +57,9 @@ let selected = null;
  * @return {?ICopyable} The currently selected block.
  * @alias blockly/core/common.getSelected
  */
-const getSelected = function() {
+export function getSelected() {
   return selected;
-};
-exports.getSelected = getSelected;
+}
 
 /**
  * Sets the currently selected block. This function does not visually mark the
@@ -72,10 +69,9 @@ exports.getSelected = getSelected;
  * @alias blockly/core/common.setSelected
  * @package
  */
-const setSelected = function(newSelection) {
+export function setSelected(newSelection) {
   selected = newSelection;
-};
-exports.setSelected = setSelected;
+}
 
 /**
  * Container element in which to render the WidgetDiv, DropDownDiv and Tooltip.
@@ -89,10 +85,9 @@ let parentContainer;
  * @return {?Element} The parent container.
  * @alias blockly/core/common.getParentContainer
  */
-const getParentContainer = function() {
+export function getParentContainer() {
   return parentContainer;
-};
-exports.getParentContainer = getParentContainer;
+}
 
 /**
  * Set the parent container.  This is the container element that the WidgetDiv,
@@ -102,10 +97,9 @@ exports.getParentContainer = getParentContainer;
  * @param {!Element} newParent The container element.
  * @alias blockly/core/common.setParentContainer
  */
-const setParentContainer = function(newParent) {
+export function setParentContainer(newParent) {
   parentContainer = newParent;
-};
-exports.setParentContainer = setParentContainer;
+}
 
 /**
  * Size the SVG image to completely fill its container. Call this when the view
@@ -116,7 +110,7 @@ exports.setParentContainer = setParentContainer;
  * @param {!WorkspaceSvg} workspace Any workspace in the SVG.
  * @alias blockly/core/common.svgResize
  */
-const svgResize = function(workspace) {
+export function svgResize(workspace) {
   let mainWorkspace = workspace;
   while (mainWorkspace.options.parentWorkspace) {
     mainWorkspace = mainWorkspace.options.parentWorkspace;
@@ -139,8 +133,7 @@ const svgResize = function(workspace) {
     mainWorkspace.setCachedParentSvgSize(null, height);
   }
   mainWorkspace.resize();
-};
-exports.svgResize = svgResize;
+}
 
 /**
  * All of the connections on blocks that are currently being dragged.
@@ -158,7 +151,7 @@ exports.draggingConnections = [];
  * @return {!Object} Map of types to type counts for descendants of the bock.
  * @alias blockly/core/common.getBlockTypeCounts
  */
-const getBlockTypeCounts = function(block, opt_stripFollowing) {
+export function getBlockTypeCounts(block, opt_stripFollowing) {
   const typeCountsMap = Object.create(null);
   const descendants = block.getDescendants(true);
   if (opt_stripFollowing) {
@@ -176,8 +169,7 @@ const getBlockTypeCounts = function(block, opt_stripFollowing) {
     }
   }
   return typeCountsMap;
-};
-exports.getBlockTypeCounts = getBlockTypeCounts;
+}
 
 /**
  * Helper function for defining a block from JSON.  The resulting function has

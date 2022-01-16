@@ -82,7 +82,7 @@ const conditionalBind = function(
 
     // Add equivalent touch event.
     if (name in Touch.TOUCH_MAP) {
-      const touchWrapFunc = function(e) {
+      export function touchWrapFunc(e) {
         wrapFunc(e);
         // Calling preventDefault stops the browser from scrolling/zooming the
         // page.
@@ -99,8 +99,7 @@ const conditionalBind = function(
     }
   }
   return bindData;
-};
-exports.conditionalBind = conditionalBind;
+}
 
 
 /**
@@ -169,7 +168,7 @@ exports.bind = bind;
  * @return {!Function} The function call.
  * @alias Blockly.browserEvents.unbind
  */
-const unbind = function(bindData) {
+export function unbind(bindData) {
   let func;
   while (bindData.length) {
     const bindDatum = bindData.pop();
@@ -179,8 +178,7 @@ const unbind = function(bindData) {
     node.removeEventListener(name, func, false);
   }
   return func;
-};
-exports.unbind = unbind;
+}
 
 /**
  * Returns true if this event is targeting a text input widget?
@@ -188,15 +186,14 @@ exports.unbind = unbind;
  * @return {boolean} True if text input.
  * @alias Blockly.browserEvents.isTargetInput
  */
-const isTargetInput = function(e) {
+export function isTargetInput(e) {
   return e.target.type === 'textarea' || e.target.type === 'text' ||
       e.target.type === 'number' || e.target.type === 'email' ||
       e.target.type === 'password' || e.target.type === 'search' ||
       e.target.type === 'tel' || e.target.type === 'url' ||
       e.target.isContentEditable ||
       (e.target.dataset && e.target.dataset.isTextInput === 'true');
-};
-exports.isTargetInput = isTargetInput;
+}
 
 /**
  * Returns true this event is a right-click.
@@ -204,15 +201,14 @@ exports.isTargetInput = isTargetInput;
  * @return {boolean} True if right-click.
  * @alias Blockly.browserEvents.isRightButton
  */
-const isRightButton = function(e) {
+export function isRightButton(e) {
   if (e.ctrlKey && userAgent.MAC) {
     // Control-clicking on Mac OS X is treated as a right-click.
     // WebKit on Mac OS X fails to change button to 2 (but Gecko does).
     return true;
   }
   return e.button === 2;
-};
-exports.isRightButton = isRightButton;
+}
 
 /**
  * Returns the converted coordinates of the given mouse event.
@@ -242,7 +238,7 @@ exports.mouseToSvg = mouseToSvg;
  *    properties.
  * @alias Blockly.browserEvents.getScrollDeltaPixels
  */
-const getScrollDeltaPixels = function(e) {
+export function getScrollDeltaPixels(e) {
   switch (e.deltaMode) {
     case 0x00:  // Pixel mode.
     default:
@@ -258,5 +254,4 @@ const getScrollDeltaPixels = function(e) {
         y: e.deltaY * internalConstants.PAGE_MODE_MULTIPLIER,
       };
   }
-};
-exports.getScrollDeltaPixels = getScrollDeltaPixels;
+}

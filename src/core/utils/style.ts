@@ -116,11 +116,10 @@ exports.getComputedStyle = getComputedStyle;
  * @return {string} Style value.
  * @alias Blockly.utils.style.getCascadedStyle
  */
-const getCascadedStyle = function(element, style) {
+export function getCascadedStyle(element, style) {
   return /** @type {string} */ (
       element.currentStyle ? element.currentStyle[style] : null);
-};
-exports.getCascadedStyle = getCascadedStyle;
+}
 
 /**
  * Returns a Coordinate object relative to the top-left of the HTML document.
@@ -152,14 +151,13 @@ exports.getPageOffset = getPageOffset;
  * @return {!Coordinate} The page offset of the viewport.
  * @alias Blockly.utils.style.getViewportPageOffset
  */
-const getViewportPageOffset = function() {
+export function getViewportPageOffset() {
   const body = document.body;
   const documentElement = document.documentElement;
   const scrollLeft = body.scrollLeft || documentElement.scrollLeft;
   const scrollTop = body.scrollTop || documentElement.scrollTop;
   return new Coordinate(scrollLeft, scrollTop);
-};
-exports.getViewportPageOffset = getViewportPageOffset;
+}
 
 /**
  * Shows or hides an element from the page. Hiding the element is done by
@@ -174,10 +172,9 @@ exports.getViewportPageOffset = getViewportPageOffset;
  *     false to disable rendering the element.
  * @alias Blockly.utils.style.setElementShown
  */
-const setElementShown = function(el, isShown) {
+export function setElementShown(el, isShown) {
   el.style.display = isShown ? '' : 'none';
-};
-exports.setElementShown = setElementShown;
+}
 
 /**
  * Returns true if the element is using right to left (RTL) direction.
@@ -187,10 +184,9 @@ exports.setElementShown = setElementShown;
  * @return {boolean} True for right to left, false for left to right.
  * @alias Blockly.utils.style.isRightToLeft
  */
-const isRightToLeft = function(el) {
+export function isRightToLeft(el) {
   return 'rtl' === getStyle(el, 'direction');
-};
-exports.isRightToLeft = isRightToLeft;
+}
 
 /**
  * Gets the computed border widths (on all sides) in pixels
@@ -228,12 +224,11 @@ exports.getBorderBox = getBorderBox;
  *     Defaults to false.
  * @alias Blockly.utils.style.scrollIntoContainerView
  */
-const scrollIntoContainerView = function(element, container, opt_center) {
+export function scrollIntoContainerView(element, container, opt_center) {
   const offset = getContainerOffsetToScrollInto(element, container, opt_center);
   container.scrollLeft = offset.x;
   container.scrollTop = offset.y;
-};
-exports.scrollIntoContainerView = scrollIntoContainerView;
+}
 
 /**
  * Calculate the scroll position of `container` with the minimum amount so

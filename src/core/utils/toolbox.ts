@@ -424,7 +424,7 @@ const addAttributes = function(node, obj) {
  * @return {?Node} DOM tree of blocks, or null.
  * @alias Blockly.utils.toolbox.parseToolboxTree
  */
-const parseToolboxTree = function(toolboxDef) {
+export function parseToolboxTree(toolboxDef) {
   if (toolboxDef) {
     if (typeof toolboxDef !== 'string') {
       if (userAgent.IE && toolboxDef.outerHTML) {
@@ -447,5 +447,4 @@ const parseToolboxTree = function(toolboxDef) {
     toolboxDef = null;
   }
   return toolboxDef;
-};
-exports.parseToolboxTree = parseToolboxTree;
+}

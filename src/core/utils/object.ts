@@ -42,12 +42,11 @@ exports.inherits = inherits;
  * @param {!Object} source Source.
  * @alias Blockly.utils.object.mixin
  */
-const mixin = function(target, source) {
+export function mixin(target, source) {
   for (const x in source) {
     target[x] = source[x];
   }
-};
-exports.mixin = mixin;
+}
 
 /**
  * Complete a deep merge of all members of a source object with a target object.
@@ -56,7 +55,7 @@ exports.mixin = mixin;
  * @return {!Object} The resulting object.
  * @alias Blockly.utils.object.deepMerge
  */
-const deepMerge = function(target, source) {
+export function deepMerge(target, source) {
   for (const x in source) {
     if (source[x] !== null && typeof source[x] === 'object') {
       target[x] = deepMerge(target[x] || Object.create(null), source[x]);
@@ -65,8 +64,7 @@ const deepMerge = function(target, source) {
     }
   }
   return target;
-};
-exports.deepMerge = deepMerge;
+}
 
 /**
  * Returns an array of a given object's own enumerable property values.
@@ -74,7 +72,7 @@ exports.deepMerge = deepMerge;
  * @return {!Array} Array of values.
  * @alias Blockly.utils.object.values
  */
-const values = function(obj) {
+export function values(obj) {
   if (Object.values) {
     return Object.values(obj);
   }
@@ -82,5 +80,4 @@ const values = function(obj) {
   return Object.keys(obj).map(function(e) {
     return obj[e];
   });
-};
-exports.values = values;
+}

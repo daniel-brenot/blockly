@@ -39,7 +39,7 @@ exports.names = names;
  * Keyboard shortcut to hide chaff on escape.
  * @alias Blockly.ShortcutItems.registerEscape
  */
-const registerEscape = function() {
+export function registerEscape() {
   /** @type {!ShortcutRegistry.KeyboardShortcut} */
   const escapeAction = {
     name: names.ESCAPE,
@@ -53,14 +53,13 @@ const registerEscape = function() {
   };
   ShortcutRegistry.registry.register(escapeAction);
   ShortcutRegistry.registry.addKeyMapping(KeyCodes.ESC, escapeAction.name);
-};
-exports.registerEscape = registerEscape;
+}
 
 /**
  * Keyboard shortcut to delete a block on delete or backspace
  * @alias Blockly.ShortcutItems.registerDelete
  */
-const registerDelete = function() {
+export function registerDelete() {
   /** @type {!ShortcutRegistry.KeyboardShortcut} */
   const deleteShortcut = {
     name: names.DELETE,
@@ -86,8 +85,7 @@ const registerDelete = function() {
   ShortcutRegistry.registry.addKeyMapping(KeyCodes.DELETE, deleteShortcut.name);
   ShortcutRegistry.registry.addKeyMapping(
       KeyCodes.BACKSPACE, deleteShortcut.name);
-};
-exports.registerDelete = registerDelete;
+}
 
 /**
  * Keyboard shortcut to copy a block on ctrl+c, cmd+c, or alt+c.
@@ -281,7 +279,7 @@ exports.registerRedo = registerRedo;
  * @alias Blockly.ShortcutItems.registerDefaultShortcuts
  * @package
  */
-const registerDefaultShortcuts = function() {
+export function registerDefaultShortcuts() {
   registerEscape();
   registerDelete();
   registerCopy();
@@ -289,7 +287,6 @@ const registerDefaultShortcuts = function() {
   registerPaste();
   registerUndo();
   registerRedo();
-};
-exports.registerDefaultShortcuts = registerDefaultShortcuts;
+}
 
 registerDefaultShortcuts();

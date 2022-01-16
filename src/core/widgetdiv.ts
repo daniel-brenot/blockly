@@ -55,10 +55,9 @@ let DIV;
  * @return {?Element} The editor widget container.
  * @alias Blockly.WidgetDiv.getDiv
  */
-const getDiv = function() {
+export function getDiv() {
   return DIV;
-};
-exports.getDiv = getDiv;
+}
 
 /**
  * Allows unit tests to reset the div.
@@ -66,10 +65,9 @@ exports.getDiv = getDiv;
  * @alias Blockly.WidgetDiv.testOnly_setDiv
  * @ignore
  */
-const testOnly_setDiv = function(newDiv) {
+export function testOnly_setDiv(newDiv) {
   DIV = newDiv;
-};
-exports.testOnly_setDiv = testOnly_setDiv;
+}
 
 Object.defineProperties(exports, {
   /**
@@ -114,7 +112,7 @@ exports.createDom = createDom;
  *     widget is closed.
  * @alias Blockly.WidgetDiv.show
  */
-const show = function(newOwner, rtl, newDispose) {
+export function show(newOwner, rtl, newDispose) {
   hide();
   owner = newOwner;
   dispose = newDispose;
@@ -127,8 +125,7 @@ const show = function(newOwner, rtl, newDispose) {
   themeClassName = mainWorkspace.getTheme().getClassName();
   dom.addClass(div, rendererClassName);
   dom.addClass(div, themeClassName);
-};
-exports.show = show;
+}
 
 /**
  * Destroy the widget and hide the div.
@@ -165,10 +162,9 @@ exports.hide = hide;
  * @return {boolean} True if visible.
  * @alias Blockly.WidgetDiv.isVisible
  */
-const isVisible = function() {
+export function isVisible() {
   return !!owner;
-};
-exports.isVisible = isVisible;
+}
 
 /**
  * Destroy the widget and hide the div if it is being used by the specified
@@ -176,12 +172,11 @@ exports.isVisible = isVisible;
  * @param {!Object} oldOwner The object that was using this container.
  * @alias Blockly.WidgetDiv.hideIfOwner
  */
-const hideIfOwner = function(oldOwner) {
+export function hideIfOwner(oldOwner) {
   if (owner === oldOwner) {
     hide();
   }
-};
-exports.hideIfOwner = hideIfOwner;
+}
 
 /**
  * Set the widget div's position and height.  This function does nothing clever:

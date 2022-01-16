@@ -29,20 +29,18 @@ import {IRegistrableField} from 'Blockly.IRegistrableField';
  *     function.
  * @alias Blockly.fieldRegistry.register
  */
-const register = function(type, fieldClass) {
+export function register(type, fieldClass) {
   registry.register(registry.Type.FIELD, type, fieldClass);
-};
-exports.register = register;
+}
 
 /**
  * Unregisters the field registered with the given type.
  * @param {string} type The field type name as used in the JSON definition.
  * @alias Blockly.fieldRegistry.unregister
  */
-const unregister = function(type) {
+export function unregister(type) {
   registry.unregister(registry.Type.FIELD, type);
-};
-exports.unregister = unregister;
+}
 
 /**
  * Construct a Field from a JSON arg object.
@@ -55,7 +53,7 @@ exports.unregister = unregister;
  * @alias Blockly.fieldRegistry.fromJson
  * @package
  */
-const fromJson = function(options) {
+export function fromJson(options) {
   const fieldObject = /** @type {?IRegistrableField} */ (
       registry.getObject(registry.Type.FIELD, options['type']));
   if (!fieldObject) {
@@ -67,5 +65,4 @@ const fromJson = function(options) {
     return null;
   }
   return fieldObject.fromJson(options);
-};
-exports.fromJson = fromJson;
+}

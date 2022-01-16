@@ -85,7 +85,7 @@ let canvasContext = null;
  * @template T
  * @alias Blockly.utils.dom.createSvgElement
  */
-const createSvgElement = function(name, attrs, opt_parent) {
+export function createSvgElement(name, attrs, opt_parent) {
   const e = /** @type {T} */
       (document.createElementNS(SVG_NS, String(name)));
   for (const key in attrs) {
@@ -101,8 +101,7 @@ const createSvgElement = function(name, attrs, opt_parent) {
     opt_parent.appendChild(e);
   }
   return e;
-};
-exports.createSvgElement = createSvgElement;
+}
 
 /**
  * Add a CSS class to a element.
@@ -112,7 +111,7 @@ exports.createSvgElement = createSvgElement;
  * @return {boolean} True if class was added, false if already present.
  * @alias Blockly.utils.dom.addClass
  */
-const addClass = function(element, className) {
+export function addClass(element, className) {
   let classes = element.getAttribute('class') || '';
   if ((' ' + classes + ' ').indexOf(' ' + className + ' ') !== -1) {
     return false;
@@ -122,8 +121,7 @@ const addClass = function(element, className) {
   }
   element.setAttribute('class', classes + className);
   return true;
-};
-exports.addClass = addClass;
+}
 
 /**
  * Removes multiple calsses from an element.
@@ -132,13 +130,12 @@ exports.addClass = addClass;
  *    element.
  * @alias Blockly.utils.dom.removeClasses
  */
-const removeClasses = function(element, classNames) {
+export function removeClasses(element, classNames) {
   const classList = classNames.split(' ');
   for (let i = 0; i < classList.length; i++) {
     removeClass(element, classList[i]);
   }
-};
-exports.removeClasses = removeClasses;
+}
 
 /**
  * Remove a CSS class from a element.
@@ -148,7 +145,7 @@ exports.removeClasses = removeClasses;
  * @return {boolean} True if class was removed, false if never present.
  * @alias Blockly.utils.dom.removeClass
  */
-const removeClass = function(element, className) {
+export function removeClass(element, className) {
   const classes = element.getAttribute('class');
   if ((' ' + classes + ' ').indexOf(' ' + className + ' ') === -1) {
     return false;
@@ -166,8 +163,7 @@ const removeClass = function(element, className) {
     element.removeAttribute('class');
   }
   return true;
-};
-exports.removeClass = removeClass;
+}
 
 /**
  * Checks if an element has the specified CSS class.
@@ -177,11 +173,10 @@ exports.removeClass = removeClass;
  * @return {boolean} True if class exists, false otherwise.
  * @alias Blockly.utils.dom.hasClass
  */
-const hasClass = function(element, className) {
+export function hasClass(element, className) {
   const classes = element.getAttribute('class');
   return (' ' + classes + ' ').indexOf(' ' + className + ' ') !== -1;
-};
-exports.hasClass = hasClass;
+}
 
 /**
  * Removes a node from its parent. No-op if not attached to a parent.
@@ -190,10 +185,9 @@ exports.hasClass = hasClass;
  * @alias Blockly.utils.dom.removeNode
  */
 // Copied from Closure goog.dom.removeNode
-const removeNode = function(node) {
+export function removeNode(node) {
   return node && node.parentNode ? node.parentNode.removeChild(node) : null;
-};
-exports.removeNode = removeNode;
+}
 
 /**
  * Insert a node after a reference node.
@@ -202,7 +196,7 @@ exports.removeNode = removeNode;
  * @param {!Element} refNode Existing element to precede new node.
  * @alias Blockly.utils.dom.insertAfter
  */
-const insertAfter = function(newNode, refNode) {
+export function insertAfter(newNode, refNode) {
   const siblingNode = refNode.nextSibling;
   const parentNode = refNode.parentNode;
   if (!parentNode) {
@@ -213,8 +207,7 @@ const insertAfter = function(newNode, refNode) {
   } else {
     parentNode.appendChild(newNode);
   }
-};
-exports.insertAfter = insertAfter;
+}
 
 /**
  * Whether a node contains another node.
@@ -223,12 +216,11 @@ exports.insertAfter = insertAfter;
  * @return {boolean} Whether the parent node contains the descendant node.
  * @alias Blockly.utils.dom.containsNode
  */
-const containsNode = function(parent, descendant) {
+export function containsNode(parent, descendant) {
   return !!(
       parent.compareDocumentPosition(descendant) &
       NodeType.DOCUMENT_POSITION_CONTAINED_BY);
-};
-exports.containsNode = containsNode;
+}
 
 /**
  * Sets the CSS transform property on an element. This function sets the
@@ -238,37 +230,34 @@ exports.containsNode = containsNode;
  * @param {string} transform The value of the CSS `transform` property.
  * @alias Blockly.utils.dom.setCssTransform
  */
-const setCssTransform = function(element, transform) {
+export function setCssTransform(element, transform) {
   element.style['transform'] = transform;
   element.style['-webkit-transform'] = transform;
-};
-exports.setCssTransform = setCssTransform;
+}
 
 /**
  * Start caching text widths. Every call to this function MUST also call
  * stopTextWidthCache. Caches must not survive between execution threads.
  * @alias Blockly.utils.dom.startTextWidthCache
  */
-const startTextWidthCache = function() {
+export function startTextWidthCache() {
   cacheReference++;
   if (!cacheWidths) {
     cacheWidths = Object.create(null);
   }
-};
-exports.startTextWidthCache = startTextWidthCache;
+}
 
 /**
  * Stop caching field widths. Unless caching was already on when the
  * corresponding call to startTextWidthCache was made.
  * @alias Blockly.utils.dom.stopTextWidthCache
  */
-const stopTextWidthCache = function() {
+export function stopTextWidthCache() {
   cacheReference--;
   if (!cacheReference) {
     cacheWidths = null;
   }
-};
-exports.stopTextWidthCache = stopTextWidthCache;
+}
 
 /**
  * Gets the width of a text element, caching it in the process.

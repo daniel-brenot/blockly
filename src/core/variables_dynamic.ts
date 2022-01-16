@@ -31,23 +31,20 @@ import {Workspace} from 'Blockly.Workspace';
 const CATEGORY_NAME = 'VARIABLE_DYNAMIC';
 exports.CATEGORY_NAME = CATEGORY_NAME;
 
-const stringButtonClickHandler = function(button) {
+export function stringButtonClickHandler(button) {
   Variables.createVariableButtonHandler(
       button.getTargetWorkspace(), undefined, 'String');
-};
-exports.onCreateVariableButtonClick_String = stringButtonClickHandler;
+}
 
-const numberButtonClickHandler = function(button) {
+export function numberButtonClickHandler(button) {
   Variables.createVariableButtonHandler(
       button.getTargetWorkspace(), undefined, 'Number');
-};
-exports.onCreateVariableButtonClick_Number = numberButtonClickHandler;
+}
 
-const colorButtonClickHandler = function(button) {
+export function colorButtonClickHandler(button) {
   Variables.createVariableButtonHandler(
       button.getTargetWorkspace(), undefined, 'Color');
-};
-exports.onCreateVariableButtonClick_Color = colorButtonClickHandler;
+}
 
 /**
  * Construct the elements (blocks and button) required by the flyout for the

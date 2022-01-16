@@ -111,13 +111,12 @@ exports.longStart = longStart;
  * @alias Blockly.Touch.longStop
  * @package
  */
-const longStop = function() {
+export function longStop() {
   if (longPid_) {
     clearTimeout(longPid_);
     longPid_ = 0;
   }
-};
-exports.longStop = longStop;
+}
 
 /**
  * Clear the touch identifier that tracks which touch stream to pay attention
@@ -125,10 +124,9 @@ exports.longStop = longStop;
  * captured.
  * @alias Blockly.Touch.clearTouchIdentifier
  */
-const clearTouchIdentifier = function() {
+export function clearTouchIdentifier() {
   touchIdentifier_ = null;
-};
-exports.clearTouchIdentifier = clearTouchIdentifier;
+}
 
 /**
  * Decide whether Blockly should handle or ignore this event.
@@ -139,10 +137,9 @@ exports.clearTouchIdentifier = clearTouchIdentifier;
  *     registered handler; false if it should be blocked.
  * @alias Blockly.Touch.shouldHandleEvent
  */
-const shouldHandleEvent = function(e) {
+export function shouldHandleEvent(e) {
   return !isMouseOrTouchEvent(e) || checkTouchIdentifier(e);
-};
-exports.shouldHandleEvent = shouldHandleEvent;
+}
 
 /**
  * Get the touch identifier from the given event.  If it was a mouse event, the
@@ -152,15 +149,14 @@ exports.shouldHandleEvent = shouldHandleEvent;
  *     defined.  Otherwise 'mouse'.
  * @alias Blockly.Touch.getTouchIdentifierFromEvent
  */
-const getTouchIdentifierFromEvent = function(e) {
+export function getTouchIdentifierFromEvent(e) {
   return e.pointerId !== undefined ? e.pointerId :
       (e.changedTouches && e.changedTouches[0] &&
        e.changedTouches[0].identifier !== undefined &&
        e.changedTouches[0].identifier !== null) ?
                                      e.changedTouches[0].identifier :
                                      'mouse';
-};
-exports.getTouchIdentifierFromEvent = getTouchIdentifierFromEvent;
+}
 
 /**
  * Check whether the touch identifier on the event matches the current saved
@@ -205,15 +201,14 @@ exports.checkTouchIdentifier = checkTouchIdentifier;
  * @param {!Event} e A touch event.
  * @alias Blockly.Touch.setClientFromTouch
  */
-const setClientFromTouch = function(e) {
+export function setClientFromTouch(e) {
   if (utilsString.startsWith(e.type, 'touch')) {
     // Map the touch event's properties to the event.
     const touchPoint = e.changedTouches[0];
     e.clientX = touchPoint.clientX;
     e.clientY = touchPoint.clientY;
   }
-};
-exports.setClientFromTouch = setClientFromTouch;
+}
 
 /**
  * Check whether a given event is a mouse or touch event.
@@ -221,12 +216,11 @@ exports.setClientFromTouch = setClientFromTouch;
  * @return {boolean} True if it is a mouse or touch event; false otherwise.
  * @alias Blockly.Touch.isMouseOrTouchEvent
  */
-const isMouseOrTouchEvent = function(e) {
+export function isMouseOrTouchEvent(e) {
   return utilsString.startsWith(e.type, 'touch') ||
       utilsString.startsWith(e.type, 'mouse') ||
       utilsString.startsWith(e.type, 'pointer');
-};
-exports.isMouseOrTouchEvent = isMouseOrTouchEvent;
+}
 
 /**
  * Check whether a given event is a touch event or a pointer event.
@@ -234,11 +228,10 @@ exports.isMouseOrTouchEvent = isMouseOrTouchEvent;
  * @return {boolean} True if it is a touch event; false otherwise.
  * @alias Blockly.Touch.isTouchEvent
  */
-const isTouchEvent = function(e) {
+export function isTouchEvent(e) {
   return utilsString.startsWith(e.type, 'touch') ||
       utilsString.startsWith(e.type, 'pointer');
-};
-exports.isTouchEvent = isTouchEvent;
+}
 
 /**
  * Split an event into an array of events, one per changed touch or mouse
@@ -249,7 +242,7 @@ exports.isTouchEvent = isTouchEvent;
  *     event will have exactly one changed touch.
  * @alias Blockly.Touch.splitEventByTouches
  */
-const splitEventByTouches = function(e) {
+export function splitEventByTouches(e) {
   const events = [];
   if (e.changedTouches) {
     for (let i = 0; i < e.changedTouches.length; i++) {
@@ -270,5 +263,4 @@ const splitEventByTouches = function(e) {
     events.push(e);
   }
   return events;
-};
-exports.splitEventByTouches = splitEventByTouches;
+}

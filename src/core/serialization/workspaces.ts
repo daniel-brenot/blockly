@@ -24,7 +24,7 @@ import {Workspace} from 'Blockly.Workspace';
  * @return {!Object<string, *>} The serialized state of the workspace.
  * @alias Blockly.serialization.workspaces.save
  */
-const save = function(workspace) {
+export function save(workspace) {
   const state = Object.create(null);
   const serializerMap = registry.getAllItems(registry.Type.SERIALIZER, true);
   for (const key in serializerMap) {
@@ -34,8 +34,7 @@ const save = function(workspace) {
     }
   }
   return state;
-};
-exports.save = save;
+}
 
 /**
  * Loads the variable represented by the given state into the given workspace.

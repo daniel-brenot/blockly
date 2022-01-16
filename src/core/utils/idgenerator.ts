@@ -36,10 +36,9 @@ let nextId = 0;
  * @return {string} The next unique identifier.
  * @alias Blockly.utils.idGenerator.getNextUniqueId
  */
-const getNextUniqueId = function() {
+export function getNextUniqueId() {
   return 'blockly-' + (nextId++).toString(36);
-};
-exports.getNextUniqueId = getNextUniqueId;
+}
 
 /**
  * Legal characters for the universally unique IDs.  Should be all on
@@ -72,7 +71,6 @@ internal.genUid = function() {
  * @return {string} A globally unique ID string.
  * @alias Blockly.utils.idGenerator.genUid
  */
-const genUid = function() {
+export function genUid() {
   return internal.genUid();
-};
-exports.genUid = genUid;
+}

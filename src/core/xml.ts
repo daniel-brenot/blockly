@@ -34,7 +34,7 @@ goog.requireType('Blockly.WorkspaceCommentSvg');
  * @return {!Element} XML DOM element.
  * @alias Blockly.Xml.workspaceToDom
  */
-const workspaceToDom = function(workspace, opt_noId) {
+export function workspaceToDom(workspace, opt_noId) {
   const treeXml = utilsXml.createElement('xml');
   const variablesElement = variablesToDom(
       goog.module.get('Blockly.Variables').allUsedVarModels(workspace));
@@ -52,8 +52,7 @@ const workspaceToDom = function(workspace, opt_noId) {
     treeXml.appendChild(blockToDomWithXY(block, opt_noId));
   }
   return treeXml;
-};
-exports.workspaceToDom = workspaceToDom;
+}
 
 /**
  * Encode a list of variables as XML.
@@ -62,7 +61,7 @@ exports.workspaceToDom = workspaceToDom;
  * @return {!Element} Tree of XML elements.
  * @alias Blockly.Xml.variablesToDom
  */
-const variablesToDom = function(variableList) {
+export function variablesToDom(variableList) {
   const variables = utilsXml.createElement('variables');
   for (let i = 0; i < variableList.length; i++) {
     const variable = variableList[i];
@@ -75,8 +74,7 @@ const variablesToDom = function(variableList) {
     variables.appendChild(element);
   }
   return variables;
-};
-exports.variablesToDom = variablesToDom;
+}
 
 /**
  * Encode a block subtree as XML with XY coordinates.
@@ -322,13 +320,12 @@ const cloneShadow = function(shadow, opt_noId) {
  * @return {string} Text representation.
  * @alias Blockly.Xml.domToText
  */
-const domToText = function(dom) {
+export function domToText(dom) {
   const text = utilsXml.domToText(dom);
   // Unpack self-closing tags.  These tags fail when embedded in HTML.
   // <block name="foo"/> -> <block name="foo"></block>
   return text.replace(/<(\w+)([^<]*)\/>/g, '<$1$2></$1>');
-};
-exports.domToText = domToText;
+}
 
 /**
  * Converts a DOM structure into properly indented text.
@@ -336,7 +333,7 @@ exports.domToText = domToText;
  * @return {string} Text representation.
  * @alias Blockly.Xml.domToPrettyText
  */
-const domToPrettyText = function(dom) {
+export function domToPrettyText(dom) {
   // This function is not guaranteed to be correct for all XML.
   // But it handles the XML that Blockly generates.
   const blob = domToText(dom);
@@ -360,8 +357,7 @@ const domToPrettyText = function(dom) {
   text = text.replace(/(<(\w+)\b[^>]*>[^\n]*)\n *<\/\2>/g, '$1</$2>');
   // Trim leading blank line.
   return text.replace(/^\n/, '');
-};
-exports.domToPrettyText = domToPrettyText;
+}
 
 /**
  * Converts an XML string into a DOM structure.
@@ -371,15 +367,14 @@ exports.domToPrettyText = domToPrettyText;
  * @throws if the text doesn't parse.
  * @alias Blockly.Xml.textToDom
  */
-const textToDom = function(text) {
+export function textToDom(text) {
   const doc = utilsXml.textToDomDocument(text);
   if (!doc || !doc.documentElement ||
       doc.getElementsByTagName('parsererror').length) {
     throw Error('textToDom was unable to parse: ' + text);
   }
   return doc.documentElement;
-};
-exports.textToDom = textToDom;
+}
 
 /**
  * Clear the given workspace then decode an XML DOM and
@@ -389,14 +384,13 @@ exports.textToDom = textToDom;
  * @return {!Array<string>} An array containing new block IDs.
  * @alias Blockly.Xml.clearWorkspaceAndLoadFromXml
  */
-const clearWorkspaceAndLoadFromXml = function(xml, workspace) {
+export function clearWorkspaceAndLoadFromXml(xml, workspace) {
   workspace.setResizesEnabled(false);
   workspace.clear();
   const blockIds = domToWorkspace(xml, workspace);
   workspace.setResizesEnabled(true);
   return blockIds;
-};
-exports.clearWorkspaceAndLoadFromXml = clearWorkspaceAndLoadFromXml;
+}
 
 /**
  * Decode an XML DOM and create blocks on the workspace.
@@ -518,7 +512,7 @@ exports.domToWorkspace = domToWorkspace;
  * @return {!Array<string>} An array containing new block IDs.
  * @alias Blockly.Xml.appendDomToWorkspace
  */
-const appendDomToWorkspace = function(xml, workspace) {
+export function appendDomToWorkspace(xml, workspace) {
   let bbox;  // Bounding box of the current blocks.
   // First check if we have a workspaceSvg, otherwise the blocks have no shape
   // and the position does not matter.
@@ -558,8 +552,7 @@ const appendDomToWorkspace = function(xml, workspace) {
     }
   }
   return newBlockIds;
-};
-exports.appendDomToWorkspace = appendDomToWorkspace;
+}
 
 /**
  * Decode an XML block tag and create a block (and possibly sub blocks) on the
@@ -569,7 +562,7 @@ exports.appendDomToWorkspace = appendDomToWorkspace;
  * @return {!Block} The root block created.
  * @alias Blockly.Xml.domToBlock
  */
-const domToBlock = function(xmlBlock, workspace) {
+export function domToBlock(xmlBlock, workspace) {
   const {Workspace} = goog.module.get('Blockly.Workspace');
   if (xmlBlock instanceof Workspace) {
     const swap = xmlBlock;
@@ -633,8 +626,7 @@ const domToBlock = function(xmlBlock, workspace) {
     eventUtils.fire(new (eventUtils.get(eventUtils.CREATE))(topBlock));
   }
   return topBlock;
-};
-exports.domToBlock = domToBlock;
+}
 
 /**
  * Decode an XML list of variables and add the variables to the workspace.
@@ -1010,7 +1002,7 @@ const domToField = function(block, fieldName, xml) {
  *     DocumentFragment if the block was an insertion marker.
  * @alias Blockly.Xml.deleteNext
  */
-const deleteNext = function(xmlBlock) {
+export function deleteNext(xmlBlock) {
   for (let i = 0; i < xmlBlock.childNodes.length; i++) {
     const child = xmlBlock.childNodes[i];
     if (child.nodeName.toLowerCase() === 'next') {
@@ -1018,5 +1010,4 @@ const deleteNext = function(xmlBlock) {
       break;
     }
   }
-};
-exports.deleteNext = deleteNext;
+}

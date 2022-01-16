@@ -43,20 +43,18 @@ let currentBlock = null;
  * @return {?Block} The block the context menu is attached to.
  * @alias Blockly.ContextMenu.getCurrentBlock
  */
-const getCurrentBlock = function() {
+export function getCurrentBlock() {
   return currentBlock;
-};
-exports.getCurrentBlock = getCurrentBlock;
+}
 
 /**
  * Sets the block the context menu is currently attached to.
  * @param {?Block} block The block the context menu is attached to.
  * @alias Blockly.ContextMenu.setCurrentBlock
  */
-const setCurrentBlock = function(block) {
+export function setCurrentBlock(block) {
   currentBlock = block;
-};
-exports.setCurrentBlock = setCurrentBlock;
+}
 
 // Add JS accessors for backwards compatibility.
 Object.defineProperties(exports, {
@@ -222,23 +220,21 @@ const haltPropagation = function(e) {
  * Hide the context menu.
  * @alias Blockly.ContextMenu.hide
  */
-const hide = function() {
+export function hide() {
   WidgetDiv.hideIfOwner(exports);
   currentBlock = null;
-};
-exports.hide = hide;
+}
 
 /**
  * Dispose of the menu.
  * @alias Blockly.ContextMenu.dispose
  */
-const dispose = function() {
+export function dispose() {
   if (menu_) {
     menu_.dispose();
     menu_ = null;
   }
-};
-exports.dispose = dispose;
+}
 
 /**
  * Create a callback function that creates and configures a block,
@@ -248,7 +244,7 @@ exports.dispose = dispose;
  * @return {!Function} Function that creates a block.
  * @alias Blockly.ContextMenu.callbackFactory
  */
-const callbackFactory = function(block, xml) {
+export function callbackFactory(block, xml) {
   return function() {
     eventUtils.disable();
     let newBlock;
@@ -271,8 +267,7 @@ const callbackFactory = function(block, xml) {
     }
     newBlock.select();
   };
-};
-exports.callbackFactory = callbackFactory;
+}
 
 // Helper functions for creating context menu options.
 
@@ -284,7 +279,7 @@ exports.callbackFactory = callbackFactory;
  * @alias Blockly.ContextMenu.commentDeleteOption
  * @package
  */
-const commentDeleteOption = function(comment) {
+export function commentDeleteOption(comment) {
   const deleteOption = {
     text: Msg['REMOVE_COMMENT'],
     enabled: true,
@@ -295,8 +290,7 @@ const commentDeleteOption = function(comment) {
     },
   };
   return deleteOption;
-};
-exports.commentDeleteOption = commentDeleteOption;
+}
 
 /**
  * Make a context menu option for duplicating the current workspace comment.
@@ -306,7 +300,7 @@ exports.commentDeleteOption = commentDeleteOption;
  * @alias Blockly.ContextMenu.commentDuplicateOption
  * @package
  */
-const commentDuplicateOption = function(comment) {
+export function commentDuplicateOption(comment) {
   const duplicateOption = {
     text: Msg['DUPLICATE_COMMENT'],
     enabled: true,
@@ -315,8 +309,7 @@ const commentDuplicateOption = function(comment) {
     },
   };
   return duplicateOption;
-};
-exports.commentDuplicateOption = commentDuplicateOption;
+}
 
 /**
  * Make a context menu option for adding a comment on the workspace.

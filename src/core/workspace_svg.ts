@@ -2667,9 +2667,8 @@ WorkspaceSvg.prototype.hideChaff = function(opt_onlyClosePopups) {
  * @param {!WorkspaceSvg} workspace The workspace to resize.
  * @alias Blockly.WorkspaceSvg.resizeSvgContents
  */
-const resizeSvgContents = function(workspace) {
+export function resizeSvgContents(workspace) {
   workspace.resizeContents();
-};
-exports.resizeSvgContents = resizeSvgContents;
+}
 
 exports.WorkspaceSvg = WorkspaceSvg;

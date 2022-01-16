@@ -39,20 +39,18 @@ let recordUndo = true;
  * @param {boolean} newValue True if events should be added to the undo stack.
  * @alias Blockly.Events.utils.setRecordUndo
  */
-const setRecordUndo = function(newValue) {
+export function setRecordUndo(newValue) {
   recordUndo = newValue;
-};
-exports.setRecordUndo = setRecordUndo;
+}
 
 /**
  * Returns whether or not events will be added to the undo stack.
  * @returns {boolean} True if events will be added to the undo stack.
  * @alias Blockly.Events.utils.getRecordUndo
  */
-const getRecordUndo = function() {
+export function getRecordUndo() {
   return recordUndo;
-};
-exports.getRecordUndo = getRecordUndo;
+}
 
 /**
  * Allow change events to be created and fired.
@@ -302,7 +300,7 @@ const FIRE_QUEUE = [];
  * @param {!Abstract} event Custom data for event.
  * @alias Blockly.Events.utils.fire
  */
-const fire = function(event) {
+export function fire(event) {
   if (!isEnabled()) {
     return;
   }
@@ -311,8 +309,7 @@ const fire = function(event) {
     setTimeout(fireNow, 0);
   }
   FIRE_QUEUE.push(event);
-};
-exports.fire = fire;
+}
 
 /**
  * Fire all queued events.
@@ -413,51 +410,46 @@ exports.filter = filter;
  * in the undo stack.  Called by Workspace.clearUndo.
  * @alias Blockly.Events.utils.clearPendingUndo
  */
-const clearPendingUndo = function() {
+export function clearPendingUndo() {
   for (let i = 0, event; (event = FIRE_QUEUE[i]); i++) {
     event.recordUndo = false;
   }
-};
-exports.clearPendingUndo = clearPendingUndo;
+}
 
 /**
  * Stop sending events.  Every call to this function MUST also call enable.
  * @alias Blockly.Events.utils.disable
  */
-const disable = function() {
+export function disable() {
   disabled++;
-};
-exports.disable = disable;
+}
 
 /**
  * Start sending events.  Unless events were already disabled when the
  * corresponding call to disable was made.
  * @alias Blockly.Events.utils.enable
  */
-const enable = function() {
+export function enable() {
   disabled--;
-};
-exports.enable = enable;
+}
 
 /**
  * Returns whether events may be fired or not.
  * @return {boolean} True if enabled.
  * @alias Blockly.Events.utils.isEnabled
  */
-const isEnabled = function() {
+export function isEnabled() {
   return disabled === 0;
-};
-exports.isEnabled = isEnabled;
+}
 
 /**
  * Current group.
  * @return {string} ID string.
  * @alias Blockly.Events.utils.getGroup
  */
-const getGroup = function() {
+export function getGroup() {
   return group;
-};
-exports.getGroup = getGroup;
+}
 
 /**
  * Start or stop a group.
@@ -465,14 +457,13 @@ exports.getGroup = getGroup;
  *   String to set group explicitly.
  * @alias Blockly.Events.utils.setGroup
  */
-const setGroup = function(state) {
+export function setGroup(state) {
   if (typeof state === 'boolean') {
     group = state ? idGenerator.genUid() : '';
   } else {
     group = state;
   }
-};
-exports.setGroup = setGroup;
+}
 
 /**
  * Compute a list of the IDs of the specified block and all its descendants.
@@ -481,15 +472,14 @@ exports.setGroup = setGroup;
  * @alias Blockly.Events.utils.getDescendantIds
  * @package
  */
-const getDescendantIds = function(block) {
+export function getDescendantIds(block) {
   const ids = [];
   const descendants = block.getDescendants(false);
   for (let i = 0, descendant; (descendant = descendants[i]); i++) {
     ids[i] = descendant.id;
   }
   return ids;
-};
-exports.getDescendantIds = getDescendantIds;
+}
 
 /**
  * Decode the JSON into an event.
@@ -499,7 +489,7 @@ exports.getDescendantIds = getDescendantIds;
  * @throws {Error} if an event type is not found in the registry.
  * @alias Blockly.Events.utils.fromJson
  */
-const fromJson = function(json, workspace) {
+export function fromJson(json, workspace) {
   const eventClass = get(json.type);
   if (!eventClass) {
     throw Error('Unknown event type.');
@@ -508,8 +498,7 @@ const fromJson = function(json, workspace) {
   event.fromJson(json);
   event.workspaceId = workspace.id;
   return event;
-};
-exports.fromJson = fromJson;
+}
 
 /**
  * Gets the class for a specific event type from the registry.
@@ -518,10 +507,9 @@ exports.fromJson = fromJson;
  *     the given type or null if none exists.
  * @alias Blockly.Events.utils.get
  */
-const get = function(eventType) {
+export function get(eventType) {
   return registry.getClass(registry.Type.EVENT, eventType);
-};
-exports.get = get;
+}
 
 /**
  * Enable/disable a block depending on whether it is properly connected.
@@ -531,7 +519,7 @@ exports.get = get;
  * @param {!Abstract} event Custom data for event.
  * @alias Blockly.Events.utils.disableOrphans
  */
-const disableOrphans = function(event) {
+export function disableOrphans(event) {
   if (event.type === MOVE || event.type === CREATE) {
     if (!event.workspaceId) {
       return;
@@ -563,8 +551,7 @@ const disableOrphans = function(event) {
       }
     }
   }
-};
-exports.disableOrphans = disableOrphans;
+}
 
 exports.TEST_ONLY = {
   FIRE_QUEUE,

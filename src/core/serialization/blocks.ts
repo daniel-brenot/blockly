@@ -295,10 +295,9 @@ const saveConnection = function(connection, doFullSerialization) {
  * @return {!Block} The block that was just loaded.
  * @alias Blockly.serialization.blocks.append
  */
-const append = function(state, workspace, {recordUndo = false} = {}) {
+export function append(state, workspace, {recordUndo = false} = {}) {
   return appendInternal(state, workspace, {recordUndo});
-};
-exports.append = append;
+}
 
 /**
  * Loads the block represented by the given state into the given workspace.

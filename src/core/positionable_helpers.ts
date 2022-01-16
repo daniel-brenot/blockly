@@ -128,7 +128,7 @@ exports.getStartPositionRect = getStartPositionRect;
  * @alias Blockly.uiPosition.getCornerOppositeToolbox
  * @package
  */
-const getCornerOppositeToolbox = function(workspace, metrics) {
+export function getCornerOppositeToolbox(workspace, metrics) {
   const leftCorner =
       metrics.toolboxMetrics.position !== toolbox.Position.LEFT &&
       (!workspace.horizontalLayout || workspace.RTL);
@@ -137,8 +137,7 @@ const getCornerOppositeToolbox = function(workspace, metrics) {
       leftCorner ? horizontalPosition.LEFT : horizontalPosition.RIGHT;
   const vPosition = topCorner ? verticalPosition.TOP : verticalPosition.BOTTOM;
   return {horizontal: hPosition, vertical: vPosition};
-};
-exports.getCornerOppositeToolbox = getCornerOppositeToolbox;
+}
 
 /**
  * Returns a position Rect based on a starting position that is bumped

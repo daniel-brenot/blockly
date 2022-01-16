@@ -18,12 +18,11 @@ goog.module('Blockly.utils.array');
  * @alias Blockly.array.removeElem
  * @package
  */
-const removeElem = function(arr, value) {
+export function removeElem(arr, value) {
   const i = arr.indexOf(value);
   if (i === -1) {
     return false;
   }
   arr.splice(i, 1);
   return true;
-};
-exports.removeElem = removeElem;
+}

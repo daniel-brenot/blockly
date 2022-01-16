@@ -23,17 +23,15 @@ import {ISerializer} from 'Blockly.serialization.ISerializer';
  * @param {ISerializer} serializer The serializer to register.
  * @alias Blockly.serialization.registry.register
  */
-const register = function(name, serializer) {
+export function register(name, serializer) {
   registry.register(registry.Type.SERIALIZER, name, serializer);
-};
-exports.register = register;
+}
 
 /**
  * Unregisters the serializer associated with the given name.
  * @param {string} name The name of the serializer to unregister.
  * @alias Blockly.serialization.registry.unregister
  */
-const unregister = function(name) {
+export function unregister(name) {
   registry.unregister(registry.Type.SERIALIZER, name);
-};
-exports.unregister = unregister;
+}

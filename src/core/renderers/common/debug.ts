@@ -22,27 +22,24 @@ let useDebugger = false;
  * @alias Blockly.blockRendering.debug.isDebuggerEnabled
  * @package
  */
-const isDebuggerEnabled = function() {
+export function isDebuggerEnabled() {
   return useDebugger;
-};
-exports.isDebuggerEnabled = isDebuggerEnabled;
+}
 
 /**
  * Turn on the blocks debugger.
  * @package
  * @alias Blockly.blockRendering.debug.startDebugger
  */
-const startDebugger = function() {
+export function startDebugger() {
   useDebugger = true;
-};
-exports.startDebugger = startDebugger;
+}
 
 /**
  * Turn off the blocks debugger.
  * @package
  * @alias Blockly.blockRendering.debug.stopDebugger
  */
-const stopDebugger = function() {
+export function stopDebugger() {
   useDebugger = false;
-};
-exports.stopDebugger = stopDebugger;
+}

@@ -59,14 +59,13 @@ exports.DEFAULT = DEFAULT;
  * @template T
  * @alias Blockly.registry.Type
  */
-const Type = function(name) {
+export function Type(name) {
   /**
    * @type {string}
    * @private
    */
   this.name_ = name;
-};
-exports.Type = Type;
+}
 
 /**
  * Returns the name of the type.
@@ -199,7 +198,7 @@ const validate = function(type, registryItem) {
  * @template T
  * @alias Blockly.registry.unregister
  */
-const unregister = function(type, name) {
+export function unregister(type, name) {
   type = String(type).toLowerCase();
   name = name.toLowerCase();
   const typeRegistry = typeMap[type];
@@ -211,8 +210,7 @@ const unregister = function(type, name) {
   }
   delete typeMap[type][name];
   delete nameMap[type][name];
-};
-exports.unregister = unregister;
+}
 
 /**
  * Gets the registry item for the given name and type. This can be either a
@@ -254,7 +252,7 @@ const getItem = function(type, name, opt_throwIfMissing) {
  * @template T
  * @alias Blockly.registry.hasItem
  */
-const hasItem = function(type, name) {
+export function hasItem(type, name) {
   type = String(type).toLowerCase();
   name = name.toLowerCase();
   const typeRegistry = typeMap[type];
@@ -262,8 +260,7 @@ const hasItem = function(type, name) {
     return false;
   }
   return !!(typeRegistry[name]);
-};
-exports.hasItem = hasItem;
+}
 
 /**
  * Gets the class for the given name and type.
@@ -277,11 +274,10 @@ exports.hasItem = hasItem;
  * @template T
  * @alias Blockly.registry.getClass
  */
-const getClass = function(type, name, opt_throwIfMissing) {
+export function getClass(type, name, opt_throwIfMissing) {
   return /** @type {?function(new:T, ...?)} */ (
       getItem(type, name, opt_throwIfMissing));
-};
-exports.getClass = getClass;
+}
 
 /**
  * Gets the object for the given name and type.
@@ -294,10 +290,9 @@ exports.getClass = getClass;
  * @template T
  * @alias Blockly.registry.getObject
  */
-const getObject = function(type, name, opt_throwIfMissing) {
+export function getObject(type, name, opt_throwIfMissing) {
   return /** @type {T} */ (getItem(type, name, opt_throwIfMissing));
-};
-exports.getObject = getObject;
+}
 
 /**
  * Returns a map of items registered with the given type.
@@ -311,7 +306,7 @@ exports.getObject = getObject;
  * @template T
  * @alias Blockly.registry.getAllItems
  */
-const getAllItems = function(type, opt_cased, opt_throwIfMissing) {
+export function getAllItems(type, opt_cased, opt_throwIfMissing) {
   type = String(type).toLowerCase();
   const typeRegistry = typeMap[type];
   if (!typeRegistry) {
@@ -334,8 +329,7 @@ const getAllItems = function(type, opt_cased, opt_throwIfMissing) {
     casedRegistry[nameRegistry[key]] = typeRegistry[key];
   }
   return casedRegistry;
-};
-exports.getAllItems = getAllItems;
+}
 
 /**
  * Gets the class from Blockly options for the given type.

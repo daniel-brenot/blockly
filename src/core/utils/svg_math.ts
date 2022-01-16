@@ -92,7 +92,7 @@ exports.getRelativeXY = getRelativeXY;
  * @return {!Coordinate} Object with .x and .y properties.
  * @alias Blockly.utils.svgMath.getInjectionDivXY
  */
-const getInjectionDivXY = function(element) {
+export function getInjectionDivXY(element) {
   let x = 0;
   let y = 0;
   while (element) {
@@ -106,8 +106,7 @@ const getInjectionDivXY = function(element) {
     element = /** @type {!Element} */ (element.parentNode);
   }
   return new Coordinate(x, y);
-};
-exports.getInjectionDivXY = getInjectionDivXY;
+}
 
 /**
  * Check if 3D transforms are supported by adding an element
@@ -169,14 +168,13 @@ exports.is3dSupported = is3dSupported;
  * @alias Blockly.utils.svgMath.getViewportBBox
  * @package
  */
-const getViewportBBox = function() {
+export function getViewportBBox() {
   // Pixels, in window coordinates.
   const scrollOffset = style.getViewportPageOffset();
   return new Rect(
       scrollOffset.y, document.documentElement.clientHeight + scrollOffset.y,
       scrollOffset.x, document.documentElement.clientWidth + scrollOffset.x);
-};
-exports.getViewportBBox = getViewportBBox;
+}
 
 /**
  * Gets the document scroll distance as a coordinate object.
@@ -184,7 +182,7 @@ exports.getViewportBBox = getViewportBBox;
  * @return {!Coordinate} Object with values 'x' and 'y'.
  * @alias Blockly.utils.svgMath.getDocumentScroll
  */
-const getDocumentScroll = function() {
+export function getDocumentScroll() {
   const el = document.documentElement;
   const win = window;
   if (userAgent.IE && win.pageYOffset !== el.scrollTop) {
@@ -195,8 +193,7 @@ const getDocumentScroll = function() {
   }
   return new Coordinate(
       win.pageXOffset || el.scrollLeft, win.pageYOffset || el.scrollTop);
-};
-exports.getDocumentScroll = getDocumentScroll;
+}
 
 /**
  * Converts screen coordinates to workspace coordinates.
@@ -242,7 +239,7 @@ exports.screenToWsCoordinates = screenToWsCoordinates;
  * @deprecated Use workspace.getCachedParentSvgSize. (2021 March 5)
  * @alias Blockly.utils.svgMath.svgSize
  */
-const svgSize = function(svg) {
+export function svgSize(svg) {
   // When removing this function, remove svg.cachedWidth_ and svg.cachedHeight_
   // from setCachedParentSvgSize.
   // The deprecated name is `Blockly.svgSize` because this function used to be
@@ -252,8 +249,7 @@ const svgSize = function(svg) {
       'workspace.getCachedParentSvgSize');
   svg = /** @type {?} */ (svg);
   return new Size(svg.cachedWidth_, svg.cachedHeight_);
-};
-exports.svgSize = svgSize;
+}
 
 
 exports.TEST_ONLY = {

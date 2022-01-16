@@ -69,13 +69,12 @@ exports.xml = xmlUtils;
  * @deprecated
  * @alias Blockly.utils.noEvent
  */
-const noEvent = function(e) {
+export function noEvent(e) {
   deprecation.warn('Blockly.utils.noEvent', 'September 2021', 'September 2022');
   // This event has been handled.  No need to bubble up to the document.
   e.preventDefault();
   e.stopPropagation();
-};
-exports.noEvent = noEvent;
+}
 
 /**
  * Returns true if this event is targeting a text input widget?
@@ -84,13 +83,12 @@ exports.noEvent = noEvent;
  * @deprecated Use Blockly.browserEvents.isTargetInput instead.
  * @alias Blockly.utils.isTargetInput
  */
-const isTargetInput = function(e) {
+export function isTargetInput(e) {
   deprecation.warn(
       'Blockly.utils.isTargetInput', 'September 2021', 'September 2022',
       'Blockly.browserEvents.isTargetInput');
   return browserEvents.isTargetInput(e);
-};
-exports.isTargetInput = isTargetInput;
+}
 
 /**
  * Return the coordinates of the top-left corner of this element relative to
@@ -100,13 +98,12 @@ exports.isTargetInput = isTargetInput;
  * @deprecated
  * @alias Blockly.utils.getRelativeXY
  */
-const getRelativeXY = function(element) {
+export function getRelativeXY(element) {
   deprecation.warn(
       'Blockly.utils.getRelativeXY', 'December 2021', 'December 2022',
       'Blockly.utils.svgMath.getRelativeXY');
   return svgMath.getRelativeXY(element);
-};
-exports.getRelativeXY = getRelativeXY;
+}
 
 /**
  * Return the coordinates of the top-left corner of this element relative to
@@ -118,13 +115,12 @@ exports.getRelativeXY = getRelativeXY;
  * @deprecated
  * @alias Blockly.utils.getInjectionDivXY_
  */
-const getInjectionDivXY = function(element) {
+export function getInjectionDivXY(element) {
   deprecation.warn(
       'Blockly.utils.getInjectionDivXY_', 'December 2021', 'December 2022',
       'Blockly.utils.svgMath.getInjectionDivXY');
   return svgMath.getInjectionDivXY(element);
-};
-exports.getInjectionDivXY_ = getInjectionDivXY;
+}
 
 /**
  * Returns true this event is a right-click.
@@ -133,13 +129,12 @@ exports.getInjectionDivXY_ = getInjectionDivXY;
  * @deprecated Use Blockly.browserEvents.isRightButton instead.
  * @alias Blockly.utils.isRightButton
  */
-const isRightButton = function(e) {
+export function isRightButton(e) {
   deprecation.warn(
       'Blockly.utils.isRightButton', 'September 2021', 'September 2022',
       'Blockly.browserEvents.isRightButton');
   return browserEvents.isRightButton(e);
-};
-exports.isRightButton = isRightButton;
+}
 
 /**
  * Returns the converted coordinates of the given mouse event.
@@ -151,13 +146,12 @@ exports.isRightButton = isRightButton;
  * @deprecated Use Blockly.browserEvents.mouseToSvg instead;
  * @alias Blockly.utils.mouseToSvg
  */
-const mouseToSvg = function(e, svg, matrix) {
+export function mouseToSvg(e, svg, matrix) {
   deprecation.warn(
       'Blockly.utils.mouseToSvg', 'September 2021', 'September 2022',
       'Blockly.browserEvents.mouseToSvg');
   return browserEvents.mouseToSvg(e, svg, matrix);
-};
-exports.mouseToSvg = mouseToSvg;
+}
 
 /**
  * Returns the scroll delta of a mouse event in pixel units.
@@ -167,13 +161,12 @@ exports.mouseToSvg = mouseToSvg;
  * @deprecated Use Blockly.browserEvents.getScrollDeltaPixels instead.
  * @alias Blockly.utils.getScrollDeltaPixels
  */
-const getScrollDeltaPixels = function(e) {
+export function getScrollDeltaPixels(e) {
   deprecation.warn(
       'Blockly.utils.getScrollDeltaPixels', 'September 2021', 'September 2022',
       'Blockly.browserEvents.getScrollDeltaPixels');
   return browserEvents.getScrollDeltaPixels(e);
-};
-exports.getScrollDeltaPixels = getScrollDeltaPixels;
+}
 
 /**
  * Parse a string with any number of interpolation tokens (%1, %2, ...).
@@ -187,13 +180,12 @@ exports.getScrollDeltaPixels = getScrollDeltaPixels;
  * @deprecated
  * @alias Blockly.utils.tokenizeInterpolation
  */
-const tokenizeInterpolation = function(message) {
+export function tokenizeInterpolation(message) {
   deprecation.warn(
       'Blockly.utils.tokenizeInterpolation', 'December 2021', 'December 2022',
       'Blockly.utils.parsing.tokenizeInterpolation');
   return parsing.tokenizeInterpolation(message);
-};
-exports.tokenizeInterpolation = tokenizeInterpolation;
+}
 
 /**
  * Replaces string table references in a message, if the message is a string.
@@ -205,13 +197,12 @@ exports.tokenizeInterpolation = tokenizeInterpolation;
  * @deprecated
  * @alias Blockly.utils.replaceMessageReferences
  */
-const replaceMessageReferences = function(message) {
+export function replaceMessageReferences(message) {
   deprecation.warn(
       'Blockly.utils.replaceMessageReferences', 'December 2021',
       'December 2022', 'Blockly.utils.parsing.replaceMessageReferences');
   return parsing.replaceMessageReferences(message);
-};
-exports.replaceMessageReferences = replaceMessageReferences;
+}
 
 /**
  * Validates that any %{MSG_KEY} references in the message refer to keys of
@@ -222,13 +213,12 @@ exports.replaceMessageReferences = replaceMessageReferences;
  * @deprecated
  * @alias Blockly.utils.checkMessageReferences
  */
-const checkMessageReferences = function(message) {
+export function checkMessageReferences(message) {
   deprecation.warn(
       'Blockly.utils.checkMessageReferences', 'December 2021', 'December 2022',
       'Blockly.utils.parsing.checkMessageReferences');
   return parsing.checkMessageReferences(message);
-};
-exports.checkMessageReferences = checkMessageReferences;
+}
 
 /**
  * Generate a unique ID.
@@ -236,13 +226,12 @@ exports.checkMessageReferences = checkMessageReferences;
  * @deprecated Use Blockly.utils.idGenerator.genUid instead.
  * @alias Blockly.utils.genUid
  */
-const genUid = function() {
+export function genUid() {
   deprecation.warn(
       'Blockly.utils.genUid', 'September 2021', 'September 2022',
       'Blockly.utils.idGenerator.genUid');
   return idGenerator.genUid();
-};
-exports.genUid = genUid;
+}
 
 /**
  * Check if 3D transforms are supported by adding an element
@@ -251,13 +240,12 @@ exports.genUid = genUid;
  * @deprecated
  * @alias Blockly.utils.is3dSupported
  */
-const is3dSupported = function() {
+export function is3dSupported() {
   deprecation.warn(
       'Blockly.utils.is3dSupported', 'December 2021', 'December 2022',
       'Blockly.utils.svgMath.is3dSupported');
   return svgMath.is3dSupported();
-};
-exports.is3dSupported = is3dSupported;
+}
 
 /**
  * Get the position of the current viewport in window coordinates.  This takes
@@ -268,13 +256,12 @@ exports.is3dSupported = is3dSupported;
  * @deprecated
  * @package
  */
-const getViewportBBox = function() {
+export function getViewportBBox() {
   deprecation.warn(
       'Blockly.utils.getViewportBBox', 'December 2021', 'December 2022',
       'Blockly.utils.svgMath.getViewportBBox');
   return svgMath.getViewportBBox();
-};
-exports.getViewportBBox = getViewportBBox;
+}
 
 /**
  * Removes the first occurrence of a particular value from an array.
@@ -285,12 +272,11 @@ exports.getViewportBBox = getViewportBBox;
  * @deprecated
  * @package
  */
-const arrayRemove = function(arr, value) {
+export function arrayRemove(arr, value) {
   deprecation.warn(
       'Blockly.utils.arrayRemove', 'December 2021', 'December 2022');
   return arrayUtils.removeElem(arr, value);
-};
-exports.arrayRemove = arrayRemove;
+}
 
 /**
  * Gets the document scroll distance as a coordinate object.
@@ -299,13 +285,12 @@ exports.arrayRemove = arrayRemove;
  * @deprecated
  * @alias Blockly.utils.getDocumentScroll
  */
-const getDocumentScroll = function() {
+export function getDocumentScroll() {
   deprecation.warn(
       'Blockly.utils.getDocumentScroll', 'December 2021', 'December 2022',
       'Blockly.utils.svgMath.getDocumentScroll');
   return svgMath.getDocumentScroll();
-};
-exports.getDocumentScroll = getDocumentScroll;
+}
 
 /**
  * Get a map of all the block's descendants mapping their type to the number of
@@ -318,13 +303,12 @@ exports.getDocumentScroll = getDocumentScroll;
  * @deprecated
  * @alias Blockly.utils.getBlockTypeCounts
  */
-const getBlockTypeCounts = function(block, opt_stripFollowing) {
+export function getBlockTypeCounts(block, opt_stripFollowing) {
   deprecation.warn(
       'Blockly.utils.getBlockTypeCounts', 'December 2021', 'December 2022',
       'blockly/core/common.getBlockTypeCounts');
   return common.getBlockTypeCounts(block, opt_stripFollowing);
-};
-exports.getBlockTypeCounts = getBlockTypeCounts;
+}
 
 /**
  * Converts screen coordinates to workspace coordinates.
@@ -334,13 +318,12 @@ exports.getBlockTypeCounts = getBlockTypeCounts;
  * @deprecated
  * @return {!Coordinate} The workspace coordinates.
  */
-const screenToWsCoordinates = function(ws, screenCoordinates) {
+export function screenToWsCoordinates(ws, screenCoordinates) {
   deprecation.warn(
       'Blockly.utils.screenToWsCoordinates', 'December 2021', 'December 2022',
       'Blockly.utils.svgMath.screenToWsCoordinates');
   return svgMath.screenToWsCoordinates(ws, screenCoordinates);
-};
-exports.screenToWsCoordinates = screenToWsCoordinates;
+}
 
 /**
  * Parse a block color from a number or string, as provided in a block
@@ -353,13 +336,12 @@ exports.screenToWsCoordinates = screenToWsCoordinates;
  * @deprecated
  * @alias Blockly.utils.parseBlockColor
  */
-const parseBlockColor = function(color) {
+export function parseBlockColor(color) {
   deprecation.warn(
       'Blockly.utils.parseBlockColor', 'December 2021', 'December 2022',
       'Blockly.utils.parsing.parseBlockColor');
   return parsing.parseBlockColor(color);
-};
-exports.parseBlockColor = parseBlockColor;
+}
 
 /**
  * Calls a function after the page has loaded, possibly immediately.
@@ -368,9 +350,8 @@ exports.parseBlockColor = parseBlockColor;
  * @deprecated
  * @alias Blockly.utils.runAfterPageLoad
  */
-const runAfterPageLoad = function(fn) {
+export function runAfterPageLoad(fn) {
   deprecation.warn(
       'Blockly.utils.runAfterPageLoad', 'December 2021', 'December 2022');
   extensions.runAfterPageLoad(fn);
-};
-exports.runAfterPageLoad = runAfterPageLoad;
+}

@@ -36,7 +36,7 @@ exports.TEST_ONLY = {allExtensions};
  *     registered, or extensionFn is not a function.
  * @alias Blockly.Extensions.register
  */
-const register = function(name, initFn) {
+export function register(name, initFn) {
   if ((typeof name !== 'string') || (name.trim() === '')) {
     throw Error('Error: Invalid extension name "' + name + '"');
   }
@@ -47,8 +47,7 @@ const register = function(name, initFn) {
     throw Error('Error: Extension "' + name + '" must be a function');
   }
   allExtensions[name] = initFn;
-};
-exports.register = register;
+}
 
 /**
  * Registers a new extension function that adds all key/value of mixinObj.
@@ -58,7 +57,7 @@ exports.register = register;
  *     registered.
  * @alias Blockly.Extensions.registerMixin
  */
-const registerMixin = function(name, mixinObj) {
+export function registerMixin(name, mixinObj) {
   if (!mixinObj || typeof mixinObj !== 'object') {
     throw Error('Error: Mixin "' + name + '" must be a object');
   }
@@ -68,8 +67,7 @@ const registerMixin = function(name, mixinObj) {
       function() {
         this.mixin(mixinObj);
       });
-};
-exports.registerMixin = registerMixin;
+}
 
 /**
  * Registers a new extension function that adds a mutator to the block.
@@ -122,15 +120,14 @@ exports.registerMutator = registerMutator;
  * @param {string} name The name of the extension to unregister.
  * @alias Blockly.Extensions.unregister
  */
-const unregister = function(name) {
+export function unregister(name) {
   if (isRegistered(name)) {
     delete allExtensions[name];
   } else {
     console.warn(
         'No extension mapping for name "' + name + '" found to unregister');
   }
-};
-exports.unregister = unregister;
+}
 
 /**
  * Returns whether an extension is registered with the given name.
@@ -139,10 +136,9 @@ exports.unregister = unregister;
  *     not registered.
  * @alias Blockly.Extensions.isRegistered
  */
-const isRegistered = function(name) {
+export function isRegistered(name) {
   return !!allExtensions[name];
-};
-exports.isRegistered = isRegistered;
+}
 
 /**
  * Applies an extension method to a block. This should only be called during
@@ -347,7 +343,7 @@ const mutatorPropertiesMatch = function(oldProperties, block) {
  * @throws Error Will throw if no global document can be found (e.g., Node.js).
  * @package
  */
-const runAfterPageLoad = function(fn) {
+export function runAfterPageLoad(fn) {
   if (typeof document !== 'object') {
     throw Error('runAfterPageLoad() requires browser document.');
   }
@@ -362,8 +358,7 @@ const runAfterPageLoad = function(fn) {
       }
     }, 10);
   }
-};
-exports.runAfterPageLoad = runAfterPageLoad;
+}
 
 /**
  * Builds an extension function that will map a dropdown value to a tooltip
@@ -484,7 +479,7 @@ const buildTooltipWithFieldText = function(msgTemplate, fieldName) {
    * The actual extension.
    * @this {Block}
    */
-  const extensionFn = function() {
+  export function extensionFn() {
     this.setTooltip(function() {
       const field = this.getField(fieldName);
       return parsing.replaceMessageReferences(msgTemplate)
@@ -492,8 +487,7 @@ const buildTooltipWithFieldText = function(msgTemplate, fieldName) {
     }.bind(this));
   };
   return extensionFn;
-};
-exports.buildTooltipWithFieldText = buildTooltipWithFieldText;
+}
 
 /**
  * Configures the tooltip to mimic the parent block when connected. Otherwise,

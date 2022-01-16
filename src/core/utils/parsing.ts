@@ -165,10 +165,9 @@ const tokenizeInterpolationInternal = function(
  * @return {!Array<string|number>} Array of strings and numbers.
  * @alias Blockly.utils.parsing.tokenizeInterpolation
  */
-const tokenizeInterpolation = function(message) {
+export function tokenizeInterpolation(message) {
   return tokenizeInterpolationInternal(message, true);
-};
-exports.tokenizeInterpolation = tokenizeInterpolation;
+}
 
 /**
  * Replaces string table references in a message, if the message is a string.
@@ -179,7 +178,7 @@ exports.tokenizeInterpolation = tokenizeInterpolation;
  * @return {string} String with message references replaced.
  * @alias Blockly.utils.parsing.replaceMessageReferences
  */
-const replaceMessageReferences = function(message) {
+export function replaceMessageReferences(message) {
   if (typeof message !== 'string') {
     return message;
   }
@@ -187,8 +186,7 @@ const replaceMessageReferences = function(message) {
   // When parseInterpolationTokens === false, interpolatedResult should be at
   // most length 1.
   return interpolatedResult.length ? String(interpolatedResult[0]) : '';
-};
-exports.replaceMessageReferences = replaceMessageReferences;
+}
 
 /**
  * Validates that any %{MSG_KEY} references in the message refer to keys of

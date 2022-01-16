@@ -36,20 +36,18 @@ let xmlDocument = globalThis['document'];
  * @return {!Document} The document object.
  * @alias Blockly.utils.xml.getDocument
  */
-const getDocument = function() {
+export function getDocument() {
   return xmlDocument;
-};
-exports.getDocument = getDocument;
+}
 
 /**
  * Get the document object to use for XML serialization.
  * @param {!Document} document The document object to use.
  * @alias Blockly.utils.xml.setDocument
  */
-const setDocument = function(document) {
+export function setDocument(document) {
   xmlDocument = document;
-};
-exports.setDocument = setDocument;
+}
 
 /**
  * Create DOM element for XML.
@@ -57,10 +55,9 @@ exports.setDocument = setDocument;
  * @return {!Element} New DOM element.
  * @alias Blockly.utils.xml.createElement
  */
-const createElement = function(tagName) {
+export function createElement(tagName) {
   return xmlDocument.createElementNS(NAME_SPACE, tagName);
-};
-exports.createElement = createElement;
+}
 
 /**
  * Create text element for XML.

@@ -84,7 +84,7 @@ const disposeUiStep = function(clone, rtl, start, workspaceScale) {
  * @alias Blockly.blockAnimations.connectionUiEffect
  * @package
  */
-const connectionUiEffect = function(block) {
+export function connectionUiEffect(block) {
   const workspace = block.workspace;
   const scale = workspace.scale;
   workspace.getAudioManager().play('click');
@@ -113,8 +113,7 @@ const connectionUiEffect = function(block) {
       workspace.getParentSvg());
   // Start the animation.
   connectionUiStep(ripple, new Date, scale);
-};
-exports.connectionUiEffect = connectionUiEffect;
+}
 
 /**
  * Expand a ripple around a connection.
@@ -140,7 +139,7 @@ const connectionUiStep = function(ripple, start, scale) {
  * @alias Blockly.blockAnimations.disconnectUiEffect
  * @package
  */
-const disconnectUiEffect = function(block) {
+export function disconnectUiEffect(block) {
   block.workspace.getAudioManager().play('disconnect');
   if (block.workspace.scale < 1) {
     return;  // Too small to care about visual effects.
@@ -155,8 +154,7 @@ const disconnectUiEffect = function(block) {
   }
   // Start the animation.
   disconnectUiStep(block.getSvgRoot(), magnitude, new Date);
-};
-exports.disconnectUiEffect = disconnectUiEffect;
+}
 
 /**
  * Animate a brief wiggle of a disconnected block.
@@ -188,7 +186,7 @@ const disconnectUiStep = function(group, magnitude, start) {
  * @alias Blockly.blockAnimations.disconnectUiStop
  * @package
  */
-const disconnectUiStop = function() {
+export function disconnectUiStop() {
   if (disconnectGroup) {
     clearTimeout(disconnectPid);
     const group = disconnectGroup;
@@ -196,5 +194,4 @@ const disconnectUiStop = function() {
     group.setAttribute('transform', group.translate_);
     disconnectGroup = null;
   }
-};
-exports.disconnectUiStop = disconnectUiStop;
+}

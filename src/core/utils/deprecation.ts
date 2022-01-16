@@ -24,12 +24,11 @@ goog.module('Blockly.utils.deprecation');
  * @alias Blockly.utils.deprecation.warn
  * @package
  */
-const warn = function(name, deprecationDate, deletionDate, opt_use) {
+export function warn(name, deprecationDate, deletionDate, opt_use) {
   let msg = name + ' was deprecated on ' + deprecationDate +
       ' and will be deleted on ' + deletionDate + '.';
   if (opt_use) {
     msg += '\nUse ' + opt_use + ' instead.';
   }
   console.warn(msg);
-};
-exports.warn = warn;
+}

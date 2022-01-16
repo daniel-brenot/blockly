@@ -26,10 +26,9 @@ let copyData = null;
  * @alias Blockly.clipboard.copy
  * @package
  */
-const copy = function(toCopy) {
+export function copy(toCopy) {
   copyData = toCopy.toCopyData();
-};
-exports.copy = copy;
+}
 
 /**
  * Paste a block or workspace comment on to the main workspace.
@@ -37,7 +36,7 @@ exports.copy = copy;
  * @alias Blockly.clipboard.paste
  * @package
  */
-const paste = function() {
+export function paste() {
   if (!copyData) {
     return false;
   }
@@ -55,8 +54,7 @@ const paste = function() {
     return true;
   }
   return false;
-};
-exports.paste = paste;
+}
 
 /**
  * Duplicate this block and its children, or a workspace comment.
@@ -65,10 +63,9 @@ exports.paste = paste;
  * @alias Blockly.clipboard.duplicate
  * @package
  */
-const duplicate = function(toDuplicate) {
+export function duplicate(toDuplicate) {
   const oldCopyData = copyData;
   copy(toDuplicate);
   toDuplicate.workspace.paste(copyData.saveInfo);
   copyData = oldCopyData;
-};
-exports.duplicate = duplicate;
+}
