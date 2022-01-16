@@ -8,7 +8,6 @@
  * Class for a block change event.
  * @class
  */
-goog.module('blockly/core/events/events_block_change');
 
 import Xml from 'blockly/core/xml';
 import eventUtils from 'blockly/core/events/utils';

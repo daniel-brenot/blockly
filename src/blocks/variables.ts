@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/blocks/variables');
 
 import ContextMenu from 'blockly/core/contextmenu';
 import Extensions from 'blockly/core/extensions';

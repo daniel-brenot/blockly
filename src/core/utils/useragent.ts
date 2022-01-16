@@ -10,7 +10,6 @@
  * a JavaScript framework such as Closure.
  * @namespace Blockly.utils.userAgent
  */
-goog.module('blockly/core/utils/useragent');
 
 import {globalThis} from 'blockly/core/utils/global';
 

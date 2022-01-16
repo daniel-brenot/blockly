@@ -8,7 +8,6 @@
  * Events fired as a block drag.
  * @class
  */
-goog.module('blockly/core/events/events_block_drag');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

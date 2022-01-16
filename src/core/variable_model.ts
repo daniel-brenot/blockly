@@ -8,7 +8,6 @@
  * Components for the variable model.
  * @class
  */
-goog.module('blockly/core/variable_model');
 
 import eventUtils from 'blockly/core/events/utils';
 import idGenerator from 'blockly/core/utils/idgenerator';

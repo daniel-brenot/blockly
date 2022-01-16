@@ -8,7 +8,6 @@
  * Utility methods for color manipulation.
  * @namespace Blockly.utils.color
  */
-goog.module('blockly/core/utils/colour');
 
 /**
  * The richness of block colors, regardless of the hue.

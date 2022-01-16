@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/python/procedures');
 
 import Python from 'blockly/generators/python';
 import Variables from 'blockly/core/variables';

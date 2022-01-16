@@ -8,7 +8,6 @@
  * Horizontal flyout tray containing blocks which may be created.
  * @class
  */
-goog.module('blockly/core/flyout_horizontal');
 
 import WidgetDiv from 'blockly/core/widgetdiv';
 import browserEvents from 'blockly/core/browser_events';

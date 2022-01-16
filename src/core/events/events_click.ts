@@ -8,7 +8,6 @@
  * Events fired as a result of UI click in Blockly's editor.
  * @class
  */
-goog.module('blockly/core/events/events_click');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

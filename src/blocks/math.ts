@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/blocks/math');
 
 import Extensions from 'blockly/core/extensions';
 // N.B.: Blockly.FieldDropdown needed for type AND side-effects.

@@ -8,7 +8,6 @@
  * Utilities for bumping objects back into worksapce bounds.
  * @namespace Blockly.bumpObjects
  */
-goog.module('blockly/core/bump_objects');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import eventUtils from 'blockly/core/events/utils';

@@ -14,7 +14,6 @@
  * rendering.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/next_connection');
 
 import object from 'blockly/core/utils/object';
 import {Connection} from 'blockly/core/renderers/measurables/connection';

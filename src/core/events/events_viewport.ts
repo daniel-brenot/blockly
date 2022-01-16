@@ -8,7 +8,6 @@
  * Events fired as a result of a viewport change.
  * @class
  */
-goog.module('blockly/core/events/events_viewport');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

@@ -8,7 +8,6 @@
  * Functionality for the right-click context menus.
  * @namespace Blockly.ContextMenu
  */
-goog.module('blockly/core/contextmenu');
 
 import WidgetDiv from 'blockly/core/widgetdiv';
 import Xml from 'blockly/core/xml';

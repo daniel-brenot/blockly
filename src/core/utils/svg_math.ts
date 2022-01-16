@@ -8,7 +8,6 @@
  * Utility methods realted to figuring out positions of SVG elements.
  * @namespace Blockly.utils.svgMath
  */
-goog.module('blockly/core/utils/svg_math');
 
 import deprecation from 'blockly/core/utils/deprecation';
 import global from 'blockly/core/utils/global';

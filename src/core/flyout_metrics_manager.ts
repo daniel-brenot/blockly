@@ -8,7 +8,6 @@
  * Calculates and reports flyout workspace metrics.
  * @class
  */
-goog.module('blockly/core/flyout_metrics_manager');
 
 import object from 'blockly/core/utils/object';
 import {IFlyout} from 'blockly/core/interfaces/i_flyout';

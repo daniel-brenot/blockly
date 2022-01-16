@@ -8,7 +8,6 @@
  * Functions for injecting Blockly into a web page.
  * @namespace Blockly.inject
  */
-goog.module('blockly/core/inject');
 
 import Css from 'blockly/core/css';
 import Tooltip from 'blockly/core/tooltip';

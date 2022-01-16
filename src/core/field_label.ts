@@ -9,7 +9,6 @@
  *    labels, etc.
  * @class
  */
-goog.module('blockly/core/field_label');
 
 import dom from 'blockly/core/utils/dom';
 import fieldRegistry from 'blockly/core/field_registry';

@@ -14,7 +14,6 @@
  * The interface for a positionable UI element.
  * @namespace Blockly.IPositionable
  */
-goog.module('blockly/core/interfaces/i_positionable');
 
 import {IComponent} from 'blockly/core/interfaces/i_component';
 import {MetricsManager} from 'blockly/core/metrics_manager';

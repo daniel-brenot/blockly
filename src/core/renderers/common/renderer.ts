@@ -8,7 +8,6 @@
  * Base renderer.
  * @class
  */
-goog.module('blockly/core/renderers/common/renderer');
 
 import debug from 'blockly/core/renderers/common/debug';
 import object from 'blockly/core/utils/object';

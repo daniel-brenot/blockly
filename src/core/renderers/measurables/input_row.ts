@@ -14,7 +14,6 @@
  * rendered block.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/input_row');
 
 import object from 'blockly/core/utils/object';
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';

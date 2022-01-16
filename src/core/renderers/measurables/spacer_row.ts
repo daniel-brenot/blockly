@@ -12,7 +12,6 @@
  * Object representing a spacer between two rows.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/spacer_row');
 
 import object from 'blockly/core/utils/object';
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';

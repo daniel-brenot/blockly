@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/php/procedures');
 
 import PHP from 'blockly/generators/php';
 import Variables from 'blockly/core/variables';

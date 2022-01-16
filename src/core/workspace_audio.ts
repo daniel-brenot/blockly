@@ -9,7 +9,6 @@
  *     workspace.
  * @class
  */
-goog.module('blockly/core/workspace_audio');
 
 import internalConstants from 'blockly/core/internal_constants';
 import userAgent from 'blockly/core/utils/useragent';

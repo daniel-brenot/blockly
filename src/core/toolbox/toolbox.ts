@@ -8,7 +8,6 @@
  * Toolbox from whence to create blocks.
  * @class
  */
-goog.module('blockly/core/toolbox/toolbox');
 
 import Css from 'blockly/core/css';
 import Touch from 'blockly/core/touch';

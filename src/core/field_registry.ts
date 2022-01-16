@@ -10,7 +10,6 @@
  *    fields based on JSON.
  * @namespace Blockly.fieldRegistry
  */
-goog.module('blockly/core/field_registry');
 
 import registry from 'blockly/core/registry';
 import {Field} from 'blockly/core/field';

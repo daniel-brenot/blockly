@@ -8,7 +8,6 @@
  * Events fired as a result of a marker move.
  * @class
  */
-goog.module('blockly/core/events/events_marker_move');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

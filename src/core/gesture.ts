@@ -9,7 +9,6 @@
  * or a tap.
  * @class
  */
-goog.module('blockly/core/gesture');
 
 import Tooltip from 'blockly/core/tooltip';
 import Touch from 'blockly/core/touch';

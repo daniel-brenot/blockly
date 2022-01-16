@@ -8,7 +8,6 @@
  * Blockly constants.
  * @namespace Blockly.constants
  */
-goog.module('blockly/core/constants');
 
 
 /**

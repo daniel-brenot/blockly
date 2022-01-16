@@ -14,7 +14,6 @@
  * Methods for graphically rendering a block as SVG.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/base');
 
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';
 import {Types} from 'blockly/core/renderers/measurables/types';

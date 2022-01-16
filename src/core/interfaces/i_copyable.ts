@@ -14,7 +14,6 @@
  * The interface for an object that is copyable.
  * @namespace Blockly.ICopyable
  */
-goog.module('blockly/core/interfaces/i_copyable');
 
 import {ISelectable} from 'blockly/core/interfaces/i_selectable';
 import {WorkspaceSvg} from 'blockly/core/workspace_svg';

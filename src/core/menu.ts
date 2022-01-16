@@ -8,7 +8,6 @@
  * Blockly menu similar to Closure's goog.ui.Menu
  * @class
  */
-goog.module('blockly/core/menu');
 
 import aria from 'blockly/core/utils/aria';
 import browserEvents from 'blockly/core/browser_events';

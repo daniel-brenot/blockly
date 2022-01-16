@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/python/all');
 
 goog.require('blockly/generators/python/colour');
 goog.require('blockly/generators/python/lists');

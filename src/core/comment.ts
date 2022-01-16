@@ -8,7 +8,6 @@
  * Object representing a code comment.
  * @class
  */
-goog.module('blockly/core/comment');
 
 import Css from 'blockly/core/css';
 import browserEvents from 'blockly/core/browser_events';

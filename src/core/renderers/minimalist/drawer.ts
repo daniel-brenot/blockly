@@ -8,7 +8,6 @@
  * Minimalist rendering drawer.
  * @class
  */
-goog.module('blockly/core/renderers/minimalist/drawer');
 
 import object from 'blockly/core/utils/object';
 import {BlockSvg} from 'blockly/core/block_svg';

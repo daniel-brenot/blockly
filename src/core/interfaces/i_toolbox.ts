@@ -14,7 +14,6 @@
  * The interface for a toolbox.
  * @namespace Blockly.IToolbox
  */
-goog.module('blockly/core/interfaces/i_toolbox');
 
 import toolbox from 'blockly/core/utils/toolbox';
 import {IFlyout} from 'blockly/core/interfaces/i_flyout';

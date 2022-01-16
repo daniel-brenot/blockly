@@ -8,7 +8,6 @@
  * Text input field.
  * @class
  */
-goog.module('blockly/core/field_textinput');
 
 import WidgetDiv from 'blockly/core/widgetdiv';
 import aria from 'blockly/core/utils/aria';

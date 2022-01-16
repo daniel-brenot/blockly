@@ -8,7 +8,6 @@
  * Empty name space for the Message singleton.
  * @namespace Blockly.Msg
  */
-goog.module('blockly/core/msg');
 
 
 /**

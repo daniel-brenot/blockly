@@ -8,7 +8,6 @@
  * Object representing a workspace rendered as SVG.
  * @class
  */
-goog.module('blockly/core/workspace_svg');
 
 import ContextMenu from 'blockly/core/contextmenu';
 import Procedures from 'blockly/core/procedures';

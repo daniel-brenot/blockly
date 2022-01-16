@@ -8,7 +8,6 @@
  * XML reader and writer.
  * @namespace Blockly.Xml
  */
-goog.module('blockly/core/xml');
 
 import dom from 'blockly/core/utils/dom';
 import eventUtils from 'blockly/core/events/utils';

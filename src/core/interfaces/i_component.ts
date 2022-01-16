@@ -16,7 +16,6 @@
  * the ComponentManager.
  * @namespace Blockly.IComponent
  */
-goog.module('blockly/core/interfaces/i_component');
 
 
 /**

@@ -9,7 +9,6 @@
  * Methods for graphically rendering a marker as SVG.
  * @class
  */
-goog.module('blockly/core/renderers/common/marker_svg');
 
 import dom from 'blockly/core/utils/dom';
 import eventUtils from 'blockly/core/events/utils';

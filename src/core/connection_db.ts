@@ -10,7 +10,6 @@
  *    Sorted by y coordinate.
  * @class
  */
-goog.module('blockly/core/connection_db');
 
 import {ConnectionType} from 'blockly/core/connection_type';
 import {Coordinate} from 'blockly/core/utils/coordinate';

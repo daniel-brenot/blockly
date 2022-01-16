@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/javascript');
 goog.module.declareLegacyNamespace();
 
 import Variables from 'blockly/core/variables';

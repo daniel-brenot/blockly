@@ -14,7 +14,6 @@
  * The interface for a flyout.
  * @namespace Blockly.IFlyout
  */
-goog.module('blockly/core/interfaces/i_flyout');
 
 import toolbox from 'blockly/core/utils/toolbox';
 import {BlockSvg} from 'blockly/core/block_svg';

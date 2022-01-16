@@ -8,7 +8,6 @@
  * Calculates and reports workspace metrics.
  * @class
  */
-goog.module('blockly/core/metrics_manager');
 
 import registry from 'blockly/core/registry';
 import toolboxUtils from 'blockly/core/utils/toolbox';

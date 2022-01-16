@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/dart/lists');
 
 import Dart from 'blockly/generators/dart';
 import {NameType} from 'blockly/core/names';

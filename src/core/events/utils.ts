@@ -9,7 +9,6 @@
  * actions in Blockly's editor.
  * @namespace Blockly.Events.utils
  */
-goog.module('blockly/core/events/utils');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import idGenerator from 'blockly/core/utils/idgenerator';

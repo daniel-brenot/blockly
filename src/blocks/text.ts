@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/blocks/text');
 
 import Extensions from 'blockly/core/extensions';
 import {Msg} from 'blockly/core/msg';

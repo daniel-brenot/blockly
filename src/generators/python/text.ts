@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/python/text');
 
 import Python from 'blockly/generators/python';
 import stringUtils from 'blockly/core/utils/string';

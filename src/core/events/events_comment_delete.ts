@@ -8,7 +8,6 @@
  * Class for comment deletion event.
  * @class
  */
-goog.module('blockly/core/events/events_comment_delete');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

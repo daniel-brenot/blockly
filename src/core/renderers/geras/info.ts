@@ -9,7 +9,6 @@
  * Geras: spirit of old age.
  * @class
  */
-goog.module('blockly/core/renderers/geras/info');
 
 import object from 'blockly/core/utils/object';
 import {BlockSvg} from 'blockly/core/block_svg';

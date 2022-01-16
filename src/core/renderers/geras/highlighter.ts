@@ -9,7 +9,6 @@
  * compatibility mode.
  * @class
  */
-goog.module('blockly/core/renderers/geras/highlighter');
 
 import svgPaths from 'blockly/core/utils/svg_paths';
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';

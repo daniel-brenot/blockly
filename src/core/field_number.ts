@@ -8,7 +8,6 @@
  * Number input field
  * @class
  */
-goog.module('blockly/core/field_number');
 
 import aria from 'blockly/core/utils/aria';
 import fieldRegistry from 'blockly/core/field_registry';

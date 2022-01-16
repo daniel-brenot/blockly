@@ -8,7 +8,6 @@
  * Abstract class for a variable event.
  * @class
  */
-goog.module('blockly/core/events/events_var_base');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import object from 'blockly/core/utils/object';

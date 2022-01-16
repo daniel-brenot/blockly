@@ -8,7 +8,6 @@
  * Components for creating connections between blocks.
  * @class
  */
-goog.module('blockly/core/connection');
 
 import Xml from 'blockly/core/xml';
 import blocks from 'blockly/core/serialization/blocks';

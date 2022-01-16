@@ -8,7 +8,6 @@
  * Events fired as a result of a theme update.
  * @class
  */
-goog.module('blockly/core/events/events_theme_change');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

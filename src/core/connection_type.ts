@@ -14,7 +14,6 @@
  * An enum for the possible types of connections.
  * @namespace Blockly.ConnectionType
  */
-goog.module('blockly/core/connection_type');
 
 
 /**

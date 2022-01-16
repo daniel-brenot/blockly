@@ -16,7 +16,6 @@
  * block is dropped on top of it.
  * @namespace Blockly.IDragTarget
  */
-goog.module('blockly/core/interfaces/i_drag_target');
 
 import {IComponent} from 'blockly/core/interfaces/i_component';
 import {IDraggable} from 'blockly/core/interfaces/i_draggable';

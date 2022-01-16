@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/javascript/colour');
 
 import JavaScript from 'blockly/generators/javascript';
 

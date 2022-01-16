@@ -14,7 +14,6 @@
  * An enum for the possible types of inputs.
  * @namespace Blockly.inputTypes
  */
-goog.module('blockly/core/input_types');
 
 import {ConnectionType} from 'blockly/core/connection_type';
 

@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/blocks/loops');
 
 import AbstractEvent from 'blockly/core/events/events_abstract';
 import ContextMenu from 'blockly/core/contextmenu';

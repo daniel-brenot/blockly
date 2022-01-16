@@ -8,7 +8,6 @@
  * Registers default context menu items.
  * @namespace Blockly.ContextMenuItems
  */
-goog.module('blockly/core/contextmenu_items');
 
 import Events from 'blockly/core/events/events';
 import clipboard from 'blockly/core/clipboard';

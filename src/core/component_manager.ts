@@ -14,7 +14,6 @@
  * Manager for all items registered with the workspace.
  * @class
  */
-goog.module('blockly/core/component_manager');
 
 import arrayUtils from 'blockly/core/utils/array';
 import {IAutoHideable} from 'blockly/core/interfaces/i_autohideable';

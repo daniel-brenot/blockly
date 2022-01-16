@@ -8,7 +8,6 @@
  * Utility functions for handling variable and procedure names.
  * @class
  */
-goog.module('blockly/core/names');
 
 import Variables from 'blockly/core/variables';
 import {Msg} from 'blockly/core/msg';

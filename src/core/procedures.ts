@@ -8,7 +8,6 @@
  * Utility functions for handling procedures.
  * @namespace Blockly.Procedures
  */
-goog.module('blockly/core/procedures');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import Variables from 'blockly/core/variables';

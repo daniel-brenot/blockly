@@ -9,7 +9,6 @@
  * must not be at the top level to avoid circular dependencies.
  * @namespace blockly/core/common
  */
-goog.module('blockly/core/common');
 
 import {Blocks} from 'blockly/core/blocks';
 import {Connection} from 'blockly/core/connection';

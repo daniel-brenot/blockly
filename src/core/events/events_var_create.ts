@@ -8,7 +8,6 @@
  * Class for a variable creation event.
  * @class
  */
-goog.module('blockly/core/events/events_var_create');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

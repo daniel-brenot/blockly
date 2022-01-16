@@ -9,7 +9,6 @@
  * etc).
  * @namespace Blockly.serialization.registry
  */
-goog.module('blockly/core/serialization/registry');
 
 import registry from 'blockly/core/registry';
 // eslint-disable-next-line no-unused-vars

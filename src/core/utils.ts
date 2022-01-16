@@ -8,7 +8,6 @@
  * Utility methods.
  * @namespace Blockly.utils
  */
-goog.module('blockly/core/utils');
 
 import aria from 'blockly/core/utils/aria';
 import arrayUtils from 'blockly/core/utils/array';

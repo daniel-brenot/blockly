@@ -8,7 +8,6 @@
  * Object representing a map of variables and their types.
  * @class
  */
-goog.module('blockly/core/variable_map');
 
 import arrayUtils from 'blockly/core/utils/array';
 import dialog from 'blockly/core/dialog';

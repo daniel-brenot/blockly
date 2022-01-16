@@ -14,7 +14,6 @@
  * The interface for a collapsible toolbox item.
  * @namespace Blockly.ICollapsibleToolboxItem
  */
-goog.module('blockly/core/interfaces/i_collapsible_toolbox_item');
 
 import {ISelectableToolboxItem} from 'blockly/core/interfaces/i_selectable_toolbox_item';
 import {IToolboxItem} from 'blockly/core/interfaces/i_toolbox_item';

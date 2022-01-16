@@ -9,7 +9,6 @@
  * objects.
  * @namespace Blockly.serialization.workspaces
  */
-goog.module('blockly/core/serialization/workspaces');
 
 import dom from 'blockly/core/utils/dom';
 import eventUtils from 'blockly/core/events/utils';

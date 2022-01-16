@@ -8,7 +8,6 @@
  * Object representing a workspace.
  * @class
  */
-goog.module('blockly/core/workspace');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import arrayUtils from 'blockly/core/utils/array';

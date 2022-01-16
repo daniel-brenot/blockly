@@ -8,7 +8,6 @@
  * Class for a block move event.
  * @class
  */
-goog.module('blockly/core/events/events_block_move');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

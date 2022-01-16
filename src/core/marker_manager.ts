@@ -8,7 +8,6 @@
  * Object in charge of managing markers and the cursor.
  * @class
  */
-goog.module('blockly/core/marker_manager');
 
 import {Cursor} from 'blockly/core/keyboard_nav/cursor';
 import {Marker} from 'blockly/core/keyboard_nav/marker';

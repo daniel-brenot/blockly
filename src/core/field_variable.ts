@@ -8,7 +8,6 @@
  * Variable input field.
  * @class
  */
-goog.module('blockly/core/field_variable');
 
 import Variables from 'blockly/core/variables';
 import Xml from 'blockly/core/xml';

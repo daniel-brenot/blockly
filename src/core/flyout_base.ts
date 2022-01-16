@@ -8,7 +8,6 @@
  * Flyout tray containing blocks which may be created.
  * @class
  */
-goog.module('blockly/core/flyout_base');
 
 import Tooltip from 'blockly/core/tooltip';
 import Variables from 'blockly/core/variables';

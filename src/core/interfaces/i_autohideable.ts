@@ -16,7 +16,6 @@
  * when WorkspaceSvg.hideChaff is called.
  * @namespace Blockly.IAutoHideable
  */
-goog.module('blockly/core/interfaces/i_autohideable');
 
 import {IComponent} from 'blockly/core/interfaces/i_component';
 

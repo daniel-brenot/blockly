@@ -8,7 +8,6 @@
  * An item in the toolbox.
  * @class
  */
-goog.module('blockly/core/toolbox/toolbox_item');
 
 import idGenerator from 'blockly/core/utils/idgenerator';
 import toolbox from 'blockly/core/utils/toolbox';

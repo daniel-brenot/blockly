@@ -8,7 +8,6 @@
  * Components for creating connections between blocks.
  * @class
  */
-goog.module('blockly/core/rendered_connection');
 
 import common from 'blockly/core/common';
 import dom from 'blockly/core/utils/dom';

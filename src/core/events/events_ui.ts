@@ -9,7 +9,6 @@
  * Blockly's editor.
  * @class
  */
-goog.module('blockly/core/events/events_ui');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

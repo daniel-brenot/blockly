@@ -8,7 +8,6 @@
  * Utility functions for the toolbox and flyout.
  * @namespace Blockly.utils.toolbox
  */
-goog.module('blockly/core/utils/toolbox');
 
 import Xml from 'blockly/core/xml';
 import userAgent from 'blockly/core/utils/useragent';

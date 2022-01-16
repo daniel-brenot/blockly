@@ -9,7 +9,6 @@
  *     and UI components.
  * @class
  */
-goog.module('blockly/core/theme_manager');
 
 import arrayUtils from 'blockly/core/utils/array';
 import dom from 'blockly/core/utils/dom';

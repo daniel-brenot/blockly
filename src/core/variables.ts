@@ -8,7 +8,6 @@
  * Utility functions for handling variables.
  * @namespace Blockly.Variables
  */
-goog.module('blockly/core/variables');
 
 import Xml from 'blockly/core/xml';
 import dialog from 'blockly/core/dialog';

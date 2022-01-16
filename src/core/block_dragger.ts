@@ -8,7 +8,6 @@
  * Methods for dragging a block visually.
  * @class
  */
-goog.module('blockly/core/block_dragger');
 
 import blockAnimation from 'blockly/core/block_animations';
 import bumpObjects from 'blockly/core/bump_objects';

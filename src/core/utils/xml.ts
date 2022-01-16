@@ -10,7 +10,6 @@
  * a JavaScript framework such as Closure.
  * @namespace Blockly.utils.xml
  */
-goog.module('blockly/core/utils/xml');
 
 import {globalThis} from 'blockly/core/utils/global';
 

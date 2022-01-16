@@ -9,7 +9,6 @@
  * mode.
  * @class
  */
-goog.module('blockly/core/renderers/geras/constants');
 
 import object from 'blockly/core/utils/object';
 import {ConstantProvider: BaseConstantProvider} from 'blockly/core/renderers/common/constants';

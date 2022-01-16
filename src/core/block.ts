@@ -8,7 +8,6 @@
  * The class representing one block.
  * @class
  */
-goog.module('blockly/core/block');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import Extensions from 'blockly/core/extensions';

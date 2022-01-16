@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/lua');
 goog.module.declareLegacyNamespace();
 
 import objectUtils from 'blockly/core/utils/object';

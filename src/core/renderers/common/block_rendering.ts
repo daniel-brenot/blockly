@@ -8,7 +8,6 @@
  * Namespace for block rendering functionality.
  * @namespace Blockly.blockRendering
  */
-goog.module('blockly/core/renderers/common/block_rendering');
 
 import debug from 'blockly/core/renderers/common/debug';
 import deprecation from 'blockly/core/utils/deprecation';

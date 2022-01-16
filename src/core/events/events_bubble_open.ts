@@ -8,7 +8,6 @@
  * Events fired as a result of bubble open.
  * @class
  */
-goog.module('blockly/core/events/events_bubble_open');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

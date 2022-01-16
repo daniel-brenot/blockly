@@ -8,7 +8,6 @@
  * Object that controls settings for the workspace.
  * @class
  */
-goog.module('blockly/core/options');
 
 import idGenerator from 'blockly/core/utils/idgenerator';
 import registry from 'blockly/core/registry';

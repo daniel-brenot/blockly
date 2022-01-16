@@ -14,7 +14,6 @@
  * block.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/square_corner');
 
 import object from 'blockly/core/utils/object';
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';

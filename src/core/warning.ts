@@ -8,7 +8,6 @@
  * Object representing a warning.
  * @class
  */
-goog.module('blockly/core/warning');
 
 import dom from 'blockly/core/utils/dom';
 import eventUtils from 'blockly/core/events/utils';

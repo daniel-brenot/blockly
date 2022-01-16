@@ -8,7 +8,6 @@
  * Methods for graphically rendering a block as SVG.
  * @class
  */
-goog.module('blockly/core/renderers/common/drawer');
 
 import debug from 'blockly/core/renderers/common/debug';
 import svgPaths from 'blockly/core/utils/svg_paths';

@@ -9,7 +9,6 @@
  * Used primarily for keyboard navigation to show a marked location.
  * @class
  */
-goog.module('blockly/core/keyboard_nav/marker');
 
 import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
 import {MarkerSvg} from 'blockly/core/renderers/common/marker_svg';

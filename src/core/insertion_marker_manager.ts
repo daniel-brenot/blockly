@@ -8,7 +8,6 @@
  * Class that controls updates to connections during drags.
  * @class
  */
-goog.module('blockly/core/insertion_marker_manager');
 
 import blockAnimations from 'blockly/core/block_animations';
 import common from 'blockly/core/common';

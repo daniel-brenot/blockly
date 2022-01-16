@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/lua/loops');
 
 import Lua from 'blockly/generators/lua';
 import stringUtils from 'blockly/core/utils/string';

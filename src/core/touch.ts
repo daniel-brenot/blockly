@@ -8,7 +8,6 @@
  * Touch handling for Blockly.
  * @namespace Blockly.Touch
  */
-goog.module('blockly/core/touch');
 
 import internalConstants from 'blockly/core/internal_constants';
 import utilsString from 'blockly/core/utils/string';

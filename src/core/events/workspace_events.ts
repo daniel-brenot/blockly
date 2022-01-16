@@ -8,7 +8,6 @@
  * Class for a finished loading workspace event.
  * @class
  */
-goog.module('blockly/core/events/workspace_events');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import eventUtils from 'blockly/core/events/utils';

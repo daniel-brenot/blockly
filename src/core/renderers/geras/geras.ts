@@ -8,7 +8,6 @@
  * Re-exports of Blockly.geras.* modules.
  * @namespace Blockly.geras
  */
-goog.module('blockly/core/renderers/geras/geras');
 
 import {ConstantProvider} from 'blockly/core/renderers/geras/constants';
 import {Drawer} from 'blockly/core/renderers/geras/drawer';

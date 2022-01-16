@@ -8,7 +8,6 @@
  * Class for a button in the flyout.
  * @class
  */
-goog.module('blockly/core/flyout_button');
 
 import Css from 'blockly/core/css';
 import browserEvents from 'blockly/core/browser_events';

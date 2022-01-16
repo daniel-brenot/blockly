@@ -8,7 +8,6 @@
  * Re-exports of Blockly.minimalist.* modules.
  * @namespace Blockly.minimalist
  */
-goog.module('blockly/core/renderers/minimalist/minimalist');
 
 import {ConstantProvider} from 'blockly/core/renderers/minimalist/constants';
 import {Drawer} from 'blockly/core/renderers/minimalist/drawer';

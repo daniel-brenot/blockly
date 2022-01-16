@@ -8,7 +8,6 @@
  * Browser event handling.
  * @namespace Blockly.browserEvents
  */
-goog.module('blockly/core/browser_events');
 
 import Touch from 'blockly/core/touch';
 import internalConstants from 'blockly/core/internal_constants';

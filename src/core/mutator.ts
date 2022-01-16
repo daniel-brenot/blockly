@@ -9,7 +9,6 @@
  * user to change the shape of a block using a nested blocks editor.
  * @class
  */
-goog.module('blockly/core/mutator');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import dom from 'blockly/core/utils/dom';

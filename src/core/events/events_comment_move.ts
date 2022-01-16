@@ -8,7 +8,6 @@
  * Class for comment move event.
  * @class
  */
-goog.module('blockly/core/events/events_comment_move');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

@@ -14,7 +14,6 @@
  * An object that owns a block's rendering SVG elements.
  * @class
  */
-goog.module('blockly/core/renderers/common/path_object');
 
 import dom from 'blockly/core/utils/dom';
 import {Block} from 'blockly/core/block';

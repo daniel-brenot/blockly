@@ -9,7 +9,6 @@
  * all SVG tag names used by Blockly.
  * @class
  */
-goog.module('blockly/core/utils/svg');
 
 
 /**

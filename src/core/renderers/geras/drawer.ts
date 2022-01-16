@@ -8,7 +8,6 @@
  * Renderer that preserves the look and feel of Blockly pre-2019.
  * @class
  */
-goog.module('blockly/core/renderers/geras/drawer');
 
 import debug from 'blockly/core/renderers/common/debug';
 import object from 'blockly/core/utils/object';

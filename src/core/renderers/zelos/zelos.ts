@@ -8,7 +8,6 @@
  * Re-exports of Blockly.zelos.* modules.
  * @namespace Blockly.zelos
  */
-goog.module('blockly/core/renderers/zelos/zelos');
 
 import {BottomRow} from 'blockly/core/renderers/zelos/measurables/bottom_row';
 import {ConstantProvider} from 'blockly/core/renderers/zelos/constants';

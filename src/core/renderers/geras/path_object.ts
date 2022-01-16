@@ -14,7 +14,6 @@
  * An object that owns a block's rendering SVG elements.
  * @class
  */
-goog.module('blockly/core/renderers/geras/path_object');
 
 import color from 'blockly/core/utils/colour';
 import dom from 'blockly/core/utils/dom';

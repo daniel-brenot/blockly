@@ -14,7 +14,6 @@
  * The interface for a metrics manager.
  * @namespace Blockly.IMetricsManager
  */
-goog.module('blockly/core/interfaces/i_metrics_manager');
 
 import {MetricsManager} from 'blockly/core/metrics_manager';
 import {Metrics} from 'blockly/core/utils/metrics';

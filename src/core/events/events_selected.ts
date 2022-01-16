@@ -8,7 +8,6 @@
  * Events fired as a result of element select action.
  * @class
  */
-goog.module('blockly/core/events/events_selected');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

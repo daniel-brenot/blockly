@@ -14,7 +14,6 @@
  * of its subcomponents.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/bottom_row');
 
 import object from 'blockly/core/utils/object';
 import {BlockSvg} from 'blockly/core/block_svg';

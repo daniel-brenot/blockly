@@ -9,7 +9,6 @@
  * Used to traverse the Blockly AST.
  * @class
  */
-goog.module('blockly/core/keyboard_nav/ast_node');
 
 import {Block} from 'blockly/core/block';
 import {ConnectionType} from 'blockly/core/connection_type';

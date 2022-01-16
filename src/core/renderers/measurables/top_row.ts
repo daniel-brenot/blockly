@@ -12,7 +12,6 @@
  * Object representing a top row on a rendered block.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/top_row');
 
 import object from 'blockly/core/utils/object';
 import {BlockSvg} from 'blockly/core/block_svg';

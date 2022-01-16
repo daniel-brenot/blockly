@@ -8,7 +8,6 @@
  * Methods for rendering debug graphics.
  * @class
  */
-goog.module('blockly/core/renderers/common/debugger');
 
 import dom from 'blockly/core/utils/dom';
 import {BlockSvg} from 'blockly/core/block_svg';

@@ -16,7 +16,6 @@
  * that is dropped on top of it.
  * @namespace Blockly.IDeleteArea
  */
-goog.module('blockly/core/interfaces/i_delete_area');
 
 import {IDragTarget} from 'blockly/core/interfaces/i_drag_target';
 import {IDraggable} from 'blockly/core/interfaces/i_draggable';

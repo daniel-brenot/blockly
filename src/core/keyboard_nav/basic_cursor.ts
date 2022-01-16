@@ -9,7 +9,6 @@
  * Used to demo switching between different cursors.
  * @class
  */
-goog.module('blockly/core/keyboard_nav/basic_cursor');
 
 import object from 'blockly/core/utils/object';
 import registry from 'blockly/core/registry';

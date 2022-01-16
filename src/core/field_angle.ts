@@ -8,7 +8,6 @@
  * Angle input field.
  * @class
  */
-goog.module('blockly/core/field_angle');
 
 import Css from 'blockly/core/css';
 import WidgetDiv from 'blockly/core/widgetdiv';

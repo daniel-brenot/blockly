@@ -16,7 +16,6 @@
  * A div that floats on top of the workspace, for drop-down menus.
  * @class
  */
-goog.module('blockly/core/dropdowndiv');
 
 import common from 'blockly/core/common';
 import dom from 'blockly/core/utils/dom';

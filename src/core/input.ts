@@ -8,7 +8,6 @@
  * Object representing an input (value, statement, or dummy).
  * @class
  */
-goog.module('blockly/core/input');
 
 /**
  * Enum for alignment of inputs.

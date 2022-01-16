@@ -8,7 +8,6 @@
  * Registers default keyboard shortcuts.
  * @namespace Blockly.ShortcutItems
  */
-goog.module('blockly/core/shortcut_items');
 
 import clipboard from 'blockly/core/clipboard';
 import common from 'blockly/core/common';

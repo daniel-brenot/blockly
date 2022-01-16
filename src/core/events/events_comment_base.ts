@@ -8,7 +8,6 @@
  * Base class for comment events.
  * @class
  */
-goog.module('blockly/core/events/events_comment_base');
 
 import AbstractEvents from 'blockly/core/events/events_abstract';
 import Xml from 'blockly/core/xml';

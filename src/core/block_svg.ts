@@ -8,7 +8,6 @@
  * Methods for graphically rendering a block as SVG.
  * @class
  */
-goog.module('blockly/core/block_svg');
 
 import ContextMenu from 'blockly/core/contextmenu';
 import Tooltip from 'blockly/core/tooltip';

@@ -14,7 +14,6 @@
  * rendering.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/connection');
 
 import object from 'blockly/core/utils/object';
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';

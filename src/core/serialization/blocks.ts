@@ -8,7 +8,6 @@
  * Handles serializing blocks to plain JavaScript objects only containing state.
  * @namespace Blockly.serialization.blocks
  */
-goog.module('blockly/core/serialization/blocks');
 
 import Xml from 'blockly/core/xml';
 import eventUtils from 'blockly/core/events/utils';

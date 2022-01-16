@@ -8,7 +8,6 @@
  * Class for a block delete event.
  * @class
  */
-goog.module('blockly/core/events/events_block_delete');
 
 import Xml from 'blockly/core/xml';
 import blocks from 'blockly/core/serialization/blocks';

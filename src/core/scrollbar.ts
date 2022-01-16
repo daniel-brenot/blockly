@@ -8,7 +8,6 @@
  * Object representing a scrollbar.
  * @class
  */
-goog.module('blockly/core/scrollbar');
 
 import Touch from 'blockly/core/touch';
 import browserEvents from 'blockly/core/browser_events';

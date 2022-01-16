@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/php/loops');
 
 import PHP from 'blockly/generators/php';
 import stringUtils from 'blockly/core/utils/string';

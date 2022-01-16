@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/lua/all');
 
 goog.require('blockly/generators/lua/colour');
 goog.require('blockly/generators/lua/lists');

@@ -8,7 +8,6 @@
  * Events fired as a result of actions in Blockly's editor.
  * @namespace Blockly.Events
  */
-goog.module('blockly/core/events/events');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import deprecation from 'blockly/core/utils/deprecation';

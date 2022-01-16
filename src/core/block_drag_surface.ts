@@ -24,7 +24,6 @@
  * while dragging blocks.
  * @class
  */
-goog.module('blockly/core/block_drag_surface');
 
 import dom from 'blockly/core/utils/dom';
 import svgMath from 'blockly/core/utils/svg_math';

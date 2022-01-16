@@ -16,7 +16,6 @@
  * block.
  * @namespace Blockly.IASTNodeLocationWithBlock
  */
-goog.module('blockly/core/interfaces/i_ast_node_location_with_block');
 
 import {Block} from 'blockly/core/block';
 import {IASTNodeLocation} from 'blockly/core/interfaces/i_ast_node_location';

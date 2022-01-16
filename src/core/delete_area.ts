@@ -16,7 +16,6 @@
  * bubble that is dropped on top of it.
  * @class
  */
-goog.module('blockly/core/delete_area');
 
 import object from 'blockly/core/utils/object';
 import {BlockSvg} from 'blockly/core/block_svg';

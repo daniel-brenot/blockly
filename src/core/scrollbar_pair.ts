@@ -8,7 +8,6 @@
  * Object representing a pair of scrollbars.
  * @class
  */
-goog.module('blockly/core/scrollbar_pair');
 
 import dom from 'blockly/core/utils/dom';
 import eventUtils from 'blockly/core/events/utils';

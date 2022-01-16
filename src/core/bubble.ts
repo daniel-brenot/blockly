@@ -8,7 +8,6 @@
  * Object representing a UI bubble.
  * @class
  */
-goog.module('blockly/core/bubble');
 
 import Touch from 'blockly/core/touch';
 import browserEvents from 'blockly/core/browser_events';

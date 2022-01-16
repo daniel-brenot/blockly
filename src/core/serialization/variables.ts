@@ -9,7 +9,6 @@
  * state.
  * @namespace Blockly.serialization.variables
  */
-goog.module('blockly/core/serialization/variables');
 
 import priorities from 'blockly/core/serialization/priorities';
 import serializationRegistry from 'blockly/core/serialization/registry';

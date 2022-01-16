@@ -9,7 +9,6 @@
  * Blockly code.
  * @class
  */
-goog.module('blockly/core/generator');
 
 import common from 'blockly/core/common';
 import deprecation from 'blockly/core/utils/deprecation';

@@ -8,7 +8,6 @@
  * Object representing a zoom icons.
  * @class
  */
-goog.module('blockly/core/zoom_controls');
 
 import Css from 'blockly/core/css';
 import Touch from 'blockly/core/touch';

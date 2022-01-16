@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/blocks/logic');
 
 import AbstractEvent from 'blockly/core/events/events_abstract';
 import Events from 'blockly/core/events/events';

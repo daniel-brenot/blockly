@@ -9,7 +9,6 @@
  * Thrasos: spirit of boldness.
  * @class
  */
-goog.module('blockly/core/renderers/thrasos/info.');
 
 import object from 'blockly/core/utils/object';
 import {BlockSvg} from 'blockly/core/block_svg';

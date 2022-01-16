@@ -8,7 +8,6 @@
  * Class for comment creation event.
  * @class
  */
-goog.module('blockly/core/events/events_comment_create');
 
 import Xml from 'blockly/core/xml';
 import eventUtils from 'blockly/core/events/utils';

@@ -14,7 +14,6 @@
  * An object that owns a block's rendering SVG elements.
  * @class
  */
-goog.module('blockly/core/renderers/zelos/path_object');
 
 import dom from 'blockly/core/utils/dom';
 import object from 'blockly/core/utils/object';

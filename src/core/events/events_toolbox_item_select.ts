@@ -8,7 +8,6 @@
  * Events fired as a result of selecting an item on the toolbox.
  * @class
  */
-goog.module('blockly/core/events/events_toolbox_item_select');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

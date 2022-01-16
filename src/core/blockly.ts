@@ -8,7 +8,6 @@
  * The top level namespace used to access the Blockly library.
  * @namespace Blockly
  */
-goog.module('blockly/core/blockly');
 goog.module.declareLegacyNamespace();
 
 import ContextMenu from 'blockly/core/contextmenu';

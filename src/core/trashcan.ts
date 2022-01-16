@@ -8,7 +8,6 @@
  * Object representing a trash can icon.
  * @class
  */
-goog.module('blockly/core/trashcan');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import blocks from 'blockly/core/serialization/blocks';

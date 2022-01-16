@@ -8,7 +8,6 @@
  * Makecode/scratch-style renderer.
  * @class
  */
-goog.module('blockly/core/renderers/zelos/info');
 
 import {Align} from 'blockly/core/input';
 import object from 'blockly/core/utils/object';

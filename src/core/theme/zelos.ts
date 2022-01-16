@@ -8,7 +8,6 @@
  * Zelos theme.
  * @namespace Blockly.Themes.Zelos
  */
-goog.module('blockly/core/theme/zelos');
 
 import {Theme} from 'blockly/core/theme';
 

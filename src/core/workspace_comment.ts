@@ -8,7 +8,6 @@
  * Object representing a code comment on the workspace.
  * @class
  */
-goog.module('blockly/core/workspace_comment');
 
 import eventUtils from 'blockly/core/events/utils';
 import idGenerator from 'blockly/core/utils/idgenerator';

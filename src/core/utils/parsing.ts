@@ -7,7 +7,6 @@
 /**
  * @namespace Blockly.utils.parsing
  */
-goog.module('blockly/core/utils/parsing');
 
 import colorUtils from 'blockly/core/utils/colour';
 import stringUtils from 'blockly/core/utils/string';

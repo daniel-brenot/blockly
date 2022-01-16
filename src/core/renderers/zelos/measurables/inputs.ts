@@ -14,7 +14,6 @@
  * a rendered block.
  * @class
  */
-goog.module('blockly/core/renderers/zelos/measurables/inputs');
 
 import object from 'blockly/core/utils/object';
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';

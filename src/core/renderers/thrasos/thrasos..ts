@@ -8,7 +8,6 @@
  * Re-exports of Blockly.thrasos.* modules.
  * @namespace Blockly.thrasos
  */
-goog.module('blockly/core/renderers/thrasos/thrasos.');
 
 import {RenderInfo} from 'blockly/core/renderers/thrasos/info.';
 import {Renderer} from 'blockly/core/renderers/thrasos/renderer.';

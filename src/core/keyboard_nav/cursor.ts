@@ -9,7 +9,6 @@
  * Used primarily for keyboard navigation.
  * @class
  */
-goog.module('blockly/core/keyboard_nav/cursor');
 
 import object from 'blockly/core/utils/object';
 import registry from 'blockly/core/registry';

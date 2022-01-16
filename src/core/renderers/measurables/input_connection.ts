@@ -12,7 +12,6 @@
  * Class representing inputs with connections on a rendered block.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/input_connection');
 
 import object from 'blockly/core/utils/object';
 import {Connection} from 'blockly/core/renderers/measurables/connection';

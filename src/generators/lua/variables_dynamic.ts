@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/lua/variables_dynamic');
 
 import Lua from 'blockly/generators/lua';
 goog.require('blockly/generators/lua/variables');

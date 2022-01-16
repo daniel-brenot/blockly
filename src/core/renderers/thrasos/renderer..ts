@@ -8,7 +8,6 @@
  * Thrasos renderer.
  * @class
  */
-goog.module('blockly/core/renderers/thrasos/renderer.');
 
 import blockRendering from 'blockly/core/renderers/common/block_rendering';
 import object from 'blockly/core/utils/object';

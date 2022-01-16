@@ -10,7 +10,6 @@
  *    edited programmatically.
  * @class
  */
-goog.module('blockly/core/field_label_serializable');
 
 import fieldRegistry from 'blockly/core/field_registry';
 import object from 'blockly/core/utils/object';

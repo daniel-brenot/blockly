@@ -14,7 +14,6 @@
  * The interface for an AST node location SVG.
  * @namespace Blockly.IASTNodeLocationSvg
  */
-goog.module('blockly/core/interfaces/i_ast_node_location_svg');
 
 import {IASTNodeLocation} from 'blockly/core/interfaces/i_ast_node_location';
 

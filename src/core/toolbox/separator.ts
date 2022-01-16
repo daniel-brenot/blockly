@@ -8,7 +8,6 @@
  * A separator used for separating toolbox categories.
  * @class
  */
-goog.module('blockly/core/toolbox/separator');
 
 import Css from 'blockly/core/css';
 import dom from 'blockly/core/utils/dom';

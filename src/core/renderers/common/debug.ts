@@ -8,7 +8,6 @@
  * Block rendering debugging functionality.
  * @namespace Blockly.blockRendering.debug
  */
-goog.module('blockly/core/renderers/common/debug');
 
 
 /**

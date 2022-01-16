@@ -8,7 +8,6 @@
  * Class for a variable rename event.
  * @class
  */
-goog.module('blockly/core/events/events_var_rename');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

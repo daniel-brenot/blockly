@@ -8,7 +8,6 @@
  * A toolbox category used to organize blocks in the toolbox.
  * @class
  */
-goog.module('blockly/core/toolbox/collapsible_category');
 
 import aria from 'blockly/core/utils/aria';
 import dom from 'blockly/core/utils/dom';

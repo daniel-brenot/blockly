@@ -14,7 +14,6 @@
  * The interface for a bubble.
  * @namespace Blockly.IBubble
  */
-goog.module('blockly/core/interfaces/i_bubble');
 
 import {BlockDragSurfaceSvg} from 'blockly/core/block_drag_surface';
 import {Coordinate} from 'blockly/core/utils/coordinate';

@@ -8,7 +8,6 @@
  * Utility methods for objects.
  * @namespace Blockly.utils.object
  */
-goog.module('blockly/core/utils/object');
 
 
 /**

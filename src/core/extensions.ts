@@ -11,7 +11,6 @@
  *      array attribute.
  * @namespace Blockly.Extensions
  */
-goog.module('blockly/core/extensions');
 
 import parsing from 'blockly/core/utils/parsing';
 import {Block} from 'blockly/core/block';

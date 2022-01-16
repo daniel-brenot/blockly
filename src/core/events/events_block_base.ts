@@ -8,7 +8,6 @@
  * Base class for all types of block events.
  * @class
  */
-goog.module('blockly/core/events/events_block_base');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import object from 'blockly/core/utils/object';

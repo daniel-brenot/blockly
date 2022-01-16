@@ -14,7 +14,6 @@
  * The interface for an object that is deletable.
  * @namespace Blockly.IDeletable
  */
-goog.module('blockly/core/interfaces/i_deletable');
 
 
 /**

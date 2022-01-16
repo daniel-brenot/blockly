@@ -9,7 +9,6 @@
  * potential connection is safe and valid.
  * @class
  */
-goog.module('blockly/core/connection_checker');
 
 import common from 'blockly/core/common';
 import internalConstants from 'blockly/core/internal_constants';

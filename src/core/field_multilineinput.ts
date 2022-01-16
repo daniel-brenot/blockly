@@ -8,7 +8,6 @@
  * Text Area field.
  * @class
  */
-goog.module('blockly/core/field_multilineinput');
 
 import Css from 'blockly/core/css';
 import WidgetDiv from 'blockly/core/widgetdiv';

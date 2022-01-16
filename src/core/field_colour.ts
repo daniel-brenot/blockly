@@ -8,7 +8,6 @@
  * Color input field.
  * @class
  */
-goog.module('blockly/core/field_colour');
 
 import Css from 'blockly/core/css';
 import aria from 'blockly/core/utils/aria';

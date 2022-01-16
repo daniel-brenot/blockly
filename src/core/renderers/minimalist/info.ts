@@ -8,7 +8,6 @@
  * Minimalist render info object.
  * @class
  */
-goog.module('blockly/core/renderers/minimalist/info');
 
 import object from 'blockly/core/utils/object';
 import {BlockSvg} from 'blockly/core/block_svg';

@@ -8,7 +8,6 @@
  * Events fired as a result of trashcan flyout open and close.
  * @class
  */
-goog.module('blockly/core/events/events_trashcan_open');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

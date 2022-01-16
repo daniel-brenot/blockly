@@ -8,7 +8,6 @@
  * Object representing a code comment on a rendered workspace.
  * @class
  */
-goog.module('blockly/core/workspace_comment_svg');
 
 import ContextMenu from 'blockly/core/contextmenu';
 import Css from 'blockly/core/css';

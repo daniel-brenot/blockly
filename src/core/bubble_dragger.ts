@@ -8,7 +8,6 @@
  * Methods for dragging a bubble visually.
  * @class
  */
-goog.module('blockly/core/bubble_dragger');
 
 import eventUtils from 'blockly/core/events/utils';
 import svgMath from 'blockly/core/utils/svg_math';

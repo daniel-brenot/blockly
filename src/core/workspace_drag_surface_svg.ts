@@ -20,7 +20,6 @@
  * blocks are never repainted during drag improving performance.
  * @class
  */
-goog.module('blockly/core/workspace_drag_surface_svg');
 
 import dom from 'blockly/core/utils/dom';
 import svgMath from 'blockly/core/utils/svg_math';

@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/blocks/lists');
 
 import xmlUtils from 'blockly/core/utils/xml';
 import {Align} from 'blockly/core/input';

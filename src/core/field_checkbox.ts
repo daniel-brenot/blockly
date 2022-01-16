@@ -8,7 +8,6 @@
  * Checkbox field.  Checked or not checked.
  * @class
  */
-goog.module('blockly/core/field_checkbox');
 
 import dom from 'blockly/core/utils/dom';
 import fieldRegistry from 'blockly/core/field_registry';

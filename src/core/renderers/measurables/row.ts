@@ -12,7 +12,6 @@
  * Object representing a single row on a rendered block.
  * @class
  */
-goog.module('blockly/core/renderers/measurables/row');
 
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';
 import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';

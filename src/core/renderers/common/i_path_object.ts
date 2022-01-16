@@ -16,7 +16,6 @@
  * elements.
  * @namespace Blockly.blockRendering.IPathObject
  */
-goog.module('blockly/core/renderers/common/i_path_object');
 
 import {Block} from 'blockly/core/block';
 import {ConstantProvider} from 'blockly/core/renderers/common/constants';

@@ -9,7 +9,6 @@
  * for both pointer and touch events.
  * @class
  */
-goog.module('blockly/core/touch_gesture');
 
 import Touch from 'blockly/core/touch';
 import browserEvents from 'blockly/core/browser_events';

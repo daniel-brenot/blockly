@@ -10,7 +10,6 @@
  * a JavaScript framework such as Closure.
  * @class
  */
-goog.module('blockly/core/utils/rect');
 
 
 /**

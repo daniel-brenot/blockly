@@ -8,7 +8,6 @@
  * An object that provides constants for rendering blocks.
  * @class
  */
-goog.module('blockly/core/renderers/common/constants');
 
 import color from 'blockly/core/utils/colour';
 import dom from 'blockly/core/utils/dom';

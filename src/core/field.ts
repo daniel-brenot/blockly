@@ -10,7 +10,6 @@
  * instances would be FieldTextInput, FieldDropdown, etc.
  * @class
  */
-goog.module('blockly/core/field');
 
 import Tooltip from 'blockly/core/tooltip';
 import WidgetDiv from 'blockly/core/widgetdiv';

@@ -16,7 +16,6 @@
  * block or bubble is dragged over or dropped on top of it.
  * @class
  */
-goog.module('blockly/core/drag_target');
 
 import {IDragTarget} from 'blockly/core/interfaces/i_drag_target';
 import {IDraggable} from 'blockly/core/interfaces/i_draggable';

@@ -7,7 +7,6 @@
 /**
  * @namespace Blockly.utils.array
  */
-goog.module('blockly/core/utils/array');
 
 
 /**

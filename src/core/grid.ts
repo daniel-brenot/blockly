@@ -9,7 +9,6 @@
  * Blockly.
  * @class
  */
-goog.module('blockly/core/grid');
 
 import dom from 'blockly/core/utils/dom';
 import userAgent from 'blockly/core/utils/useragent';

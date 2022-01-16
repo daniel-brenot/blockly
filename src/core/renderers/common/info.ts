@@ -8,7 +8,6 @@
  * Methods for graphically rendering a block as SVG.
  * @class
  */
-goog.module('blockly/core/renderers/common/info');
 
 import {Align} from 'blockly/core/input';
 import {BlockSvg} from 'blockly/core/block_svg';

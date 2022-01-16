@@ -9,7 +9,6 @@
  *    for registering and unregistering different types of classes.
  * @namespace Blockly.registry
  */
-goog.module('blockly/core/registry');
 
 import Abstract from 'blockly/core/events/events_abstract';
 import {Cursor} from 'blockly/core/keyboard_nav/cursor';

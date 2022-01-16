@@ -8,7 +8,6 @@
  * Layout code for a vertical variant of the flyout.
  * @class
  */
-goog.module('blockly/core/flyout_vertical');
 
 import WidgetDiv from 'blockly/core/widgetdiv';
 import browserEvents from 'blockly/core/browser_events';

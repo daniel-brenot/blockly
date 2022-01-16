@@ -8,7 +8,6 @@
  * Methods for graphically rendering a marker as SVG.
  * @class
  */
-goog.module('blockly/core/renderers/zelos/marker_svg');
 
 import dom from 'blockly/core/utils/dom';
 import object from 'blockly/core/utils/object';

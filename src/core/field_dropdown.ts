@@ -10,7 +10,6 @@
  * properties with the context menu.
  * @class
  */
-goog.module('blockly/core/field_dropdown');
 
 import aria from 'blockly/core/utils/aria';
 import dom from 'blockly/core/utils/dom';

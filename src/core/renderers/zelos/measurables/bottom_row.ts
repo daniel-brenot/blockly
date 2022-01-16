@@ -8,7 +8,6 @@
  * An object representing the bottom row of a rendered block.
  * @class
  */
-goog.module('blockly/core/renderers/zelos/measurables/bottom_row');
 
 import object from 'blockly/core/utils/object';
 import {BottomRow: BaseBottomRow} from 'blockly/core/renderers/measurables/bottom_row';

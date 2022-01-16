@@ -9,7 +9,6 @@
  *
  * @namespace Blockly.VariablesDynamic
  */
-goog.module('blockly/core/variables_dynamic');
 
 import Variables from 'blockly/core/variables';
 import xml from 'blockly/core/utils/xml';

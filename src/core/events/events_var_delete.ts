@@ -8,7 +8,6 @@
  * Classes for all types of variable events.
  * @class
  */
-goog.module('blockly/core/events/events_var_delete');
 
 import eventUtils from 'blockly/core/events/utils';
 import object from 'blockly/core/utils/object';

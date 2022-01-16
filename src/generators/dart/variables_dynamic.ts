@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('blockly/generators/dart/variables_dynamic');
 
 import Dart from 'blockly/generators/dart';
 goog.require('blockly/generators/dart/variables');

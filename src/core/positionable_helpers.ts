@@ -8,7 +8,6 @@
  * Utility functions for positioning UI elements.
  * @namespace Blockly.uiPosition
  */
-goog.module('blockly/core/positionable_helpers');
 
 import toolbox from 'blockly/core/utils/toolbox';
 import {MetricsManager} from 'blockly/core/metrics_manager';

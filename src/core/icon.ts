@@ -8,7 +8,6 @@
  * Object representing an icon on a block.
  * @class
  */
-goog.module('blockly/core/icon');
 
 import browserEvents from 'blockly/core/browser_events';
 import dom from 'blockly/core/utils/dom';
