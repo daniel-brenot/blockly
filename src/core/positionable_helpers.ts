@@ -153,7 +153,7 @@ export function getCornerOppositeToolbox(workspace, metrics) {
  * @alias Blockly.uiPosition.bumpPositionRect
  * @package
  */
-const bumpPositionRect = function(startRect, margin, bumpDir, savedPositions) {
+export function bumpPositionRect(startRect, margin, bumpDir, savedPositions) {
   let top = startRect.top;
   const left = startRect.left;
   const width = startRect.right - startRect.left;
@@ -175,5 +175,4 @@ const bumpPositionRect = function(startRect, margin, bumpDir, savedPositions) {
     }
   }
   return boundingRect;
-};
-exports.bumpPositionRect = bumpPositionRect;
+}

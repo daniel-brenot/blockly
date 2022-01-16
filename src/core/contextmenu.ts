@@ -95,7 +95,7 @@ let menu_ = null;
  * @param {boolean} rtl True if RTL, false if LTR.
  * @alias Blockly.ContextMenu.show
  */
-const show = function(e, options, rtl) {
+export function show(e, options, rtl) {
   WidgetDiv.show(exports, rtl, dispose);
   if (!options.length) {
     hide();
@@ -111,8 +111,7 @@ const show = function(e, options, rtl) {
     menu.focus();
   }, 1);
   currentBlock = null;  // May be set by Blockly.Block.
-};
-exports.show = show;
+}
 
 /**
  * Create the context menu object and populate it with the given options.
@@ -322,7 +321,7 @@ export function commentDuplicateOption(comment) {
  *     comments are not bundled in.
  * @alias Blockly.ContextMenu.workspaceCommentOption
  */
-const workspaceCommentOption = function(ws, e) {
+export function workspaceCommentOption(ws, e) {
   const WorkspaceCommentSvg = goog.module.get('Blockly.WorkspaceCommentSvg');
   if (!WorkspaceCommentSvg) {
     throw Error('Missing require for Blockly.WorkspaceCommentSvg');
@@ -375,5 +374,4 @@ const workspaceCommentOption = function(ws, e) {
     addWsComment();
   };
   return wsCommentOption;
-};
-exports.workspaceCommentOption = workspaceCommentOption;
+}

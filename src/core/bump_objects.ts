@@ -30,7 +30,7 @@ import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
  * @return {boolean} True if block was bumped.
  * @alias Blockly.bumpObjects.bumpIntoBounds
  */
-const bumpObjectIntoBounds = function(workspace, scrollMetrics, object) {
+export function bumpObjectIntoBounds(workspace, scrollMetrics, object) {
   // Compute new top/left position for object.
   const objectMetrics = object.getBoundingRectangle();
   const height = objectMetrics.bottom - objectMetrics.top;
@@ -70,8 +70,7 @@ const bumpObjectIntoBounds = function(workspace, scrollMetrics, object) {
     return true;
   }
   return false;
-};
-exports.bumpIntoBounds = bumpObjectIntoBounds;
+}
 
 /**
  * Creates a handler for bumping objects when they cross fixed bounds.
@@ -79,7 +78,7 @@ exports.bumpIntoBounds = bumpObjectIntoBounds;
  * @return {function(Abstract)} The event handler.
  * @alias Blockly.bumpObjects.bumpIntoBoundsHandler
  */
-const bumpIntoBoundsHandler = function(workspace) {
+export function bumpIntoBoundsHandler(workspace) {
   return function(e) {
     const metricsManager = workspace.getMetricsManager();
     if (!metricsManager.hasFixedEdges() || workspace.isDragging()) {
@@ -117,8 +116,7 @@ const bumpIntoBoundsHandler = function(workspace) {
       }
     }
   };
-};
-exports.bumpIntoBoundsHandler = bumpIntoBoundsHandler;
+}
 
 /**
  * Extracts the object from the given event.
@@ -153,7 +151,7 @@ function extractObjectFromEvent(workspace, e) {
  * @param {!WorkspaceSvg} workspace The workspace.
  * @alias Blockly.bumpObjects.bumpTopObjectsIntoBounds
  */
-const bumpTopObjectsIntoBounds = function(workspace) {
+export function bumpTopObjectsIntoBounds(workspace) {
   const metricsManager = workspace.getMetricsManager();
   if (!metricsManager.hasFixedEdges() || workspace.isDragging()) {
     return;
@@ -164,5 +162,4 @@ const bumpTopObjectsIntoBounds = function(workspace) {
   for (let i = 0, block; (block = topBlocks[i]); i++) {
     bumpObjectIntoBounds(workspace, scrollMetricsInWsCoords, block);
   }
-};
-exports.bumpTopObjectsIntoBounds = bumpTopObjectsIntoBounds;
+}

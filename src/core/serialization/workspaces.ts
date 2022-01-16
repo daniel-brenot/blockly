@@ -46,7 +46,7 @@ export function save(workspace) {
  *       by the user. False by default.
  * @alias Blockly.serialization.workspaces.load
  */
-const load = function(state, workspace, {recordUndo = false} = {}) {
+export function load(state, workspace, {recordUndo = false} = {}) {
   const serializerMap = registry.getAllItems(registry.Type.SERIALIZER, true);
   if (!serializerMap) {
     return;
@@ -91,5 +91,4 @@ const load = function(state, workspace, {recordUndo = false} = {}) {
 
   eventUtils.setGroup(existingGroup);
   eventUtils.setRecordUndo(prevRecordUndo);
-};
-exports.load = load;
+}

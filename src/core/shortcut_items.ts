@@ -91,7 +91,7 @@ export function registerDelete() {
  * Keyboard shortcut to copy a block on ctrl+c, cmd+c, or alt+c.
  * @alias Blockly.ShortcutItems.registerCopy
  */
-const registerCopy = function() {
+export function registerCopy() {
   /** @type {!ShortcutRegistry.KeyboardShortcut} */
   const copyShortcut = {
     name: names.COPY,
@@ -122,14 +122,13 @@ const registerCopy = function() {
   const metaC = ShortcutRegistry.registry.createSerializedKey(
       KeyCodes.C, [KeyCodes.META]);
   ShortcutRegistry.registry.addKeyMapping(metaC, copyShortcut.name);
-};
-exports.registerCopy = registerCopy;
+}
 
 /**
  * Keyboard shortcut to copy and delete a block on ctrl+x, cmd+x, or alt+x.
  * @alias Blockly.ShortcutItems.registerCut
  */
-const registerCut = function() {
+export function registerCut() {
   /** @type {!ShortcutRegistry.KeyboardShortcut} */
   const cutShortcut = {
     name: names.CUT,
@@ -164,14 +163,13 @@ const registerCut = function() {
   const metaX = ShortcutRegistry.registry.createSerializedKey(
       KeyCodes.X, [KeyCodes.META]);
   ShortcutRegistry.registry.addKeyMapping(metaX, cutShortcut.name);
-};
-exports.registerCut = registerCut;
+}
 
 /**
  * Keyboard shortcut to paste a block on ctrl+v, cmd+v, or alt+v.
  * @alias Blockly.ShortcutItems.registerPaste
  */
-const registerPaste = function() {
+export function registerPaste() {
   /** @type {!ShortcutRegistry.KeyboardShortcut} */
   const pasteShortcut = {
     name: names.PASTE,
@@ -196,14 +194,13 @@ const registerPaste = function() {
   const metaV = ShortcutRegistry.registry.createSerializedKey(
       KeyCodes.V, [KeyCodes.META]);
   ShortcutRegistry.registry.addKeyMapping(metaV, pasteShortcut.name);
-};
-exports.registerPaste = registerPaste;
+}
 
 /**
  * Keyboard shortcut to undo the previous action on ctrl+z, cmd+z, or alt+z.
  * @alias Blockly.ShortcutItems.registerUndo
  */
-const registerUndo = function() {
+export function registerUndo() {
   /** @type {!ShortcutRegistry.KeyboardShortcut} */
   const undoShortcut = {
     name: names.UNDO,
@@ -230,15 +227,14 @@ const registerUndo = function() {
   const metaZ = ShortcutRegistry.registry.createSerializedKey(
       KeyCodes.Z, [KeyCodes.META]);
   ShortcutRegistry.registry.addKeyMapping(metaZ, undoShortcut.name);
-};
-exports.registerUndo = registerUndo;
+}
 
 /**
  * Keyboard shortcut to redo the previous action on ctrl+shift+z, cmd+shift+z,
  * or alt+shift+z.
  * @alias Blockly.ShortcutItems.registerRedo
  */
-const registerRedo = function() {
+export function registerRedo() {
   /** @type {!ShortcutRegistry.KeyboardShortcut} */
   const redoShortcut = {
     name: names.REDO,
@@ -270,8 +266,7 @@ const registerRedo = function() {
   const ctrlY = ShortcutRegistry.registry.createSerializedKey(
       KeyCodes.Y, [KeyCodes.CTRL]);
   ShortcutRegistry.registry.addKeyMapping(ctrlY, redoShortcut.name);
-};
-exports.registerRedo = registerRedo;
+}
 
 /**
  * Registers all default keyboard shortcut item. This should be called once per

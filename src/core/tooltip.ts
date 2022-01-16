@@ -240,7 +240,7 @@ export function createDom() {
  * @param {!Element} element SVG element onto which tooltip is to be bound.
  * @alias Blockly.Tooltip.bindMouseEvents
  */
-const bindMouseEvents = function(element) {
+export function bindMouseEvents(element) {
   element.mouseOverWrapper_ =
       browserEvents.bind(element, 'mouseover', null, onMouseOver);
   element.mouseOutWrapper_ =
@@ -250,8 +250,7 @@ const bindMouseEvents = function(element) {
   // corresponding touch handler, even though this only makes sense in the
   // context of a mouseover/mouseout.
   element.addEventListener('mousemove', onMouseMove, false);
-};
-exports.bindMouseEvents = bindMouseEvents;
+}
 
 /**
  * Unbinds tooltip mouse events from the SVG element.

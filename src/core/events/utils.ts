@@ -336,7 +336,7 @@ function fireNow() {
  * @return {!Array<!Abstract>} Array of filtered events.
  * @alias Blockly.Events.utils.filter
  */
-const filter = function(queueIn, forward) {
+export function filter(queueIn, forward) {
   let queue = queueIn.slice();  // Shallow copy of queue.
   if (!forward) {
     // Undo is merged in reverse order.
@@ -402,8 +402,7 @@ const filter = function(queueIn, forward) {
     }
   }
   return queue;
-};
-exports.filter = filter;
+}
 
 /**
  * Modify pending undo events so that when they are fired they don't land

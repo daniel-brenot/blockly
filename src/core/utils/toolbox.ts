@@ -232,7 +232,7 @@ exports.Position = Position;
  * @alias Blockly.utils.toolbox.convertToolboxDefToJson
  * @package
  */
-const convertToolboxDefToJson = function(toolboxDef) {
+export function convertToolboxDefToJson(toolboxDef) {
   if (!toolboxDef) {
     return null;
   }
@@ -245,8 +245,7 @@ const convertToolboxDefToJson = function(toolboxDef) {
   const toolboxJson = /** @type {ToolboxInfo} */ (toolboxDef);
   validateToolbox(toolboxJson);
   return toolboxJson;
-};
-exports.convertToolboxDefToJson = convertToolboxDefToJson;
+}
 
 /**
  * Validates the toolbox JSON fields have been set correctly.
@@ -280,7 +279,7 @@ const validateToolbox = function(toolboxJson) {
  * @alias Blockly.utils.toolbox.convertFlyoutDefToJsonArray
  * @package
  */
-const convertFlyoutDefToJsonArray = function(flyoutDef) {
+export function convertFlyoutDefToJsonArray(flyoutDef) {
   if (!flyoutDef) {
     return [];
   }
@@ -296,8 +295,7 @@ const convertFlyoutDefToJsonArray = function(flyoutDef) {
   }
 
   return xmlToJsonArray(/** @type {!Array<Node>|!NodeList} */ (flyoutDef));
-};
-exports.convertFlyoutDefToJsonArray = convertFlyoutDefToJsonArray;
+}
 
 /**
  * Whether or not the toolbox definition has categories.
@@ -307,7 +305,7 @@ exports.convertFlyoutDefToJsonArray = convertFlyoutDefToJsonArray;
  * @alias Blockly.utils.toolbox.hasCategories
  * @package
  */
-const hasCategories = function(toolboxJson) {
+export function hasCategories(toolboxJson) {
   if (!toolboxJson) {
     return false;
   }
@@ -321,8 +319,7 @@ const hasCategories = function(toolboxJson) {
     return item['kind'].toUpperCase() === 'CATEGORY';
   });
   return !!categories.length;
-};
-exports.hasCategories = hasCategories;
+}
 
 /**
  * Whether or not the category is collapsible.
@@ -332,7 +329,7 @@ exports.hasCategories = hasCategories;
  * @alias Blockly.utils.toolbox.isCategoryCollapsible
  * @package
  */
-const isCategoryCollapsible = function(categoryInfo) {
+export function isCategoryCollapsible(categoryInfo) {
   if (!categoryInfo || !categoryInfo['contents']) {
     return false;
   }
@@ -341,8 +338,7 @@ const isCategoryCollapsible = function(categoryInfo) {
     return item['kind'].toUpperCase() === 'CATEGORY';
   });
   return !!categories.length;
-};
-exports.isCategoryCollapsible = isCategoryCollapsible;
+}
 
 /**
  * Parses the provided toolbox definition into a consistent format.

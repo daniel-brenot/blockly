@@ -196,7 +196,7 @@ export function replaceMessageReferences(message) {
  *     Otherwise, false.
  * @alias Blockly.utils.parsing.checkMessageReferences
  */
-const checkMessageReferences = function(message) {
+export function checkMessageReferences(message) {
   let validSoFar = true;
 
   const msgTable = Msg;
@@ -213,8 +213,7 @@ const checkMessageReferences = function(message) {
   }
 
   return validSoFar;
-};
-exports.checkMessageReferences = checkMessageReferences;
+}
 
 /**
  * Parse a block color from a number or string, as provided in a block
@@ -226,7 +225,7 @@ exports.checkMessageReferences = checkMessageReferences;
  * @throws {Error} If the color cannot be parsed.
  * @alias Blockly.utils.parsing.parseBlockColor
  */
-const parseBlockColor = function(color) {
+export function parseBlockColor(color) {
   const dereferenced =
       (typeof color === 'string') ? replaceMessageReferences(color) : color;
 
@@ -250,5 +249,4 @@ const parseBlockColor = function(color) {
       throw Error(errorMsg);
     }
   }
-};
-exports.parseBlockColor = parseBlockColor;
+}

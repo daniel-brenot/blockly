@@ -79,7 +79,7 @@ const ALL_DEVELOPER_VARS_WARNINGS_BY_BLOCK_TYPE = {};
  * @return {!Array<string>} A list of non-duplicated variable names.
  * @alias Blockly.Variables.allDeveloperVariables
  */
-const allDeveloperVariables = function(workspace) {
+export function allDeveloperVariables(workspace) {
   const blocks = workspace.getAllBlocks(false);
   const variableHash = Object.create(null);
   for (let i = 0, block; (block = blocks[i]); i++) {
@@ -105,8 +105,7 @@ const allDeveloperVariables = function(workspace) {
 
   // Flatten the hash into a list.
   return Object.keys(variableHash);
-};
-exports.allDeveloperVariables = allDeveloperVariables;
+}
 
 /**
  * Construct the elements (blocks and button) required by the flyout for the
@@ -115,7 +114,7 @@ exports.allDeveloperVariables = allDeveloperVariables;
  * @return {!Array<!Element>} Array of XML elements.
  * @alias Blockly.Variables.flyoutCategory
  */
-const flyoutCategory = function(workspace) {
+export function flyoutCategory(workspace) {
   let xmlList = [];
   const button = document.createElement('button');
   button.setAttribute('text', '%{BKY_NEW_VARIABLE}');
@@ -130,8 +129,7 @@ const flyoutCategory = function(workspace) {
   const blockList = flyoutCategoryBlocks(workspace);
   xmlList = xmlList.concat(blockList);
   return xmlList;
-};
-exports.flyoutCategory = flyoutCategory;
+}
 
 /**
  * Construct the blocks required by the flyout for the variable category.
@@ -139,7 +137,7 @@ exports.flyoutCategory = flyoutCategory;
  * @return {!Array<!Element>} Array of XML block elements.
  * @alias Blockly.Variables.flyoutCategoryBlocks
  */
-const flyoutCategoryBlocks = function(workspace) {
+export function flyoutCategoryBlocks(workspace) {
   const variableModelList = workspace.getVariablesOfType('');
 
   const xmlList = [];
@@ -180,8 +178,7 @@ const flyoutCategoryBlocks = function(workspace) {
     }
   }
   return xmlList;
-};
-exports.flyoutCategoryBlocks = flyoutCategoryBlocks;
+}
 
 /**
  * @alias Blockly.Variables.VAR_LETTER_OPTIONS
@@ -212,7 +209,7 @@ export function generateUniqueName(workspace) {
  * @return {string} A unique name that is not present in the usedNames array.
  * @alias Blockly.Variables.generateUniqueNameFromOptions
  */
-const generateUniqueNameFromOptions = function(startChar, usedNames) {
+export function generateUniqueNameFromOptions(startChar, usedNames) {
   if (!usedNames.length) {
     return startChar;
   }
@@ -243,8 +240,7 @@ const generateUniqueNameFromOptions = function(startChar, usedNames) {
     }
     potName = letters.charAt(letterIndex) + suffix;
   }
-};
-exports.generateUniqueNameFromOptions = generateUniqueNameFromOptions;
+}
 
 /**
  * Handles "Create Variable" button in the default variables toolbox category.
@@ -400,7 +396,7 @@ const nameUsedWithOtherType = function(name, type, workspace) {
  *     or null if none was found.
  * @alias Blockly.Variables.nameUsedWithAnyType
  */
-const nameUsedWithAnyType = function(name, workspace) {
+export function nameUsedWithAnyType(name, workspace) {
   const allVariables = workspace.getVariableMap().getAllVariables();
 
   name = name.toLowerCase();
@@ -410,8 +406,7 @@ const nameUsedWithAnyType = function(name, workspace) {
     }
   }
   return null;
-};
-exports.nameUsedWithAnyType = nameUsedWithAnyType;
+}
 
 /**
  * Generate DOM objects representing a variable field.

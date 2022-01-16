@@ -133,7 +133,7 @@ Type.SERIALIZER = new Type('serializer');
  * @template T
  * @alias Blockly.registry.register
  */
-const register = function(type, name, registryItem, opt_allowOverrides) {
+export function register(type, name, registryItem, opt_allowOverrides) {
   if ((!(type instanceof Type) && typeof type !== 'string') ||
       String(type).trim() === '') {
     throw Error(
@@ -170,8 +170,7 @@ const register = function(type, name, registryItem, opt_allowOverrides) {
   }
   typeRegistry[caselessName] = registryItem;
   nameRegistry[caselessName] = name;
-};
-exports.register = register;
+}
 
 /**
  * Checks the given registry item for properties that are required based on the
@@ -343,7 +342,7 @@ export function getAllItems(type, opt_cased, opt_throwIfMissing) {
  * @template T
  * @alias Blockly.registry.getClassFromOptions
  */
-const getClassFromOptions = function(type, options, opt_throwIfMissing) {
+export function getClassFromOptions(type, options, opt_throwIfMissing) {
   const typeName = type.toString();
   const plugin = options.plugins[typeName] || DEFAULT;
 
@@ -352,5 +351,4 @@ const getClassFromOptions = function(type, options, opt_throwIfMissing) {
     return plugin;
   }
   return getClass(type, plugin, opt_throwIfMissing);
-};
-exports.getClassFromOptions = getClassFromOptions;
+}

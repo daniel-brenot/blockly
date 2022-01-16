@@ -133,7 +133,7 @@ export function rgbToHex(r, g, b) {
  * @return {!Array<number>} RGB representation of the color.
  * @alias Blockly.utils.color.hexToRgb
  */
-const hexToRgb = function(color) {
+export function hexToRgb(color) {
   const hex = parse(color);
   if (!hex) {
     return [0, 0, 0];
@@ -145,8 +145,7 @@ const hexToRgb = function(color) {
   const b = rgb & 255;
 
   return [r, g, b];
-};
-exports.hexToRgb = hexToRgb;
+}
 
 /**
  * Converts an HSV triplet to hex representation.

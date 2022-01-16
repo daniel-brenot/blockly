@@ -81,7 +81,7 @@ let longPid_ = 0;
  * @alias Blockly.Touch.longStart
  * @package
  */
-const longStart = function(e, gesture) {
+export function longStart(e, gesture) {
   longStop();
   // Punt on multitouch events.
   if (e.changedTouches && e.changedTouches.length !== 1) {
@@ -102,8 +102,7 @@ const longStart = function(e, gesture) {
       gesture.handleRightClick(e);
     }
   }, internalConstants.LONGPRESS);
-};
-exports.longStart = longStart;
+}
 
 /**
  * Nope, that's not a long-press.  Either touchend or touchcancel was fired,
@@ -171,7 +170,7 @@ export function getTouchIdentifierFromEvent(e) {
  *     saved identifier.
  * @alias Blockly.Touch.checkTouchIdentifier
  */
-const checkTouchIdentifier = function(e) {
+export function checkTouchIdentifier(e) {
   const identifier = getTouchIdentifierFromEvent(e);
 
   // if (touchIdentifier_) is insufficient because Android touch
@@ -192,8 +191,7 @@ const checkTouchIdentifier = function(e) {
   // to ignore it.  This probably means that another drag finished while this
   // pointer was down.
   return false;
-};
-exports.checkTouchIdentifier = checkTouchIdentifier;
+}
 
 /**
  * Set an event's clientX and clientY from its first changed touch.  Use this to

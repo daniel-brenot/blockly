@@ -23,7 +23,7 @@ import {Size} from 'Blockly.utils.Size';
  * @return {!Size} Object with width/height properties.
  * @alias Blockly.utils.style.getSize
  */
-const getSize = function(element) {
+export function getSize(element) {
   if (getStyle(element, 'display') !== 'none') {
     return getSizeWithDisplay(element);
   }
@@ -46,8 +46,7 @@ const getSize = function(element) {
   style.visibility = originalVisibility;
 
   return new Size(offsetWidth, offsetHeight);
-};
-exports.getSize = getSize;
+}
 
 /**
  * Gets the height and width of an element when the display is not none.
@@ -91,7 +90,7 @@ function getStyle(element, style) {
  * @return {string} Style value.
  * @alias Blockly.utils.style.getComputedStyle
  */
-const getComputedStyle = function(element, property) {
+export function getComputedStyle(element, property) {
   if (document.defaultView && document.defaultView.getComputedStyle) {
     const styles = document.defaultView.getComputedStyle(element, null);
     if (styles) {
@@ -102,8 +101,7 @@ const getComputedStyle = function(element, property) {
   }
 
   return '';
-};
-exports.getComputedStyle = getComputedStyle;
+}
 
 /**
  * Gets the cascaded style value of a node, or null if the value cannot be
@@ -128,7 +126,7 @@ export function getCascadedStyle(element, style) {
  * @return {!Coordinate} The page offset.
  * @alias Blockly.utils.style.getPageOffset
  */
-const getPageOffset = function(el) {
+export function getPageOffset(el) {
   const pos = new Coordinate(0, 0);
   const box = el.getBoundingClientRect();
   const documentElement = document.documentElement;
@@ -142,8 +140,7 @@ const getPageOffset = function(el) {
   pos.y = box.top + scrollCoord.y;
 
   return pos;
-};
-exports.getPageOffset = getPageOffset;
+}
 
 /**
  * Calculates the viewport coordinates relative to the document.
@@ -195,7 +192,7 @@ export function isRightToLeft(el) {
  * @return {!Object} The computed border widths.
  * @alias Blockly.utils.style.getBorderBox
  */
-const getBorderBox = function(element) {
+export function getBorderBox(element) {
   const left = getComputedStyle(element, 'borderLeftWidth');
   const right = getComputedStyle(element, 'borderRightWidth');
   const top = getComputedStyle(element, 'borderTopWidth');
@@ -207,8 +204,7 @@ const getBorderBox = function(element) {
     bottom: parseFloat(bottom),
     left: parseFloat(left),
   };
-};
-exports.getBorderBox = getBorderBox;
+}
 
 /**
  * Changes the scroll position of `container` with the minimum amount so

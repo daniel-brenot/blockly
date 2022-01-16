@@ -83,7 +83,7 @@ export function registerMixin(name, mixinObj) {
  * @throws {Error} if the mutation is invalid or can't be applied to the block.
  * @alias Blockly.Extensions.registerMutator
  */
-const registerMutator = function(name, mixinObj, opt_helperFn, opt_blockList) {
+export function registerMutator(name, mixinObj, opt_helperFn, opt_blockList) {
   const errorPrefix = 'Error when registering mutator "' + name + '": ';
 
   checkHasMutatorProperties(errorPrefix, mixinObj);
@@ -112,8 +112,7 @@ const registerMutator = function(name, mixinObj, opt_helperFn, opt_blockList) {
           opt_helperFn.apply(this);
         }
       });
-};
-exports.registerMutator = registerMutator;
+}
 
 /**
  * Unregisters the extension registered with the given name.
@@ -149,7 +148,7 @@ export function isRegistered(name) {
  * @throws {Error} if the extension is not found.
  * @alias Blockly.Extensions.apply
  */
-const apply = function(name, block, isMutator) {
+export function apply(name, block, isMutator) {
   const extensionFn = allExtensions[name];
   if (typeof extensionFn !== 'function') {
     throw Error('Error: Extension "' + name + '" not found.');
@@ -176,8 +175,7 @@ const apply = function(name, block, isMutator) {
           'mutation properties changed when applying a non-mutator extension.');
     }
   }
-};
-exports.apply = apply;
+}
 
 /**
  * Check that the given block does not have any of the four mutator properties
@@ -380,7 +378,7 @@ export function runAfterPageLoad(fn) {
  * @return {!Function} The extension function.
  * @alias Blockly.Extensions.buildTooltipForDropdown
  */
-const buildTooltipForDropdown = function(dropdownName, lookupTable) {
+export function buildTooltipForDropdown(dropdownName, lookupTable) {
   // List of block types already validated, to minimize duplicate warnings.
   const blockTypesChecked = [];
 
@@ -427,8 +425,7 @@ const buildTooltipForDropdown = function(dropdownName, lookupTable) {
     }.bind(this));
   };
   return extensionFn;
-};
-exports.buildTooltipForDropdown = buildTooltipForDropdown;
+}
 
 /**
  * Checks all options keys are present in the provided string lookup table.

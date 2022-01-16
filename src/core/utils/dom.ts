@@ -265,7 +265,7 @@ export function stopTextWidthCache() {
  * @return {number} Width of element.
  * @alias Blockly.utils.dom.getTextWidth
  */
-const getTextWidth = function(textElement) {
+export function getTextWidth(textElement) {
   const key = textElement.textContent + '\n' + textElement.className.baseVal;
   let width;
 
@@ -297,8 +297,7 @@ const getTextWidth = function(textElement) {
     cacheWidths[key] = width;
   }
   return width;
-};
-exports.getTextWidth = getTextWidth;
+}
 
 /**
  * Gets the width of a text element using a faster method than `getTextWidth`.
@@ -379,7 +378,7 @@ exports.getFastTextWidthWithSizeString = getFastTextWidthWithSizeString;
  * @return {{height: number, baseline: number}} Font measurements.
  * @alias Blockly.utils.dom.measureFontMetrics
  */
-const measureFontMetrics = function(text, fontSize, fontWeight, fontFamily) {
+export function measureFontMetrics(text, fontSize, fontWeight, fontFamily) {
   const span = document.createElement('span');
   span.style.font = fontWeight + ' ' + fontSize + ' ' + fontFamily;
   span.textContent = text;
@@ -407,5 +406,4 @@ const measureFontMetrics = function(text, fontSize, fontWeight, fontFamily) {
     document.body.removeChild(div);
   }
   return result;
-};
-exports.measureFontMetrics = measureFontMetrics;
+}

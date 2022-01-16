@@ -166,7 +166,7 @@ export function isNameUsed(name, workspace, opt_exclude) {
  * @this {Field}
  * @alias Blockly.Procedures.rename
  */
-const rename = function(name) {
+export function rename(name) {
   // Strip leading and trailing whitespace.  Beyond this, all names are legal.
   name = name.trim();
 
@@ -186,8 +186,7 @@ const rename = function(name) {
     }
   }
   return legalName;
-};
-exports.rename = rename;
+}
 
 /**
  * Construct the blocks required by the flyout for the procedure category.
@@ -195,7 +194,7 @@ exports.rename = rename;
  * @return {!Array<!Element>} Array of XML block elements.
  * @alias Blockly.Procedures.flyoutCategory
  */
-const flyoutCategory = function(workspace) {
+export function flyoutCategory(workspace) {
   const xmlList = [];
   if (Blocks['procedures_defnoreturn']) {
     // <block type="procedures_defnoreturn" gap="16">
@@ -272,8 +271,7 @@ const flyoutCategory = function(workspace) {
   populateProcedures(tuple[0], 'procedures_callnoreturn');
   populateProcedures(tuple[1], 'procedures_callreturn');
   return xmlList;
-};
-exports.flyoutCategory = flyoutCategory;
+}
 
 /**
  * Updates the procedure mutator's flyout so that the arg block is not a

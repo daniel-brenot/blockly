@@ -115,7 +115,7 @@ const conditionalBind = function(
  *     unbindEvent_.
  * @alias Blockly.browserEvents.bind
  */
-const bind = function(node, name, thisObject, func) {
+export function bind(node, name, thisObject, func) {
   const wrapFunc = function(e) {
     if (thisObject) {
       func.call(thisObject, e);
@@ -158,8 +158,7 @@ const bind = function(node, name, thisObject, func) {
     }
   }
   return bindData;
-};
-exports.bind = bind;
+}
 
 /**
  * Unbind one or more events event from a function call.
@@ -219,7 +218,7 @@ export function isRightButton(e) {
  * @return {!SVGPoint} Object with .x and .y properties.
  * @alias Blockly.browserEvents.mouseToSvg
  */
-const mouseToSvg = function(e, svg, matrix) {
+export function mouseToSvg(e, svg, matrix) {
   const svgPoint = svg.createSVGPoint();
   svgPoint.x = e.clientX;
   svgPoint.y = e.clientY;
@@ -228,8 +227,7 @@ const mouseToSvg = function(e, svg, matrix) {
     matrix = svg.getScreenCTM().inverse();
   }
   return svgPoint.matrixTransform(matrix);
-};
-exports.mouseToSvg = mouseToSvg;
+}
 
 /**
  * Returns the scroll delta of a mouse event in pixel units.

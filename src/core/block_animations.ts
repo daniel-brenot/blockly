@@ -33,7 +33,7 @@ let disconnectGroup = null;
  * @alias Blockly.blockAnimations.disposeUiEffect
  * @package
  */
-const disposeUiEffect = function(block) {
+export function disposeUiEffect(block) {
   const workspace = block.workspace;
   const svgGroup = block.getSvgRoot();
   workspace.getAudioManager().play('delete');
@@ -48,8 +48,7 @@ const disposeUiEffect = function(block) {
   clone.bBox_ = clone.getBBox();
   // Start the animation.
   disposeUiStep(clone, workspace.RTL, new Date, workspace.scale);
-};
-exports.disposeUiEffect = disposeUiEffect;
+}
 
 /**
  * Animate a cloned block and eventually dispose of it.

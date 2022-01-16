@@ -18,7 +18,7 @@ goog.module('Blockly.utils.object');
  * @suppress {strictMissingProperties} superClass_ is not defined on Function.
  * @alias Blockly.utils.object.inherits
  */
-const inherits = function(childCtor, parentCtor) {
+export function inherits(childCtor, parentCtor) {
   // Set a .superClass_ property so that methods can call parent methods
   // without hard-coding the parent class name.
   // Could be replaced by ES6's super().
@@ -33,8 +33,7 @@ const inherits = function(childCtor, parentCtor) {
   childCtor.prototype.constructor = childCtor;
   // Alternatively, one could use this instead:
   // Object.setPrototypeOf(childCtor.prototype, parentCtor.prototype);
-};
-exports.inherits = inherits;
+}
 
 /**
  * Copies all the members of a source object to a target object.

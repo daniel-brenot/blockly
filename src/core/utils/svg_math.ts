@@ -47,7 +47,7 @@ const XY_STYLE_REGEX =
  * @return {!Coordinate} Object with .x and .y properties.
  * @alias Blockly.utils.svgMath.getRelativeXY
  */
-const getRelativeXY = function(element) {
+export function getRelativeXY(element) {
   const xy = new Coordinate(0, 0);
   // First, check for x and y attributes.
   const x = element.getAttribute('x');
@@ -80,8 +80,7 @@ const getRelativeXY = function(element) {
     }
   }
   return xy;
-};
-exports.getRelativeXY = getRelativeXY;
+}
 
 /**
  * Return the coordinates of the top-left corner of this element relative to
@@ -114,7 +113,7 @@ export function getInjectionDivXY(element) {
  * @return {boolean} True if 3D transforms are supported.
  * @alias Blockly.utils.svgMath.is3dSupported
  */
-const is3dSupported = function() {
+export function is3dSupported() {
   if (is3dSupported.cached_ !== undefined) {
     return is3dSupported.cached_;
   }
@@ -157,8 +156,7 @@ const is3dSupported = function() {
   document.body.removeChild(el);
   is3dSupported.cached_ = has3d !== 'none';
   return is3dSupported.cached_;
-};
-exports.is3dSupported = is3dSupported;
+}
 
 /**
  * Get the position of the current viewport in window coordinates.  This takes
@@ -203,7 +201,7 @@ export function getDocumentScroll() {
  * @return {!Coordinate} The workspace coordinates.
  * @alias Blockly.utils.svgMath.screenToWsCoordinates
  */
-const screenToWsCoordinates = function(ws, screenCoordinates) {
+export function screenToWsCoordinates(ws, screenCoordinates) {
   const screenX = screenCoordinates.x;
   const screenY = screenCoordinates.y;
 
@@ -229,8 +227,7 @@ const screenToWsCoordinates = function(ws, screenCoordinates) {
   // The position in main workspace coordinates.
   const finalOffsetMainWs = finalOffsetPixels.scale(1 / ws.scale);
   return finalOffsetMainWs;
-};
-exports.screenToWsCoordinates = screenToWsCoordinates;
+}
 
 /**
  * Returns the dimensions of the specified SVG image.

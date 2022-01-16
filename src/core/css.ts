@@ -27,7 +27,7 @@ let injected = false;
  *    single lines of CSS.
  * @alias Blockly.Css.register
  */
-const register = function(cssContent) {
+export function register(cssContent) {
   if (injected) {
     throw Error('CSS already injected');
   }
@@ -41,8 +41,7 @@ const register = function(cssContent) {
     // Add new cssContent in the global content.
     content += ('\n' + cssContent);
   }
-};
-exports.register = register;
+}
 
 /**
  * Inject the CSS into the DOM.  This is preferable over using a regular CSS
@@ -55,7 +54,7 @@ exports.register = register;
  * @param {string} pathToMedia Path from page to the Blockly media directory.
  * @alias Blockly.Css.inject
  */
-const inject = function(hasCss, pathToMedia) {
+export function inject(hasCss, pathToMedia) {
   // Only inject the CSS once.
   if (injected) {
     return;
@@ -76,8 +75,7 @@ const inject = function(hasCss, pathToMedia) {
   const cssTextNode = document.createTextNode(cssContent);
   cssNode.appendChild(cssTextNode);
   document.head.insertBefore(cssNode, document.head.firstChild);
-};
-exports.inject = inject;
+}
 
 /**
  * The CSS content for Blockly.

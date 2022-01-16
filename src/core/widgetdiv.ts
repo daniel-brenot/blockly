@@ -92,7 +92,7 @@ Object.defineProperties(exports, {
  * Create the widget div and inject it onto the page.
  * @alias Blockly.WidgetDiv.createDom
  */
-const createDom = function() {
+export function createDom() {
   if (DIV) {
     return;  // Already created.
   }
@@ -101,8 +101,7 @@ const createDom = function() {
   DIV.className = 'blocklyWidgetDiv';
   const container = common.getParentContainer() || document.body;
   container.appendChild(DIV);
-};
-exports.createDom = createDom;
+}
 
 /**
  * Initialize and display the widget div.  Close the old one if needed.
@@ -131,7 +130,7 @@ export function show(newOwner, rtl, newDispose) {
  * Destroy the widget and hide the div.
  * @alias Blockly.WidgetDiv.hide
  */
-const hide = function() {
+export function hide() {
   if (!isVisible()) {
     return;
   }
@@ -154,8 +153,7 @@ const hide = function() {
     themeClassName = '';
   }
   (/** @type {!WorkspaceSvg} */ (common.getMainWorkspace())).markFocused();
-};
-exports.hide = hide;
+}
 
 /**
  * Is the container visible?
@@ -207,7 +205,7 @@ function positionInternal(x, y, height) {
  * @alias Blockly.WidgetDiv.positionWithAnchor
  * @package
  */
-const positionWithAnchor = function(viewportBBox, anchorBBox, widgetSize, rtl) {
+export function positionWithAnchor(viewportBBox, anchorBBox, widgetSize, rtl) {
   const y = calculateY(viewportBBox, anchorBBox, widgetSize);
   const x = calculateX(viewportBBox, anchorBBox, widgetSize, rtl);
 
@@ -216,8 +214,7 @@ const positionWithAnchor = function(viewportBBox, anchorBBox, widgetSize, rtl) {
   } else {
     positionInternal(x, y, widgetSize.height);
   }
-};
-exports.positionWithAnchor = positionWithAnchor;
+}
 
 /**
  * Calculate an x position (in window coordinates) such that the widget will not

@@ -53,7 +53,7 @@ export function colorButtonClickHandler(button) {
  * @return {!Array<!Element>} Array of XML elements.
  * @alias Blockly.VariablesDynamic.flyoutCategory
  */
-const flyoutCategory = function(workspace) {
+export function flyoutCategory(workspace) {
   let xmlList = [];
   let button = document.createElement('button');
   button.setAttribute('text', Msg['NEW_STRING_VARIABLE']);
@@ -79,8 +79,7 @@ const flyoutCategory = function(workspace) {
   const blockList = flyoutCategoryBlocks(workspace);
   xmlList = xmlList.concat(blockList);
   return xmlList;
-};
-exports.flyoutCategory = flyoutCategory;
+}
 
 /**
  * Construct the blocks required by the flyout for the variable category.
@@ -88,7 +87,7 @@ exports.flyoutCategory = flyoutCategory;
  * @return {!Array<!Element>} Array of XML block elements.
  * @alias Blockly.VariablesDynamic.flyoutCategoryBlocks
  */
-const flyoutCategoryBlocks = function(workspace) {
+export function flyoutCategoryBlocks(workspace) {
   const variableModelList = workspace.getAllVariables();
 
   const xmlList = [];
@@ -113,5 +112,4 @@ const flyoutCategoryBlocks = function(workspace) {
     }
   }
   return xmlList;
-};
-exports.flyoutCategoryBlocks = flyoutCategoryBlocks;
+}

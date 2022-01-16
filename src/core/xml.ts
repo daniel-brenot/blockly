@@ -84,7 +84,7 @@ export function variablesToDom(variableList) {
  *     document fragment if the block was an insertion marker.
  * @alias Blockly.Xml.blockToDomWithXY
  */
-const blockToDomWithXY = function(block, opt_noId) {
+export function blockToDomWithXY(block, opt_noId) {
   if (block.isInsertionMarker()) {  // Skip over insertion markers.
     block = block.getChildren(false)[0];
     if (!block) {
@@ -104,8 +104,7 @@ const blockToDomWithXY = function(block, opt_noId) {
       'x', Math.round(block.workspace.RTL ? width - xy.x : xy.x));
   element.setAttribute('y', Math.round(xy.y));
   return element;
-};
-exports.blockToDomWithXY = blockToDomWithXY;
+}
 
 /**
  * Encode a field as XML.
@@ -150,7 +149,7 @@ function allFieldsToDom(block, element) {
  *     document fragment if the block was an insertion marker.
  * @alias Blockly.Xml.blockToDom
  */
-const blockToDom = function(block, opt_noId) {
+export function blockToDom(block, opt_noId) {
   // Skip over insertion markers.
   if (block.isInsertionMarker()) {
     const child = block.getChildren(false)[0];
@@ -266,8 +265,7 @@ const blockToDom = function(block, opt_noId) {
   }
 
   return element;
-};
-exports.blockToDom = blockToDom;
+}
 
 /**
  * Deeply clone the shadow's DOM so that changes don't back-wash to the block.
@@ -401,7 +399,7 @@ export function clearWorkspaceAndLoadFromXml(xml, workspace) {
  *     comments are not bundled in.
  * @alias Blockly.Xml.domToWorkspace
  */
-const domToWorkspace = function(xml, workspace) {
+export function domToWorkspace(xml, workspace) {
   const {Workspace} = goog.module.get('Blockly.Workspace');
   if (xml instanceof Workspace) {
     const swap = xml;
@@ -501,8 +499,7 @@ const domToWorkspace = function(xml, workspace) {
   }
   eventUtils.fire(new (eventUtils.get(eventUtils.FINISHED_LOADING))(workspace));
   return newBlockIds;
-};
-exports.domToWorkspace = domToWorkspace;
+}
 
 /**
  * Decode an XML DOM and create blocks on the workspace. Position the new
@@ -635,7 +632,7 @@ export function domToBlock(xmlBlock, workspace) {
  *     should be added.
  * @alias Blockly.Xml.domToVariables
  */
-const domToVariables = function(xmlVariables, workspace) {
+export function domToVariables(xmlVariables, workspace) {
   for (let i = 0; i < xmlVariables.childNodes.length; i++) {
     const xmlChild = xmlVariables.childNodes[i];
     if (xmlChild.nodeType !== dom.NodeType.ELEMENT_NODE) {
@@ -647,8 +644,7 @@ const domToVariables = function(xmlVariables, workspace) {
 
     workspace.createVariable(name, type, id);
   }
-};
-exports.domToVariables = domToVariables;
+}
 
 /**
  * A mapping of nodeName to node for child nodes of xmlBlock.
