@@ -5,29 +5,21 @@
  */
 
 /**
- * @fileoverview A toolbox category used to organize blocks in the toolbox.
- */
-'use strict';
-
-/**
  * A toolbox category used to organize blocks in the toolbox.
  * @class
  */
 goog.module('Blockly.CollapsibleToolboxCategory');
 
-const aria = goog.require('Blockly.utils.aria');
-const dom = goog.require('Blockly.utils.dom');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const toolbox = goog.require('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {ICollapsibleToolboxItem} = goog.require('Blockly.ICollapsibleToolboxItem');
-/* eslint-disable-next-line no-unused-vars */
-const {IToolboxItem} = goog.requireType('Blockly.IToolboxItem');
-/* eslint-disable-next-line no-unused-vars */
-const {IToolbox} = goog.requireType('Blockly.IToolbox');
-const {ToolboxCategory} = goog.require('Blockly.ToolboxCategory');
-const {ToolboxSeparator} = goog.require('Blockly.ToolboxSeparator');
+import aria from 'Blockly.utils.aria';
+import dom from 'Blockly.utils.dom';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import toolbox from 'Blockly.utils.toolbox';
+import {ICollapsibleToolboxItem} from 'Blockly.ICollapsibleToolboxItem';
+import {IToolboxItem} from 'Blockly.IToolboxItem';
+import {IToolbox} from 'Blockly.IToolbox';
+import {ToolboxCategory} from 'Blockly.ToolboxCategory';
+import {ToolboxSeparator} from 'Blockly.ToolboxSeparator';
 
 
 /**

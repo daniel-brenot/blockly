@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Provides a reference to the global object.
- */
-'use strict';
-
-/**
  * Provides a reference to the global object.
  * @namespace Blockly.utils.global
  */

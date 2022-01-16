@@ -5,19 +5,13 @@
  */
 
 /**
- * @fileoverview Blockly's internal clipboard for managing copy-paste.
- */
-'use strict';
-
-/**
  * Blockly's internal clipboard for managing copy-paste.
  * @namespace Blockly.clipboard
  */
 goog.module('Blockly.clipboard');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-/* eslint-disable-next-line no-unused-vars */
-const {ICopyable} = goog.requireType('Blockly.ICopyable');
+import eventUtils from 'Blockly.Events.utils';
+import {ICopyable} from 'Blockly.ICopyable';
 
 
 /**

@@ -5,24 +5,17 @@
  */
 
 /**
- * @fileoverview Object representing a pair of scrollbars.
- */
-'use strict';
-
-/**
  * Object representing a pair of scrollbars.
  * @class
  */
 goog.module('Blockly.ScrollbarPair');
 
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-/* eslint-disable-next-line no-unused-vars */
-const {Metrics} = goog.requireType('Blockly.utils.Metrics');
-const {Scrollbar} = goog.require('Blockly.Scrollbar');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import {Metrics} from 'Blockly.utils.Metrics';
+import {Scrollbar} from 'Blockly.Scrollbar';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

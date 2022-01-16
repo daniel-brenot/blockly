@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Python for logic blocks.
- */
-'use strict';
-
 goog.module('Blockly.Python.logic');
 
-const Python = goog.require('Blockly.Python');
+import Python from 'Blockly.Python';
 
 
 Python['controls_if'] = function(block) {

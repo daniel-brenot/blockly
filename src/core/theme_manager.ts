@@ -5,26 +5,17 @@
  */
 
 /**
- * @fileoverview Object in charge of storing and updating a workspace theme
- *     and UI components.
- */
-'use strict';
-
-/**
  * Object in charge of storing and updating a workspace theme
  *     and UI components.
  * @class
  */
 goog.module('Blockly.ThemeManager');
 
-const arrayUtils = goog.require('Blockly.utils.array');
-const dom = goog.require('Blockly.utils.dom');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import arrayUtils from 'Blockly.utils.array';
+import dom from 'Blockly.utils.dom';
+import {Theme} from 'Blockly.Theme';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

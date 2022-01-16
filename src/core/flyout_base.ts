@@ -5,55 +5,39 @@
  */
 
 /**
- * @fileoverview Flyout tray containing blocks which may be created.
- */
-'use strict';
-
-/**
  * Flyout tray containing blocks which may be created.
  * @class
  */
 goog.module('Blockly.Flyout');
 
-const Tooltip = goog.require('Blockly.Tooltip');
-const Variables = goog.require('Blockly.Variables');
-const Xml = goog.require('Blockly.Xml');
-const blocks = goog.require('Blockly.serialization.blocks');
-const browserEvents = goog.require('Blockly.browserEvents');
-const common = goog.require('Blockly.common');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const object = goog.require('Blockly.utils.object');
-const toolbox = goog.require('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {ComponentManager} = goog.require('Blockly.ComponentManager');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {DeleteArea} = goog.require('Blockly.DeleteArea');
-/* eslint-disable-next-line no-unused-vars */
-const {FlyoutButton} = goog.requireType('Blockly.FlyoutButton');
-const {FlyoutMetricsManager} = goog.require('Blockly.FlyoutMetricsManager');
-/* eslint-disable-next-line no-unused-vars */
-const {IFlyout} = goog.require('Blockly.IFlyout');
-/* eslint-disable-next-line no-unused-vars */
-const {Options} = goog.requireType('Blockly.Options');
-/* eslint-disable-next-line no-unused-vars */
-const {Rect} = goog.require('Blockly.utils.Rect');
-const {ScrollbarPair} = goog.require('Blockly.ScrollbarPair');
-const {Svg} = goog.require('Blockly.utils.Svg');
-const {WorkspaceSvg} = goog.require('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import Tooltip from 'Blockly.Tooltip';
+import Variables from 'Blockly.Variables';
+import Xml from 'Blockly.Xml';
+import blocks from 'Blockly.serialization.blocks';
+import browserEvents from 'Blockly.browserEvents';
+import common from 'Blockly.common';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import idGenerator from 'Blockly.utils.idGenerator';
+import object from 'Blockly.utils.object';
+import toolbox from 'Blockly.utils.toolbox';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Block} from 'Blockly.Block';
+import {ComponentManager} from 'Blockly.ComponentManager';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {DeleteArea} from 'Blockly.DeleteArea';
+import {FlyoutButton} from 'Blockly.FlyoutButton';
+import {FlyoutMetricsManager} from 'Blockly.FlyoutMetricsManager';
+import {IFlyout} from 'Blockly.IFlyout';
+import {Options} from 'Blockly.Options';
+import {Rect} from 'Blockly.utils.Rect';
+import {ScrollbarPair} from 'Blockly.ScrollbarPair';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.BlockCreate');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.VarCreate');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Gesture');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Touch');
-/** @suppress {extraRequire} */
 goog.require('Blockly.blockRendering');
 
 

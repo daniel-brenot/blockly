@@ -5,45 +5,31 @@
  */
 
 /**
- * @fileoverview Object representing a mutator dialog.  A mutator allows the
- * user to change the shape of a block using a nested blocks editor.
- */
-'use strict';
-
-/**
  * Object representing a mutator dialog.  A mutator allows the
  * user to change the shape of a block using a nested blocks editor.
  * @class
  */
 goog.module('Blockly.Mutator');
 
-/* eslint-disable-next-line no-unused-vars */
-const Abstract = goog.requireType('Blockly.Events.Abstract');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const internalConstants = goog.require('Blockly.internalConstants');
-const object = goog.require('Blockly.utils.object');
-const toolbox = goog.require('Blockly.utils.toolbox');
-const xml = goog.require('Blockly.utils.xml');
-const {BlockChange} = goog.require('Blockly.Events.BlockChange');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {BlocklyOptions} = goog.requireType('Blockly.BlocklyOptions');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Bubble} = goog.require('Blockly.Bubble');
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-const {Icon} = goog.require('Blockly.Icon');
-const {Options} = goog.require('Blockly.Options');
-const {Svg} = goog.require('Blockly.utils.Svg');
-const {WorkspaceSvg} = goog.require('Blockly.WorkspaceSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
-/** @suppress {extraRequire} */
+import Abstract from 'Blockly.Events.Abstract';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import internalConstants from 'Blockly.internalConstants';
+import object from 'Blockly.utils.object';
+import toolbox from 'Blockly.utils.toolbox';
+import xml from 'Blockly.utils.xml';
+import {BlockChange} from 'Blockly.Events.BlockChange';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {BlocklyOptions} from 'Blockly.BlocklyOptions';
+import {Block} from 'Blockly.Block';
+import {Bubble} from 'Blockly.Bubble';
+import {Connection} from 'Blockly.Connection';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Icon} from 'Blockly.Icon';
+import {Options} from 'Blockly.Options';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Workspace} from 'Blockly.Workspace';
 goog.require('Blockly.Events.BubbleOpen');
 
 

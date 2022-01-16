@@ -5,20 +5,14 @@
  */
 
 /**
- * @fileoverview An object that provides constants for rendering blocks in the
- * minimalist renderer.
- */
-'use strict';
-
-/**
  * An object that provides constants for rendering blocks in the
  * minimalist renderer.
  * @class
  */
 goog.module('Blockly.minimalist.ConstantProvider');
 
-const object = goog.require('Blockly.utils.object');
-const {ConstantProvider: BaseConstantProvider} = goog.require('Blockly.blockRendering.ConstantProvider');
+import object from 'Blockly.utils.object';
+import {ConstantProvider: BaseConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
 
 
 /**

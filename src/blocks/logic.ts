@@ -4,31 +4,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Logic blocks for Blockly.
- * @suppress {checkTypes}
- */
-'use strict';
-
 goog.module('Blockly.blocks.logic');
 
-/* eslint-disable-next-line no-unused-vars */
-const AbstractEvent = goog.requireType('Blockly.Events.Abstract');
-const Events = goog.require('Blockly.Events');
-const Extensions = goog.require('Blockly.Extensions');
-const xmlUtils = goog.require('Blockly.utils.xml');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Msg} = goog.require('Blockly.Msg');
-const {Mutator} = goog.require('Blockly.Mutator');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
-const {defineBlocksWithJsonArray} = goog.require('Blockly.common');
-/** @suppress {extraRequire} */
+import AbstractEvent from 'Blockly.Events.Abstract';
+import Events from 'Blockly.Events';
+import Extensions from 'Blockly.Extensions';
+import xmlUtils from 'Blockly.utils.xml';
+import {Block} from 'Blockly.Block';
+import {Msg} from 'Blockly.Msg';
+import {Mutator} from 'Blockly.Mutator';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {Workspace} from 'Blockly.Workspace';
+import {defineBlocksWithJsonArray} from 'Blockly.common';
 goog.require('Blockly.FieldDropdown');
-/** @suppress {extraRequire} */
 goog.require('Blockly.FieldLabel');
 
 

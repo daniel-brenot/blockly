@@ -18,12 +18,9 @@
  */
 goog.module('Blockly.blockRendering.IPathObject');
 
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
+import {Block} from 'Blockly.Block';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {Theme} from 'Blockly.Theme';
 
 
 /**

@@ -4,28 +4,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Math blocks for Blockly.
- * @suppress {checkTypes}
- */
-'use strict';
-
 goog.module('Blockly.blocks.math');
 
-const Extensions = goog.require('Blockly.Extensions');
+import Extensions from 'Blockly.Extensions';
 // N.B.: Blockly.FieldDropdown needed for type AND side-effects.
-/* eslint-disable-next-line no-unused-vars */
-const FieldDropdown = goog.require('Blockly.FieldDropdown');
-const xmlUtils = goog.require('Blockly.utils.xml');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {defineBlocksWithJsonArray} = goog.require('Blockly.common');
-/** @suppress {extraRequire} */
+import FieldDropdown from 'Blockly.FieldDropdown';
+import xmlUtils from 'Blockly.utils.xml';
+import {Block} from 'Blockly.Block';
+import {defineBlocksWithJsonArray} from 'Blockly.common';
 goog.require('Blockly.FieldLabel');
-/** @suppress {extraRequire} */
 goog.require('Blockly.FieldNumber');
-/** @suppress {extraRequire} */
 goog.require('Blockly.FieldVariable');
 
 

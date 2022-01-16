@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Dart for color blocks.
- */
-'use strict';
-
 goog.module('Blockly.Dart.color');
 
-const Dart = goog.require('Blockly.Dart');
+import Dart from 'Blockly.Dart';
 
 
 Dart.addReservedWords('Math');

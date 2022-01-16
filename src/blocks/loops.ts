@@ -4,34 +4,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Loop blocks for Blockly.
- * @suppress {checkTypes}
- */
-'use strict';
-
 goog.module('Blockly.blocks.loops');
 
-/* eslint-disable-next-line no-unused-vars */
-const AbstractEvent = goog.requireType('Blockly.Events.Abstract');
-const ContextMenu = goog.require('Blockly.ContextMenu');
-const Events = goog.require('Blockly.Events');
-const Extensions = goog.require('Blockly.Extensions');
-const Variables = goog.require('Blockly.Variables');
-const common = goog.require('Blockly.common');
-const xmlUtils = goog.require('Blockly.utils.xml');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Msg} = goog.require('Blockly.Msg');
-/** @suppress {extraRequire} */
+import AbstractEvent from 'Blockly.Events.Abstract';
+import ContextMenu from 'Blockly.ContextMenu';
+import Events from 'Blockly.Events';
+import Extensions from 'Blockly.Extensions';
+import Variables from 'Blockly.Variables';
+import common from 'Blockly.common';
+import xmlUtils from 'Blockly.utils.xml';
+import {Block} from 'Blockly.Block';
+import {Msg} from 'Blockly.Msg';
 goog.require('Blockly.FieldDropdown');
-/** @suppress {extraRequire} */
 goog.require('Blockly.FieldLabel');
-/** @suppress {extraRequire} */
 goog.require('Blockly.FieldNumber');
-/** @suppress {extraRequire} */
 goog.require('Blockly.FieldVariable');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Warning');
 
 
@@ -290,7 +277,7 @@ Extensions.register(
  * loopTypes.push('custom_loop');
  *
  * // Else if using Closure Compiler and goog.modules:
- * const {loopTypes} = goog.require('Blockly.blocks.loops');
+ * import {loopTypes} from 'Blockly.blocks.loops';
  * loopTypes.push('custom_loop');
  *
  * @type {!Array<string>}

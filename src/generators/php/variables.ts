@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating PHP for variable blocks.
- */
-'use strict';
-
 goog.module('Blockly.PHP.variables');
 
-const PHP = goog.require('Blockly.PHP');
-const {NameType} = goog.require('Blockly.Names');
+import PHP from 'Blockly.PHP';
+import {NameType} from 'Blockly.Names';
 
 
 PHP['variables_get'] = function(block) {

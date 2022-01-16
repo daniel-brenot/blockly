@@ -16,8 +16,7 @@
  */
 goog.module('Blockly.IKeyboardAccessible');
 
-/* eslint-disable-next-line no-unused-vars */
-const {ShortcutRegistry} = goog.requireType('Blockly.ShortcutRegistry');
+import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
 
 
 /**

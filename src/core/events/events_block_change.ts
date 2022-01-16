@@ -5,25 +5,18 @@
  */
 
 /**
- * @fileoverview Class for a block change event.
- */
-'use strict';
-
-/**
  * Class for a block change event.
  * @class
  */
 goog.module('Blockly.Events.BlockChange');
 
-const Xml = goog.require('Blockly.Xml');
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const {BlockBase} = goog.require('Blockly.Events.BlockBase');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
+import Xml from 'Blockly.Xml';
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {BlockBase} from 'Blockly.Events.BlockBase';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Block} from 'Blockly.Block';
 
 
 /**

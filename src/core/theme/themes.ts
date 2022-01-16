@@ -5,18 +5,13 @@
  */
 
 /**
- * @fileoverview Namespace for themes.
- */
-'use strict';
-
-/**
  * Namespace for themes.
  * @namespace Blockly.Themes
  */
 goog.module('Blockly.Themes');
 
-const {Classic} = goog.require('Blockly.Themes.Classic');
-const {Zelos} = goog.require('Blockly.Themes.Zelos');
+import {Classic} from 'Blockly.Themes.Classic';
+import {Zelos} from 'Blockly.Themes.Zelos';
 
 
 exports.Classic = Classic;

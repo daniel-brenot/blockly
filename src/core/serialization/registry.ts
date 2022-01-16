@@ -5,21 +5,15 @@
  */
 
 /**
- * @fileoverview Contains functions registering serializers (eg blocks,
- * variables, plugins, etc).
- */
-'use strict';
-
-/**
  * Contains functions registering serializers (eg blocks, variables, plugins,
  * etc).
  * @namespace Blockly.serialization.registry
  */
 goog.module('Blockly.serialization.registry');
 
-const registry = goog.require('Blockly.registry');
+import registry from 'Blockly.registry';
 // eslint-disable-next-line no-unused-vars
-const {ISerializer} = goog.requireType('Blockly.serialization.ISerializer');
+import {ISerializer} from 'Blockly.serialization.ISerializer';
 
 
 /**

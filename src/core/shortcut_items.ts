@@ -5,25 +5,18 @@
  */
 
 /**
- * @fileoverview Registers default keyboard shortcuts.
- */
-'use strict';
-
-/**
  * Registers default keyboard shortcuts.
  * @namespace Blockly.ShortcutItems
  */
 goog.module('Blockly.ShortcutItems');
 
-const clipboard = goog.require('Blockly.clipboard');
-const common = goog.require('Blockly.common');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {Gesture} = goog.require('Blockly.Gesture');
-/* eslint-disable-next-line no-unused-vars */
-const {ICopyable} = goog.requireType('Blockly.ICopyable');
-const {KeyCodes} = goog.require('Blockly.utils.KeyCodes');
-const {ShortcutRegistry} = goog.require('Blockly.ShortcutRegistry');
+import clipboard from 'Blockly.clipboard';
+import common from 'Blockly.common';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Gesture} from 'Blockly.Gesture';
+import {ICopyable} from 'Blockly.ICopyable';
+import {KeyCodes} from 'Blockly.utils.KeyCodes';
+import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
 
 
 /**

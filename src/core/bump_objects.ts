@@ -5,32 +5,20 @@
  */
 
 /**
- * @fileoverview Utilities for bumping objects back into worksapce bounds.
- */
-'use strict';
-
-/**
  * Utilities for bumping objects back into worksapce bounds.
  * @namespace Blockly.bumpObjects
  */
 goog.module('Blockly.bumpObjects');
 
-/* eslint-disable-next-line no-unused-vars */
-const Abstract = goog.requireType('Blockly.Events.Abstract');
-const eventUtils = goog.require('Blockly.Events.utils');
-const mathUtils = goog.require('Blockly.utils.math');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {IBoundedElement} = goog.requireType('Blockly.IBoundedElement');
-/* eslint-disable-next-line no-unused-vars */
-const {MetricsManager} = goog.requireType('Blockly.MetricsManager');
-/* eslint-disable-next-line no-unused-vars */
-const {ViewportChange} = goog.requireType('Blockly.Events.ViewportChange');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceCommentSvg} = goog.requireType('Blockly.WorkspaceCommentSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import Abstract from 'Blockly.Events.Abstract';
+import eventUtils from 'Blockly.Events.utils';
+import mathUtils from 'Blockly.utils.math';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {IBoundedElement} from 'Blockly.IBoundedElement';
+import {MetricsManager} from 'Blockly.MetricsManager';
+import {ViewportChange} from 'Blockly.Events.ViewportChange';
+import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

@@ -5,35 +5,24 @@
  */
 
 /**
- * @fileoverview Methods for dragging a block visually.
- */
-'use strict';
-
-/**
  * Methods for dragging a block visually.
  * @class
  */
 goog.module('Blockly.BlockDragger');
 
-const blockAnimation = goog.require('Blockly.blockAnimations');
-const bumpObjects = goog.require('Blockly.bumpObjects');
-const common = goog.require('Blockly.common');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {IBlockDragger} = goog.require('Blockly.IBlockDragger');
-/* eslint-disable-next-line no-unused-vars */
-const {IDragTarget} = goog.requireType('Blockly.IDragTarget');
-const {InsertionMarkerManager} = goog.require('Blockly.InsertionMarkerManager');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import blockAnimation from 'Blockly.blockAnimations';
+import bumpObjects from 'Blockly.bumpObjects';
+import common from 'Blockly.common';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import registry from 'Blockly.registry';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {IBlockDragger} from 'Blockly.IBlockDragger';
+import {IDragTarget} from 'Blockly.IDragTarget';
+import {InsertionMarkerManager} from 'Blockly.InsertionMarkerManager';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.BlockDrag');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.BlockMove');
 
 

@@ -5,33 +5,23 @@
  */
 
 /**
- * @fileoverview Utility functions for handling procedures.
- */
-'use strict';
-
-/**
  * Utility functions for handling procedures.
  * @namespace Blockly.Procedures
  */
 goog.module('Blockly.Procedures');
 
-/* eslint-disable-next-line no-unused-vars */
-const Abstract = goog.requireType('Blockly.Events.Abstract');
-const Variables = goog.require('Blockly.Variables');
-const Xml = goog.require('Blockly.Xml');
-const eventUtils = goog.require('Blockly.Events.utils');
-const utilsXml = goog.require('Blockly.utils.xml');
-const {Blocks} = goog.require('Blockly.blocks');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
-const {Msg} = goog.require('Blockly.Msg');
-const {Names} = goog.require('Blockly.Names');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-const {Workspace} = goog.require('Blockly.Workspace');
-/** @suppress {extraRequire} */
+import Abstract from 'Blockly.Events.Abstract';
+import Variables from 'Blockly.Variables';
+import Xml from 'Blockly.Xml';
+import eventUtils from 'Blockly.Events.utils';
+import utilsXml from 'Blockly.utils.xml';
+import {Blocks} from 'Blockly.blocks';
+import {Block} from 'Blockly.Block';
+import {Field} from 'Blockly.Field';
+import {Msg} from 'Blockly.Msg';
+import {Names} from 'Blockly.Names';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Workspace} from 'Blockly.Workspace';
 goog.require('Blockly.Events.BlockChange');
 
 

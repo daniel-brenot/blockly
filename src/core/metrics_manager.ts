@@ -5,29 +5,19 @@
  */
 
 /**
- * @fileoverview Calculates and reports workspace metrics.
- */
-'use strict';
-
-/**
  * Calculates and reports workspace metrics.
  * @class
  */
 goog.module('Blockly.MetricsManager');
 
-const registry = goog.require('Blockly.registry');
-const toolboxUtils = goog.require('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {IFlyout} = goog.requireType('Blockly.IFlyout');
-/* eslint-disable-next-line no-unused-vars */
-const {IMetricsManager} = goog.require('Blockly.IMetricsManager');
-/* eslint-disable-next-line no-unused-vars */
-const {IToolbox} = goog.requireType('Blockly.IToolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {Metrics} = goog.requireType('Blockly.utils.Metrics');
-const {Size} = goog.require('Blockly.utils.Size');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import registry from 'Blockly.registry';
+import toolboxUtils from 'Blockly.utils.toolbox';
+import {IFlyout} from 'Blockly.IFlyout';
+import {IMetricsManager} from 'Blockly.IMetricsManager';
+import {IToolbox} from 'Blockly.IToolbox';
+import {Metrics} from 'Blockly.utils.Metrics';
+import {Size} from 'Blockly.utils.Size';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

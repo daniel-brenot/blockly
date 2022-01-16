@@ -4,22 +4,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Helper functions for generating Dart for blocks.
- * @suppress {checkTypes|globalThis}
- */
-'use strict';
-
 goog.module('Blockly.Dart');
 goog.module.declareLegacyNamespace();
 
-const Variables = goog.require('Blockly.Variables');
-const stringUtils = goog.require('Blockly.utils.string');
-const {Block} = goog.requireType('Blockly.Block');
-const {Generator} = goog.require('Blockly.Generator');
-const {Names, NameType} = goog.require('Blockly.Names');
-const {Workspace} = goog.requireType('Blockly.Workspace');
-const {inputTypes} = goog.require('Blockly.inputTypes');
+import Variables from 'Blockly.Variables';
+import stringUtils from 'Blockly.utils.string';
+import {Block} from 'Blockly.Block';
+import {Generator} from 'Blockly.Generator';
+import {Names, NameType} from 'Blockly.Names';
+import {Workspace} from 'Blockly.Workspace';
+import {inputTypes} from 'Blockly.inputTypes';
 
 
 /**

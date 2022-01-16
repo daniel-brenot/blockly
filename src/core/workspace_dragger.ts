@@ -5,20 +5,14 @@
  */
 
 /**
- * @fileoverview Methods for dragging a workspace visually.
- */
-'use strict';
-
-/**
  * Methods for dragging a workspace visually.
  * @class
  */
 goog.module('Blockly.WorkspaceDragger');
 
-const common = goog.require('Blockly.common');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import common from 'Blockly.common';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating JavaScript for color blocks.
- */
-'use strict';
-
 goog.module('Blockly.JavaScript.color');
 
-const JavaScript = goog.require('Blockly.JavaScript');
+import JavaScript from 'Blockly.JavaScript';
 
 
 JavaScript['color_picker'] = function(block) {

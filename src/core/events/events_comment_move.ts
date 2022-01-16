@@ -5,23 +5,17 @@
  */
 
 /**
- * @fileoverview Class for comment move event.
- */
-'use strict';
-
-/**
  * Class for comment move event.
  * @class
  */
 goog.module('Blockly.Events.CommentMove');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const {CommentBase} = goog.require('Blockly.Events.CommentBase');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceComment} = goog.requireType('Blockly.WorkspaceComment');
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {CommentBase} from 'Blockly.Events.CommentBase';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {WorkspaceComment} from 'Blockly.WorkspaceComment';
 
 
 /**

@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Utility methods for color manipulation.
- */
-'use strict';
-
-/**
  * Utility methods for color manipulation.
  * @namespace Blockly.utils.color
  */

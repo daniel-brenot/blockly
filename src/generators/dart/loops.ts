@@ -4,16 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Dart for loop blocks.
- */
-'use strict';
-
 goog.module('Blockly.Dart.loops');
 
-const Dart = goog.require('Blockly.Dart');
-const stringUtils = goog.require('Blockly.utils.string');
-const {NameType} = goog.require('Blockly.Names');
+import Dart from 'Blockly.Dart';
+import stringUtils from 'Blockly.utils.string';
+import {NameType} from 'Blockly.Names';
 
 
 Dart['controls_repeat_ext'] = function(block) {

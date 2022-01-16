@@ -5,23 +5,16 @@
  */
 
 /**
- * @fileoverview Object in charge of loading, storing, and playing audio for a
- *     workspace.
- */
-'use strict';
-
-/**
  * Object in charge of loading, storing, and playing audio for a
  *     workspace.
  * @class
  */
 goog.module('Blockly.WorkspaceAudio');
 
-const internalConstants = goog.require('Blockly.internalConstants');
-const userAgent = goog.require('Blockly.utils.userAgent');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-const {globalThis} = goog.require('Blockly.utils.global');
+import internalConstants from 'Blockly.internalConstants';
+import userAgent from 'Blockly.utils.userAgent';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {globalThis} from 'Blockly.utils.global';
 
 
 /**

@@ -5,22 +5,16 @@
  */
 
 /**
- * @fileoverview Thrasos renderer.
- */
-'use strict';
-
-/**
  * Thrasos renderer.
  * @class
  */
 goog.module('Blockly.thrasos.Renderer');
 
-const blockRendering = goog.require('Blockly.blockRendering');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {RenderInfo} = goog.require('Blockly.thrasos.RenderInfo');
-const {Renderer: BaseRenderer} = goog.require('Blockly.blockRendering.Renderer');
+import blockRendering from 'Blockly.blockRendering';
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {RenderInfo} from 'Blockly.thrasos.RenderInfo';
+import {Renderer: BaseRenderer} from 'Blockly.blockRendering.Renderer';
 
 
 /**

@@ -5,21 +5,15 @@
  */
 
 /**
- * @fileoverview Object for configuring and updating a workspace grid in
- * Blockly.
- */
-'use strict';
-
-/**
  * Object for configuring and updating a workspace grid in
  * Blockly.
  * @class
  */
 goog.module('Blockly.Grid');
 
-const dom = goog.require('Blockly.utils.dom');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import dom from 'Blockly.utils.dom';
+import userAgent from 'Blockly.utils.userAgent';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

@@ -4,15 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Colour blocks for Blockly.
- */
-'use strict';
-
 goog.module('Blockly.blocks.colour');
 
-const {defineBlocksWithJsonArray} = goog.require('Blockly.common');
-/** @suppress {extraRequire} */
+import {defineBlocksWithJsonArray} from 'Blockly.common';
 goog.require('Blockly.FieldColour');
 
 

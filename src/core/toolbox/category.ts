@@ -5,31 +5,23 @@
  */
 
 /**
- * @fileoverview A toolbox category used to organize blocks in the toolbox.
- */
-'use strict';
-
-/**
  * A toolbox category used to organize blocks in the toolbox.
  * @class
  */
 goog.module('Blockly.ToolboxCategory');
 
-const Css = goog.require('Blockly.Css');
-const aria = goog.require('Blockly.utils.aria');
-const colorUtils = goog.require('Blockly.utils.color');
-const dom = goog.require('Blockly.utils.dom');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-const registry = goog.require('Blockly.registry');
-const toolbox = goog.require('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {ICollapsibleToolboxItem} = goog.requireType('Blockly.ICollapsibleToolboxItem');
-/* eslint-disable-next-line no-unused-vars */
-const {ISelectableToolboxItem} = goog.require('Blockly.ISelectableToolboxItem');
-/* eslint-disable-next-line no-unused-vars */
-const {IToolbox} = goog.requireType('Blockly.IToolbox');
-const {ToolboxItem} = goog.require('Blockly.ToolboxItem');
+import Css from 'Blockly.Css';
+import aria from 'Blockly.utils.aria';
+import colorUtils from 'Blockly.utils.color';
+import dom from 'Blockly.utils.dom';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import registry from 'Blockly.registry';
+import toolbox from 'Blockly.utils.toolbox';
+import {ICollapsibleToolboxItem} from 'Blockly.ICollapsibleToolboxItem';
+import {ISelectableToolboxItem} from 'Blockly.ISelectableToolboxItem';
+import {IToolbox} from 'Blockly.IToolbox';
+import {ToolboxItem} from 'Blockly.ToolboxItem';
 
 
 /**

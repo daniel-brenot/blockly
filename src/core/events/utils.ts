@@ -5,34 +5,21 @@
  */
 
 /**
- * @fileoverview Helper methods for events that are fired as a result of
- * actions in Blockly's editor.
- */
-'use strict';
-
-/**
  * Helper methods for events that are fired as a result of
  * actions in Blockly's editor.
  * @namespace Blockly.Events.utils
  */
 goog.module('Blockly.Events.utils');
 
-/* eslint-disable-next-line no-unused-vars */
-const Abstract = goog.requireType('Blockly.Events.Abstract');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockCreate} = goog.requireType('Blockly.Events.BlockCreate');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockMove} = goog.requireType('Blockly.Events.BlockMove');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {CommentCreate} = goog.requireType('Blockly.Events.CommentCreate');
-/* eslint-disable-next-line no-unused-vars */
-const {CommentMove} = goog.requireType('Blockly.Events.CommentMove');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import Abstract from 'Blockly.Events.Abstract';
+import idGenerator from 'Blockly.utils.idGenerator';
+import registry from 'Blockly.registry';
+import {BlockCreate} from 'Blockly.Events.BlockCreate';
+import {BlockMove} from 'Blockly.Events.BlockMove';
+import {Block} from 'Blockly.Block';
+import {CommentCreate} from 'Blockly.Events.CommentCreate';
+import {CommentMove} from 'Blockly.Events.CommentMove';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

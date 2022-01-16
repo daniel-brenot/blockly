@@ -5,32 +5,23 @@
  */
 
 /**
- * @fileoverview Geras renderer.
- */
-'use strict';
-
-/**
  * Geras renderer.
  * @class
  */
 goog.module('Blockly.geras.Renderer');
 
-const blockRendering = goog.require('Blockly.blockRendering');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider: BaseConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-const {ConstantProvider} = goog.require('Blockly.geras.ConstantProvider');
-const {Drawer} = goog.require('Blockly.geras.Drawer');
-const {HighlightConstantProvider} = goog.require('Blockly.geras.HighlightConstantProvider');
-const {PathObject} = goog.require('Blockly.geras.PathObject');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderInfo: BaseRenderInfo} = goog.requireType('Blockly.blockRendering.RenderInfo');
-const {RenderInfo} = goog.require('Blockly.geras.RenderInfo');
-const {Renderer: BaseRenderer} = goog.require('Blockly.blockRendering.Renderer');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
+import blockRendering from 'Blockly.blockRendering';
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ConstantProvider: BaseConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {ConstantProvider} from 'Blockly.geras.ConstantProvider';
+import {Drawer} from 'Blockly.geras.Drawer';
+import {HighlightConstantProvider} from 'Blockly.geras.HighlightConstantProvider';
+import {PathObject} from 'Blockly.geras.PathObject';
+import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {RenderInfo} from 'Blockly.geras.RenderInfo';
+import {Renderer: BaseRenderer} from 'Blockly.blockRendering.Renderer';
+import {Theme} from 'Blockly.Theme';
 
 
 /**

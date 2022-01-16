@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Object that defines user-specified options for the workspace.
- */
-'use strict';
-
-/**
  * Object that defines user-specified options for the workspace.
  * @namespace Blockly.BlocklyOptions
  */

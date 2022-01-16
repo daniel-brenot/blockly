@@ -5,51 +5,45 @@
  */
 
 /**
- * @fileoverview Namespace for block rendering functionality.
- */
-'use strict';
-
-/**
  * Namespace for block rendering functionality.
  * @namespace Blockly.blockRendering
  */
 goog.module('Blockly.blockRendering');
 
-const debug = goog.require('Blockly.blockRendering.debug');
-const deprecation = goog.require('Blockly.utils.deprecation');
-const registry = goog.require('Blockly.registry');
-const {BottomRow} = goog.require('Blockly.blockRendering.BottomRow');
-const {Connection} = goog.require('Blockly.blockRendering.Connection');
-const {ConstantProvider} = goog.require('Blockly.blockRendering.ConstantProvider');
-const {Debug} = goog.require('Blockly.blockRendering.Debug');
-const {Drawer} = goog.require('Blockly.blockRendering.Drawer');
-const {ExternalValueInput} = goog.require('Blockly.blockRendering.ExternalValueInput');
-const {Field} = goog.require('Blockly.blockRendering.Field');
-const {Hat} = goog.require('Blockly.blockRendering.Hat');
-const {IPathObject} = goog.require('Blockly.blockRendering.IPathObject');
-const {Icon} = goog.require('Blockly.blockRendering.Icon');
-const {InRowSpacer} = goog.require('Blockly.blockRendering.InRowSpacer');
-const {InlineInput} = goog.require('Blockly.blockRendering.InlineInput');
-const {InputConnection} = goog.require('Blockly.blockRendering.InputConnection');
-const {InputRow} = goog.require('Blockly.blockRendering.InputRow');
-const {JaggedEdge} = goog.require('Blockly.blockRendering.JaggedEdge');
-const {MarkerSvg} = goog.require('Blockly.blockRendering.MarkerSvg');
-const {Measurable} = goog.require('Blockly.blockRendering.Measurable');
-const {NextConnection} = goog.require('Blockly.blockRendering.NextConnection');
-const {OutputConnection} = goog.require('Blockly.blockRendering.OutputConnection');
-const {PathObject} = goog.require('Blockly.blockRendering.PathObject');
-const {PreviousConnection} = goog.require('Blockly.blockRendering.PreviousConnection');
-const {RenderInfo} = goog.require('Blockly.blockRendering.RenderInfo');
-const {Renderer} = goog.require('Blockly.blockRendering.Renderer');
-const {RoundCorner} = goog.require('Blockly.blockRendering.RoundCorner');
-const {Row} = goog.require('Blockly.blockRendering.Row');
-const {SpacerRow} = goog.require('Blockly.blockRendering.SpacerRow');
-const {SquareCorner} = goog.require('Blockly.blockRendering.SquareCorner');
-const {StatementInput} = goog.require('Blockly.blockRendering.StatementInput');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
-const {TopRow} = goog.require('Blockly.blockRendering.TopRow');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import debug from 'Blockly.blockRendering.debug';
+import deprecation from 'Blockly.utils.deprecation';
+import registry from 'Blockly.registry';
+import {BottomRow} from 'Blockly.blockRendering.BottomRow';
+import {Connection} from 'Blockly.blockRendering.Connection';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {Debug} from 'Blockly.blockRendering.Debug';
+import {Drawer} from 'Blockly.blockRendering.Drawer';
+import {ExternalValueInput} from 'Blockly.blockRendering.ExternalValueInput';
+import {Field} from 'Blockly.blockRendering.Field';
+import {Hat} from 'Blockly.blockRendering.Hat';
+import {IPathObject} from 'Blockly.blockRendering.IPathObject';
+import {Icon} from 'Blockly.blockRendering.Icon';
+import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
+import {InlineInput} from 'Blockly.blockRendering.InlineInput';
+import {InputConnection} from 'Blockly.blockRendering.InputConnection';
+import {InputRow} from 'Blockly.blockRendering.InputRow';
+import {JaggedEdge} from 'Blockly.blockRendering.JaggedEdge';
+import {MarkerSvg} from 'Blockly.blockRendering.MarkerSvg';
+import {Measurable} from 'Blockly.blockRendering.Measurable';
+import {NextConnection} from 'Blockly.blockRendering.NextConnection';
+import {OutputConnection} from 'Blockly.blockRendering.OutputConnection';
+import {PathObject} from 'Blockly.blockRendering.PathObject';
+import {PreviousConnection} from 'Blockly.blockRendering.PreviousConnection';
+import {RenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {Renderer} from 'Blockly.blockRendering.Renderer';
+import {RoundCorner} from 'Blockly.blockRendering.RoundCorner';
+import {Row} from 'Blockly.blockRendering.Row';
+import {SpacerRow} from 'Blockly.blockRendering.SpacerRow';
+import {SquareCorner} from 'Blockly.blockRendering.SquareCorner';
+import {StatementInput} from 'Blockly.blockRendering.StatementInput';
+import {Theme} from 'Blockly.Theme';
+import {TopRow} from 'Blockly.blockRendering.TopRow';
+import {Types} from 'Blockly.blockRendering.Types';
 
 /**
  * Returns whether the debugger is turned on.

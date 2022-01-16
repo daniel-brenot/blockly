@@ -5,28 +5,23 @@
  */
 
 /**
- * @fileoverview Text Area field.
- */
-'use strict';
-
-/**
  * Text Area field.
  * @class
  */
 goog.module('Blockly.FieldMultilineInput');
 
-const Css = goog.require('Blockly.Css');
-const WidgetDiv = goog.require('Blockly.WidgetDiv');
-const aria = goog.require('Blockly.utils.aria');
-const dom = goog.require('Blockly.utils.dom');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const {FieldTextInput} = goog.require('Blockly.FieldTextInput');
-const {Field} = goog.require('Blockly.Field');
-const {KeyCodes} = goog.require('Blockly.utils.KeyCodes');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import Css from 'Blockly.Css';
+import WidgetDiv from 'Blockly.WidgetDiv';
+import aria from 'Blockly.utils.aria';
+import dom from 'Blockly.utils.dom';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import userAgent from 'Blockly.utils.userAgent';
+import {FieldTextInput} from 'Blockly.FieldTextInput';
+import {Field} from 'Blockly.Field';
+import {KeyCodes} from 'Blockly.utils.KeyCodes';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

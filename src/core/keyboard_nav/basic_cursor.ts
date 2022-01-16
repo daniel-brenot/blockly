@@ -5,22 +5,16 @@
  */
 
 /**
- * @fileoverview The class representing a basic cursor.
- * Used to demo switching between different cursors.
- */
-'use strict';
-
-/**
  * The class representing a basic cursor.
  * Used to demo switching between different cursors.
  * @class
  */
 goog.module('Blockly.BasicCursor');
 
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const {ASTNode} = goog.require('Blockly.ASTNode');
-const {Cursor} = goog.require('Blockly.Cursor');
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {ASTNode} from 'Blockly.ASTNode';
+import {Cursor} from 'Blockly.Cursor';
 
 
 /**

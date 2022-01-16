@@ -5,14 +5,6 @@
  */
 
 /**
- * @fileoverview Extensions are functions that help initialize blocks, usually
- *      adding dynamic behavior such as onchange handlers and mutators. These
- *      are applied using Block.applyExtension(), or the JSON "extensions"
- *      array attribute.
- */
-'use strict';
-
-/**
  * Extensions are functions that help initialize blocks, usually
  *      adding dynamic behavior such as onchange handlers and mutators. These
  *      are applied using Block.applyExtension(), or the JSON "extensions"
@@ -21,9 +13,8 @@
  */
 goog.module('Blockly.Extensions');
 
-const parsing = goog.require('Blockly.utils.parsing');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
+import parsing from 'Blockly.utils.parsing';
+import {Block} from 'Blockly.Block';
 goog.requireType('Blockly.Mutator');
 
 

@@ -5,46 +5,32 @@
  */
 
 /**
- * @fileoverview Object representing a code comment on a rendered workspace.
- */
-'use strict';
-
-/**
  * Object representing a code comment on a rendered workspace.
  * @class
  */
 goog.module('Blockly.WorkspaceCommentSvg');
 
-const ContextMenu = goog.require('Blockly.ContextMenu');
-const Css = goog.require('Blockly.Css');
-const Touch = goog.require('Blockly.Touch');
-const browserEvents = goog.require('Blockly.browserEvents');
-const common = goog.require('Blockly.common');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const svgMath = goog.require('Blockly.utils.svgMath');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockDragSurfaceSvg} = goog.requireType('Blockly.BlockDragSurfaceSvg');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {IBoundedElement} = goog.require('Blockly.IBoundedElement');
-/* eslint-disable-next-line no-unused-vars */
-const {IBubble} = goog.require('Blockly.IBubble');
-/* eslint-disable-next-line no-unused-vars */
-const {ICopyable} = goog.require('Blockly.ICopyable');
-const {Rect} = goog.require('Blockly.utils.Rect');
-const {Svg} = goog.require('Blockly.utils.Svg');
-const {WorkspaceComment} = goog.require('Blockly.WorkspaceComment');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import ContextMenu from 'Blockly.ContextMenu';
+import Css from 'Blockly.Css';
+import Touch from 'Blockly.Touch';
+import browserEvents from 'Blockly.browserEvents';
+import common from 'Blockly.common';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import svgMath from 'Blockly.utils.svgMath';
+import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {IBoundedElement} from 'Blockly.IBoundedElement';
+import {IBubble} from 'Blockly.IBubble';
+import {ICopyable} from 'Blockly.ICopyable';
+import {Rect} from 'Blockly.utils.Rect';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceComment} from 'Blockly.WorkspaceComment';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.CommentCreate');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.CommentDelete');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.CommentMove');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.Selected');
 
 

@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview A mapping of block type names to block prototype objects.
- */
-'use strict';
-
-/**
  * A mapping of block type names to block prototype objects.
  * @namespace Blockly.blocks
  */

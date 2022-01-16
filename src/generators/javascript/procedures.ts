@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating JavaScript for procedure blocks.
- */
-'use strict';
-
 goog.module('Blockly.JavaScript.procedures');
 
-const JavaScript = goog.require('Blockly.JavaScript');
-const {NameType} = goog.require('Blockly.Names');
+import JavaScript from 'Blockly.JavaScript';
+import {NameType} from 'Blockly.Names';
 
 
 JavaScript['procedures_defreturn'] = function(block) {

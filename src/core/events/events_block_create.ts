@@ -5,24 +5,18 @@
  */
 
 /**
- * @fileoverview Class for a block creation event.
- */
-'use strict';
-
-/**
  * Class for a block creation event.
  * @class
  */
 goog.module('Blockly.Events.BlockCreate');
 
-const Xml = goog.require('Blockly.Xml');
-const blocks = goog.require('Blockly.serialization.blocks');
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const {BlockBase} = goog.require('Blockly.Events.BlockBase');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
+import Xml from 'Blockly.Xml';
+import blocks from 'Blockly.serialization.blocks';
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {BlockBase} from 'Blockly.Events.BlockBase';
+import {Block} from 'Blockly.Block';
 
 
 /**

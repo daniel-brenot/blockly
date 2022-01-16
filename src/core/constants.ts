@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Blockly constants.
- */
-'use strict';
-
-/**
  * Blockly constants.
  * @namespace Blockly.constants
  */

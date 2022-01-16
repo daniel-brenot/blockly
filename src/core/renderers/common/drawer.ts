@@ -5,33 +5,21 @@
  */
 
 /**
- * @fileoverview Methods for graphically rendering a block as SVG.
- */
-'use strict';
-
-/**
  * Methods for graphically rendering a block as SVG.
  * @class
  */
 goog.module('Blockly.blockRendering.Drawer');
 
-const debug = goog.require('Blockly.blockRendering.debug');
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.blockRendering.Field');
-/* eslint-disable-next-line no-unused-vars */
-const {Icon} = goog.requireType('Blockly.blockRendering.Icon');
-/* eslint-disable-next-line no-unused-vars */
-const {InlineInput} = goog.requireType('Blockly.blockRendering.InlineInput');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderInfo} = goog.requireType('Blockly.blockRendering.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {Row} = goog.requireType('Blockly.blockRendering.Row');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import debug from 'Blockly.blockRendering.debug';
+import svgPaths from 'Blockly.utils.svgPaths';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {Field} from 'Blockly.blockRendering.Field';
+import {Icon} from 'Blockly.blockRendering.Icon';
+import {InlineInput} from 'Blockly.blockRendering.InlineInput';
+import {RenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {Row} from 'Blockly.blockRendering.Row';
+import {Types} from 'Blockly.blockRendering.Types';
 
 
 /**

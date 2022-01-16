@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview Dropdown input field.  Used for editable titles and variables.
- * In the interests of a consistent UI, the toolbox shares some functions and
- * properties with the context menu.
- */
-'use strict';
-
-/**
  * Dropdown input field.  Used for editable titles and variables.
  * In the interests of a consistent UI, the toolbox shares some functions and
  * properties with the context menu.
@@ -19,19 +12,19 @@
  */
 goog.module('Blockly.FieldDropdown');
 
-const aria = goog.require('Blockly.utils.aria');
-const dom = goog.require('Blockly.utils.dom');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const utilsString = goog.require('Blockly.utils.string');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
-const {Field} = goog.require('Blockly.Field');
-const {MenuItem} = goog.require('Blockly.MenuItem');
-const {Menu} = goog.require('Blockly.Menu');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import aria from 'Blockly.utils.aria';
+import dom from 'Blockly.utils.dom';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import userAgent from 'Blockly.utils.userAgent';
+import utilsString from 'Blockly.utils.string';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {DropDownDiv} from 'Blockly.DropDownDiv';
+import {Field} from 'Blockly.Field';
+import {MenuItem} from 'Blockly.MenuItem';
+import {Menu} from 'Blockly.Menu';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

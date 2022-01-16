@@ -4,16 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Python for procedure blocks.
- */
-'use strict';
-
 goog.module('Blockly.Python.procedures');
 
-const Python = goog.require('Blockly.Python');
-const Variables = goog.require('Blockly.Variables');
-const {NameType} = goog.require('Blockly.Names');
+import Python from 'Blockly.Python';
+import Variables from 'Blockly.Variables';
+import {NameType} from 'Blockly.Names';
 
 
 Python['procedures_defreturn'] = function(block) {

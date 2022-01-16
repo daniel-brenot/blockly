@@ -5,20 +5,14 @@
  */
 
 /**
- * @fileoverview An object representing the top row of a rendered block.
- */
-'use strict';
-
-/**
  * An object representing the top row of a rendered block.
  * @class
  */
 goog.module('Blockly.zelos.TopRow');
 
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-const {TopRow: BaseTopRow} = goog.require('Blockly.blockRendering.TopRow');
+import object from 'Blockly.utils.object';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {TopRow: BaseTopRow} from 'Blockly.blockRendering.TopRow';
 
 
 /**

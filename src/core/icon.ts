@@ -5,26 +5,19 @@
  */
 
 /**
- * @fileoverview Object representing an icon on a block.
- */
-'use strict';
-
-/**
  * Object representing an icon on a block.
  * @class
  */
 goog.module('Blockly.Icon');
 
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const svgMath = goog.require('Blockly.utils.svgMath');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Bubble} = goog.requireType('Blockly.Bubble');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {Size} = goog.require('Blockly.utils.Size');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import svgMath from 'Blockly.utils.svgMath';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Bubble} from 'Blockly.Bubble';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Size} from 'Blockly.utils.Size';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

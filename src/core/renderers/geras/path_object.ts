@@ -16,15 +16,13 @@
  */
 goog.module('Blockly.geras.PathObject');
 
-const color = goog.require('Blockly.utils.color');
-const dom = goog.require('Blockly.utils.dom');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.geras.ConstantProvider');
-const {PathObject: BasePathObject} = goog.require('Blockly.blockRendering.PathObject');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
+import color from 'Blockly.utils.color';
+import dom from 'Blockly.utils.dom';
+import object from 'Blockly.utils.object';
+import {ConstantProvider} from 'Blockly.geras.ConstantProvider';
+import {PathObject: BasePathObject} from 'Blockly.blockRendering.PathObject';
+import {Svg} from 'Blockly.utils.Svg';
+import {Theme} from 'Blockly.Theme';
 
 
 /**

@@ -4,11 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Methods for graphically rendering a marker as SVG.
- */
-'use strict';
-
 
 /**
  * Methods for graphically rendering a marker as SVG.
@@ -16,29 +11,20 @@
  */
 goog.module('Blockly.blockRendering.MarkerSvg');
 
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-const {ASTNode} = goog.require('Blockly.ASTNode');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
-/* eslint-disable-next-line no-unused-vars */
-const {IASTNodeLocationSvg} = goog.requireType('Blockly.IASTNodeLocationSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Marker} = goog.requireType('Blockly.Marker');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import svgPaths from 'Blockly.utils.svgPaths';
+import {ASTNode} from 'Blockly.ASTNode';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {Connection} from 'Blockly.Connection';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {Field} from 'Blockly.Field';
+import {IASTNodeLocationSvg} from 'Blockly.IASTNodeLocationSvg';
+import {Marker} from 'Blockly.Marker';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.MarkerMove');
 
 

@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Utility methods related to arrays.
- */
-'use strict';
-
-/**
  * @namespace Blockly.utils.array
  */
 goog.module('Blockly.utils.array');

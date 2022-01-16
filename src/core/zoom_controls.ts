@@ -5,34 +5,25 @@
  */
 
 /**
- * @fileoverview Object representing a zoom icons.
- */
-'use strict';
-
-/**
  * Object representing a zoom icons.
  * @class
  */
 goog.module('Blockly.ZoomControls');
 
-const Css = goog.require('Blockly.Css');
-const Touch = goog.require('Blockly.Touch');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const internalConstants = goog.require('Blockly.internalConstants');
-const uiPosition = goog.require('Blockly.uiPosition');
-const {ComponentManager} = goog.require('Blockly.ComponentManager');
-/* eslint-disable-next-line no-unused-vars */
-const {IPositionable} = goog.require('Blockly.IPositionable');
-/* eslint-disable-next-line no-unused-vars */
-const {MetricsManager} = goog.requireType('Blockly.MetricsManager');
-const {Rect} = goog.require('Blockly.utils.Rect');
-const {Size} = goog.require('Blockly.utils.Size');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import Css from 'Blockly.Css';
+import Touch from 'Blockly.Touch';
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import internalConstants from 'Blockly.internalConstants';
+import uiPosition from 'Blockly.uiPosition';
+import {ComponentManager} from 'Blockly.ComponentManager';
+import {IPositionable} from 'Blockly.IPositionable';
+import {MetricsManager} from 'Blockly.MetricsManager';
+import {Rect} from 'Blockly.utils.Rect';
+import {Size} from 'Blockly.utils.Size';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.Click');
 
 

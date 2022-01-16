@@ -5,22 +5,14 @@
  */
 
 /**
- * @fileoverview Object in charge of managing markers and the cursor.
- */
-'use strict';
-
-/**
  * Object in charge of managing markers and the cursor.
  * @class
  */
 goog.module('Blockly.MarkerManager');
 
-/* eslint-disable-next-line no-unused-vars */
-const {Cursor} = goog.requireType('Blockly.Cursor');
-/* eslint-disable-next-line no-unused-vars */
-const {Marker} = goog.requireType('Blockly.Marker');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import {Cursor} from 'Blockly.Cursor';
+import {Marker} from 'Blockly.Marker';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

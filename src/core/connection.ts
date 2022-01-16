@@ -5,31 +5,20 @@
  */
 
 /**
- * @fileoverview Components for creating connections between blocks.
- */
-'use strict';
-
-/**
  * Components for creating connections between blocks.
  * @class
  */
 goog.module('Blockly.Connection');
 
-const Xml = goog.require('Blockly.Xml');
-const blocks = goog.require('Blockly.serialization.blocks');
-const eventUtils = goog.require('Blockly.Events.utils');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-/* eslint-disable-next-line no-unused-vars */
-const {IASTNodeLocationWithBlock} = goog.require('Blockly.IASTNodeLocationWithBlock');
-/* eslint-disable-next-line no-unused-vars */
-const {IConnectionChecker} = goog.requireType('Blockly.IConnectionChecker');
-/* eslint-disable-next-line no-unused-vars */
-const {Input} = goog.requireType('Blockly.Input');
-/** @suppress {extraRequire} */
+import Xml from 'Blockly.Xml';
+import blocks from 'Blockly.serialization.blocks';
+import eventUtils from 'Blockly.Events.utils';
+import {Block} from 'Blockly.Block';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {IASTNodeLocationWithBlock} from 'Blockly.IASTNodeLocationWithBlock';
+import {IConnectionChecker} from 'Blockly.IConnectionChecker';
+import {Input} from 'Blockly.Input';
 goog.require('Blockly.Events.BlockMove');
-/** @suppress {extraRequire} */
 goog.require('Blockly.constants');
 
 

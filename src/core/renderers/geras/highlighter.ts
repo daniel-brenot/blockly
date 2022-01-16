@@ -5,28 +5,18 @@
  */
 
 /**
- * @fileoverview Methods for adding highlights on block, for rendering in
- * compatibility mode.
- */
-'use strict';
-
-/**
  * Methods for adding highlights on block, for rendering in
  * compatibility mode.
  * @class
  */
 goog.module('Blockly.geras.Highlighter');
 
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {HighlightConstantProvider} = goog.requireType('Blockly.geras.HighlightConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderInfo} = goog.requireType('Blockly.geras.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {Renderer} = goog.requireType('Blockly.geras.Renderer');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import svgPaths from 'Blockly.utils.svgPaths';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {HighlightConstantProvider} from 'Blockly.geras.HighlightConstantProvider';
+import {RenderInfo} from 'Blockly.geras.RenderInfo';
+import {Renderer} from 'Blockly.geras.Renderer';
+import {Types} from 'Blockly.blockRendering.Types';
 
 
 /**

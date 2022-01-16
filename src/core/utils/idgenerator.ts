@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Generators for unique IDs.
- */
-'use strict';
-
-/**
  * Generators for unique IDs.
  * @namespace Blockly.utils.idGenerator
  */

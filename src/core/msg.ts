@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Empty name space for the Message singleton.
- */
-'use strict';
-
-/**
  * Empty name space for the Message singleton.
  * @namespace Blockly.Msg
  */

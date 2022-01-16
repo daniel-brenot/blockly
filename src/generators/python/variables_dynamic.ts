@@ -4,15 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Python for dynamic variable blocks.
- */
-'use strict';
-
 goog.module('Blockly.Python.variablesDynamic');
 
-const Python = goog.require('Blockly.Python');
-/** @suppress {extraRequire} */
+import Python from 'Blockly.Python';
 goog.require('Blockly.Python.variables');
 
 

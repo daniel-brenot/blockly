@@ -5,33 +5,25 @@
  */
 
 /**
- * @fileoverview Components for creating connections between blocks.
- */
-'use strict';
-
-/**
  * Components for creating connections between blocks.
  * @class
  */
 goog.module('Blockly.RenderedConnection');
 
-const common = goog.require('Blockly.common');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const internalConstants = goog.require('Blockly.internalConstants');
-const object = goog.require('Blockly.utils.object');
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-const svgMath = goog.require('Blockly.utils.svgMath');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {ConnectionDB} = goog.requireType('Blockly.ConnectionDB');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-const {Connection} = goog.require('Blockly.Connection');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import common from 'Blockly.common';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import internalConstants from 'Blockly.internalConstants';
+import object from 'Blockly.utils.object';
+import svgPaths from 'Blockly.utils.svgPaths';
+import svgMath from 'Blockly.utils.svgMath';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Block} from 'Blockly.Block';
+import {ConnectionDB} from 'Blockly.ConnectionDB';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {Connection} from 'Blockly.Connection';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

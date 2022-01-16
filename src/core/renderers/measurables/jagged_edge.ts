@@ -16,11 +16,10 @@
  */
 goog.module('Blockly.blockRendering.JaggedEdge');
 
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-const {Measurable} = goog.require('Blockly.blockRendering.Measurable');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import object from 'Blockly.utils.object';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {Measurable} from 'Blockly.blockRendering.Measurable';
+import {Types} from 'Blockly.blockRendering.Types';
 
 
 /**

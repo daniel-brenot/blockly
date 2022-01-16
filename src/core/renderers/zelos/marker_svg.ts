@@ -5,32 +5,21 @@
  */
 
 /**
- * @fileoverview Methods for graphically rendering a marker as SVG.
- */
-'use strict';
-
-/**
  * Methods for graphically rendering a marker as SVG.
  * @class
  */
 goog.module('Blockly.zelos.MarkerSvg');
 
-const dom = goog.require('Blockly.utils.dom');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {ASTNode} = goog.requireType('Blockly.ASTNode');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-const {MarkerSvg: BaseMarkerSvg} = goog.require('Blockly.blockRendering.MarkerSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Marker} = goog.requireType('Blockly.Marker');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import dom from 'Blockly.utils.dom';
+import object from 'Blockly.utils.object';
+import {ASTNode} from 'Blockly.ASTNode';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Connection} from 'Blockly.Connection';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {MarkerSvg: BaseMarkerSvg} from 'Blockly.blockRendering.MarkerSvg';
+import {Marker} from 'Blockly.Marker';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

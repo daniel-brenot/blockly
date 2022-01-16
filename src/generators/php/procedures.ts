@@ -4,16 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating PHP for procedure blocks.
- */
-'use strict';
-
 goog.module('Blockly.PHP.procedures');
 
-const PHP = goog.require('Blockly.PHP');
-const Variables = goog.require('Blockly.Variables');
-const {NameType} = goog.require('Blockly.Names');
+import PHP from 'Blockly.PHP';
+import Variables from 'Blockly.Variables';
+import {NameType} from 'Blockly.Names';
 
 
 PHP['procedures_defreturn'] = function(block) {

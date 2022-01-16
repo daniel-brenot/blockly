@@ -5,44 +5,30 @@
  */
 
 /**
- * @fileoverview Base renderer.
- */
-'use strict';
-
-/**
  * Base renderer.
  * @class
  */
 goog.module('Blockly.blockRendering.Renderer');
 
-const debug = goog.require('Blockly.blockRendering.debug');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-const {Connection} = goog.require('Blockly.Connection');
-const {ConstantProvider} = goog.require('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {Debug} = goog.requireType('Blockly.blockRendering.Debug');
-const {Drawer} = goog.require('Blockly.blockRendering.Drawer');
-/* eslint-disable-next-line no-unused-vars */
-const {IPathObject} = goog.requireType('Blockly.blockRendering.IPathObject');
-/* eslint-disable-next-line no-unused-vars */
-const {IRegistrable} = goog.require('Blockly.IRegistrable');
-const {InsertionMarkerManager} = goog.require('Blockly.InsertionMarkerManager');
-const {MarkerSvg} = goog.require('Blockly.blockRendering.MarkerSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Marker} = goog.requireType('Blockly.Marker');
-const {PathObject} = goog.require('Blockly.blockRendering.PathObject');
-const {RenderInfo} = goog.require('Blockly.blockRendering.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import debug from 'Blockly.blockRendering.debug';
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Block} from 'Blockly.Block';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {Connection} from 'Blockly.Connection';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {Debug} from 'Blockly.blockRendering.Debug';
+import {Drawer} from 'Blockly.blockRendering.Drawer';
+import {IPathObject} from 'Blockly.blockRendering.IPathObject';
+import {IRegistrable} from 'Blockly.IRegistrable';
+import {InsertionMarkerManager} from 'Blockly.InsertionMarkerManager';
+import {MarkerSvg} from 'Blockly.blockRendering.MarkerSvg';
+import {Marker} from 'Blockly.Marker';
+import {PathObject} from 'Blockly.blockRendering.PathObject';
+import {RenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {Theme} from 'Blockly.Theme';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

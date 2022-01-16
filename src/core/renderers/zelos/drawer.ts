@@ -5,28 +5,19 @@
  */
 
 /**
- * @fileoverview Zelos renderer.
- */
-'use strict';
-
-/**
  * Zelos renderer.
  * @class
  */
 goog.module('Blockly.zelos.Drawer');
 
-const debug = goog.require('Blockly.blockRendering.debug');
-const object = goog.require('Blockly.utils.object');
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {Drawer: BaseDrawer} = goog.require('Blockly.blockRendering.Drawer');
-/* eslint-disable-next-line no-unused-vars */
-const {PathObject} = goog.requireType('Blockly.zelos.PathObject');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderInfo} = goog.requireType('Blockly.zelos.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {Row} = goog.requireType('Blockly.blockRendering.Row');
+import debug from 'Blockly.blockRendering.debug';
+import object from 'Blockly.utils.object';
+import svgPaths from 'Blockly.utils.svgPaths';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Drawer: BaseDrawer} from 'Blockly.blockRendering.Drawer';
+import {PathObject} from 'Blockly.zelos.PathObject';
+import {RenderInfo} from 'Blockly.zelos.RenderInfo';
+import {Row} from 'Blockly.blockRendering.Row';
 
 
 /**

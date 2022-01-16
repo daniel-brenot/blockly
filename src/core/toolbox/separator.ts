@@ -5,25 +5,18 @@
  */
 
 /**
- * @fileoverview A separator used for separating toolbox categories.
- */
-'use strict';
-
-/**
  * A separator used for separating toolbox categories.
  * @class
  */
 goog.module('Blockly.ToolboxSeparator');
 
-const Css = goog.require('Blockly.Css');
-const dom = goog.require('Blockly.utils.dom');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const toolbox = goog.requireType('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {IToolbox} = goog.requireType('Blockly.IToolbox');
-const {ToolboxItem} = goog.require('Blockly.ToolboxItem');
+import Css from 'Blockly.Css';
+import dom from 'Blockly.utils.dom';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import toolbox from 'Blockly.utils.toolbox';
+import {IToolbox} from 'Blockly.IToolbox';
+import {ToolboxItem} from 'Blockly.ToolboxItem';
 
 
 /**

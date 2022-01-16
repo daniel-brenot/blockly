@@ -5,20 +5,15 @@
  */
 
 /**
- * @fileoverview Re-exports of Blockly.minimalist.* modules.
- */
-'use strict';
-
-/**
  * Re-exports of Blockly.minimalist.* modules.
  * @namespace Blockly.minimalist
  */
 goog.module('Blockly.minimalist');
 
-const {ConstantProvider} = goog.require('Blockly.minimalist.ConstantProvider');
-const {Drawer} = goog.require('Blockly.minimalist.Drawer');
-const {RenderInfo} = goog.require('Blockly.minimalist.RenderInfo');
-const {Renderer} = goog.require('Blockly.minimalist.Renderer');
+import {ConstantProvider} from 'Blockly.minimalist.ConstantProvider';
+import {Drawer} from 'Blockly.minimalist.Drawer';
+import {RenderInfo} from 'Blockly.minimalist.RenderInfo';
+import {Renderer} from 'Blockly.minimalist.Renderer';
 
 exports.ConstantProvider = ConstantProvider;
 exports.Drawer = Drawer;

@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating JavaScript for logic blocks.
- */
-'use strict';
-
 goog.module('Blockly.JavaScript.logic');
 
-const JavaScript = goog.require('Blockly.JavaScript');
+import JavaScript from 'Blockly.JavaScript';
 
 
 JavaScript['controls_if'] = function(block) {

@@ -5,38 +5,28 @@
  */
 
 /**
- * @fileoverview Makecode/scratch-style renderer.
- * Zelos: spirit of eager rivalry, emulation, envy, jealousy, and zeal.
- */
-'use strict';
-
-/**
  * Makecode/scratch-style renderer.
  * @class
  */
 goog.module('Blockly.zelos.RenderInfo');
 
-const {Align} = goog.require('Blockly.Input');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {BottomRow} = goog.require('Blockly.zelos.BottomRow');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.zelos.ConstantProvider');
-const {FieldImage} = goog.require('Blockly.FieldImage');
-const {FieldLabel} = goog.require('Blockly.FieldLabel');
-const {FieldTextInput} = goog.require('Blockly.FieldTextInput');
-const {InRowSpacer} = goog.require('Blockly.blockRendering.InRowSpacer');
-/* eslint-disable-next-line no-unused-vars */
-const {Measurable} = goog.requireType('Blockly.blockRendering.Measurable');
-const {RenderInfo: BaseRenderInfo} = goog.require('Blockly.blockRendering.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {Renderer} = goog.requireType('Blockly.zelos.Renderer');
-const {RightConnectionShape} = goog.require('Blockly.zelos.RightConnectionShape');
-const {StatementInput} = goog.require('Blockly.zelos.StatementInput');
-const {TopRow} = goog.require('Blockly.zelos.TopRow');
-const {Types} = goog.require('Blockly.blockRendering.Types');
-const {inputTypes} = goog.require('Blockly.inputTypes');
+import {Align} from 'Blockly.Input';
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {BottomRow} from 'Blockly.zelos.BottomRow';
+import {ConstantProvider} from 'Blockly.zelos.ConstantProvider';
+import {FieldImage} from 'Blockly.FieldImage';
+import {FieldLabel} from 'Blockly.FieldLabel';
+import {FieldTextInput} from 'Blockly.FieldTextInput';
+import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
+import {Measurable} from 'Blockly.blockRendering.Measurable';
+import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {Renderer} from 'Blockly.zelos.Renderer';
+import {RightConnectionShape} from 'Blockly.zelos.RightConnectionShape';
+import {StatementInput} from 'Blockly.zelos.StatementInput';
+import {TopRow} from 'Blockly.zelos.TopRow';
+import {Types} from 'Blockly.blockRendering.Types';
+import {inputTypes} from 'Blockly.inputTypes';
 
 
 /**

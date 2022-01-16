@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview Field.  Used for editable titles, variables, etc.
- * This is an abstract class that defines the UI on the block.  Actual
- * instances would be FieldTextInput, FieldDropdown, etc.
- */
-'use strict';
-
-/**
  * Field.  Used for editable titles, variables, etc.
  * This is an abstract class that defines the UI on the block.  Actual
  * instances would be FieldTextInput, FieldDropdown, etc.
@@ -19,46 +12,33 @@
  */
 goog.module('Blockly.Field');
 
-const Tooltip = goog.require('Blockly.Tooltip');
-const WidgetDiv = goog.require('Blockly.WidgetDiv');
-const Xml = goog.require('Blockly.Xml');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const parsing = goog.require('Blockly.utils.parsing');
-const style = goog.require('Blockly.utils.style');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const utilsXml = goog.require('Blockly.utils.xml');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
-/* eslint-disable-next-line no-unused-vars */
-const {IASTNodeLocationSvg} = goog.require('Blockly.IASTNodeLocationSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {IASTNodeLocationWithBlock} = goog.require('Blockly.IASTNodeLocationWithBlock');
-/* eslint-disable-next-line no-unused-vars */
-const {IKeyboardAccessible} = goog.require('Blockly.IKeyboardAccessible');
-/* eslint-disable-next-line no-unused-vars */
-const {IRegistrable} = goog.require('Blockly.IRegistrable');
-/* eslint-disable-next-line no-unused-vars */
-const {Input} = goog.requireType('Blockly.Input');
-const {MarkerManager} = goog.require('Blockly.MarkerManager');
-const {Rect} = goog.require('Blockly.utils.Rect');
-/* eslint-disable-next-line no-unused-vars */
-const {ShortcutRegistry} = goog.requireType('Blockly.ShortcutRegistry');
-const {Size} = goog.require('Blockly.utils.Size');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import Tooltip from 'Blockly.Tooltip';
+import WidgetDiv from 'Blockly.WidgetDiv';
+import Xml from 'Blockly.Xml';
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import parsing from 'Blockly.utils.parsing';
+import style from 'Blockly.utils.style';
+import userAgent from 'Blockly.utils.userAgent';
+import utilsXml from 'Blockly.utils.xml';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Block} from 'Blockly.Block';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {DropDownDiv} from 'Blockly.DropDownDiv';
+import {IASTNodeLocationSvg} from 'Blockly.IASTNodeLocationSvg';
+import {IASTNodeLocationWithBlock} from 'Blockly.IASTNodeLocationWithBlock';
+import {IKeyboardAccessible} from 'Blockly.IKeyboardAccessible';
+import {IRegistrable} from 'Blockly.IRegistrable';
+import {Input} from 'Blockly.Input';
+import {MarkerManager} from 'Blockly.MarkerManager';
+import {Rect} from 'Blockly.utils.Rect';
+import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
+import {Size} from 'Blockly.utils.Size';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.BlockChange');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Gesture');
 
 

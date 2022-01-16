@@ -4,25 +4,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Variable blocks for Blockly.
- * @suppress {checkTypes}
- */
-'use strict';
-
 goog.module('Blockly.blocks.variables');
 
-const ContextMenu = goog.require('Blockly.ContextMenu');
-const Extensions = goog.require('Blockly.Extensions');
-const Variables = goog.require('Blockly.Variables');
-const xmlUtils = goog.require('Blockly.utils.xml');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Msg} = goog.require('Blockly.Msg');
-const {defineBlocksWithJsonArray} = goog.require('Blockly.common');
-/** @suppress {extraRequire} */
+import ContextMenu from 'Blockly.ContextMenu';
+import Extensions from 'Blockly.Extensions';
+import Variables from 'Blockly.Variables';
+import xmlUtils from 'Blockly.utils.xml';
+import {Block} from 'Blockly.Block';
+import {Msg} from 'Blockly.Msg';
+import {defineBlocksWithJsonArray} from 'Blockly.common';
 goog.require('Blockly.FieldLabel');
-/** @suppress {extraRequire} */
 goog.require('Blockly.FieldVariable');
 
 

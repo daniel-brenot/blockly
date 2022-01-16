@@ -5,27 +5,19 @@
  */
 
 /**
- * @fileoverview Base class for comment events.
- */
-'use strict';
-
-/**
  * Base class for comment events.
  * @class
  */
 goog.module('Blockly.Events.CommentBase');
 
-const AbstractEvents = goog.require('Blockly.Events.Abstract');
-const Xml = goog.require('Blockly.Xml');
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const utilsXml = goog.require('Blockly.utils.xml');
-/* eslint-disable-next-line no-unused-vars */
-const {CommentCreate} = goog.requireType('Blockly.Events.CommentCreate');
-/* eslint-disable-next-line no-unused-vars */
-const {CommentDelete} = goog.requireType('Blockly.Events.CommentDelete');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceComment} = goog.requireType('Blockly.WorkspaceComment');
+import AbstractEvents from 'Blockly.Events.Abstract';
+import Xml from 'Blockly.Xml';
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import utilsXml from 'Blockly.utils.xml';
+import {CommentCreate} from 'Blockly.Events.CommentCreate';
+import {CommentDelete} from 'Blockly.Events.CommentDelete';
+import {WorkspaceComment} from 'Blockly.WorkspaceComment';
 
 
 /**

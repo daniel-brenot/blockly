@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview Useragent detection.
- * These methods are not specific to Blockly, and could be factored out into
- * a JavaScript framework such as Closure.
- */
-'use strict';
-
-/**
  * Useragent detection.
  * These methods are not specific to Blockly, and could be factored out into
  * a JavaScript framework such as Closure.
@@ -19,7 +12,7 @@
  */
 goog.module('Blockly.utils.userAgent');
 
-const {globalThis} = goog.require('Blockly.utils.global');
+import {globalThis} from 'Blockly.utils.global';
 
 
 /**

@@ -5,29 +5,23 @@
  */
 
 /**
- * @fileoverview Color input field.
- */
-'use strict';
-
-/**
  * Color input field.
  * @class
  */
 goog.module('Blockly.FieldColor');
 
-const Css = goog.require('Blockly.Css');
-const aria = goog.require('Blockly.utils.aria');
-const browserEvents = goog.require('Blockly.browserEvents');
-const color = goog.require('Blockly.utils.color');
-const dom = goog.require('Blockly.utils.dom');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const object = goog.require('Blockly.utils.object');
-const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
-const {Field} = goog.require('Blockly.Field');
-const {KeyCodes} = goog.require('Blockly.utils.KeyCodes');
-const {Size} = goog.require('Blockly.utils.Size');
-/** @suppress {extraRequire} */
+import Css from 'Blockly.Css';
+import aria from 'Blockly.utils.aria';
+import browserEvents from 'Blockly.browserEvents';
+import color from 'Blockly.utils.color';
+import dom from 'Blockly.utils.dom';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import idGenerator from 'Blockly.utils.idGenerator';
+import object from 'Blockly.utils.object';
+import {DropDownDiv} from 'Blockly.DropDownDiv';
+import {Field} from 'Blockly.Field';
+import {KeyCodes} from 'Blockly.utils.KeyCodes';
+import {Size} from 'Blockly.utils.Size';
 goog.require('Blockly.Events.BlockChange');
 
 

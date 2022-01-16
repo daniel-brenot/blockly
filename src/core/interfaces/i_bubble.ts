@@ -16,14 +16,10 @@
  */
 goog.module('Blockly.IBubble');
 
-/* eslint-disable-next-line no-unused-vars */
-const {BlockDragSurfaceSvg} = goog.requireType('Blockly.BlockDragSurfaceSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {IContextMenu} = goog.require('Blockly.IContextMenu');
-/* eslint-disable-next-line no-unused-vars */
-const {IDraggable} = goog.require('Blockly.IDraggable');
+import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {IContextMenu} from 'Blockly.IContextMenu';
+import {IDraggable} from 'Blockly.IDraggable';
 
 
 /**

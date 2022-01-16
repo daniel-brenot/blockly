@@ -5,42 +5,27 @@
  */
 
 /**
- * @fileoverview Object representing a workspace.
- */
-'use strict';
-
-/**
  * Object representing a workspace.
  * @class
  */
 goog.module('Blockly.Workspace');
 
-/* eslint-disable-next-line no-unused-vars */
-const Abstract = goog.requireType('Blockly.Events.Abstract');
-const arrayUtils = goog.require('Blockly.utils.array');
-const eventUtils = goog.require('Blockly.Events.utils');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const math = goog.require('Blockly.utils.math');
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const toolbox = goog.requireType('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {BlocklyOptions} = goog.requireType('Blockly.BlocklyOptions');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {ConnectionDB} = goog.requireType('Blockly.ConnectionDB');
-/* eslint-disable-next-line no-unused-vars */
-const {IASTNodeLocation} = goog.require('Blockly.IASTNodeLocation');
-/* eslint-disable-next-line no-unused-vars */
-const {IConnectionChecker} = goog.requireType('Blockly.IConnectionChecker');
-const {Options} = goog.require('Blockly.Options');
-const {VariableMap} = goog.require('Blockly.VariableMap');
-/* eslint-disable-next-line no-unused-vars */
-const {VariableModel} = goog.requireType('Blockly.VariableModel');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceComment} = goog.requireType('Blockly.WorkspaceComment');
-/** @suppress {extraRequire} */
+import Abstract from 'Blockly.Events.Abstract';
+import arrayUtils from 'Blockly.utils.array';
+import eventUtils from 'Blockly.Events.utils';
+import idGenerator from 'Blockly.utils.idGenerator';
+import math from 'Blockly.utils.math';
+import registry from 'Blockly.registry';
+import toolbox from 'Blockly.utils.toolbox';
+import {BlocklyOptions} from 'Blockly.BlocklyOptions';
+import {Block} from 'Blockly.Block';
+import {ConnectionDB} from 'Blockly.ConnectionDB';
+import {IASTNodeLocation} from 'Blockly.IASTNodeLocation';
+import {IConnectionChecker} from 'Blockly.IConnectionChecker';
+import {Options} from 'Blockly.Options';
+import {VariableMap} from 'Blockly.VariableMap';
+import {VariableModel} from 'Blockly.VariableModel';
+import {WorkspaceComment} from 'Blockly.WorkspaceComment';
 goog.require('Blockly.ConnectionChecker');
 
 

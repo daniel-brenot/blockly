@@ -5,34 +5,21 @@
  */
 
 /**
- * @fileoverview The class representing an AST node.
- * Used to traverse the Blockly AST.
- */
-'use strict';
-
-/**
  * The class representing an AST node.
  * Used to traverse the Blockly AST.
  * @class
  */
 goog.module('Blockly.ASTNode');
 
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
-/* eslint-disable-next-line no-unused-vars */
-const {IASTNodeLocationWithBlock} = goog.requireType('Blockly.IASTNodeLocationWithBlock');
-/* eslint-disable-next-line no-unused-vars */
-const {IASTNodeLocation} = goog.requireType('Blockly.IASTNodeLocation');
-/* eslint-disable-next-line no-unused-vars */
-const {Input} = goog.requireType('Blockly.Input');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import {Block} from 'Blockly.Block';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {Connection} from 'Blockly.Connection';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Field} from 'Blockly.Field';
+import {IASTNodeLocationWithBlock} from 'Blockly.IASTNodeLocationWithBlock';
+import {IASTNodeLocation} from 'Blockly.IASTNodeLocation';
+import {Input} from 'Blockly.Input';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

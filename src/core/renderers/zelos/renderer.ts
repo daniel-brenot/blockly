@@ -5,36 +5,26 @@
  */
 
 /**
- * @fileoverview Zelos renderer.
- */
-'use strict';
-
-/**
  * Zelos renderer.
  * @class
  */
 goog.module('Blockly.zelos.Renderer');
 
-const blockRendering = goog.require('Blockly.blockRendering');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-const {ConstantProvider} = goog.require('Blockly.zelos.ConstantProvider');
-const {Drawer} = goog.require('Blockly.zelos.Drawer');
-const {InsertionMarkerManager} = goog.require('Blockly.InsertionMarkerManager');
-const {MarkerSvg} = goog.require('Blockly.zelos.MarkerSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Marker} = goog.requireType('Blockly.Marker');
-const {PathObject} = goog.require('Blockly.zelos.PathObject');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderInfo: BaseRenderInfo} = goog.requireType('Blockly.blockRendering.RenderInfo');
-const {RenderInfo} = goog.require('Blockly.zelos.RenderInfo');
-const {Renderer: BaseRenderer} = goog.require('Blockly.blockRendering.Renderer');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import blockRendering from 'Blockly.blockRendering';
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {ConstantProvider} from 'Blockly.zelos.ConstantProvider';
+import {Drawer} from 'Blockly.zelos.Drawer';
+import {InsertionMarkerManager} from 'Blockly.InsertionMarkerManager';
+import {MarkerSvg} from 'Blockly.zelos.MarkerSvg';
+import {Marker} from 'Blockly.Marker';
+import {PathObject} from 'Blockly.zelos.PathObject';
+import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {RenderInfo} from 'Blockly.zelos.RenderInfo';
+import {Renderer: BaseRenderer} from 'Blockly.blockRendering.Renderer';
+import {Theme} from 'Blockly.Theme';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

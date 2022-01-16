@@ -16,18 +16,12 @@
  */
 goog.module('Blockly.IFlyout');
 
-/* eslint-disable-next-line no-unused-vars */
-const toolbox = goog.requireType('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {IRegistrable} = goog.require('Blockly.IRegistrable');
-/* eslint-disable-next-line no-unused-vars */
-const {Svg} = goog.requireType('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import toolbox from 'Blockly.utils.toolbox';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {IRegistrable} from 'Blockly.IRegistrable';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

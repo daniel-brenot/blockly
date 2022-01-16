@@ -5,49 +5,34 @@
  */
 
 /**
- * @fileoverview Object representing a trash can icon.
- */
-'use strict';
-
-/**
  * Object representing a trash can icon.
  * @class
  */
 goog.module('Blockly.Trashcan');
 
-/* eslint-disable-next-line no-unused-vars */
-const Abstract = goog.requireType('Blockly.Events.Abstract');
-/* eslint-disable-next-line no-unused-vars */
-const blocks = goog.requireType('Blockly.serialization.blocks');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const internalConstants = goog.require('Blockly.internalConstants');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const toolbox = goog.require('Blockly.utils.toolbox');
-const uiPosition = goog.require('Blockly.uiPosition');
-/* eslint-disable-next-line no-unused-vars */
-const {BlocklyOptions} = goog.requireType('Blockly.BlocklyOptions');
-const {ComponentManager} = goog.require('Blockly.ComponentManager');
-const {DeleteArea} = goog.require('Blockly.DeleteArea');
-/* eslint-disable-next-line no-unused-vars */
-const {IAutoHideable} = goog.require('Blockly.IAutoHideable');
-/* eslint-disable-next-line no-unused-vars */
-const {IDraggable} = goog.requireType('Blockly.IDraggable');
-/* eslint-disable-next-line no-unused-vars */
-const {IFlyout} = goog.requireType('Blockly.IFlyout');
-/* eslint-disable-next-line no-unused-vars */
-const {IPositionable} = goog.require('Blockly.IPositionable');
-/* eslint-disable-next-line no-unused-vars */
-const {MetricsManager} = goog.requireType('Blockly.MetricsManager');
-const {Options} = goog.require('Blockly.Options');
-const {Rect} = goog.require('Blockly.utils.Rect');
-const {Size} = goog.require('Blockly.utils.Size');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import Abstract from 'Blockly.Events.Abstract';
+import blocks from 'Blockly.serialization.blocks';
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import internalConstants from 'Blockly.internalConstants';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import toolbox from 'Blockly.utils.toolbox';
+import uiPosition from 'Blockly.uiPosition';
+import {BlocklyOptions} from 'Blockly.BlocklyOptions';
+import {ComponentManager} from 'Blockly.ComponentManager';
+import {DeleteArea} from 'Blockly.DeleteArea';
+import {IAutoHideable} from 'Blockly.IAutoHideable';
+import {IDraggable} from 'Blockly.IDraggable';
+import {IFlyout} from 'Blockly.IFlyout';
+import {IPositionable} from 'Blockly.IPositionable';
+import {MetricsManager} from 'Blockly.MetricsManager';
+import {Options} from 'Blockly.Options';
+import {Rect} from 'Blockly.utils.Rect';
+import {Size} from 'Blockly.utils.Size';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.TrashcanOpen');
 
 

@@ -5,23 +5,17 @@
  */
 
 /**
- * @fileoverview Contains top-level functions for serializing workspaces to
- * plain JavaScript objects.
- */
-'use strict';
-
-/**
  * Contains top-level functions for serializing workspaces to plain JavaScript
  * objects.
  * @namespace Blockly.serialization.workspaces
  */
 goog.module('Blockly.serialization.workspaces');
 
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const registry = goog.require('Blockly.registry');
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import registry from 'Blockly.registry';
 // eslint-disable-next-line no-unused-vars
-const {Workspace} = goog.require('Blockly.Workspace');
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

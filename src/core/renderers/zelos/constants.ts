@@ -5,25 +5,19 @@
  */
 
 /**
- * @fileoverview An object that provides constants for rendering blocks in Zelos
- * mode.
- */
-'use strict';
-
-/**
  * An object that provides constants for rendering blocks in Zelos
  * mode.
  * @class
  */
 goog.module('Blockly.zelos.ConstantProvider');
 
-const dom = goog.require('Blockly.utils.dom');
-const object = goog.require('Blockly.utils.object');
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-const utilsColor = goog.require('Blockly.utils.color');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-const {ConstantProvider: BaseConstantProvider} = goog.require('Blockly.blockRendering.ConstantProvider');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import dom from 'Blockly.utils.dom';
+import object from 'Blockly.utils.object';
+import svgPaths from 'Blockly.utils.svgPaths';
+import utilsColor from 'Blockly.utils.color';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {ConstantProvider: BaseConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

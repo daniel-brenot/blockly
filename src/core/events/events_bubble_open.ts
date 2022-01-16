@@ -5,22 +5,16 @@
  */
 
 /**
- * @fileoverview Events fired as a result of bubble open.
- */
-'use strict';
-
-/**
  * Events fired as a result of bubble open.
  * @class
  */
 goog.module('Blockly.Events.BubbleOpen');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {UiBase} = goog.require('Blockly.Events.UiBase');
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {UiBase} from 'Blockly.Events.UiBase';
 
 
 /**

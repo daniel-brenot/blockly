@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Block rendering debugging functionality.
- */
-'use strict';
-
-/**
  * Block rendering debugging functionality.
  * @namespace Blockly.blockRendering.debug
  */

@@ -5,20 +5,14 @@
  */
 
 /**
- * @fileoverview Abstract class for a variable event.
- */
-'use strict';
-
-/**
  * Abstract class for a variable event.
  * @class
  */
 goog.module('Blockly.Events.VarBase');
 
-const Abstract = goog.require('Blockly.Events.Abstract');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {VariableModel} = goog.requireType('Blockly.VariableModel');
+import Abstract from 'Blockly.Events.Abstract';
+import object from 'Blockly.utils.object';
+import {VariableModel} from 'Blockly.VariableModel';
 
 
 /**

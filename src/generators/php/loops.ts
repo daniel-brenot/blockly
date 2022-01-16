@@ -4,16 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating PHP for loop blocks.
- */
-'use strict';
-
 goog.module('Blockly.PHP.loops');
 
-const PHP = goog.require('Blockly.PHP');
-const stringUtils = goog.require('Blockly.utils.string');
-const {NameType} = goog.require('Blockly.Names');
+import PHP from 'Blockly.PHP';
+import stringUtils from 'Blockly.utils.string';
+import {NameType} from 'Blockly.Names';
 
 
 PHP['controls_repeat_ext'] = function(block) {

@@ -5,19 +5,13 @@
  */
 
 /**
- * @fileoverview Classic theme.
- * Contains multi-colored border to create shadow effect.
- */
-'use strict';
-
-/**
  * Classic theme.
  * Contains multi-colored border to create shadow effect.
  * @namespace Blockly.Themes.Classic
  */
 goog.module('Blockly.Themes.Classic');
 
-const {Theme} = goog.require('Blockly.Theme');
+import {Theme} from 'Blockly.Theme';
 
 
 const defaultBlockStyles = {

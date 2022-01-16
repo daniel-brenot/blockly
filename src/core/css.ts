@@ -5,17 +5,12 @@
  */
 
 /**
- * @fileoverview Inject Blockly's CSS synchronously.
- */
-'use strict';
-
-/**
  * Inject Blockly's CSS synchronously.
  * @namespace Blockly.Css
  */
 goog.module('Blockly.Css');
 
-const deprecation = goog.require('Blockly.utils.deprecation');
+import deprecation from 'Blockly.utils.deprecation';
 
 
 /**

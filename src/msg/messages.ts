@@ -4,21 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview English strings.
- *
- * After modifying this file, run:
- *
- *     npm run generate:langfiles
- *
- * to regenerate json/{en,qqq,constants,synonyms}.json.
- *
- * To convert all of the json files to .js files, run:
- *
- *     npm run build:langfiles
- */
-'use strict';
-
 
 /**
  * Due to the frequency of long strings, the 80-column wrap rule need not apply

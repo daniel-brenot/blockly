@@ -5,26 +5,19 @@
  */
 
 /**
- * @fileoverview Blockly menu similar to Closure's goog.ui.Menu
- */
-'use strict';
-
-/**
  * Blockly menu similar to Closure's goog.ui.Menu
  * @class
  */
 goog.module('Blockly.Menu');
 
-const aria = goog.require('Blockly.utils.aria');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const style = goog.require('Blockly.utils.style');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {KeyCodes} = goog.require('Blockly.utils.KeyCodes');
-/* eslint-disable-next-line no-unused-vars */
-const {MenuItem} = goog.requireType('Blockly.MenuItem');
-/* eslint-disable-next-line no-unused-vars */
-const {Size} = goog.requireType('Blockly.utils.Size');
+import aria from 'Blockly.utils.aria';
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import style from 'Blockly.utils.style';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {KeyCodes} from 'Blockly.utils.KeyCodes';
+import {MenuItem} from 'Blockly.MenuItem';
+import {Size} from 'Blockly.utils.Size';
 
 
 /**

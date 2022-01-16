@@ -16,8 +16,7 @@
  */
 goog.module('Blockly.IRegistrableField');
 
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
+import {Field} from 'Blockly.Field';
 
 
 /**

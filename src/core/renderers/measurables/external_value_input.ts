@@ -16,13 +16,11 @@
  */
 goog.module('Blockly.blockRendering.ExternalValueInput');
 
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-const {InputConnection} = goog.require('Blockly.blockRendering.InputConnection');
-/* eslint-disable-next-line no-unused-vars */
-const {Input} = goog.requireType('Blockly.Input');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import object from 'Blockly.utils.object';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {InputConnection} from 'Blockly.blockRendering.InputConnection';
+import {Input} from 'Blockly.Input';
+import {Types} from 'Blockly.blockRendering.Types';
 
 
 /**

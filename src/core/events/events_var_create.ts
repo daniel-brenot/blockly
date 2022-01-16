@@ -5,22 +5,16 @@
  */
 
 /**
- * @fileoverview Class for a variable creation event.
- */
-'use strict';
-
-/**
  * Class for a variable creation event.
  * @class
  */
 goog.module('Blockly.Events.VarCreate');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const {VarBase} = goog.require('Blockly.Events.VarBase');
-/* eslint-disable-next-line no-unused-vars */
-const {VariableModel} = goog.requireType('Blockly.VariableModel');
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {VarBase} from 'Blockly.Events.VarBase';
+import {VariableModel} from 'Blockly.VariableModel';
 
 
 /**

@@ -5,27 +5,19 @@
  */
 
 /**
- * @fileoverview Object that controls settings for the workspace.
- */
-'use strict';
-
-/**
  * Object that controls settings for the workspace.
  * @class
  */
 goog.module('Blockly.Options');
 
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const registry = goog.require('Blockly.registry');
-const toolbox = goog.require('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {BlocklyOptions} = goog.requireType('Blockly.BlocklyOptions');
-const {Classic} = goog.require('Blockly.Themes.Classic');
-/* eslint-disable-next-line no-unused-vars */
-const {Metrics} = goog.requireType('Blockly.utils.Metrics');
-const {Theme} = goog.require('Blockly.Theme');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import idGenerator from 'Blockly.utils.idGenerator';
+import registry from 'Blockly.registry';
+import toolbox from 'Blockly.utils.toolbox';
+import {BlocklyOptions} from 'Blockly.BlocklyOptions';
+import {Classic} from 'Blockly.Themes.Classic';
+import {Metrics} from 'Blockly.utils.Metrics';
+import {Theme} from 'Blockly.Theme';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

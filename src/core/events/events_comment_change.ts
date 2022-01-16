@@ -5,22 +5,16 @@
  */
 
 /**
- * @fileoverview Class for comment change event.
- */
-'use strict';
-
-/**
  * Class for comment change event.
  * @class
  */
 goog.module('Blockly.Events.CommentChange');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const {CommentBase} = goog.require('Blockly.Events.CommentBase');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceComment} = goog.requireType('Blockly.WorkspaceComment');
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {CommentBase} from 'Blockly.Events.CommentBase';
+import {WorkspaceComment} from 'Blockly.WorkspaceComment';
 
 
 /**

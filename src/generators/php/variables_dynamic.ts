@@ -4,15 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating PHP for dynamic variable blocks.
- */
-'use strict';
-
 goog.module('Blockly.PHP.variablesDynamic');
 
-const PHP = goog.require('Blockly.PHP');
-/** @suppress {extraRequire} */
+import PHP from 'Blockly.PHP';
 goog.require('Blockly.PHP.variables');
 
 

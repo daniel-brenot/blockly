@@ -4,13 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Complete helper functions for generating Python for
- *     blocks.  This is the entrypoint for python_compressed.js.
- * @suppress {extraRequire}
- */
-'use strict';
-
 goog.module('Blockly.Python.all');
 
 goog.require('Blockly.Python.color');

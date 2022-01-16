@@ -5,45 +5,40 @@
  */
 
 /**
- * @fileoverview Events fired as a result of actions in Blockly's editor.
- */
-'use strict';
-
-/**
  * Events fired as a result of actions in Blockly's editor.
  * @namespace Blockly.Events
  */
 goog.module('Blockly.Events');
 
-const Abstract = goog.require('Blockly.Events.Abstract');
-const deprecation = goog.require('Blockly.utils.deprecation');
-const eventUtils = goog.require('Blockly.Events.utils');
-const {BlockBase} = goog.require('Blockly.Events.BlockBase');
-const {BlockChange} = goog.require('Blockly.Events.BlockChange');
-const {BlockCreate} = goog.require('Blockly.Events.BlockCreate');
-const {BlockDelete} = goog.require('Blockly.Events.BlockDelete');
-const {BlockDrag} = goog.require('Blockly.Events.BlockDrag');
-const {BlockMove} = goog.require('Blockly.Events.BlockMove');
-const {BubbleOpen} = goog.require('Blockly.Events.BubbleOpen');
-const {Click} = goog.require('Blockly.Events.Click');
-const {CommentBase} = goog.require('Blockly.Events.CommentBase');
-const {CommentChange} = goog.require('Blockly.Events.CommentChange');
-const {CommentCreate} = goog.require('Blockly.Events.CommentCreate');
-const {CommentDelete} = goog.require('Blockly.Events.CommentDelete');
-const {CommentMove} = goog.require('Blockly.Events.CommentMove');
-const {FinishedLoading} = goog.require('Blockly.Events.FinishedLoading');
-const {MarkerMove} = goog.require('Blockly.Events.MarkerMove');
-const {Selected} = goog.require('Blockly.Events.Selected');
-const {ThemeChange} = goog.require('Blockly.Events.ThemeChange');
-const {ToolboxItemSelect} = goog.require('Blockly.Events.ToolboxItemSelect');
-const {TrashcanOpen} = goog.require('Blockly.Events.TrashcanOpen');
-const {UiBase} = goog.require('Blockly.Events.UiBase');
-const {Ui} = goog.require('Blockly.Events.Ui');
-const {VarBase} = goog.require('Blockly.Events.VarBase');
-const {VarCreate} = goog.require('Blockly.Events.VarCreate');
-const {VarDelete} = goog.require('Blockly.Events.VarDelete');
-const {VarRename} = goog.require('Blockly.Events.VarRename');
-const {ViewportChange} = goog.require('Blockly.Events.ViewportChange');
+import Abstract from 'Blockly.Events.Abstract';
+import deprecation from 'Blockly.utils.deprecation';
+import eventUtils from 'Blockly.Events.utils';
+import {BlockBase} from 'Blockly.Events.BlockBase';
+import {BlockChange} from 'Blockly.Events.BlockChange';
+import {BlockCreate} from 'Blockly.Events.BlockCreate';
+import {BlockDelete} from 'Blockly.Events.BlockDelete';
+import {BlockDrag} from 'Blockly.Events.BlockDrag';
+import {BlockMove} from 'Blockly.Events.BlockMove';
+import {BubbleOpen} from 'Blockly.Events.BubbleOpen';
+import {Click} from 'Blockly.Events.Click';
+import {CommentBase} from 'Blockly.Events.CommentBase';
+import {CommentChange} from 'Blockly.Events.CommentChange';
+import {CommentCreate} from 'Blockly.Events.CommentCreate';
+import {CommentDelete} from 'Blockly.Events.CommentDelete';
+import {CommentMove} from 'Blockly.Events.CommentMove';
+import {FinishedLoading} from 'Blockly.Events.FinishedLoading';
+import {MarkerMove} from 'Blockly.Events.MarkerMove';
+import {Selected} from 'Blockly.Events.Selected';
+import {ThemeChange} from 'Blockly.Events.ThemeChange';
+import {ToolboxItemSelect} from 'Blockly.Events.ToolboxItemSelect';
+import {TrashcanOpen} from 'Blockly.Events.TrashcanOpen';
+import {UiBase} from 'Blockly.Events.UiBase';
+import {Ui} from 'Blockly.Events.Ui';
+import {VarBase} from 'Blockly.Events.VarBase';
+import {VarCreate} from 'Blockly.Events.VarCreate';
+import {VarDelete} from 'Blockly.Events.VarDelete';
+import {VarRename} from 'Blockly.Events.VarRename';
+import {ViewportChange} from 'Blockly.Events.ViewportChange';
 
 
 // Events.

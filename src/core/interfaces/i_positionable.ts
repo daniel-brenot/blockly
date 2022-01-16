@@ -16,12 +16,9 @@
  */
 goog.module('Blockly.IPositionable');
 
-/* eslint-disable-next-line no-unused-vars */
-const {IComponent} = goog.require('Blockly.IComponent');
-/* eslint-disable-next-line no-unused-vars */
-const {MetricsManager} = goog.requireType('Blockly.MetricsManager');
-/* eslint-disable-next-line no-unused-vars */
-const {Rect} = goog.requireType('Blockly.utils.Rect');
+import {IComponent} from 'Blockly.IComponent';
+import {MetricsManager} from 'Blockly.MetricsManager';
+import {Rect} from 'Blockly.utils.Rect';
 
 
 /**

@@ -5,26 +5,17 @@
  */
 
 /**
- * @fileoverview Utility functions for generating executable code from
- * Blockly code.
- */
-'use strict';
-
-/**
  * Utility functions for generating executable code from
  * Blockly code.
  * @class
  */
 goog.module('Blockly.Generator');
 
-const common = goog.require('Blockly.common');
-const deprecation = goog.require('Blockly.utils.deprecation');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {Names, NameType} = goog.require('Blockly.Names');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import common from 'Blockly.common';
+import deprecation from 'Blockly.utils.deprecation';
+import {Block} from 'Blockly.Block';
+import {Names, NameType} from 'Blockly.Names';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

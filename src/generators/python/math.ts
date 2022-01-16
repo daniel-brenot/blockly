@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Python for math blocks.
- */
-'use strict';
-
 goog.module('Blockly.Python.math');
 
-const Python = goog.require('Blockly.Python');
-const {NameType} = goog.require('Blockly.Names');
+import Python from 'Blockly.Python';
+import {NameType} from 'Blockly.Names';
 
 
 // If any new block imports any library, add that library name here.

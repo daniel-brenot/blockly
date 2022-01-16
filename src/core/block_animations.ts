@@ -5,20 +5,14 @@
  */
 
 /**
- * @fileoverview Methods animating a block on connection and disconnection.
- */
-'use strict';
-
-/**
  * Methods animating a block on connection and disconnection.
  * @namespace Blockly.blockAnimations
  */
 goog.module('Blockly.blockAnimations');
 
-const dom = goog.require('Blockly.utils.dom');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import dom from 'Blockly.utils.dom';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

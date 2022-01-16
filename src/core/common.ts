@@ -5,29 +5,18 @@
  */
 
 /**
- * @fileoverview Common functions used both internally and externally, but which
- * must not be at the top level to avoid circular dependencies.
- */
-'use strict';
-
-/**
  * Common functions used both internally and externally, but which
  * must not be at the top level to avoid circular dependencies.
  * @namespace Blockly.common
  */
 goog.module('Blockly.common');
 
-const {Blocks} = goog.require('Blockly.blocks');
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-/* eslint-disable-next-line no-unused-vars */
-const {ICopyable} = goog.requireType('Blockly.ICopyable');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import {Blocks} from 'Blockly.blocks';
+import {Connection} from 'Blockly.Connection';
+import {ICopyable} from 'Blockly.ICopyable';
+import {Block} from 'Blockly.Block';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

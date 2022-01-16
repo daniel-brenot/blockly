@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Dart for variable blocks.
- */
-'use strict';
-
 goog.module('Blockly.Dart.variables');
 
-const Dart = goog.require('Blockly.Dart');
-const {NameType} = goog.require('Blockly.Names');
+import Dart from 'Blockly.Dart';
+import {NameType} from 'Blockly.Names';
 
 
 Dart['variables_get'] = function(block) {

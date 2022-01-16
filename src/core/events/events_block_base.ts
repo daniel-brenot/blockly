@@ -5,20 +5,14 @@
  */
 
 /**
- * @fileoverview Base class for all types of block events.
- */
-'use strict';
-
-/**
  * Base class for all types of block events.
  * @class
  */
 goog.module('Blockly.Events.BlockBase');
 
-const Abstract = goog.require('Blockly.Events.Abstract');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
+import Abstract from 'Blockly.Events.Abstract';
+import object from 'Blockly.utils.object';
+import {Block} from 'Blockly.Block';
 
 
 /**

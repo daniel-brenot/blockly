@@ -5,18 +5,13 @@
  */
 
 /**
- * @fileoverview Utility methods related to block and message parsing.
- */
-'use strict';
-
-/**
  * @namespace Blockly.utils.parsing
  */
 goog.module('Blockly.utils.parsing');
 
-const colorUtils = goog.require('Blockly.utils.color');
-const stringUtils = goog.require('Blockly.utils.string');
-const {Msg} = goog.require('Blockly.Msg');
+import colorUtils from 'Blockly.utils.color';
+import stringUtils from 'Blockly.utils.string';
+import {Msg} from 'Blockly.Msg';
 
 
 /**

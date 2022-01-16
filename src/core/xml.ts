@@ -5,33 +5,22 @@
  */
 
 /**
- * @fileoverview XML reader and writer.
- */
-'use strict';
-
-/**
  * XML reader and writer.
  * @namespace Blockly.Xml
  */
 goog.module('Blockly.Xml');
 
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const utilsXml = goog.require('Blockly.utils.xml');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
-const {Size} = goog.require('Blockly.utils.Size');
-/* eslint-disable-next-line no-unused-vars */
-const {VariableModel} = goog.requireType('Blockly.VariableModel');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
-const {inputTypes} = goog.require('Blockly.inputTypes');
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import utilsXml from 'Blockly.utils.xml';
+import {Block} from 'Blockly.Block';
+import {Connection} from 'Blockly.Connection';
+import {Field} from 'Blockly.Field';
+import {Size} from 'Blockly.utils.Size';
+import {VariableModel} from 'Blockly.VariableModel';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Workspace} from 'Blockly.Workspace';
+import {inputTypes} from 'Blockly.inputTypes';
 goog.requireType('Blockly.Comment');
 goog.requireType('Blockly.Variables');
 goog.requireType('Blockly.WorkspaceComment');

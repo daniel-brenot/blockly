@@ -5,31 +5,22 @@
  */
 
 /**
- * @fileoverview Object representing a map of variables and their types.
- */
-'use strict';
-
-/**
  * Object representing a map of variables and their types.
  * @class
  */
 goog.module('Blockly.VariableMap');
 
-const arrayUtils = goog.require('Blockly.utils.array');
-const dialog = goog.require('Blockly.dialog');
-const eventUtils = goog.require('Blockly.Events.utils');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Msg} = goog.require('Blockly.Msg');
-const {Names} = goog.require('Blockly.Names');
-const {VariableModel} = goog.require('Blockly.VariableModel');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
-/** @suppress {extraRequire} */
+import arrayUtils from 'Blockly.utils.array';
+import dialog from 'Blockly.dialog';
+import eventUtils from 'Blockly.Events.utils';
+import idGenerator from 'Blockly.utils.idGenerator';
+import object from 'Blockly.utils.object';
+import {Block} from 'Blockly.Block';
+import {Msg} from 'Blockly.Msg';
+import {Names} from 'Blockly.Names';
+import {VariableModel} from 'Blockly.VariableModel';
+import {Workspace} from 'Blockly.Workspace';
 goog.require('Blockly.Events.VarDelete');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.VarRename');
 
 

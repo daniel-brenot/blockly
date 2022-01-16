@@ -16,8 +16,7 @@
  */
 goog.module('Blockly.IBoundedElement');
 
-/* eslint-disable-next-line no-unused-vars */
-const {Rect} = goog.requireType('Blockly.utils.Rect');
+import {Rect} from 'Blockly.utils.Rect';
 
 
 /**

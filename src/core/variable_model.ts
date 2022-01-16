@@ -5,21 +5,14 @@
  */
 
 /**
- * @fileoverview Components for the variable model.
- */
-'use strict';
-
-/**
  * Components for the variable model.
  * @class
  */
 goog.module('Blockly.VariableModel');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
-/** @suppress {extraRequire} */
+import eventUtils from 'Blockly.Events.utils';
+import idGenerator from 'Blockly.utils.idGenerator';
+import {Workspace} from 'Blockly.Workspace';
 goog.require('Blockly.Events.VarCreate');
 
 

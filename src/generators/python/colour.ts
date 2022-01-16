@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Python for color blocks.
- */
-'use strict';
-
 goog.module('Blockly.Python.color');
 
-const Python = goog.require('Blockly.Python');
+import Python from 'Blockly.Python';
 
 
 Python['color_picker'] = function(block) {

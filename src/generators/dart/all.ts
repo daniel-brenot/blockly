@@ -4,13 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Complete helper functions for generating Dart for
- *     blocks.  This is the entrypoint for dart_compressed.js.
- * @suppress {extraRequire}
- */
-'use strict';
-
 goog.module('Blockly.Dart.all');
 
 goog.require('Blockly.Dart.color');

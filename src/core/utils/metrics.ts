@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Workspace metrics definitions.
- */
-'use strict';
-
-/**
  * Workspace metrics definitions.
  * @namespace Blockly.utils.Metrics
  */

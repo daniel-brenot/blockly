@@ -5,29 +5,20 @@
  */
 
 /**
- * @fileoverview Object representing a warning.
- */
-'use strict';
-
-/**
  * Object representing a warning.
  * @class
  */
 goog.module('Blockly.Warning');
 
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Bubble} = goog.require('Blockly.Bubble');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-const {Icon} = goog.require('Blockly.Icon');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/** @suppress {extraRequire} */
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Block} from 'Blockly.Block';
+import {Bubble} from 'Blockly.Bubble';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Icon} from 'Blockly.Icon';
+import {Svg} from 'Blockly.utils.Svg';
 goog.require('Blockly.Events.BubbleOpen');
 
 

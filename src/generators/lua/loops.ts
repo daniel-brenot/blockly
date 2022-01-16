@@ -4,16 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Lua for loop blocks.
- */
-'use strict';
-
 goog.module('Blockly.Lua.loops');
 
-const Lua = goog.require('Blockly.Lua');
-const stringUtils = goog.require('Blockly.utils.string');
-const {NameType} = goog.require('Blockly.Names');
+import Lua from 'Blockly.Lua';
+import stringUtils from 'Blockly.utils.string';
+import {NameType} from 'Blockly.Names';
 
 
 /**

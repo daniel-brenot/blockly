@@ -5,23 +5,18 @@
  */
 
 /**
- * @fileoverview Image field.  Used for pictures, icons, etc.
- */
-'use strict';
-
-/**
  * Image field.  Used for pictures, icons, etc.
  * @class
  */
 goog.module('Blockly.FieldImage');
 
-const dom = goog.require('Blockly.utils.dom');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-const {Field} = goog.require('Blockly.Field');
-const {Size} = goog.require('Blockly.utils.Size');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import dom from 'Blockly.utils.dom';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import {Field} from 'Blockly.Field';
+import {Size} from 'Blockly.utils.Size';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

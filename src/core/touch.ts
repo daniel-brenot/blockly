@@ -5,21 +5,15 @@
  */
 
 /**
- * @fileoverview Touch handling for Blockly.
- */
-'use strict';
-
-/**
  * Touch handling for Blockly.
  * @namespace Blockly.Touch
  */
 goog.module('Blockly.Touch');
 
-const internalConstants = goog.require('Blockly.internalConstants');
-const utilsString = goog.require('Blockly.utils.string');
-/* eslint-disable-next-line no-unused-vars */
-const {Gesture} = goog.requireType('Blockly.Gesture');
-const {globalThis} = goog.require('Blockly.utils.global');
+import internalConstants from 'Blockly.internalConstants';
+import utilsString from 'Blockly.utils.string';
+import {Gesture} from 'Blockly.Gesture';
+import {globalThis} from 'Blockly.utils.global';
 
 
 /**

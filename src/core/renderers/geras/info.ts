@@ -5,34 +5,24 @@
  */
 
 /**
- * @fileoverview Old (compatibility) renderer.
- * Geras: spirit of old age.
- */
-'use strict';
-
-/**
  * Old (compatibility) renderer.
  * Geras: spirit of old age.
  * @class
  */
 goog.module('Blockly.geras.RenderInfo');
 
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {ExternalValueInput} = goog.require('Blockly.blockRendering.ExternalValueInput');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.blockRendering.Field');
-const {InRowSpacer} = goog.require('Blockly.blockRendering.InRowSpacer');
-const {InlineInput} = goog.require('Blockly.geras.InlineInput');
-/* eslint-disable-next-line no-unused-vars */
-const {InputRow} = goog.requireType('Blockly.blockRendering.InputRow');
-const {RenderInfo: BaseRenderInfo} = goog.require('Blockly.blockRendering.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {Renderer} = goog.requireType('Blockly.geras.Renderer');
-const {StatementInput} = goog.require('Blockly.geras.StatementInput');
-const {Types} = goog.require('Blockly.blockRendering.Types');
-const {inputTypes} = goog.require('Blockly.inputTypes');
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ExternalValueInput} from 'Blockly.blockRendering.ExternalValueInput';
+import {Field} from 'Blockly.blockRendering.Field';
+import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
+import {InlineInput} from 'Blockly.geras.InlineInput';
+import {InputRow} from 'Blockly.blockRendering.InputRow';
+import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {Renderer} from 'Blockly.geras.Renderer';
+import {StatementInput} from 'Blockly.geras.StatementInput';
+import {Types} from 'Blockly.blockRendering.Types';
+import {inputTypes} from 'Blockly.inputTypes';
 
 
 /**

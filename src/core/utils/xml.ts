@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview XML element manipulation.
- * These methods are not specific to Blockly, and could be factored out into
- * a JavaScript framework such as Closure.
- */
-'use strict';
-
-/**
  * XML element manipulation.
  * These methods are not specific to Blockly, and could be factored out into
  * a JavaScript framework such as Closure.
@@ -19,7 +12,7 @@
  */
 goog.module('Blockly.utils.xml');
 
-const {globalThis} = goog.require('Blockly.utils.global');
+import {globalThis} from 'Blockly.utils.global';
 
 
 /**
@@ -75,10 +68,9 @@ exports.createElement = createElement;
  * @return {!Text} New DOM text node.
  * @alias Blockly.utils.xml.createTextNode
  */
-const createTextNode = function(text) {
+export function createTextNode(text) {
   return xmlDocument.createTextNode(text);
-};
-exports.createTextNode = createTextNode;
+}
 
 /**
  * Converts an XML string into a DOM tree.
@@ -87,11 +79,10 @@ exports.createTextNode = createTextNode;
  * @throws if XML doesn't parse.
  * @alias Blockly.utils.xml.textToDomDocument
  */
-const textToDomDocument = function(text) {
+export function textToDomDocument(text) {
   const oParser = new DOMParser();
   return oParser.parseFromString(text, 'text/xml');
-};
-exports.textToDomDocument = textToDomDocument;
+}
 
 /**
  * Converts a DOM structure into plain text.
@@ -100,8 +91,7 @@ exports.textToDomDocument = textToDomDocument;
  * @return {string} Text representation.
  * @alias Blockly.utils.xml.domToText
  */
-const domToText = function(dom) {
+export function domToText(dom) {
   const oSerializer = new XMLSerializer();
   return oSerializer.serializeToString(dom);
-};
-exports.domToText = domToText;
+}

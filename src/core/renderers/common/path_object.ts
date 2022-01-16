@@ -16,18 +16,13 @@
  */
 goog.module('Blockly.blockRendering.PathObject');
 
-const dom = goog.require('Blockly.utils.dom');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {IPathObject} = goog.require('Blockly.blockRendering.IPathObject');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
+import dom from 'Blockly.utils.dom';
+import {Block} from 'Blockly.Block';
+import {Connection} from 'Blockly.Connection';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {IPathObject} from 'Blockly.blockRendering.IPathObject';
+import {Svg} from 'Blockly.utils.Svg';
+import {Theme} from 'Blockly.Theme';
 
 
 /**

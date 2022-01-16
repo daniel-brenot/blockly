@@ -5,24 +5,18 @@
  */
 
 /**
- * @fileoverview Handles serializing variables to plain JavaScript objects, only
- * containing state.
- */
-'use strict';
-
-/**
  * Handles serializing variables to plain JavaScript objects, only containing
  * state.
  * @namespace Blockly.serialization.variables
  */
 goog.module('Blockly.serialization.variables');
 
-const priorities = goog.require('Blockly.serialization.priorities');
-const serializationRegistry = goog.require('Blockly.serialization.registry');
+import priorities from 'Blockly.serialization.priorities';
+import serializationRegistry from 'Blockly.serialization.registry';
 // eslint-disable-next-line no-unused-vars
-const {ISerializer} = goog.require('Blockly.serialization.ISerializer');
+import {ISerializer} from 'Blockly.serialization.ISerializer';
 // eslint-disable-next-line no-unused-vars
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

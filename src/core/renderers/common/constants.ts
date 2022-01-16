@@ -5,28 +5,21 @@
  */
 
 /**
- * @fileoverview An object that provides constants for rendering blocks.
- */
-'use strict';
-
-/**
  * An object that provides constants for rendering blocks.
  * @class
  */
 goog.module('Blockly.blockRendering.ConstantProvider');
 
-const color = goog.require('Blockly.utils.color');
-const dom = goog.require('Blockly.utils.dom');
-const object = goog.require('Blockly.utils.object');
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const parsing = goog.require('Blockly.utils.parsing');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
+import color from 'Blockly.utils.color';
+import dom from 'Blockly.utils.dom';
+import object from 'Blockly.utils.object';
+import svgPaths from 'Blockly.utils.svgPaths';
+import userAgent from 'Blockly.utils.userAgent';
+import parsing from 'Blockly.utils.parsing';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {Svg} from 'Blockly.utils.Svg';
+import {Theme} from 'Blockly.Theme';
 
 
 /**

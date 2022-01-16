@@ -14,15 +14,11 @@
  */
 goog.module('Blockly.blockRendering.Row');
 
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {InRowSpacer} = goog.requireType('Blockly.blockRendering.InRowSpacer');
-/* eslint-disable-next-line no-unused-vars */
-const {InputConnection} = goog.requireType('Blockly.blockRendering.InputConnection');
-/* eslint-disable-next-line no-unused-vars */
-const {Measurable} = goog.requireType('Blockly.blockRendering.Measurable');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
+import {InputConnection} from 'Blockly.blockRendering.InputConnection';
+import {Measurable} from 'Blockly.blockRendering.Measurable';
+import {Types} from 'Blockly.blockRendering.Types';
 
 
 /**

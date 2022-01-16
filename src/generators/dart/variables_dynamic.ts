@@ -4,15 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Dart for dynamic variable blocks.
- */
-'use strict';
-
 goog.module('Blockly.Dart.variablesDynamic');
 
-const Dart = goog.require('Blockly.Dart');
-/** @suppress {extraRequire} */
+import Dart from 'Blockly.Dart';
 goog.require('Blockly.Dart.variables');
 
 

@@ -5,27 +5,20 @@
  */
 
 /**
- * @fileoverview Class for a button in the flyout.
- */
-'use strict';
-
-/**
  * Class for a button in the flyout.
  * @class
  */
 goog.module('Blockly.FlyoutButton');
 
-const Css = goog.require('Blockly.Css');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const style = goog.require('Blockly.utils.style');
-/* eslint-disable-next-line no-unused-vars */
-const toolbox = goog.requireType('Blockly.utils.toolbox');
-const parsing = goog.require('Blockly.utils.parsing');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import Css from 'Blockly.Css';
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import style from 'Blockly.utils.style';
+import toolbox from 'Blockly.utils.toolbox';
+import parsing from 'Blockly.utils.parsing';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

@@ -4,41 +4,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Procedure blocks for Blockly.
- * @suppress {checkTypes|visibility}
- */
-'use strict';
-
 goog.module('Blockly.blocks.procedures');
 
-/* eslint-disable-next-line no-unused-vars */
-const AbstractEvent = goog.requireType('Blockly.Events.Abstract');
-const ContextMenu = goog.require('Blockly.ContextMenu');
-const Events = goog.require('Blockly.Events');
-const Procedures = goog.require('Blockly.Procedures');
-const Variables = goog.require('Blockly.Variables');
-const Xml = goog.require('Blockly.Xml');
-const internalConstants = goog.require('Blockly.internalConstants');
-const xmlUtils = goog.require('Blockly.utils.xml');
-const {Align} = goog.require('Blockly.Input');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Blocks} = goog.require('Blockly.blocks');
-/* eslint-disable-next-line no-unused-vars */
-const {FieldCheckbox} = goog.require('Blockly.FieldCheckbox');
-const {FieldLabel} = goog.require('Blockly.FieldLabel');
-const {FieldTextInput} = goog.require('Blockly.FieldTextInput');
-const {Msg} = goog.require('Blockly.Msg');
-const {Mutator} = goog.require('Blockly.Mutator');
-const {Names} = goog.require('Blockly.Names');
-/* eslint-disable-next-line no-unused-vars */
-const {VariableModel} = goog.requireType('Blockly.VariableModel');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
-/** @suppress {extraRequire} */
+import AbstractEvent from 'Blockly.Events.Abstract';
+import ContextMenu from 'Blockly.ContextMenu';
+import Events from 'Blockly.Events';
+import Procedures from 'Blockly.Procedures';
+import Variables from 'Blockly.Variables';
+import Xml from 'Blockly.Xml';
+import internalConstants from 'Blockly.internalConstants';
+import xmlUtils from 'Blockly.utils.xml';
+import {Align} from 'Blockly.Input';
+import {Block} from 'Blockly.Block';
+import {Blocks} from 'Blockly.blocks';
+import {FieldCheckbox} from 'Blockly.FieldCheckbox';
+import {FieldLabel} from 'Blockly.FieldLabel';
+import {FieldTextInput} from 'Blockly.FieldTextInput';
+import {Msg} from 'Blockly.Msg';
+import {Mutator} from 'Blockly.Mutator';
+import {Names} from 'Blockly.Names';
+import {VariableModel} from 'Blockly.VariableModel';
+import {Workspace} from 'Blockly.Workspace';
 goog.require('Blockly.Comment');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Warning');
 
 

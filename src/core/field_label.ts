@@ -5,23 +5,17 @@
  */
 
 /**
- * @fileoverview Non-editable, non-serializable text field.  Used for titles,
- *    labels, etc.
- */
-'use strict';
-
-/**
  * Non-editable, non-serializable text field.  Used for titles,
  *    labels, etc.
  * @class
  */
 goog.module('Blockly.FieldLabel');
 
-const dom = goog.require('Blockly.utils.dom');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-const {Field} = goog.require('Blockly.Field');
+import dom from 'Blockly.utils.dom';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import {Field} from 'Blockly.Field';
 
 
 /**

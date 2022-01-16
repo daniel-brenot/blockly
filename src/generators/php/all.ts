@@ -4,13 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Complete helper functions for generating PHP for
- *     blocks.  This is the entrypoint for php_compressed.js.
- * @suppress {extraRequire}
- */
-'use strict';
-
 goog.module('Blockly.PHP.all');
 
 goog.require('Blockly.PHP.color');

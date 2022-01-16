@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating PHP for color blocks.
- */
-'use strict';
-
 goog.module('Blockly.PHP.color');
 
-const PHP = goog.require('Blockly.PHP');
+import PHP from 'Blockly.PHP';
 
 
 PHP['color_picker'] = function(block) {

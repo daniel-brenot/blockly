@@ -5,46 +5,39 @@
  */
 
 /**
- * @fileoverview Utility methods.
- */
-'use strict';
-
-/**
  * Utility methods.
  * @namespace Blockly.utils
  */
 goog.module('Blockly.utils');
 
-const aria = goog.require('Blockly.utils.aria');
-const arrayUtils = goog.require('Blockly.utils.array');
-const browserEvents = goog.require('Blockly.browserEvents');
-const colorUtils = goog.require('Blockly.utils.color');
-const common = goog.require('Blockly.common');
-const deprecation = goog.require('Blockly.utils.deprecation');
-const dom = goog.require('Blockly.utils.dom');
-const extensions = goog.require('Blockly.Extensions');
-const global = goog.require('Blockly.utils.global');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const math = goog.require('Blockly.utils.math');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-const stringUtils = goog.require('Blockly.utils.string');
-const style = goog.require('Blockly.utils.style');
-const svgMath = goog.require('Blockly.utils.svgMath');
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-const toolbox = goog.require('Blockly.utils.toolbox');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const xmlUtils = goog.require('Blockly.utils.xml');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {KeyCodes} = goog.require('Blockly.utils.KeyCodes');
-const {Metrics} = goog.require('Blockly.utils.Metrics');
-const {Rect} = goog.require('Blockly.utils.Rect');
-const {Size} = goog.require('Blockly.utils.Size');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import aria from 'Blockly.utils.aria';
+import arrayUtils from 'Blockly.utils.array';
+import browserEvents from 'Blockly.browserEvents';
+import colorUtils from 'Blockly.utils.color';
+import common from 'Blockly.common';
+import deprecation from 'Blockly.utils.deprecation';
+import dom from 'Blockly.utils.dom';
+import extensions from 'Blockly.Extensions';
+import global from 'Blockly.utils.global';
+import idGenerator from 'Blockly.utils.idGenerator';
+import math from 'Blockly.utils.math';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import stringUtils from 'Blockly.utils.string';
+import style from 'Blockly.utils.style';
+import svgMath from 'Blockly.utils.svgMath';
+import svgPaths from 'Blockly.utils.svgPaths';
+import toolbox from 'Blockly.utils.toolbox';
+import userAgent from 'Blockly.utils.userAgent';
+import xmlUtils from 'Blockly.utils.xml';
+import {Block} from 'Blockly.Block';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {KeyCodes} from 'Blockly.utils.KeyCodes';
+import {Metrics} from 'Blockly.utils.Metrics';
+import {Rect} from 'Blockly.utils.Rect';
+import {Size} from 'Blockly.utils.Size';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 exports.aria = aria;

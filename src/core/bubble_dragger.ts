@@ -5,37 +5,23 @@
  */
 
 /**
- * @fileoverview Methods for dragging a bubble visually.
- */
-'use strict';
-
-/**
  * Methods for dragging a bubble visually.
  * @class
  */
 goog.module('Blockly.BubbleDragger');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const svgMath = goog.require('Blockly.utils.svgMath');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockDragSurfaceSvg} = goog.requireType('Blockly.BlockDragSurfaceSvg');
-const {ComponentManager} = goog.require('Blockly.ComponentManager');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {IBubble} = goog.requireType('Blockly.IBubble');
-/* eslint-disable-next-line no-unused-vars */
-const {IDeleteArea} = goog.requireType('Blockly.IDeleteArea');
-/* eslint-disable-next-line no-unused-vars */
-const {IDragTarget} = goog.requireType('Blockly.IDragTarget');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceCommentSvg} = goog.requireType('Blockly.WorkspaceCommentSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import eventUtils from 'Blockly.Events.utils';
+import svgMath from 'Blockly.utils.svgMath';
+import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
+import {ComponentManager} from 'Blockly.ComponentManager';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {IBubble} from 'Blockly.IBubble';
+import {IDeleteArea} from 'Blockly.IDeleteArea';
+import {IDragTarget} from 'Blockly.IDragTarget';
+import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Bubble');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.CommentMove');
-/** @suppress {extraRequire} */
 goog.require('Blockly.constants');
 
 

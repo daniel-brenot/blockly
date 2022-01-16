@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Lua for logic blocks.
- */
-'use strict';
-
 goog.module('Blockly.Lua.logic');
 
-const Lua = goog.require('Blockly.Lua');
+import Lua from 'Blockly.Lua';
 
 
 Lua['controls_if'] = function(block) {

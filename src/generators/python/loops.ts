@@ -4,16 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Python for loop blocks.
- */
-'use strict';
-
 goog.module('Blockly.Python.loops');
 
-const Python = goog.require('Blockly.Python');
-const stringUtils = goog.require('Blockly.utils.string');
-const {NameType} = goog.require('Blockly.Names');
+import Python from 'Blockly.Python';
+import stringUtils from 'Blockly.utils.string';
+import {NameType} from 'Blockly.Names';
 
 
 Python['controls_repeat_ext'] = function(block) {

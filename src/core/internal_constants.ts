@@ -5,20 +5,13 @@
  */
 
 /**
- * @fileoverview Module that provides constants for use inside Blockly. Do not
- * use these constants outside of the core library.
- * @package
- */
-'use strict';
-
-/**
  * Module that provides constants for use inside Blockly. Do not
  * use these constants outside of the core library.
  * @namespace Blockly.internalConstants
  */
 goog.module('Blockly.internalConstants');
 
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
+import {ConnectionType} from 'Blockly.ConnectionType';
 
 
 /**

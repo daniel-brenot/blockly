@@ -16,10 +16,8 @@
  */
 goog.module('Blockly.blockRendering.Types');
 
-/* eslint-disable-next-line no-unused-vars */
-const {Measurable} = goog.requireType('Blockly.blockRendering.Measurable');
-/* eslint-disable-next-line no-unused-vars */
-const {Row} = goog.requireType('Blockly.blockRendering.Row');
+import {Measurable} from 'Blockly.blockRendering.Measurable';
+import {Row} from 'Blockly.blockRendering.Row';
 
 
 /**

@@ -5,23 +5,15 @@
  */
 
 /**
- * @fileoverview Utility functions for handling variable and procedure names.
- */
-'use strict';
-
-/**
  * Utility functions for handling variable and procedure names.
  * @class
  */
 goog.module('Blockly.Names');
 
-const Variables = goog.require('Blockly.Variables');
-const {Msg} = goog.require('Blockly.Msg');
-/* eslint-disable-next-line no-unused-vars */
-const {VariableMap} = goog.requireType('Blockly.VariableMap');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
-/** @suppress {extraRequire} */
+import Variables from 'Blockly.Variables';
+import {Msg} from 'Blockly.Msg';
+import {VariableMap} from 'Blockly.VariableMap';
+import {Workspace} from 'Blockly.Workspace';
 goog.requireType('Blockly.Procedures');
 
 

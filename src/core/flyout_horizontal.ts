@@ -5,29 +5,22 @@
  */
 
 /**
- * @fileoverview Horizontal flyout tray containing blocks which may be created.
- */
-'use strict';
-
-/**
  * Horizontal flyout tray containing blocks which may be created.
  * @class
  */
 goog.module('Blockly.HorizontalFlyout');
 
-const WidgetDiv = goog.require('Blockly.WidgetDiv');
-const browserEvents = goog.require('Blockly.browserEvents');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const toolbox = goog.require('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
-const {Flyout} = goog.require('Blockly.Flyout');
-/* eslint-disable-next-line no-unused-vars */
-const {Options} = goog.requireType('Blockly.Options');
-const {Rect} = goog.require('Blockly.utils.Rect');
-const {Scrollbar} = goog.require('Blockly.Scrollbar');
+import WidgetDiv from 'Blockly.WidgetDiv';
+import browserEvents from 'Blockly.browserEvents';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import toolbox from 'Blockly.utils.toolbox';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {DropDownDiv} from 'Blockly.DropDownDiv';
+import {Flyout} from 'Blockly.Flyout';
+import {Options} from 'Blockly.Options';
+import {Rect} from 'Blockly.utils.Rect';
+import {Scrollbar} from 'Blockly.Scrollbar';
 
 
 /**

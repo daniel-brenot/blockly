@@ -5,19 +5,13 @@
  */
 
 /**
- * @fileoverview Objects for rendering highlights on blocks.
- */
-'use strict';
-
-/**
  * Objects for rendering highlights on blocks.
  * @class
  */
 goog.module('Blockly.geras.HighlightConstantProvider');
 
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
+import svgPaths from 'Blockly.utils.svgPaths';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
 
 
 /**

@@ -5,22 +5,16 @@
  */
 
 /**
- * @fileoverview Events fired as a result of UI click in Blockly's editor.
- */
-'use strict';
-
-/**
  * Events fired as a result of UI click in Blockly's editor.
  * @class
  */
 goog.module('Blockly.Events.Click');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {UiBase} = goog.require('Blockly.Events.UiBase');
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {Block} from 'Blockly.Block';
+import {UiBase} from 'Blockly.Events.UiBase';
 
 
 /**

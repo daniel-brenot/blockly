@@ -5,25 +5,18 @@
  */
 
 /**
- * @fileoverview Utility functions for handling typed variables.
- *
- */
-'use strict';
-
-/**
  * Utility functions for handling typed variables.
  *
  * @namespace Blockly.VariablesDynamic
  */
 goog.module('Blockly.VariablesDynamic');
 
-const Variables = goog.require('Blockly.Variables');
-const xml = goog.require('Blockly.utils.xml');
-const {Blocks} = goog.require('Blockly.blocks');
-const {Msg} = goog.require('Blockly.Msg');
-const {VariableModel} = goog.require('Blockly.VariableModel');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import Variables from 'Blockly.Variables';
+import xml from 'Blockly.utils.xml';
+import {Blocks} from 'Blockly.blocks';
+import {Msg} from 'Blockly.Msg';
+import {VariableModel} from 'Blockly.VariableModel';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

@@ -5,39 +5,30 @@
  */
 
 /**
- * @fileoverview Functionality for the right-click context menus.
- */
-'use strict';
-
-/**
  * Functionality for the right-click context menus.
  * @namespace Blockly.ContextMenu
  */
 goog.module('Blockly.ContextMenu');
 
-const WidgetDiv = goog.require('Blockly.WidgetDiv');
-const Xml = goog.require('Blockly.Xml');
-const aria = goog.require('Blockly.utils.aria');
-const browserEvents = goog.require('Blockly.browserEvents');
-const clipboard = goog.require('Blockly.clipboard');
-const deprecation = goog.require('Blockly.utils.deprecation');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const internalConstants = goog.require('Blockly.internalConstants');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const svgMath = goog.require('Blockly.utils.svgMath');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {MenuItem} = goog.require('Blockly.MenuItem');
-const {Menu} = goog.require('Blockly.Menu');
-const {Msg} = goog.require('Blockly.Msg');
-const {Rect} = goog.require('Blockly.utils.Rect');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceCommentSvg} = goog.requireType('Blockly.WorkspaceCommentSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import WidgetDiv from 'Blockly.WidgetDiv';
+import Xml from 'Blockly.Xml';
+import aria from 'Blockly.utils.aria';
+import browserEvents from 'Blockly.browserEvents';
+import clipboard from 'Blockly.clipboard';
+import deprecation from 'Blockly.utils.deprecation';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import internalConstants from 'Blockly.internalConstants';
+import userAgent from 'Blockly.utils.userAgent';
+import svgMath from 'Blockly.utils.svgMath';
+import {Block} from 'Blockly.Block';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {MenuItem} from 'Blockly.MenuItem';
+import {Menu} from 'Blockly.Menu';
+import {Msg} from 'Blockly.Msg';
+import {Rect} from 'Blockly.utils.Rect';
+import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.BlockCreate');
 
 

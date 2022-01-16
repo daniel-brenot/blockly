@@ -5,28 +5,23 @@
  */
 
 /**
- * @fileoverview Angle input field.
- */
-'use strict';
-
-/**
  * Angle input field.
  * @class
  */
 goog.module('Blockly.FieldAngle');
 
-const Css = goog.require('Blockly.Css');
-const WidgetDiv = goog.require('Blockly.WidgetDiv');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const math = goog.require('Blockly.utils.math');
-const object = goog.require('Blockly.utils.object');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
-const {FieldTextInput} = goog.require('Blockly.FieldTextInput');
-const {KeyCodes} = goog.require('Blockly.utils.KeyCodes');
-const {Svg} = goog.require('Blockly.utils.Svg');
+import Css from 'Blockly.Css';
+import WidgetDiv from 'Blockly.WidgetDiv';
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import math from 'Blockly.utils.math';
+import object from 'Blockly.utils.object';
+import userAgent from 'Blockly.utils.userAgent';
+import {DropDownDiv} from 'Blockly.DropDownDiv';
+import {FieldTextInput} from 'Blockly.FieldTextInput';
+import {KeyCodes} from 'Blockly.utils.KeyCodes';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

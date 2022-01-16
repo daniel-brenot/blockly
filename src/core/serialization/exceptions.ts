@@ -1,25 +1,13 @@
 
 /**
- * @license
- * Copyright 2021 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-/**
- * @fileoverview Contains custom errors thrown by the serialization system.
- */
-'use strict';
-
-/**
  * Contains custom errors thrown by the serialization system.
  * @namespace Blockly.serialization.exceptions
  */
 goog.module('Blockly.serialization.exceptions');
 
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
+import {Block} from 'Blockly.Block';
 // eslint-disable-next-line no-unused-vars
-const {State} = goog.requireType('Blockly.serialization.blocks');
+import {State} from 'Blockly.serialization.blocks';
 
 
 /**

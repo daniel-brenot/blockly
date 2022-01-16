@@ -5,18 +5,13 @@
  */
 
 /**
- * @fileoverview The class representing a theme.
- */
-'use strict';
-
-/**
  * The class representing a theme.
  * @class
  */
 goog.module('Blockly.Theme');
 
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
 
 
 /**

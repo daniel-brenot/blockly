@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating JavaScript for text blocks.
- */
-'use strict';
-
 goog.module('Blockly.JavaScript.texts');
 
-const JavaScript = goog.require('Blockly.JavaScript');
-const {NameType} = goog.require('Blockly.Names');
+import JavaScript from 'Blockly.JavaScript';
+import {NameType} from 'Blockly.Names';
 
 
 /**

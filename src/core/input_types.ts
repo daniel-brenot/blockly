@@ -16,7 +16,7 @@
  */
 goog.module('Blockly.inputTypes');
 
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
+import {ConnectionType} from 'Blockly.ConnectionType';
 
 
 /**

@@ -4,24 +4,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Helper functions for generating JavaScript for blocks.
- * @suppress {checkTypes|globalThis}
- */
-'use strict';
-
 goog.module('Blockly.JavaScript');
 goog.module.declareLegacyNamespace();
 
-const Variables = goog.require('Blockly.Variables');
-const objectUtils = goog.require('Blockly.utils.object');
-const stringUtils = goog.require('Blockly.utils.string');
-const {Block} = goog.requireType('Blockly.Block');
-const {Generator} = goog.require('Blockly.Generator');
-const {globalThis} = goog.require('Blockly.utils.global');
-const {inputTypes} = goog.require('Blockly.inputTypes');
-const {Names, NameType} = goog.require('Blockly.Names');
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import Variables from 'Blockly.Variables';
+import objectUtils from 'Blockly.utils.object';
+import stringUtils from 'Blockly.utils.string';
+import {Block} from 'Blockly.Block';
+import {Generator} from 'Blockly.Generator';
+import {globalThis} from 'Blockly.utils.global';
+import {inputTypes} from 'Blockly.inputTypes';
+import {Names, NameType} from 'Blockly.Names';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

@@ -5,44 +5,25 @@
  */
 
 /**
- * @fileoverview This file is a universal registry that provides generic methods
- *    for registering and unregistering different types of classes.
- */
-'use strict';
-
-/**
  * This file is a universal registry that provides generic methods
  *    for registering and unregistering different types of classes.
  * @namespace Blockly.registry
  */
 goog.module('Blockly.registry');
 
-/* eslint-disable-next-line no-unused-vars */
-const Abstract = goog.requireType('Blockly.Events.Abstract');
-/* eslint-disable-next-line no-unused-vars */
-const {Cursor} = goog.requireType('Blockly.Cursor');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
-/* eslint-disable-next-line no-unused-vars */
-const {IBlockDragger} = goog.requireType('Blockly.IBlockDragger');
-/* eslint-disable-next-line no-unused-vars */
-const {IConnectionChecker} = goog.requireType('Blockly.IConnectionChecker');
-/* eslint-disable-next-line no-unused-vars */
-const {IFlyout} = goog.requireType('Blockly.IFlyout');
-/* eslint-disable-next-line no-unused-vars */
-const {IMetricsManager} = goog.requireType('Blockly.IMetricsManager');
-/* eslint-disable-next-line no-unused-vars */
-const {ISerializer} = goog.requireType('Blockly.serialization.ISerializer');
-/* eslint-disable-next-line no-unused-vars */
-const {IToolbox} = goog.requireType('Blockly.IToolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {Options} = goog.requireType('Blockly.Options');
-/* eslint-disable-next-line no-unused-vars */
-const {Renderer} = goog.requireType('Blockly.blockRendering.Renderer');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
-/* eslint-disable-next-line no-unused-vars */
-const {ToolboxItem} = goog.requireType('Blockly.ToolboxItem');
+import Abstract from 'Blockly.Events.Abstract';
+import {Cursor} from 'Blockly.Cursor';
+import {Field} from 'Blockly.Field';
+import {IBlockDragger} from 'Blockly.IBlockDragger';
+import {IConnectionChecker} from 'Blockly.IConnectionChecker';
+import {IFlyout} from 'Blockly.IFlyout';
+import {IMetricsManager} from 'Blockly.IMetricsManager';
+import {ISerializer} from 'Blockly.serialization.ISerializer';
+import {IToolbox} from 'Blockly.IToolbox';
+import {Options} from 'Blockly.Options';
+import {Renderer} from 'Blockly.blockRendering.Renderer';
+import {Theme} from 'Blockly.Theme';
+import {ToolboxItem} from 'Blockly.ToolboxItem';
 
 
 /**

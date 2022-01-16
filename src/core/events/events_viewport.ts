@@ -5,20 +5,15 @@
  */
 
 /**
- * @fileoverview Events fired as a result of a viewport change.
- */
-'use strict';
-
-/**
  * Events fired as a result of a viewport change.
  * @class
  */
 goog.module('Blockly.Events.ViewportChange');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const {UiBase} = goog.require('Blockly.Events.UiBase');
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {UiBase} from 'Blockly.Events.UiBase';
 
 
 /**

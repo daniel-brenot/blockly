@@ -5,17 +5,12 @@
  */
 
 /**
- * @fileoverview Zelos theme.
- */
-'use strict';
-
-/**
  * Zelos theme.
  * @namespace Blockly.Themes.Zelos
  */
 goog.module('Blockly.Themes.Zelos');
 
-const {Theme} = goog.require('Blockly.Theme');
+import {Theme} from 'Blockly.Theme';
 
 
 const defaultBlockStyles = {

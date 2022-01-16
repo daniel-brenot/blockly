@@ -4,13 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Complete helper functions for generating Lua for
- *     blocks.  This is the entrypoint for lua_compressed.js.
- * @suppress {extraRequire}
- */
-'use strict';
-
 goog.module('Blockly.Lua.all');
 
 goog.require('Blockly.Lua.color');

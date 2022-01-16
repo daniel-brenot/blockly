@@ -5,45 +5,31 @@
  */
 
 /**
- * @fileoverview The class representing an in-progress gesture, usually a drag
- * or a tap.
- */
-'use strict';
-
-/**
  * The class representing an in-progress gesture, usually a drag
  * or a tap.
  * @class
  */
 goog.module('Blockly.Gesture');
 
-const Tooltip = goog.require('Blockly.Tooltip');
-const Touch = goog.require('Blockly.Touch');
-const blockAnimations = goog.require('Blockly.blockAnimations');
-const browserEvents = goog.require('Blockly.browserEvents');
-const common = goog.require('Blockly.common');
-const eventUtils = goog.require('Blockly.Events.utils');
-const internalConstants = goog.require('Blockly.internalConstants');
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {BubbleDragger} = goog.require('Blockly.BubbleDragger');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
-/* eslint-disable-next-line no-unused-vars */
-const {IBlockDragger} = goog.requireType('Blockly.IBlockDragger');
-/* eslint-disable-next-line no-unused-vars */
-const {IBubble} = goog.requireType('Blockly.IBubble');
-/* eslint-disable-next-line no-unused-vars */
-const {IFlyout} = goog.requireType('Blockly.IFlyout');
-const {WorkspaceDragger} = goog.require('Blockly.WorkspaceDragger');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-const {Workspace} = goog.require('Blockly.Workspace');
-/** @suppress {extraRequire} */
+import Tooltip from 'Blockly.Tooltip';
+import Touch from 'Blockly.Touch';
+import blockAnimations from 'Blockly.blockAnimations';
+import browserEvents from 'Blockly.browserEvents';
+import common from 'Blockly.common';
+import eventUtils from 'Blockly.Events.utils';
+import internalConstants from 'Blockly.internalConstants';
+import registry from 'Blockly.registry';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {BubbleDragger} from 'Blockly.BubbleDragger';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Field} from 'Blockly.Field';
+import {IBlockDragger} from 'Blockly.IBlockDragger';
+import {IBubble} from 'Blockly.IBubble';
+import {IFlyout} from 'Blockly.IFlyout';
+import {WorkspaceDragger} from 'Blockly.WorkspaceDragger';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Workspace} from 'Blockly.Workspace';
 goog.require('Blockly.BlockDragger');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.Click');
 
 

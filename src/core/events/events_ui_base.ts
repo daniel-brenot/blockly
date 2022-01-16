@@ -5,20 +5,14 @@
  */
 
 /**
- * @fileoverview Base class for events fired as a result of UI actions in
- * Blockly's editor.
- */
-'use strict';
-
-/**
  * Base class for events fired as a result of UI actions in
  * Blockly's editor.
  * @class
  */
 goog.module('Blockly.Events.UiBase');
 
-const Abstract = goog.require('Blockly.Events.Abstract');
-const object = goog.require('Blockly.utils.object');
+import Abstract from 'Blockly.Events.Abstract';
+import object from 'Blockly.utils.object';
 
 
 /**

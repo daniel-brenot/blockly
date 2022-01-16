@@ -4,27 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating PHP for list blocks.
- */
-
-/**
- * Lists in PHP are known to break when non-variables are passed into blocks
- * that require a list. PHP, unlike other languages, passes arrays as reference
- * value instead of value so we are unable to support it to the extent we can
- * for the other languages.
- * For example, a ternary operator with two arrays will return the array by
- * value and that cannot be passed into any of the built-in array functions for
- * PHP (because only variables can be passed by reference).
- * ex:  end(true ? list1 : list2)
- */
-'use strict';
-
 goog.module('Blockly.PHP.lists');
 
-const PHP = goog.require('Blockly.PHP');
-const stringUtils = goog.require('Blockly.utils.string');
-const {NameType} = goog.require('Blockly.Names');
+import PHP from 'Blockly.PHP';
+import stringUtils from 'Blockly.utils.string';
+import {NameType} from 'Blockly.Names';
 
 
 PHP['lists_create_empty'] = function(block) {

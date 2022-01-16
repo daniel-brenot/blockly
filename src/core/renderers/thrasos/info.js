@@ -5,28 +5,19 @@
  */
 
 /**
- * @fileoverview New (evolving) renderer.
- * Thrasos: spirit of boldness.
- */
-'use strict';
-
-/**
  * New (evolving) renderer.
  * Thrasos: spirit of boldness.
  * @class
  */
 goog.module('Blockly.thrasos.RenderInfo');
 
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.blockRendering.Field');
-const {InRowSpacer} = goog.require('Blockly.blockRendering.InRowSpacer');
-const {RenderInfo: BaseRenderInfo} = goog.require('Blockly.blockRendering.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {Renderer} = goog.requireType('Blockly.thrasos.Renderer');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Field} from 'Blockly.blockRendering.Field';
+import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
+import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {Renderer} from 'Blockly.thrasos.Renderer';
+import {Types} from 'Blockly.blockRendering.Types';
 
 
 /**

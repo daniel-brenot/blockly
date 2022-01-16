@@ -5,36 +5,28 @@
  */
 
 /**
- * @fileoverview Text input field.
- */
-'use strict';
-
-/**
  * Text input field.
  * @class
  */
 goog.module('Blockly.FieldTextInput');
 
-const WidgetDiv = goog.require('Blockly.WidgetDiv');
-const aria = goog.require('Blockly.utils.aria');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dialog = goog.require('Blockly.dialog');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-const userAgent = goog.require('Blockly.utils.userAgent');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
-const {Field} = goog.require('Blockly.Field');
-const {KeyCodes} = goog.require('Blockly.utils.KeyCodes');
-const {Msg} = goog.require('Blockly.Msg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import WidgetDiv from 'Blockly.WidgetDiv';
+import aria from 'Blockly.utils.aria';
+import browserEvents from 'Blockly.browserEvents';
+import dialog from 'Blockly.dialog';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import userAgent from 'Blockly.utils.userAgent';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {DropDownDiv} from 'Blockly.DropDownDiv';
+import {Field} from 'Blockly.Field';
+import {KeyCodes} from 'Blockly.utils.KeyCodes';
+import {Msg} from 'Blockly.Msg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.BlockChange');
 
 

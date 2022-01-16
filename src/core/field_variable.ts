@@ -5,33 +5,24 @@
  */
 
 /**
- * @fileoverview Variable input field.
- */
-'use strict';
-
-/**
  * Variable input field.
  * @class
  */
 goog.module('Blockly.FieldVariable');
 
-const Variables = goog.require('Blockly.Variables');
-const Xml = goog.require('Blockly.Xml');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const internalConstants = goog.require('Blockly.internalConstants');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {FieldDropdown} = goog.require('Blockly.FieldDropdown');
-/* eslint-disable-next-line no-unused-vars */
-const {MenuItem} = goog.requireType('Blockly.MenuItem');
-/* eslint-disable-next-line no-unused-vars */
-const {Menu} = goog.requireType('Blockly.Menu');
-const {Msg} = goog.require('Blockly.Msg');
-const {Size} = goog.require('Blockly.utils.Size');
-const {VariableModel} = goog.require('Blockly.VariableModel');
-/** @suppress {extraRequire} */
+import Variables from 'Blockly.Variables';
+import Xml from 'Blockly.Xml';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import internalConstants from 'Blockly.internalConstants';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import {Block} from 'Blockly.Block';
+import {FieldDropdown} from 'Blockly.FieldDropdown';
+import {MenuItem} from 'Blockly.MenuItem';
+import {Menu} from 'Blockly.Menu';
+import {Msg} from 'Blockly.Msg';
+import {Size} from 'Blockly.utils.Size';
+import {VariableModel} from 'Blockly.VariableModel';
 goog.require('Blockly.Events.BlockChange');
 
 

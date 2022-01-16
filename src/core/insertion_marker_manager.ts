@@ -5,35 +5,24 @@
  */
 
 /**
- * @fileoverview Class that controls updates to connections during drags.
- */
-'use strict';
-
-/**
  * Class that controls updates to connections during drags.
  * @class
  */
 goog.module('Blockly.InsertionMarkerManager');
 
-const blockAnimations = goog.require('Blockly.blockAnimations');
-const common = goog.require('Blockly.common');
-const constants = goog.require('Blockly.constants');
-const eventUtils = goog.require('Blockly.Events.utils');
-const internalConstants = goog.require('Blockly.internalConstants');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {ComponentManager} = goog.require('Blockly.ComponentManager');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {IDeleteArea} = goog.requireType('Blockly.IDeleteArea');
-/* eslint-disable-next-line no-unused-vars */
-const {IDragTarget} = goog.requireType('Blockly.IDragTarget');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import blockAnimations from 'Blockly.blockAnimations';
+import common from 'Blockly.common';
+import constants from 'Blockly.constants';
+import eventUtils from 'Blockly.Events.utils';
+import internalConstants from 'Blockly.internalConstants';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ComponentManager} from 'Blockly.ComponentManager';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {IDeleteArea} from 'Blockly.IDeleteArea';
+import {IDragTarget} from 'Blockly.IDragTarget';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Utility methods for objects.
- */
-'use strict';
-
-/**
  * Utility methods for objects.
  * @namespace Blockly.utils.object
  */

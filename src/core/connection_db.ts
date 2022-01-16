@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview A database of all the rendered connections that could
- *    possibly be connected to (i.e. not collapsed, etc).
- *    Sorted by y coordinate.
- */
-'use strict';
-
-/**
  * A database of all the rendered connections that could
  *    possibly be connected to (i.e. not collapsed, etc).
  *    Sorted by y coordinate.
@@ -19,14 +12,10 @@
  */
 goog.module('Blockly.ConnectionDB');
 
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {IConnectionChecker} = goog.requireType('Blockly.IConnectionChecker');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-/** @suppress {extraRequire} */
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {IConnectionChecker} from 'Blockly.IConnectionChecker';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
 goog.require('Blockly.constants');
 
 

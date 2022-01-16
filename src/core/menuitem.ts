@@ -5,19 +5,14 @@
  */
 
 /**
- * @fileoverview Blockly menu item similar to Closure's goog.ui.MenuItem
- */
-'use strict';
-
-/**
  * Blockly menu item similar to Closure's goog.ui.MenuItem
  * @class
  */
 goog.module('Blockly.MenuItem');
 
-const aria = goog.require('Blockly.utils.aria');
-const dom = goog.require('Blockly.utils.dom');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
+import aria from 'Blockly.utils.aria';
+import dom from 'Blockly.utils.dom';
+import idGenerator from 'Blockly.utils.idGenerator';
 
 
 /**

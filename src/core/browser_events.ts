@@ -5,20 +5,15 @@
  */
 
 /**
- * @fileoverview Browser event handling.
- */
-'use strict';
-
-/**
  * Browser event handling.
  * @namespace Blockly.browserEvents
  */
 goog.module('Blockly.browserEvents');
 
-const Touch = goog.require('Blockly.Touch');
-const internalConstants = goog.require('Blockly.internalConstants');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const {globalThis} = goog.require('Blockly.utils.global');
+import Touch from 'Blockly.Touch';
+import internalConstants from 'Blockly.internalConstants';
+import userAgent from 'Blockly.utils.userAgent';
+import {globalThis} from 'Blockly.utils.global';
 
 
 /**

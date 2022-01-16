@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview A div that floats on top of Blockly.  This singleton contains
- *     temporary HTML UI widgets that the user is currently interacting with.
- *     E.g. text input areas, color pickers, context menus.
- */
-'use strict';
-
-/**
  * A div that floats on top of Blockly.  This singleton contains
  *     temporary HTML UI widgets that the user is currently interacting with.
  *     E.g. text input areas, color pickers, context menus.
@@ -19,15 +12,12 @@
  */
 goog.module('Blockly.WidgetDiv');
 
-const common = goog.require('Blockly.common');
-const deprecation = goog.require('Blockly.utils.deprecation');
-const dom = goog.require('Blockly.utils.dom');
-/* eslint-disable-next-line no-unused-vars */
-const {Rect} = goog.requireType('Blockly.utils.Rect');
-/* eslint-disable-next-line no-unused-vars */
-const {Size} = goog.requireType('Blockly.utils.Size');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import common from 'Blockly.common';
+import deprecation from 'Blockly.utils.deprecation';
+import dom from 'Blockly.utils.dom';
+import {Rect} from 'Blockly.utils.Rect';
+import {Size} from 'Blockly.utils.Size';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

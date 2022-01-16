@@ -19,7 +19,7 @@
 goog.module('Blockly.serialization.ISerializer');
 
 // eslint-disable-next-line no-unused-vars
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

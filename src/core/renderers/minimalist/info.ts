@@ -5,22 +5,15 @@
  */
 
 /**
- * @fileoverview Minimalist render info object.
- */
-'use strict';
-
-/**
  * Minimalist render info object.
  * @class
  */
 goog.module('Blockly.minimalist.RenderInfo');
 
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {RenderInfo: BaseRenderInfo} = goog.require('Blockly.blockRendering.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {Renderer} = goog.requireType('Blockly.minimalist.Renderer');
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {Renderer} from 'Blockly.minimalist.Renderer';
 
 
 /**

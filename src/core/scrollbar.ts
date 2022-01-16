@@ -5,26 +5,19 @@
  */
 
 /**
- * @fileoverview Object representing a scrollbar.
- */
-'use strict';
-
-/**
  * Object representing a scrollbar.
  * @class
  */
 goog.module('Blockly.Scrollbar');
 
-const Touch = goog.require('Blockly.Touch');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const svgMath = goog.require('Blockly.utils.svgMath');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {Metrics} = goog.requireType('Blockly.utils.Metrics');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import Touch from 'Blockly.Touch';
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import svgMath from 'Blockly.utils.svgMath';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Metrics} from 'Blockly.utils.Metrics';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

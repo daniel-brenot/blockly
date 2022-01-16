@@ -5,25 +5,17 @@
  */
 
 /**
- * @fileoverview Utility functions for positioning UI elements.
- */
-'use strict';
-
-/**
  * Utility functions for positioning UI elements.
  * @namespace Blockly.uiPosition
  */
 goog.module('Blockly.uiPosition');
 
-const toolbox = goog.require('Blockly.utils.toolbox');
-/* eslint-disable-next-line no-unused-vars */
-const {MetricsManager} = goog.requireType('Blockly.MetricsManager');
-const {Rect} = goog.require('Blockly.utils.Rect');
-const {Scrollbar} = goog.require('Blockly.Scrollbar');
-/* eslint-disable-next-line no-unused-vars */
-const {Size} = goog.requireType('Blockly.utils.Size');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import toolbox from 'Blockly.utils.toolbox';
+import {MetricsManager} from 'Blockly.MetricsManager';
+import {Rect} from 'Blockly.utils.Rect';
+import {Scrollbar} from 'Blockly.Scrollbar';
+import {Size} from 'Blockly.utils.Size';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

@@ -5,22 +5,16 @@
  */
 
 /**
- * @fileoverview The class representing a cursor.
- * Used primarily for keyboard navigation.
- */
-'use strict';
-
-/**
  * The class representing a cursor.
  * Used primarily for keyboard navigation.
  * @class
  */
 goog.module('Blockly.Cursor');
 
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const {ASTNode} = goog.require('Blockly.ASTNode');
-const {Marker} = goog.require('Blockly.Marker');
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {ASTNode} from 'Blockly.ASTNode';
+import {Marker} from 'Blockly.Marker';
 
 /**
  * Class for a cursor.

@@ -18,12 +18,9 @@
  */
 goog.module('Blockly.IDragTarget');
 
-/* eslint-disable-next-line no-unused-vars */
-const {IComponent} = goog.require('Blockly.IComponent');
-/* eslint-disable-next-line no-unused-vars */
-const {IDraggable} = goog.requireType('Blockly.IDraggable');
-/* eslint-disable-next-line no-unused-vars */
-const {Rect} = goog.requireType('Blockly.utils.Rect');
+import {IComponent} from 'Blockly.IComponent';
+import {IDraggable} from 'Blockly.IDraggable';
+import {Rect} from 'Blockly.utils.Rect';
 
 
 /**

@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Python for variable blocks.
- */
-'use strict';
-
 goog.module('Blockly.Python.variables');
 
-const Python = goog.require('Blockly.Python');
-const {NameType} = goog.require('Blockly.Names');
+import Python from 'Blockly.Python';
+import {NameType} from 'Blockly.Names';
 
 
 Python['variables_get'] = function(block) {

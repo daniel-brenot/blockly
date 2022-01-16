@@ -4,13 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Complete helper functions for generating JavaScript for
- *     blocks.  This is the entrypoint for javascript_compressed.js.
- * @suppress {extraRequire}
- */
-'use strict';
-
 goog.module('Blockly.JavaScript.all');
 
 goog.require('Blockly.JavaScript.color');

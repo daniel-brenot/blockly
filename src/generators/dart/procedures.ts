@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Dart for procedure blocks.
- */
-'use strict';
-
 goog.module('Blockly.Dart.procedures');
 
-const Dart = goog.require('Blockly.Dart');
-const {NameType} = goog.require('Blockly.Names');
+import Dart from 'Blockly.Dart';
+import {NameType} from 'Blockly.Names';
 
 
 Dart['procedures_defreturn'] = function(block) {

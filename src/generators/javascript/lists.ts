@@ -4,16 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating JavaScript for list blocks.
- * @suppress {missingRequire}
- */
-'use strict';
-
 goog.module('Blockly.JavaScript.lists');
 
-const JavaScript = goog.require('Blockly.JavaScript');
-const {NameType} = goog.require('Blockly.Names');
+import JavaScript from 'Blockly.JavaScript';
+import {NameType} from 'Blockly.Names';
 
 
 JavaScript['lists_create_empty'] = function(block) {

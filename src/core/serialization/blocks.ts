@@ -5,32 +5,25 @@
  */
 
 /**
- * @fileoverview Handles serializing blocks to plain JavaScript objects only
- * containing state.
- */
-'use strict';
-
-/**
  * Handles serializing blocks to plain JavaScript objects only containing state.
  * @namespace Blockly.serialization.blocks
  */
 goog.module('Blockly.serialization.blocks');
 
-const Xml = goog.require('Blockly.Xml');
-const eventUtils = goog.require('Blockly.Events.utils');
-const priorities = goog.require('Blockly.serialization.priorities');
-const serializationRegistry = goog.require('Blockly.serialization.registry');
-const {BadConnectionCheck, MissingBlockType, MissingConnection, RealChildOfShadow} = goog.require('Blockly.serialization.exceptions');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
+import Xml from 'Blockly.Xml';
+import eventUtils from 'Blockly.Events.utils';
+import priorities from 'Blockly.serialization.priorities';
+import serializationRegistry from 'Blockly.serialization.registry';
+import {BadConnectionCheck, MissingBlockType, MissingConnection, RealChildOfShadow} from 'Blockly.serialization.exceptions';
+import {Block} from 'Blockly.Block';
 // eslint-disable-next-line no-unused-vars
-const {Connection} = goog.requireType('Blockly.Connection');
+import {Connection} from 'Blockly.Connection';
 // eslint-disable-next-line no-unused-vars
-const {ISerializer} = goog.require('Blockly.serialization.ISerializer');
-const {Size} = goog.require('Blockly.utils.Size');
+import {ISerializer} from 'Blockly.serialization.ISerializer';
+import {Size} from 'Blockly.utils.Size';
 // eslint-disable-next-line no-unused-vars
-const {Workspace} = goog.requireType('Blockly.Workspace');
-const {inputTypes} = goog.require('Blockly.inputTypes');
+import {Workspace} from 'Blockly.Workspace';
+import {inputTypes} from 'Blockly.inputTypes';
 
 
 // TODO(#5160): Remove this once lint is fixed.

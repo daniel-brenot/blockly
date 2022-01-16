@@ -16,15 +16,12 @@
  */
 goog.module('Blockly.blockRendering.BottomRow');
 
-const object = goog.require('Blockly.utils.object');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-/* eslint-disable-next-line no-unused-vars */
-const {NextConnection} = goog.requireType('Blockly.blockRendering.NextConnection');
-const {Row} = goog.require('Blockly.blockRendering.Row');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import object from 'Blockly.utils.object';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {NextConnection} from 'Blockly.blockRendering.NextConnection';
+import {Row} from 'Blockly.blockRendering.Row';
+import {Types} from 'Blockly.blockRendering.Types';
 
 
 /**

@@ -5,35 +5,23 @@
  */
 
 /**
- * @fileoverview Methods for rendering debug graphics.
- */
-'use strict';
-
-/**
  * Methods for rendering debug graphics.
  * @class
  */
 goog.module('Blockly.blockRendering.Debug');
 
-const dom = goog.require('Blockly.utils.dom');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {ConnectionType} = goog.require('Blockly.ConnectionType');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-const {FieldLabel} = goog.require('Blockly.FieldLabel');
-/* eslint-disable-next-line no-unused-vars */
-const {InRowSpacer} = goog.requireType('Blockly.blockRendering.InRowSpacer');
-/* eslint-disable-next-line no-unused-vars */
-const {Measurable} = goog.requireType('Blockly.blockRendering.Measurable');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderInfo} = goog.requireType('Blockly.blockRendering.RenderInfo');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-/* eslint-disable-next-line no-unused-vars */
-const {Row} = goog.requireType('Blockly.blockRendering.Row');
-const {Svg} = goog.require('Blockly.utils.Svg');
-const {Types} = goog.require('Blockly.blockRendering.Types');
+import dom from 'Blockly.utils.dom';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ConnectionType} from 'Blockly.ConnectionType';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {FieldLabel} from 'Blockly.FieldLabel';
+import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
+import {Measurable} from 'Blockly.blockRendering.Measurable';
+import {RenderInfo} from 'Blockly.blockRendering.RenderInfo';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {Row} from 'Blockly.blockRendering.Row';
+import {Svg} from 'Blockly.utils.Svg';
+import {Types} from 'Blockly.blockRendering.Types';
 
 
 /**

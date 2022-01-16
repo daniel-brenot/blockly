@@ -5,22 +5,16 @@
  */
 
 /**
- * @fileoverview Class for a finished loading workspace event.
- */
-'use strict';
-
-/**
  * Class for a finished loading workspace event.
  * @class
  */
 goog.module('Blockly.Events.FinishedLoading');
 
-const Abstract = goog.require('Blockly.Events.Abstract');
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import Abstract from 'Blockly.Events.Abstract';
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

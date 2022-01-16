@@ -5,50 +5,38 @@
  */
 
 /**
- * @fileoverview Methods for graphically rendering a block as SVG.
- */
-'use strict';
-
-/**
  * Methods for graphically rendering a block as SVG.
  * @class
  */
 goog.module('Blockly.blockRendering.RenderInfo');
 
-const {Align} = goog.require('Blockly.Input');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {BottomRow} = goog.require('Blockly.blockRendering.BottomRow');
-/* eslint-disable-next-line no-unused-vars */
-const {ConstantProvider} = goog.requireType('Blockly.blockRendering.ConstantProvider');
-const {ExternalValueInput} = goog.require('Blockly.blockRendering.ExternalValueInput');
-const {Field} = goog.require('Blockly.blockRendering.Field');
-const {Hat} = goog.require('Blockly.blockRendering.Hat');
-const {Icon} = goog.require('Blockly.blockRendering.Icon');
-const {InRowSpacer} = goog.require('Blockly.blockRendering.InRowSpacer');
-const {InlineInput} = goog.require('Blockly.blockRendering.InlineInput');
-const {InputRow} = goog.require('Blockly.blockRendering.InputRow');
-/* eslint-disable-next-line no-unused-vars */
-const {Input} = goog.requireType('Blockly.Input');
-const {JaggedEdge} = goog.require('Blockly.blockRendering.JaggedEdge');
-/* eslint-disable-next-line no-unused-vars */
-const {Measurable} = goog.requireType('Blockly.blockRendering.Measurable');
-const {NextConnection} = goog.require('Blockly.blockRendering.NextConnection');
-const {OutputConnection} = goog.require('Blockly.blockRendering.OutputConnection');
-const {PreviousConnection} = goog.require('Blockly.blockRendering.PreviousConnection');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-/* eslint-disable-next-line no-unused-vars */
-const {Renderer} = goog.requireType('Blockly.blockRendering.Renderer');
-const {RoundCorner} = goog.require('Blockly.blockRendering.RoundCorner');
-/* eslint-disable-next-line no-unused-vars */
-const {Row} = goog.requireType('Blockly.blockRendering.Row');
-const {SpacerRow} = goog.require('Blockly.blockRendering.SpacerRow');
-const {SquareCorner} = goog.require('Blockly.blockRendering.SquareCorner');
-const {StatementInput} = goog.require('Blockly.blockRendering.StatementInput');
-const {TopRow} = goog.require('Blockly.blockRendering.TopRow');
-const {Types} = goog.require('Blockly.blockRendering.Types');
-const {inputTypes} = goog.require('Blockly.inputTypes');
+import {Align} from 'Blockly.Input';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {BottomRow} from 'Blockly.blockRendering.BottomRow';
+import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import {ExternalValueInput} from 'Blockly.blockRendering.ExternalValueInput';
+import {Field} from 'Blockly.blockRendering.Field';
+import {Hat} from 'Blockly.blockRendering.Hat';
+import {Icon} from 'Blockly.blockRendering.Icon';
+import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
+import {InlineInput} from 'Blockly.blockRendering.InlineInput';
+import {InputRow} from 'Blockly.blockRendering.InputRow';
+import {Input} from 'Blockly.Input';
+import {JaggedEdge} from 'Blockly.blockRendering.JaggedEdge';
+import {Measurable} from 'Blockly.blockRendering.Measurable';
+import {NextConnection} from 'Blockly.blockRendering.NextConnection';
+import {OutputConnection} from 'Blockly.blockRendering.OutputConnection';
+import {PreviousConnection} from 'Blockly.blockRendering.PreviousConnection';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {Renderer} from 'Blockly.blockRendering.Renderer';
+import {RoundCorner} from 'Blockly.blockRendering.RoundCorner';
+import {Row} from 'Blockly.blockRendering.Row';
+import {SpacerRow} from 'Blockly.blockRendering.SpacerRow';
+import {SquareCorner} from 'Blockly.blockRendering.SquareCorner';
+import {StatementInput} from 'Blockly.blockRendering.StatementInput';
+import {TopRow} from 'Blockly.blockRendering.TopRow';
+import {Types} from 'Blockly.blockRendering.Types';
+import {inputTypes} from 'Blockly.inputTypes';
 
 
 /**

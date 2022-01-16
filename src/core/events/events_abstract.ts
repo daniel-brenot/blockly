@@ -5,21 +5,14 @@
  */
 
 /**
- * @fileoverview Abstract class for events fired as a result of actions in
- * Blockly's editor.
- */
-'use strict';
-
-/**
  * Abstract class for events fired as a result of actions in
  * Blockly's editor.
  * @class
  */
 goog.module('Blockly.Events.Abstract');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import eventUtils from 'Blockly.Events.utils';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

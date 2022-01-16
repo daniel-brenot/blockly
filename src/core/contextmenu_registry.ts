@@ -5,20 +5,13 @@
  */
 
 /**
- * @fileoverview Registry for context menu option items.
- */
-'use strict';
-
-/**
  * Registry for context menu option items.
  * @class
  */
 goog.module('Blockly.ContextMenuRegistry');
 
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

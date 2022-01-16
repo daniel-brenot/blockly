@@ -5,29 +5,19 @@
  */
 
 /**
- * @fileoverview Object representing a code comment on the workspace.
- */
-'use strict';
-
-/**
  * Object representing a code comment on the workspace.
  * @class
  */
 goog.module('Blockly.WorkspaceComment');
 
-const eventUtils = goog.require('Blockly.Events.utils');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const xml = goog.require('Blockly.utils.xml');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
-/** @suppress {extraRequire} */
+import eventUtils from 'Blockly.Events.utils';
+import idGenerator from 'Blockly.utils.idGenerator';
+import xml from 'Blockly.utils.xml';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Workspace} from 'Blockly.Workspace';
 goog.require('Blockly.Events.CommentChange');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.CommentCreate');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.CommentDelete');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.CommentMove');
 
 

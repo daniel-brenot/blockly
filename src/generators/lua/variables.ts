@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating Lua for variable blocks.
- */
-'use strict';
-
 goog.module('Blockly.Lua.variables');
 
-const Lua = goog.require('Blockly.Lua');
-const {NameType} = goog.require('Blockly.Names');
+import Lua from 'Blockly.Lua';
+import {NameType} from 'Blockly.Names';
 
 
 Lua['variables_get'] = function(block) {

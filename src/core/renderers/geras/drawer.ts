@@ -5,27 +5,19 @@
  */
 
 /**
- * @fileoverview Renderer that preserves the look and feel of Blockly pre-2019.
- */
-'use strict';
-
-/**
  * Renderer that preserves the look and feel of Blockly pre-2019.
  * @class
  */
 goog.module('Blockly.geras.Drawer');
 
-const debug = goog.require('Blockly.blockRendering.debug');
-const object = goog.require('Blockly.utils.object');
-const svgPaths = goog.require('Blockly.utils.svgPaths');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {Drawer: BaseDrawer} = goog.require('Blockly.blockRendering.Drawer');
-const {Highlighter} = goog.require('Blockly.geras.Highlighter');
-/* eslint-disable-next-line no-unused-vars */
-const {PathObject} = goog.requireType('Blockly.geras.PathObject');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderInfo} = goog.requireType('Blockly.geras.RenderInfo');
+import debug from 'Blockly.blockRendering.debug';
+import object from 'Blockly.utils.object';
+import svgPaths from 'Blockly.utils.svgPaths';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Drawer: BaseDrawer} from 'Blockly.blockRendering.Drawer';
+import {Highlighter} from 'Blockly.geras.Highlighter';
+import {PathObject} from 'Blockly.geras.PathObject';
+import {RenderInfo} from 'Blockly.geras.RenderInfo';
 
 
 /**

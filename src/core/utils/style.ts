@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview Utilities for element styles.
- * These methods are not specific to Blockly, and could be factored out into
- * a JavaScript framework such as Closure.
- */
-'use strict';
-
-/**
  * Utilities for element styles.
  * These methods are not specific to Blockly, and could be factored out into
  * a JavaScript framework such as Closure.
@@ -19,8 +12,8 @@
  */
 goog.module('Blockly.utils.style');
 
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {Size} = goog.require('Blockly.utils.Size');
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Size} from 'Blockly.utils.Size';
 
 
 /**

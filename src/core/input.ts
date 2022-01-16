@@ -5,11 +5,6 @@
  */
 
 /**
- * @fileoverview Object representing an input (value, statement, or dummy).
- */
-'use strict';
-
-/**
  * Object representing an input (value, statement, or dummy).
  * @class
  */
@@ -27,19 +22,13 @@ const Align = {
 };
 exports.Align = Align;
 
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
-const {inputTypes} = goog.require('Blockly.inputTypes');
-/** @suppress {extraRequire} */
+import fieldRegistry from 'Blockly.fieldRegistry';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Block} from 'Blockly.Block';
+import {Connection} from 'Blockly.Connection';
+import {Field} from 'Blockly.Field';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {inputTypes} from 'Blockly.inputTypes';
 goog.require('Blockly.FieldLabel');
 
 /**

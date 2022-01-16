@@ -5,25 +5,19 @@
  */
 
 /**
- * @fileoverview Utility methods for SVG math.
- */
-'use strict';
-
-/**
  * Utility methods realted to figuring out positions of SVG elements.
  * @namespace Blockly.utils.svgMath
  */
 goog.module('Blockly.utils.svgMath');
 
-const deprecation = goog.require('Blockly.utils.deprecation');
-const global = goog.require('Blockly.utils.global');
-const style = goog.require('Blockly.utils.style');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {Rect} = goog.require('Blockly.utils.Rect');
-const {Size} = goog.require('Blockly.utils.Size');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import deprecation from 'Blockly.utils.deprecation';
+import global from 'Blockly.utils.global';
+import style from 'Blockly.utils.style';
+import userAgent from 'Blockly.utils.userAgent';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Rect} from 'Blockly.utils.Rect';
+import {Size} from 'Blockly.utils.Size';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /**

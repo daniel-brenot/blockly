@@ -5,29 +5,22 @@
  */
 
 /**
- * @fileoverview Registers default context menu items.
- */
-'use strict';
-
-/**
  * Registers default context menu items.
  * @namespace Blockly.ContextMenuItems
  */
 goog.module('Blockly.ContextMenuItems');
 
-const Events = goog.require('Blockly.Events');
-const clipboard = goog.require('Blockly.clipboard');
-const dialog = goog.require('Blockly.dialog');
-const eventUtils = goog.require('Blockly.Events.utils');
-const idGenerator = goog.require('Blockly.utils.idGenerator');
-const userAgent = goog.require('Blockly.utils.userAgent');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-const {ContextMenuRegistry} = goog.require('Blockly.ContextMenuRegistry');
-const {Msg} = goog.require('Blockly.Msg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-const {inputTypes} = goog.require('Blockly.inputTypes');
+import Events from 'Blockly.Events';
+import clipboard from 'Blockly.clipboard';
+import dialog from 'Blockly.dialog';
+import eventUtils from 'Blockly.Events.utils';
+import idGenerator from 'Blockly.utils.idGenerator';
+import userAgent from 'Blockly.utils.userAgent';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {ContextMenuRegistry} from 'Blockly.ContextMenuRegistry';
+import {Msg} from 'Blockly.Msg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {inputTypes} from 'Blockly.inputTypes';
 
 
 /**

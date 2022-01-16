@@ -5,12 +5,6 @@
  */
 
 /**
- * @fileoverview Methods for creating parts of SVG path strings.  See
- * developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
- */
-'use strict';
-
-/**
  * Methods for creating parts of SVG path strings.  See
  * @namespace Blockly.utils.svgPaths
  */

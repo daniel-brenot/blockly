@@ -5,40 +5,27 @@
  */
 
 /**
- * @fileoverview Object representing a code comment.
- */
-'use strict';
-
-/**
  * Object representing a code comment.
  * @class
  */
 goog.module('Blockly.Comment');
 
-const Css = goog.require('Blockly.Css');
-const browserEvents = goog.require('Blockly.browserEvents');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const object = goog.require('Blockly.utils.object');
-const userAgent = goog.require('Blockly.utils.userAgent');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockSvg} = goog.requireType('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Bubble} = goog.require('Blockly.Bubble');
-/* eslint-disable-next-line no-unused-vars */
-const {Coordinate} = goog.requireType('Blockly.utils.Coordinate');
-const {Icon} = goog.require('Blockly.Icon');
-/* eslint-disable-next-line no-unused-vars */
-const {Size} = goog.requireType('Blockly.utils.Size');
-const {Svg} = goog.require('Blockly.utils.Svg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
-/** @suppress {extraRequire} */
+import Css from 'Blockly.Css';
+import browserEvents from 'Blockly.browserEvents';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import object from 'Blockly.utils.object';
+import userAgent from 'Blockly.utils.userAgent';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {Block} from 'Blockly.Block';
+import {Bubble} from 'Blockly.Bubble';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Icon} from 'Blockly.Icon';
+import {Size} from 'Blockly.utils.Size';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 goog.require('Blockly.Events.BlockChange');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.BubbleOpen');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Warning');
 
 

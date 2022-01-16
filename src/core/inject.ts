@@ -5,39 +5,33 @@
  */
 
 /**
- * @fileoverview Functions for injecting Blockly into a web page.
- */
-'use strict';
-
-/**
  * Functions for injecting Blockly into a web page.
  * @namespace Blockly.inject
  */
 goog.module('Blockly.inject');
 
-const Css = goog.require('Blockly.Css');
-const Tooltip = goog.require('Blockly.Tooltip');
-const Touch = goog.require('Blockly.Touch');
-const WidgetDiv = goog.require('Blockly.WidgetDiv');
-const aria = goog.require('Blockly.utils.aria');
-const browserEvents = goog.require('Blockly.browserEvents');
-const bumpObjects = goog.require('Blockly.bumpObjects');
-const common = goog.require('Blockly.common');
-const dom = goog.require('Blockly.utils.dom');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const {BlockDragSurfaceSvg} = goog.require('Blockly.BlockDragSurfaceSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {BlocklyOptions} = goog.requireType('Blockly.BlocklyOptions');
-const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
-const {Grid} = goog.require('Blockly.Grid');
-const {Msg} = goog.require('Blockly.Msg');
-const {Options} = goog.require('Blockly.Options');
-const {ScrollbarPair} = goog.require('Blockly.ScrollbarPair');
-const {ShortcutRegistry} = goog.require('Blockly.ShortcutRegistry');
-const {Svg} = goog.require('Blockly.utils.Svg');
-const {WorkspaceDragSurfaceSvg} = goog.require('Blockly.WorkspaceDragSurfaceSvg');
-const {WorkspaceSvg} = goog.require('Blockly.WorkspaceSvg');
-const {Workspace} = goog.require('Blockly.Workspace');
+import Css from 'Blockly.Css';
+import Tooltip from 'Blockly.Tooltip';
+import Touch from 'Blockly.Touch';
+import WidgetDiv from 'Blockly.WidgetDiv';
+import aria from 'Blockly.utils.aria';
+import browserEvents from 'Blockly.browserEvents';
+import bumpObjects from 'Blockly.bumpObjects';
+import common from 'Blockly.common';
+import dom from 'Blockly.utils.dom';
+import userAgent from 'Blockly.utils.userAgent';
+import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
+import {BlocklyOptions} from 'Blockly.BlocklyOptions';
+import {DropDownDiv} from 'Blockly.DropDownDiv';
+import {Grid} from 'Blockly.Grid';
+import {Msg} from 'Blockly.Msg';
+import {Options} from 'Blockly.Options';
+import {ScrollbarPair} from 'Blockly.ScrollbarPair';
+import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
+import {Svg} from 'Blockly.utils.Svg';
+import {WorkspaceDragSurfaceSvg} from 'Blockly.WorkspaceDragSurfaceSvg';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

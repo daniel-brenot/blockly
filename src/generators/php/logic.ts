@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Generating PHP for logic blocks.
- */
-'use strict';
-
 goog.module('Blockly.PHP.logic');
 
-const PHP = goog.require('Blockly.PHP');
+import PHP from 'Blockly.PHP';
 
 
 PHP['controls_if'] = function(block) {

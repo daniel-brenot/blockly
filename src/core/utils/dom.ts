@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview Utility methods for DOM manipulation.
- * These methods are not specific to Blockly, and could be factored out into
- * a JavaScript framework such as Closure.
- */
-'use strict';
-
-/**
  * Utility methods for DOM manipulation.
  * These methods are not specific to Blockly, and could be factored out into
  * a JavaScript framework such as Closure.
@@ -19,9 +12,8 @@
  */
 goog.module('Blockly.utils.dom');
 
-const userAgent = goog.require('Blockly.utils.userAgent');
-/* eslint-disable-next-line no-unused-vars */
-const {Svg} = goog.requireType('Blockly.utils.Svg');
+import userAgent from 'Blockly.utils.userAgent';
+import {Svg} from 'Blockly.utils.Svg';
 
 
 /**

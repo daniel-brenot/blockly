@@ -5,22 +5,15 @@
  */
 
 /**
- * @fileoverview The namespace used to keep track of keyboard shortcuts and the
- * key codes used to execute those shortcuts.
- */
-'use strict';
-
-/**
  * The namespace used to keep track of keyboard shortcuts and the
  * key codes used to execute those shortcuts.
  * @class
  */
 goog.module('Blockly.ShortcutRegistry');
 
-const object = goog.require('Blockly.utils.object');
-const {KeyCodes} = goog.require('Blockly.utils.KeyCodes');
-/* eslint-disable-next-line no-unused-vars */
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import object from 'Blockly.utils.object';
+import {KeyCodes} from 'Blockly.utils.KeyCodes';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

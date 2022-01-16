@@ -5,25 +5,18 @@
  */
 
 /**
- * @fileoverview The class extends Gesture to support pinch to zoom
- * for both pointer and touch events.
- */
-'use strict';
-
-/**
  * The class extends Gesture to support pinch to zoom
  * for both pointer and touch events.
  * @class
  */
 goog.module('Blockly.TouchGesture');
 
-const Touch = goog.require('Blockly.Touch');
-const browserEvents = goog.require('Blockly.browserEvents');
-const object = goog.require('Blockly.utils.object');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-const {Gesture} = goog.require('Blockly.Gesture');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceSvg} = goog.requireType('Blockly.WorkspaceSvg');
+import Touch from 'Blockly.Touch';
+import browserEvents from 'Blockly.browserEvents';
+import object from 'Blockly.utils.object';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Gesture} from 'Blockly.Gesture';
+import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
 
 
 /*

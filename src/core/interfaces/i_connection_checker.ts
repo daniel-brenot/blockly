@@ -5,22 +5,14 @@
  */
 
 /**
- * @fileoverview The interface for an object that encapsulates logic for
- * checking whether a potential connection is safe and valid.
- */
-'use strict';
-
-/**
  * The interface for an object that encapsulates logic for
  * checking whether a potential connection is safe and valid.
  * @namespace Blockly.IConnectionChecker
  */
 goog.module('Blockly.IConnectionChecker');
 
-/* eslint-disable-next-line no-unused-vars */
-const {Connection} = goog.requireType('Blockly.Connection');
-/* eslint-disable-next-line no-unused-vars */
-const {RenderedConnection} = goog.requireType('Blockly.RenderedConnection');
+import {Connection} from 'Blockly.Connection';
+import {RenderedConnection} from 'Blockly.RenderedConnection';
 
 
 /**

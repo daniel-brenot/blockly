@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview Fields can be created based on a JSON definition. This file
- *    contains methods for registering those JSON definitions, and building the
- *    fields based on JSON.
- */
-'use strict';
-
-/**
  * Fields can be created based on a JSON definition. This file
  *    contains methods for registering those JSON definitions, and building the
  *    fields based on JSON.
@@ -19,11 +12,9 @@
  */
 goog.module('Blockly.fieldRegistry');
 
-const registry = goog.require('Blockly.registry');
-/* eslint-disable-next-line no-unused-vars */
-const {Field} = goog.requireType('Blockly.Field');
-/* eslint-disable-next-line no-unused-vars */
-const {IRegistrableField} = goog.requireType('Blockly.IRegistrableField');
+import registry from 'Blockly.registry';
+import {Field} from 'Blockly.Field';
+import {IRegistrableField} from 'Blockly.IRegistrableField';
 
 
 /**

@@ -18,8 +18,7 @@
  */
 goog.module('Blockly.IAutoHideable');
 
-/* eslint-disable-next-line no-unused-vars */
-const {IComponent} = goog.require('Blockly.IComponent');
+import {IComponent} from 'Blockly.IComponent';
 
 
 /**

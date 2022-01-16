@@ -5,20 +5,15 @@
  */
 
 /**
- * @fileoverview Number input field
- */
-'use strict';
-
-/**
  * Number input field
  * @class
  */
 goog.module('Blockly.FieldNumber');
 
-const aria = goog.require('Blockly.utils.aria');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const object = goog.require('Blockly.utils.object');
-const {FieldTextInput} = goog.require('Blockly.FieldTextInput');
+import aria from 'Blockly.utils.aria';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import object from 'Blockly.utils.object';
+import {FieldTextInput} from 'Blockly.FieldTextInput';
 
 
 /**

@@ -5,13 +5,6 @@
  */
 
 /**
- * @fileoverview Non-editable, serializable text field. Behaves like a
- *    normal label but is serialized to XML. It may only be
- *    edited programmatically.
- */
-'use strict';
-
-/**
  * Non-editable, serializable text field. Behaves like a
  *    normal label but is serialized to XML. It may only be
  *    edited programmatically.
@@ -19,10 +12,10 @@
  */
 goog.module('Blockly.FieldLabelSerializable');
 
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const object = goog.require('Blockly.utils.object');
-const parsing = goog.require('Blockly.utils.parsing');
-const {FieldLabel} = goog.require('Blockly.FieldLabel');
+import fieldRegistry from 'Blockly.fieldRegistry';
+import object from 'Blockly.utils.object';
+import parsing from 'Blockly.utils.parsing';
+import {FieldLabel} from 'Blockly.FieldLabel';
 
 
 /**

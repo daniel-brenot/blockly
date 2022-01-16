@@ -4,23 +4,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Helper functions for generating Lua for blocks.
- * Based on Ellen Spertus's blocky-lua project.
- * @suppress {checkTypes|globalThis}
- */
-'use strict';
-
 goog.module('Blockly.Lua');
 goog.module.declareLegacyNamespace();
 
-const objectUtils = goog.require('Blockly.utils.object');
-const stringUtils = goog.require('Blockly.utils.string');
-const {Block} = goog.requireType('Blockly.Block');
-const {Generator} = goog.require('Blockly.Generator');
-const {inputTypes} = goog.require('Blockly.inputTypes');
-const {Names} = goog.require('Blockly.Names');
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import objectUtils from 'Blockly.utils.object';
+import stringUtils from 'Blockly.utils.string';
+import {Block} from 'Blockly.Block';
+import {Generator} from 'Blockly.Generator';
+import {inputTypes} from 'Blockly.inputTypes';
+import {Names} from 'Blockly.Names';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

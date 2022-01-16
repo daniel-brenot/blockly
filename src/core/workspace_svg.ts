@@ -5,111 +5,76 @@
  */
 
 /**
- * @fileoverview Object representing a workspace rendered as SVG.
- */
-'use strict';
-
-/**
  * Object representing a workspace rendered as SVG.
  * @class
  */
 goog.module('Blockly.WorkspaceSvg');
 
-const ContextMenu = goog.require('Blockly.ContextMenu');
-/* eslint-disable-next-line no-unused-vars */
-const Procedures = goog.requireType('Blockly.Procedures');
-const Tooltip = goog.require('Blockly.Tooltip');
-/* eslint-disable-next-line no-unused-vars */
-const Variables = goog.requireType('Blockly.Variables');
-/* eslint-disable-next-line no-unused-vars */
-const VariablesDynamic = goog.requireType('Blockly.VariablesDynamic');
-const WidgetDiv = goog.require('Blockly.WidgetDiv');
-const Xml = goog.require('Blockly.Xml');
-const arrayUtils = goog.require('Blockly.utils.array');
-const blockRendering = goog.require('Blockly.blockRendering');
-const blocks = goog.require('Blockly.serialization.blocks');
-const browserEvents = goog.require('Blockly.browserEvents');
-const common = goog.require('Blockly.common');
-const dom = goog.require('Blockly.utils.dom');
-const eventUtils = goog.require('Blockly.Events.utils');
-const internalConstants = goog.require('Blockly.internalConstants');
-const object = goog.require('Blockly.utils.object');
-const registry = goog.require('Blockly.registry');
-const svgMath = goog.require('Blockly.utils.svgMath');
-const toolbox = goog.require('Blockly.utils.toolbox');
-const userAgent = goog.require('Blockly.utils.userAgent');
-const utils = goog.require('Blockly.utils');
-/* eslint-disable-next-line no-unused-vars */
-const {BlockDragSurfaceSvg} = goog.requireType('Blockly.BlockDragSurfaceSvg');
-const {BlockSvg} = goog.require('Blockly.BlockSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {BlocklyOptions} = goog.requireType('Blockly.BlocklyOptions');
-/* eslint-disable-next-line no-unused-vars */
-const {Block} = goog.requireType('Blockly.Block');
-const {Classic} = goog.require('Blockly.Themes.Classic');
-const {ComponentManager} = goog.require('Blockly.ComponentManager');
-const {ConnectionDB} = goog.require('Blockly.ConnectionDB');
-const {ContextMenuRegistry} = goog.require('Blockly.ContextMenuRegistry');
-const {Coordinate} = goog.require('Blockly.utils.Coordinate');
-/* eslint-disable-next-line no-unused-vars */
-const {Cursor} = goog.requireType('Blockly.Cursor');
-const {DropDownDiv} = goog.require('Blockly.DropDownDiv');
-/* eslint-disable-next-line no-unused-vars */
-const {FlyoutButton} = goog.requireType('Blockly.FlyoutButton');
-const {Gesture} = goog.require('Blockly.Gesture');
-const {Grid} = goog.require('Blockly.Grid');
-/* eslint-disable-next-line no-unused-vars */
-const {IASTNodeLocationSvg} = goog.require('Blockly.IASTNodeLocationSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {IBoundedElement} = goog.requireType('Blockly.IBoundedElement');
-/* eslint-disable-next-line no-unused-vars */
-const {IDragTarget} = goog.requireType('Blockly.IDragTarget');
-/* eslint-disable-next-line no-unused-vars */
-const {IFlyout} = goog.requireType('Blockly.IFlyout');
-/* eslint-disable-next-line no-unused-vars */
-const {IMetricsManager} = goog.requireType('Blockly.IMetricsManager');
-/* eslint-disable-next-line no-unused-vars */
-const {IToolbox} = goog.requireType('Blockly.IToolbox');
-const {MarkerManager} = goog.require('Blockly.MarkerManager');
-/* eslint-disable-next-line no-unused-vars */
-const {Marker} = goog.requireType('Blockly.Marker');
-/* eslint-disable-next-line no-unused-vars */
-const {Metrics} = goog.requireType('Blockly.utils.Metrics');
-const {Options} = goog.require('Blockly.Options');
-const {Rect} = goog.require('Blockly.utils.Rect');
-/* eslint-disable-next-line no-unused-vars */
-const {Renderer} = goog.requireType('Blockly.blockRendering.Renderer');
-/* eslint-disable-next-line no-unused-vars */
-const {ScrollbarPair} = goog.requireType('Blockly.ScrollbarPair');
-const {Size} = goog.require('Blockly.utils.Size');
-const {Svg} = goog.require('Blockly.utils.Svg');
-const {ThemeManager} = goog.require('Blockly.ThemeManager');
-/* eslint-disable-next-line no-unused-vars */
-const {Theme} = goog.requireType('Blockly.Theme');
-const {TouchGesture} = goog.require('Blockly.TouchGesture');
-/* eslint-disable-next-line no-unused-vars */
-const {Trashcan} = goog.requireType('Blockly.Trashcan');
-/* eslint-disable-next-line no-unused-vars */
-const {VariableModel} = goog.requireType('Blockly.VariableModel');
-const {WorkspaceAudio} = goog.require('Blockly.WorkspaceAudio');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceCommentSvg} = goog.requireType('Blockly.WorkspaceCommentSvg');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceComment} = goog.requireType('Blockly.WorkspaceComment');
-/* eslint-disable-next-line no-unused-vars */
-const {WorkspaceDragSurfaceSvg} = goog.requireType('Blockly.WorkspaceDragSurfaceSvg');
-const {Workspace} = goog.require('Blockly.Workspace');
-/* eslint-disable-next-line no-unused-vars */
-const {ZoomControls} = goog.requireType('Blockly.ZoomControls');
-/** @suppress {extraRequire} */
+import ContextMenu from 'Blockly.ContextMenu';
+import Procedures from 'Blockly.Procedures';
+import Tooltip from 'Blockly.Tooltip';
+import Variables from 'Blockly.Variables';
+import VariablesDynamic from 'Blockly.VariablesDynamic';
+import WidgetDiv from 'Blockly.WidgetDiv';
+import Xml from 'Blockly.Xml';
+import arrayUtils from 'Blockly.utils.array';
+import blockRendering from 'Blockly.blockRendering';
+import blocks from 'Blockly.serialization.blocks';
+import browserEvents from 'Blockly.browserEvents';
+import common from 'Blockly.common';
+import dom from 'Blockly.utils.dom';
+import eventUtils from 'Blockly.Events.utils';
+import internalConstants from 'Blockly.internalConstants';
+import object from 'Blockly.utils.object';
+import registry from 'Blockly.registry';
+import svgMath from 'Blockly.utils.svgMath';
+import toolbox from 'Blockly.utils.toolbox';
+import userAgent from 'Blockly.utils.userAgent';
+import utils from 'Blockly.utils';
+import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
+import {BlockSvg} from 'Blockly.BlockSvg';
+import {BlocklyOptions} from 'Blockly.BlocklyOptions';
+import {Block} from 'Blockly.Block';
+import {Classic} from 'Blockly.Themes.Classic';
+import {ComponentManager} from 'Blockly.ComponentManager';
+import {ConnectionDB} from 'Blockly.ConnectionDB';
+import {ContextMenuRegistry} from 'Blockly.ContextMenuRegistry';
+import {Coordinate} from 'Blockly.utils.Coordinate';
+import {Cursor} from 'Blockly.Cursor';
+import {DropDownDiv} from 'Blockly.DropDownDiv';
+import {FlyoutButton} from 'Blockly.FlyoutButton';
+import {Gesture} from 'Blockly.Gesture';
+import {Grid} from 'Blockly.Grid';
+import {IASTNodeLocationSvg} from 'Blockly.IASTNodeLocationSvg';
+import {IBoundedElement} from 'Blockly.IBoundedElement';
+import {IDragTarget} from 'Blockly.IDragTarget';
+import {IFlyout} from 'Blockly.IFlyout';
+import {IMetricsManager} from 'Blockly.IMetricsManager';
+import {IToolbox} from 'Blockly.IToolbox';
+import {MarkerManager} from 'Blockly.MarkerManager';
+import {Marker} from 'Blockly.Marker';
+import {Metrics} from 'Blockly.utils.Metrics';
+import {Options} from 'Blockly.Options';
+import {Rect} from 'Blockly.utils.Rect';
+import {Renderer} from 'Blockly.blockRendering.Renderer';
+import {ScrollbarPair} from 'Blockly.ScrollbarPair';
+import {Size} from 'Blockly.utils.Size';
+import {Svg} from 'Blockly.utils.Svg';
+import {ThemeManager} from 'Blockly.ThemeManager';
+import {Theme} from 'Blockly.Theme';
+import {TouchGesture} from 'Blockly.TouchGesture';
+import {Trashcan} from 'Blockly.Trashcan';
+import {VariableModel} from 'Blockly.VariableModel';
+import {WorkspaceAudio} from 'Blockly.WorkspaceAudio';
+import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
+import {WorkspaceComment} from 'Blockly.WorkspaceComment';
+import {WorkspaceDragSurfaceSvg} from 'Blockly.WorkspaceDragSurfaceSvg';
+import {Workspace} from 'Blockly.Workspace';
+import {ZoomControls} from 'Blockly.ZoomControls';
 goog.require('Blockly.Events.BlockCreate');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.ThemeChange');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Events.ViewportChange');
-/** @suppress {extraRequire} */
 goog.require('Blockly.MetricsManager');
-/** @suppress {extraRequire} */
 goog.require('Blockly.Msg');
 
 

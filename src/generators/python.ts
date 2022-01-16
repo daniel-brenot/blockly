@@ -4,22 +4,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @fileoverview Helper functions for generating Python for blocks.
- * @suppress {checkTypes|globalThis}
- */
-'use strict';
-
 goog.module('Blockly.Python');
 goog.module.declareLegacyNamespace();
 
-const stringUtils = goog.require('Blockly.utils.string');
-const Variables = goog.require('Blockly.Variables');
-const {Block} = goog.requireType('Blockly.Block');
-const {Generator} = goog.require('Blockly.Generator');
-const {inputTypes} = goog.require('Blockly.inputTypes');
-const {Names, NameType} = goog.require('Blockly.Names');
-const {Workspace} = goog.requireType('Blockly.Workspace');
+import stringUtils from 'Blockly.utils.string';
+import Variables from 'Blockly.Variables';
+import {Block} from 'Blockly.Block';
+import {Generator} from 'Blockly.Generator';
+import {inputTypes} from 'Blockly.inputTypes';
+import {Names, NameType} from 'Blockly.Names';
+import {Workspace} from 'Blockly.Workspace';
 
 
 /**

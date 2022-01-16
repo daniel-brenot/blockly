@@ -5,21 +5,15 @@
  */
 
 /**
- * @fileoverview Checkbox field.  Checked or not checked.
- */
-'use strict';
-
-/**
  * Checkbox field.  Checked or not checked.
  * @class
  */
 goog.module('Blockly.FieldCheckbox');
 
-const dom = goog.require('Blockly.utils.dom');
-const fieldRegistry = goog.require('Blockly.fieldRegistry');
-const object = goog.require('Blockly.utils.object');
-const {Field} = goog.require('Blockly.Field');
-/** @suppress {extraRequire} */
+import dom from 'Blockly.utils.dom';
+import fieldRegistry from 'Blockly.fieldRegistry';
+import object from 'Blockly.utils.object';
+import {Field} from 'Blockly.Field';
 goog.require('Blockly.Events.BlockChange');
 
 
