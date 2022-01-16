@@ -8,7 +8,7 @@
  * @fileoverview The interface for an object that is copyable.
  */
 
-'use strict';
+
 
 /**
  * The interface for an object that is copyable.

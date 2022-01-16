@@ -8,7 +8,7 @@
  * @fileoverview The interface for a bounded element.
  */
 
-'use strict';
+
 
 /**
  * The interface for a bounded element.

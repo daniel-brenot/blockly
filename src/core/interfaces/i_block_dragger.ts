@@ -8,7 +8,7 @@
  * @fileoverview The interface for a block dragger.
  */
 
-'use strict';
+
 
 /**
  * The interface for a block dragger.

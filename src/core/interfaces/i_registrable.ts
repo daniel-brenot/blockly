@@ -9,7 +9,7 @@
  *    (Ex. Toolbox, Fields, Renderers)
  */
 
-'use strict';
+
 
 /**
  * The interface for a Blockly component that can be registered.

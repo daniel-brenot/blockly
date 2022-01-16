@@ -8,7 +8,7 @@
  * @fileoverview Measurable types.
  */
 
-'use strict';
+
 
 /**
  * Measurable types.

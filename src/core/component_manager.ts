@@ -8,7 +8,7 @@
  * @fileoverview Manager for all items registered with the workspace.
  */
 
-'use strict';
+
 
 /**
  * Manager for all items registered with the workspace.

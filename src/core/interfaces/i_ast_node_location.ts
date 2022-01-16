@@ -8,7 +8,7 @@
  * @fileoverview The interface for an AST node location.
  */
 
-'use strict';
+
 
 /**
  * The interface for an AST node location.

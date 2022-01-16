@@ -9,7 +9,7 @@
  * block.
  */
 
-'use strict';
+
 
 /**
  * The interface for an AST node location that has an associated

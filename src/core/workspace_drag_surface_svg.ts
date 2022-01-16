@@ -11,7 +11,7 @@
  * blocks are never repainted during drag improving performance.
  */
 
-'use strict';
+
 
 /**
  * An SVG that floats on top of the workspace.

@@ -9,7 +9,7 @@
  * when WorkspaceSvg.hideChaff is called.
  */
 
-'use strict';
+
 
 /**
  * The interface for a component that is automatically hidden

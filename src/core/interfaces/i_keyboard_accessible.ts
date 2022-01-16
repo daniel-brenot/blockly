@@ -8,7 +8,7 @@
  * @fileoverview The interface for objects that handle keyboard shortcuts.
  */
 
-'use strict';
+
 
 /**
  * The interface for objects that handle keyboard shortcuts.

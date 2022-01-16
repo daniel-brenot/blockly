@@ -8,7 +8,7 @@
  * @fileoverview The interface for an object that supports a right-click.
  */
 
-'use strict';
+
 
 /**
  * The interface for an object that supports a right-click.

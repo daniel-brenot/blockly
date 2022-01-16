@@ -8,7 +8,7 @@
  * @fileoverview The interface for a bubble.
  */
 
-'use strict';
+
 
 /**
  * The interface for a bubble.

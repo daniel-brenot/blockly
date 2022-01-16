@@ -8,7 +8,7 @@
  * @fileoverview An object that owns a block's rendering SVG elements.
  */
 
-'use strict';
+
 
 /**
  * An object that owns a block's rendering SVG elements.

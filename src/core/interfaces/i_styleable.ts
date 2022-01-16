@@ -8,7 +8,7 @@
  * @fileoverview The interface for an object that a style can be added to.
  */
 
-'use strict';
+
 
 /**
  * The interface for an object that a style can be added to.

@@ -9,7 +9,7 @@
  * that is dropped on top of it.
  */
 
-'use strict';
+
 
 /**
  * The interface for a component that can delete a block or bubble

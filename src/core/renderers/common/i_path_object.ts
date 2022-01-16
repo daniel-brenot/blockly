@@ -9,7 +9,7 @@
  * elements.
  */
 
-'use strict';
+
 
 /**
  * The interface for an object that owns a block's rendering SVG

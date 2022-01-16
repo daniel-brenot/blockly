@@ -9,7 +9,7 @@
  * serializing part of the workspace.
  */
 
-'use strict';
+
 
 /**
  * The record type for an object containing functions for

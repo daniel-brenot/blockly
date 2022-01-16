@@ -10,7 +10,7 @@
  * serializers. Higher priorities are deserialized first.
  */
 
-'use strict';
+
 
 /**
  * The top level namespace for priorities of plugin serializers.

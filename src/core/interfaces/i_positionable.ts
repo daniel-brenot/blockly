@@ -8,7 +8,7 @@
  * @fileoverview The interface for a positionable UI element.
  */
 
-'use strict';
+
 
 /**
  * The interface for a positionable UI element.

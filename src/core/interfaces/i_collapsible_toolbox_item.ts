@@ -8,7 +8,7 @@
  * @fileoverview The interface for a collapsible toolbox item.
  */
 
-'use strict';
+
 
 /**
  * The interface for a collapsible toolbox item.

@@ -9,7 +9,7 @@
  * the ComponentManager.
  */
 
-'use strict';
+
 
 /**
  * Interface for a workspace component that can be registered with

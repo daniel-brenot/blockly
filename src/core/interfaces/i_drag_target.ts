@@ -9,7 +9,7 @@
  * block is dropped on top of it.
  */
 
-'use strict';
+
 
 /**
  * The interface for a component that has a handler for when a

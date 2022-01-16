@@ -8,7 +8,7 @@
  * @fileoverview An enum for the possible types of connections.
  */
 
-'use strict';
+
 
 /**
  * An enum for the possible types of connections.

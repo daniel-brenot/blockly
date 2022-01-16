@@ -10,7 +10,7 @@
  * The drop-down can be kept inside the workspace, animate in/out, etc.
  */
 
-'use strict';
+
 
 /**
  * A div that floats on top of the workspace, for drop-down menus.

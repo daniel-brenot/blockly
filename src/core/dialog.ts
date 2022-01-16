@@ -9,7 +9,7 @@
  * alert/confirmation dialogs.
  */
 
-'use strict';
+
 
 /**
  * Wrapper functions around JS functions for showing alert/confirmation dialogs.

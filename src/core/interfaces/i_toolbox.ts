@@ -8,7 +8,7 @@
  * @fileoverview The interface for a toolbox.
  */
 
-'use strict';
+
 
 /**
  * The interface for a toolbox.

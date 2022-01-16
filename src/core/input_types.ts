@@ -8,7 +8,7 @@
  * @fileoverview An enum for the possible types of inputs.
  */
 
-'use strict';
+
 
 /**
  * An enum for the possible types of inputs.

@@ -13,7 +13,7 @@
  * while dragging blocks.
  */
 
-'use strict';
+
 
 /**
  * A class that manages a surface for dragging blocks.  When a
@@ -61,6 +61,7 @@ BlockDragSurfaceSvg.prototype.SVG_ = null;
  * @private
  */
 BlockDragSurfaceSvg.prototype.dragGroup_ = null;
+
 
 /**
  * Containing HTML element; parent of the workspace and the drag surface.

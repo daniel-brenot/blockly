@@ -8,7 +8,7 @@
  * @fileoverview The interface for a metrics manager.
  */
 
-'use strict';
+
 
 /**
  * The interface for a metrics manager.
