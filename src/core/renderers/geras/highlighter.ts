@@ -9,14 +9,14 @@
  * compatibility mode.
  * @class
  */
-goog.module('Blockly.geras.Highlighter');
+goog.module('blockly/core/renderers/geras/highlighter');
 
-import svgPaths from 'Blockly.utils.svgPaths';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {HighlightConstantProvider} from 'Blockly.geras.HighlightConstantProvider';
-import {RenderInfo} from 'Blockly.geras.RenderInfo';
-import {Renderer} from 'Blockly.geras.Renderer';
-import {Types} from 'Blockly.blockRendering.Types';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {HighlightConstantProvider} from 'blockly/core/renderers/geras/highlight_constants';
+import {RenderInfo} from 'blockly/core/renderers/geras/info';
+import {Renderer} from 'blockly/core/renderers/geras/renderer';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

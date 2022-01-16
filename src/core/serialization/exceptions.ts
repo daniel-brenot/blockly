@@ -3,11 +3,11 @@
  * Contains custom errors thrown by the serialization system.
  * @namespace Blockly.serialization.exceptions
  */
-goog.module('Blockly.serialization.exceptions');
+goog.module('blockly/core/serialization/exceptions');
 
-import {Block} from 'Blockly.Block';
+import {Block} from 'blockly/core/block';
 // eslint-disable-next-line no-unused-vars
-import {State} from 'Blockly.serialization.blocks';
+import {State} from 'blockly/core/serialization/blocks';
 
 
 /**

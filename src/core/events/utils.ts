@@ -9,17 +9,17 @@
  * actions in Blockly's editor.
  * @namespace Blockly.Events.utils
  */
-goog.module('Blockly.Events.utils');
+goog.module('blockly/core/events/utils');
 
-import Abstract from 'Blockly.Events.Abstract';
-import idGenerator from 'Blockly.utils.idGenerator';
-import registry from 'Blockly.registry';
-import {BlockCreate} from 'Blockly.Events.BlockCreate';
-import {BlockMove} from 'Blockly.Events.BlockMove';
-import {Block} from 'Blockly.Block';
-import {CommentCreate} from 'Blockly.Events.CommentCreate';
-import {CommentMove} from 'Blockly.Events.CommentMove';
-import {Workspace} from 'Blockly.Workspace';
+import Abstract from 'blockly/core/events/events_abstract';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import registry from 'blockly/core/registry';
+import {BlockCreate} from 'blockly/core/events/events_block_create';
+import {BlockMove} from 'blockly/core/events/events_block_move';
+import {Block} from 'blockly/core/block';
+import {CommentCreate} from 'blockly/core/events/events_comment_create';
+import {CommentMove} from 'blockly/core/events/events_comment_move';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**
@@ -321,7 +321,7 @@ function fireNow() {
     if (!event.workspaceId) {
       continue;
     }
-    const {Workspace} = goog.module.get('Blockly.Workspace');
+    const {Workspace} = goog.module.get('blockly/core/workspace');
     const eventWorkspace = Workspace.getById(event.workspaceId);
     if (eventWorkspace) {
       eventWorkspace.fireChangeListener(event);
@@ -523,7 +523,7 @@ export function disableOrphans(event) {
     if (!event.workspaceId) {
       return;
     }
-    const {Workspace} = goog.module.get('Blockly.Workspace');
+    const {Workspace} = goog.module.get('blockly/core/workspace');
     const eventWorkspace = Workspace.getById(event.workspaceId);
     let block = eventWorkspace.getBlockById(event.blockId);
     if (block) {

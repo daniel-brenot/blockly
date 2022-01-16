@@ -8,23 +8,23 @@
  * Object representing a zoom icons.
  * @class
  */
-goog.module('Blockly.ZoomControls');
+goog.module('blockly/core/zoom_controls');
 
-import Css from 'Blockly.Css';
-import Touch from 'Blockly.Touch';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import uiPosition from 'Blockly.uiPosition';
-import {ComponentManager} from 'Blockly.ComponentManager';
-import {IPositionable} from 'Blockly.IPositionable';
-import {MetricsManager} from 'Blockly.MetricsManager';
-import {Rect} from 'Blockly.utils.Rect';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.Click');
+import Css from 'blockly/core/css';
+import Touch from 'blockly/core/touch';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import uiPosition from 'blockly/core/positionable_helpers';
+import {ComponentManager} from 'blockly/core/component_manager';
+import {IPositionable} from 'blockly/core/interfaces/i_positionable';
+import {MetricsManager} from 'blockly/core/metrics_manager';
+import {Rect} from 'blockly/core/utils/rect';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_click');
 
 
 /**

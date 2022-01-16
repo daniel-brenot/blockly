@@ -14,12 +14,12 @@
  * rendered block.
  * @class
  */
-goog.module('Blockly.blockRendering.InputRow');
+goog.module('blockly/core/renderers/measurables/input_row');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Row} from 'Blockly.blockRendering.Row';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Row} from 'blockly/core/renderers/measurables/row';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

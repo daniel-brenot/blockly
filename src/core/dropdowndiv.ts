@@ -16,17 +16,17 @@
  * A div that floats on top of the workspace, for drop-down menus.
  * @class
  */
-goog.module('Blockly.DropDownDiv');
+goog.module('blockly/core/dropdowndiv');
 
 import common from 'blockly/core/common';
-import dom from 'Blockly.utils.dom';
-import math from 'Blockly.utils.math';
-import style from 'Blockly.utils.style';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Field} from 'Blockly.Field';
-import {Rect} from 'Blockly.utils.Rect';
-import {Size} from 'Blockly.utils.Size';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import dom from 'blockly/core/utils/dom';
+import math from 'blockly/core/utils/math';
+import style from 'blockly/core/utils/style';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Field} from 'blockly/core/field';
+import {Rect} from 'blockly/core/utils/rect';
+import {Size} from 'blockly/core/utils/size';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

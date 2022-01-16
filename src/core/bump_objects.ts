@@ -8,17 +8,17 @@
  * Utilities for bumping objects back into worksapce bounds.
  * @namespace Blockly.bumpObjects
  */
-goog.module('Blockly.bumpObjects');
+goog.module('blockly/core/bump_objects');
 
-import Abstract from 'Blockly.Events.Abstract';
-import eventUtils from 'Blockly.Events.utils';
-import mathUtils from 'Blockly.utils.math';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {IBoundedElement} from 'Blockly.IBoundedElement';
-import {MetricsManager} from 'Blockly.MetricsManager';
-import {ViewportChange} from 'Blockly.Events.ViewportChange';
-import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import Abstract from 'blockly/core/events/events_abstract';
+import eventUtils from 'blockly/core/events/utils';
+import mathUtils from 'blockly/core/utils/math';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {IBoundedElement} from 'blockly/core/interfaces/i_bounded_element';
+import {MetricsManager} from 'blockly/core/metrics_manager';
+import {ViewportChange} from 'blockly/core/events/events_viewport';
+import {WorkspaceCommentSvg} from 'blockly/core/workspace_comment_svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

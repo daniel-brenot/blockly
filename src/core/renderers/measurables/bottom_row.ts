@@ -14,14 +14,14 @@
  * of its subcomponents.
  * @class
  */
-goog.module('Blockly.blockRendering.BottomRow');
+goog.module('blockly/core/renderers/measurables/bottom_row');
 
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {NextConnection} from 'Blockly.blockRendering.NextConnection';
-import {Row} from 'Blockly.blockRendering.Row';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {NextConnection} from 'blockly/core/renderers/measurables/next_connection';
+import {Row} from 'blockly/core/renderers/measurables/row';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

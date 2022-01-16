@@ -8,11 +8,11 @@
  * Methods for dragging a workspace visually.
  * @class
  */
-goog.module('Blockly.WorkspaceDragger');
+goog.module('blockly/core/workspace_dragger');
 
 import common from 'blockly/core/common';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

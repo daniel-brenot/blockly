@@ -8,14 +8,14 @@
  * An item in the toolbox.
  * @class
  */
-goog.module('Blockly.ToolboxItem');
+goog.module('blockly/core/toolbox/toolbox_item');
 
-import idGenerator from 'Blockly.utils.idGenerator';
-import toolbox from 'Blockly.utils.toolbox';
-import {ICollapsibleToolboxItem} from 'Blockly.ICollapsibleToolboxItem';
-import {IToolboxItem} from 'Blockly.IToolboxItem';
-import {IToolbox} from 'Blockly.IToolbox';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import toolbox from 'blockly/core/utils/toolbox';
+import {ICollapsibleToolboxItem} from 'blockly/core/interfaces/i_collapsible_toolbox_item';
+import {IToolboxItem} from 'blockly/core/interfaces/i_toolbox_item';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

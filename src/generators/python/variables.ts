@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Python.variables');
+goog.module('blockly/generators/python/variables');
 
-import Python from 'Blockly.Python';
-import {NameType} from 'Blockly.Names';
+import Python from 'blockly/generators/python';
+import {NameType} from 'blockly/core/names';
 
 
 Python['variables_get'] = function(block) {

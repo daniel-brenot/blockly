@@ -8,14 +8,14 @@
  * Class for comment creation event.
  * @class
  */
-goog.module('Blockly.Events.CommentCreate');
+goog.module('blockly/core/events/events_comment_create');
 
-import Xml from 'Blockly.Xml';
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {CommentBase} from 'Blockly.Events.CommentBase';
-import {WorkspaceComment} from 'Blockly.WorkspaceComment';
+import Xml from 'blockly/core/xml';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {CommentBase} from 'blockly/core/events/events_comment_base';
+import {WorkspaceComment} from 'blockly/core/workspace_comment';
 
 
 /**

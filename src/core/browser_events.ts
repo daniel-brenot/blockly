@@ -8,12 +8,12 @@
  * Browser event handling.
  * @namespace Blockly.browserEvents
  */
-goog.module('Blockly.browserEvents');
+goog.module('blockly/core/browser_events');
 
-import Touch from 'Blockly.Touch';
-import internalConstants from 'Blockly.internalConstants';
-import userAgent from 'Blockly.utils.userAgent';
-import {globalThis} from 'Blockly.utils.global';
+import Touch from 'blockly/core/touch';
+import internalConstants from 'blockly/core/internal_constants';
+import userAgent from 'blockly/core/utils/useragent';
+import {globalThis} from 'blockly/core/utils/global';
 
 
 /**

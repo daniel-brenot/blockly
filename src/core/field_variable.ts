@@ -8,22 +8,22 @@
  * Variable input field.
  * @class
  */
-goog.module('Blockly.FieldVariable');
+goog.module('blockly/core/field_variable');
 
-import Variables from 'Blockly.Variables';
-import Xml from 'Blockly.Xml';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import internalConstants from 'Blockly.internalConstants';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import {Block} from 'Blockly.Block';
-import {FieldDropdown} from 'Blockly.FieldDropdown';
-import {MenuItem} from 'Blockly.MenuItem';
-import {Menu} from 'Blockly.Menu';
-import {Msg} from 'Blockly.Msg';
-import {Size} from 'Blockly.utils.Size';
-import {VariableModel} from 'Blockly.VariableModel';
-goog.require('Blockly.Events.BlockChange');
+import Variables from 'blockly/core/variables';
+import Xml from 'blockly/core/xml';
+import fieldRegistry from 'blockly/core/field_registry';
+import internalConstants from 'blockly/core/internal_constants';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import {Block} from 'blockly/core/block';
+import {FieldDropdown} from 'blockly/core/field_dropdown';
+import {MenuItem} from 'blockly/core/menuitem';
+import {Menu} from 'blockly/core/menu';
+import {Msg} from 'blockly/core/msg';
+import {Size} from 'blockly/core/utils/size';
+import {VariableModel} from 'blockly/core/variable_model';
+goog.require('blockly/core/events/events_block_change');
 
 
 /**

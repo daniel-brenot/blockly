@@ -8,21 +8,21 @@
  * Color input field.
  * @class
  */
-goog.module('Blockly.FieldColor');
+goog.module('blockly/core/field_colour');
 
-import Css from 'Blockly.Css';
-import aria from 'Blockly.utils.aria';
-import browserEvents from 'Blockly.browserEvents';
-import color from 'Blockly.utils.color';
-import dom from 'Blockly.utils.dom';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import idGenerator from 'Blockly.utils.idGenerator';
-import object from 'Blockly.utils.object';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {Field} from 'Blockly.Field';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {Size} from 'Blockly.utils.Size';
-goog.require('Blockly.Events.BlockChange');
+import Css from 'blockly/core/css';
+import aria from 'blockly/core/utils/aria';
+import browserEvents from 'blockly/core/browser_events';
+import color from 'blockly/core/utils/colour';
+import dom from 'blockly/core/utils/dom';
+import fieldRegistry from 'blockly/core/field_registry';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import object from 'blockly/core/utils/object';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {Field} from 'blockly/core/field';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {Size} from 'blockly/core/utils/size';
+goog.require('blockly/core/events/events_block_change');
 
 
 /**

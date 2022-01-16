@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP.procedures');
+goog.module('blockly/generators/php/procedures');
 
-import PHP from 'Blockly.PHP';
-import Variables from 'Blockly.Variables';
-import {NameType} from 'Blockly.Names';
+import PHP from 'blockly/generators/php';
+import Variables from 'blockly/core/variables';
+import {NameType} from 'blockly/core/names';
 
 
 PHP['procedures_defreturn'] = function(block) {

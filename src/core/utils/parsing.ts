@@ -7,11 +7,11 @@
 /**
  * @namespace Blockly.utils.parsing
  */
-goog.module('Blockly.utils.parsing');
+goog.module('blockly/core/utils/parsing');
 
-import colorUtils from 'Blockly.utils.color';
-import stringUtils from 'Blockly.utils.string';
-import {Msg} from 'Blockly.Msg';
+import colorUtils from 'blockly/core/utils/colour';
+import stringUtils from 'blockly/core/utils/string';
+import {Msg} from 'blockly/core/msg';
 
 
 /**

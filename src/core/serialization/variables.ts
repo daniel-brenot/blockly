@@ -9,14 +9,14 @@
  * state.
  * @namespace Blockly.serialization.variables
  */
-goog.module('Blockly.serialization.variables');
+goog.module('blockly/core/serialization/variables');
 
-import priorities from 'Blockly.serialization.priorities';
-import serializationRegistry from 'Blockly.serialization.registry';
+import priorities from 'blockly/core/serialization/priorities';
+import serializationRegistry from 'blockly/core/serialization/registry';
 // eslint-disable-next-line no-unused-vars
-import {ISerializer} from 'Blockly.serialization.ISerializer';
+import {ISerializer} from 'blockly/core/interfaces/i_serializer';
 // eslint-disable-next-line no-unused-vars
-import {Workspace} from 'Blockly.Workspace';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

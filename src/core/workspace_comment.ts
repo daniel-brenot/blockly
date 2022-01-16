@@ -8,17 +8,17 @@
  * Object representing a code comment on the workspace.
  * @class
  */
-goog.module('Blockly.WorkspaceComment');
+goog.module('blockly/core/workspace_comment');
 
-import eventUtils from 'Blockly.Events.utils';
-import idGenerator from 'Blockly.utils.idGenerator';
-import xml from 'Blockly.utils.xml';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Workspace} from 'Blockly.Workspace';
-goog.require('Blockly.Events.CommentChange');
-goog.require('Blockly.Events.CommentCreate');
-goog.require('Blockly.Events.CommentDelete');
-goog.require('Blockly.Events.CommentMove');
+import eventUtils from 'blockly/core/events/utils';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import xml from 'blockly/core/utils/xml';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Workspace} from 'blockly/core/workspace';
+goog.require('blockly/core/events/events_comment_change');
+goog.require('blockly/core/events/events_comment_create');
+goog.require('blockly/core/events/events_comment_delete');
+goog.require('blockly/core/events/events_comment_move');
 
 
 /**

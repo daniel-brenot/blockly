@@ -8,22 +8,22 @@
  * Components for creating connections between blocks.
  * @class
  */
-goog.module('Blockly.RenderedConnection');
+goog.module('blockly/core/rendered_connection');
 
 import common from 'blockly/core/common';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import object from 'Blockly.utils.object';
-import svgPaths from 'Blockly.utils.svgPaths';
-import svgMath from 'Blockly.utils.svgMath';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Block} from 'Blockly.Block';
-import {ConnectionDB} from 'Blockly.ConnectionDB';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Connection} from 'Blockly.Connection';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Svg} from 'Blockly.utils.Svg';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import object from 'blockly/core/utils/object';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import svgMath from 'blockly/core/utils/svg_math';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Block} from 'blockly/core/block';
+import {ConnectionDB} from 'blockly/core/connection_db';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Connection} from 'blockly/core/connection';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

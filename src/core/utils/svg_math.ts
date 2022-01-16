@@ -8,16 +8,16 @@
  * Utility methods realted to figuring out positions of SVG elements.
  * @namespace Blockly.utils.svgMath
  */
-goog.module('Blockly.utils.svgMath');
+goog.module('blockly/core/utils/svg_math');
 
-import deprecation from 'Blockly.utils.deprecation';
-import global from 'Blockly.utils.global';
-import style from 'Blockly.utils.style';
-import userAgent from 'Blockly.utils.userAgent';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Rect} from 'Blockly.utils.Rect';
-import {Size} from 'Blockly.utils.Size';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import deprecation from 'blockly/core/utils/deprecation';
+import global from 'blockly/core/utils/global';
+import style from 'blockly/core/utils/style';
+import userAgent from 'blockly/core/utils/useragent';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Rect} from 'blockly/core/utils/rect';
+import {Size} from 'blockly/core/utils/size';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

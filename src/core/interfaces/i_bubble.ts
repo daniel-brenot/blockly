@@ -14,12 +14,12 @@
  * The interface for a bubble.
  * @namespace Blockly.IBubble
  */
-goog.module('Blockly.IBubble');
+goog.module('blockly/core/interfaces/i_bubble');
 
-import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {IContextMenu} from 'Blockly.IContextMenu';
-import {IDraggable} from 'Blockly.IDraggable';
+import {BlockDragSurfaceSvg} from 'blockly/core/block_drag_surface';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {IContextMenu} from 'blockly/core/interfaces/i_contextmenu';
+import {IDraggable} from 'blockly/core/interfaces/i_draggable';
 
 
 /**

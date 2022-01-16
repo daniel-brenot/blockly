@@ -9,14 +9,14 @@
  * for both pointer and touch events.
  * @class
  */
-goog.module('Blockly.TouchGesture');
+goog.module('blockly/core/touch_gesture');
 
-import Touch from 'Blockly.Touch';
-import browserEvents from 'Blockly.browserEvents';
-import object from 'Blockly.utils.object';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Gesture} from 'Blockly.Gesture';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import Touch from 'blockly/core/touch';
+import browserEvents from 'blockly/core/browser_events';
+import object from 'blockly/core/utils/object';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Gesture} from 'blockly/core/gesture';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /*

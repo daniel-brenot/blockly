@@ -16,13 +16,13 @@
  * bubble that is dropped on top of it.
  * @class
  */
-goog.module('Blockly.DeleteArea');
+goog.module('blockly/core/delete_area');
 
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {DragTarget} from 'Blockly.DragTarget';
-import {IDeleteArea} from 'Blockly.IDeleteArea';
-import {IDraggable} from 'Blockly.IDraggable';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {DragTarget} from 'blockly/core/drag_target';
+import {IDeleteArea} from 'blockly/core/interfaces/i_delete_area';
+import {IDraggable} from 'blockly/core/interfaces/i_draggable';
 
 
 /**

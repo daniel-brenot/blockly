@@ -8,22 +8,22 @@
  * Methods for dragging a block visually.
  * @class
  */
-goog.module('Blockly.BlockDragger');
+goog.module('blockly/core/block_dragger');
 
-import blockAnimation from 'Blockly.blockAnimations';
-import bumpObjects from 'Blockly.bumpObjects';
+import blockAnimation from 'blockly/core/block_animations';
+import bumpObjects from 'blockly/core/bump_objects';
 import common from 'blockly/core/common';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import registry from 'Blockly.registry';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {IBlockDragger} from 'Blockly.IBlockDragger';
-import {IDragTarget} from 'Blockly.IDragTarget';
-import {InsertionMarkerManager} from 'Blockly.InsertionMarkerManager';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.BlockDrag');
-goog.require('Blockly.Events.BlockMove');
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import registry from 'blockly/core/registry';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {IBlockDragger} from 'blockly/core/interfaces/i_block_dragger';
+import {IDragTarget} from 'blockly/core/interfaces/i_drag_target';
+import {InsertionMarkerManager} from 'blockly/core/insertion_marker_manager';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_block_drag');
+goog.require('blockly/core/events/events_block_move');
 
 
 /**

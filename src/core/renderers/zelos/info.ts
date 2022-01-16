@@ -8,25 +8,25 @@
  * Makecode/scratch-style renderer.
  * @class
  */
-goog.module('Blockly.zelos.RenderInfo');
+goog.module('blockly/core/renderers/zelos/info');
 
-import {Align} from 'Blockly.Input';
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {BottomRow} from 'Blockly.zelos.BottomRow';
-import {ConstantProvider} from 'Blockly.zelos.ConstantProvider';
-import {FieldImage} from 'Blockly.FieldImage';
-import {FieldLabel} from 'Blockly.FieldLabel';
-import {FieldTextInput} from 'Blockly.FieldTextInput';
-import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {Renderer} from 'Blockly.zelos.Renderer';
-import {RightConnectionShape} from 'Blockly.zelos.RightConnectionShape';
-import {StatementInput} from 'Blockly.zelos.StatementInput';
-import {TopRow} from 'Blockly.zelos.TopRow';
-import {Types} from 'Blockly.blockRendering.Types';
-import {inputTypes} from 'Blockly.inputTypes';
+import {Align} from 'blockly/core/input';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {BottomRow} from 'blockly/core/renderers/zelos/measurables/bottom_row';
+import {ConstantProvider} from 'blockly/core/renderers/zelos/constants';
+import {FieldImage} from 'blockly/core/field_image';
+import {FieldLabel} from 'blockly/core/field_label';
+import {FieldTextInput} from 'blockly/core/field_textinput';
+import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {RenderInfo: BaseRenderInfo} from 'blockly/core/renderers/common/info';
+import {Renderer} from 'blockly/core/renderers/zelos/renderer';
+import {RightConnectionShape} from 'blockly/core/renderers/zelos/measurables/row_elements';
+import {StatementInput} from 'blockly/core/renderers/zelos/measurables/inputs';
+import {TopRow} from 'blockly/core/renderers/zelos/measurables/top_row';
+import {Types} from 'blockly/core/renderers/measurables/types';
+import {inputTypes} from 'blockly/core/input_types';
 
 
 /**

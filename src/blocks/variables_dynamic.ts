@@ -4,18 +4,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.blocks.variablesDynamic');
+goog.module('blockly/blocks/variables_dynamic');
 
-import AbstractEvent from 'Blockly.Events.Abstract';
-import ContextMenu from 'Blockly.ContextMenu';
-import Extensions from 'Blockly.Extensions';
-import Variables from 'Blockly.Variables';
-import xml from 'Blockly.utils.xml';
-import {Block} from 'Blockly.Block';
-import {Msg} from 'Blockly.Msg';
+import AbstractEvent from 'blockly/core/events/events_abstract';
+import ContextMenu from 'blockly/core/contextmenu';
+import Extensions from 'blockly/core/extensions';
+import Variables from 'blockly/core/variables';
+import xml from 'blockly/core/utils/xml';
+import {Block} from 'blockly/core/block';
+import {Msg} from 'blockly/core/msg';
 import {defineBlocksWithJsonArray} from 'blockly/core/common';
-goog.require('Blockly.FieldLabel');
-goog.require('Blockly.FieldVariable');
+goog.require('blockly/core/field_label');
+goog.require('blockly/core/field_variable');
 
 
 defineBlocksWithJsonArray([

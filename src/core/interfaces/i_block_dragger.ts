@@ -14,10 +14,10 @@
  * The interface for a block dragger.
  * @namespace Blockly.IBlockDragger
  */
-goog.module('Blockly.IBlockDragger');
+goog.module('blockly/core/interfaces/i_block_dragger');
 
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Coordinate} from 'Blockly.utils.Coordinate';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Coordinate} from 'blockly/core/utils/coordinate';
 
 
 /**

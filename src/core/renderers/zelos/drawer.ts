@@ -8,16 +8,16 @@
  * Zelos renderer.
  * @class
  */
-goog.module('Blockly.zelos.Drawer');
+goog.module('blockly/core/renderers/zelos/drawer');
 
-import debug from 'Blockly.blockRendering.debug';
-import object from 'Blockly.utils.object';
-import svgPaths from 'Blockly.utils.svgPaths';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Drawer: BaseDrawer} from 'Blockly.blockRendering.Drawer';
-import {PathObject} from 'Blockly.zelos.PathObject';
-import {RenderInfo} from 'Blockly.zelos.RenderInfo';
-import {Row} from 'Blockly.blockRendering.Row';
+import debug from 'blockly/core/renderers/common/debug';
+import object from 'blockly/core/utils/object';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Drawer: BaseDrawer} from 'blockly/core/renderers/common/drawer';
+import {PathObject} from 'blockly/core/renderers/zelos/path_object';
+import {RenderInfo} from 'blockly/core/renderers/zelos/info';
+import {Row} from 'blockly/core/renderers/measurables/row';
 
 
 /**

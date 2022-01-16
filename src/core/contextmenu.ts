@@ -8,28 +8,28 @@
  * Functionality for the right-click context menus.
  * @namespace Blockly.ContextMenu
  */
-goog.module('Blockly.ContextMenu');
+goog.module('blockly/core/contextmenu');
 
-import WidgetDiv from 'Blockly.WidgetDiv';
-import Xml from 'Blockly.Xml';
-import aria from 'Blockly.utils.aria';
-import browserEvents from 'Blockly.browserEvents';
-import clipboard from 'Blockly.clipboard';
-import deprecation from 'Blockly.utils.deprecation';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import userAgent from 'Blockly.utils.userAgent';
-import svgMath from 'Blockly.utils.svgMath';
-import {Block} from 'Blockly.Block';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {MenuItem} from 'Blockly.MenuItem';
-import {Menu} from 'Blockly.Menu';
-import {Msg} from 'Blockly.Msg';
-import {Rect} from 'Blockly.utils.Rect';
-import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.BlockCreate');
+import WidgetDiv from 'blockly/core/widgetdiv';
+import Xml from 'blockly/core/xml';
+import aria from 'blockly/core/utils/aria';
+import browserEvents from 'blockly/core/browser_events';
+import clipboard from 'blockly/core/clipboard';
+import deprecation from 'blockly/core/utils/deprecation';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import userAgent from 'blockly/core/utils/useragent';
+import svgMath from 'blockly/core/utils/svg_math';
+import {Block} from 'blockly/core/block';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {MenuItem} from 'blockly/core/menuitem';
+import {Menu} from 'blockly/core/menu';
+import {Msg} from 'blockly/core/msg';
+import {Rect} from 'blockly/core/utils/rect';
+import {WorkspaceCommentSvg} from 'blockly/core/workspace_comment_svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_block_create');
 
 
 /**
@@ -322,7 +322,7 @@ export function commentDuplicateOption(comment) {
  * @alias Blockly.ContextMenu.workspaceCommentOption
  */
 export function workspaceCommentOption(ws, e) {
-  const WorkspaceCommentSvg = goog.module.get('Blockly.WorkspaceCommentSvg');
+  const WorkspaceCommentSvg = goog.module.get('blockly/core/workspace_comment_svg');
   if (!WorkspaceCommentSvg) {
     throw Error('Missing require for Blockly.WorkspaceCommentSvg');
   }

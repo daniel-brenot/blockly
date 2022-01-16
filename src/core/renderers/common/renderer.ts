@@ -8,27 +8,27 @@
  * Base renderer.
  * @class
  */
-goog.module('Blockly.blockRendering.Renderer');
+goog.module('blockly/core/renderers/common/renderer');
 
-import debug from 'Blockly.blockRendering.debug';
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Block} from 'Blockly.Block';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Connection} from 'Blockly.Connection';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Debug} from 'Blockly.blockRendering.Debug';
-import {Drawer} from 'Blockly.blockRendering.Drawer';
-import {IPathObject} from 'Blockly.blockRendering.IPathObject';
-import {IRegistrable} from 'Blockly.IRegistrable';
-import {InsertionMarkerManager} from 'Blockly.InsertionMarkerManager';
-import {MarkerSvg} from 'Blockly.blockRendering.MarkerSvg';
-import {Marker} from 'Blockly.Marker';
-import {PathObject} from 'Blockly.blockRendering.PathObject';
-import {RenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Theme} from 'Blockly.Theme';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import debug from 'blockly/core/renderers/common/debug';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Block} from 'blockly/core/block';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Connection} from 'blockly/core/connection';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Debug} from 'blockly/core/renderers/common/debugger';
+import {Drawer} from 'blockly/core/renderers/common/drawer';
+import {IPathObject} from 'blockly/core/renderers/common/i_path_object';
+import {IRegistrable} from 'blockly/core/interfaces/i_registrable';
+import {InsertionMarkerManager} from 'blockly/core/insertion_marker_manager';
+import {MarkerSvg} from 'blockly/core/renderers/common/marker_svg';
+import {Marker} from 'blockly/core/keyboard_nav/marker';
+import {PathObject} from 'blockly/core/renderers/common/path_object';
+import {RenderInfo} from 'blockly/core/renderers/common/info';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Theme} from 'blockly/core/theme';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**
@@ -168,7 +168,7 @@ Renderer.prototype.makeDrawer_ = function(block, info) {
  * @protected
  */
 Renderer.prototype.makeDebugger_ = function() {
-  const {Debug} = goog.module.get('Blockly.blockRendering.Debug');
+  const {Debug} = goog.module.get('blockly/core/renderers/common/debugger');
   if (!Debug) {
     throw Error('Missing require for Blockly.blockRendering.Debug');
   }

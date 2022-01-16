@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.JavaScript.loops');
+goog.module('blockly/generators/javascript/loops');
 
-import stringUtils from 'Blockly.utils.string';
-import JavaScript from 'Blockly.JavaScript';
-import {NameType} from 'Blockly.Names';
+import stringUtils from 'blockly/core/utils/string';
+import JavaScript from 'blockly/generators/javascript';
+import {NameType} from 'blockly/core/names';
 
 
 JavaScript['controls_repeat_ext'] = function(block) {

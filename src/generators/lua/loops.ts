@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Lua.loops');
+goog.module('blockly/generators/lua/loops');
 
-import Lua from 'Blockly.Lua';
-import stringUtils from 'Blockly.utils.string';
-import {NameType} from 'Blockly.Names';
+import Lua from 'blockly/generators/lua';
+import stringUtils from 'blockly/core/utils/string';
+import {NameType} from 'blockly/core/names';
 
 
 /**

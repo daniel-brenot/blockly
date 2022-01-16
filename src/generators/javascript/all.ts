@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.JavaScript.all');
+goog.module('blockly/generators/javascript/all');
 
-goog.require('Blockly.JavaScript.color');
-goog.require('Blockly.JavaScript.lists');
-goog.require('Blockly.JavaScript.logic');
-goog.require('Blockly.JavaScript.loops');
-goog.require('Blockly.JavaScript.math');
-goog.require('Blockly.JavaScript.procedures');
-goog.require('Blockly.JavaScript.texts');
-goog.require('Blockly.JavaScript.variables');
-goog.require('Blockly.JavaScript.variablesDynamic');
+goog.require('blockly/generators/javascript/colour');
+goog.require('blockly/generators/javascript/lists');
+goog.require('blockly/generators/javascript/logic');
+goog.require('blockly/generators/javascript/loops');
+goog.require('blockly/generators/javascript/math');
+goog.require('blockly/generators/javascript/procedures');
+goog.require('blockly/generators/javascript/text');
+goog.require('blockly/generators/javascript/variables');
+goog.require('blockly/generators/javascript/variables_dynamic');
 

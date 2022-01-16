@@ -8,9 +8,9 @@
  * Inject Blockly's CSS synchronously.
  * @namespace Blockly.Css
  */
-goog.module('Blockly.Css');
+goog.module('blockly/core/css');
 
-import deprecation from 'Blockly.utils.deprecation';
+import deprecation from 'blockly/core/utils/deprecation';
 
 
 /**

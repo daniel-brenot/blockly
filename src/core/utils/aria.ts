@@ -10,7 +10,7 @@
  * a JavaScript framework such as Closure.
  * @namespace Blockly.utils.aria
  */
-goog.module('Blockly.utils.aria');
+goog.module('blockly/core/utils/aria');
 
 
 /** ARIA states/properties prefix. */

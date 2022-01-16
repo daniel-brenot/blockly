@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Lua.all');
+goog.module('blockly/generators/lua/all');
 
-goog.require('Blockly.Lua.color');
-goog.require('Blockly.Lua.lists');
-goog.require('Blockly.Lua.logic');
-goog.require('Blockly.Lua.loops');
-goog.require('Blockly.Lua.math');
-goog.require('Blockly.Lua.procedures');
-goog.require('Blockly.Lua.texts');
-goog.require('Blockly.Lua.variables');
-goog.require('Blockly.Lua.variablesDynamic');
+goog.require('blockly/generators/lua/colour');
+goog.require('blockly/generators/lua/lists');
+goog.require('blockly/generators/lua/logic');
+goog.require('blockly/generators/lua/loops');
+goog.require('blockly/generators/lua/math');
+goog.require('blockly/generators/lua/procedures');
+goog.require('blockly/generators/lua/text');
+goog.require('blockly/generators/lua/variables');
+goog.require('blockly/generators/lua/variables_dynamic');
 

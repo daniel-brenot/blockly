@@ -8,11 +8,11 @@
  * Blockly menu item similar to Closure's goog.ui.MenuItem
  * @class
  */
-goog.module('Blockly.MenuItem');
+goog.module('blockly/core/menuitem');
 
-import aria from 'Blockly.utils.aria';
-import dom from 'Blockly.utils.dom';
-import idGenerator from 'Blockly.utils.idGenerator';
+import aria from 'blockly/core/utils/aria';
+import dom from 'blockly/core/utils/dom';
+import idGenerator from 'blockly/core/utils/idgenerator';
 
 
 /**

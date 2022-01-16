@@ -8,14 +8,14 @@
  * Utility functions for positioning UI elements.
  * @namespace Blockly.uiPosition
  */
-goog.module('Blockly.uiPosition');
+goog.module('blockly/core/positionable_helpers');
 
-import toolbox from 'Blockly.utils.toolbox';
-import {MetricsManager} from 'Blockly.MetricsManager';
-import {Rect} from 'Blockly.utils.Rect';
-import {Scrollbar} from 'Blockly.Scrollbar';
-import {Size} from 'Blockly.utils.Size';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import toolbox from 'blockly/core/utils/toolbox';
+import {MetricsManager} from 'blockly/core/metrics_manager';
+import {Rect} from 'blockly/core/utils/rect';
+import {Scrollbar} from 'blockly/core/scrollbar';
+import {Size} from 'blockly/core/utils/size';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

@@ -9,14 +9,14 @@
  *
  * @namespace Blockly.VariablesDynamic
  */
-goog.module('Blockly.VariablesDynamic');
+goog.module('blockly/core/variables_dynamic');
 
-import Variables from 'Blockly.Variables';
-import xml from 'Blockly.utils.xml';
+import Variables from 'blockly/core/variables';
+import xml from 'blockly/core/utils/xml';
 import {Blocks} from 'blockly/core/blocks';
-import {Msg} from 'Blockly.Msg';
-import {VariableModel} from 'Blockly.VariableModel';
-import {Workspace} from 'Blockly.Workspace';
+import {Msg} from 'blockly/core/msg';
+import {VariableModel} from 'blockly/core/variable_model';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

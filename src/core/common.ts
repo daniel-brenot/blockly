@@ -12,11 +12,11 @@
 goog.module('blockly/core/common');
 
 import {Blocks} from 'blockly/core/blocks';
-import {Connection} from 'Blockly.Connection';
-import {ICopyable} from 'Blockly.ICopyable';
-import {Block} from 'Blockly.Block';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {Workspace} from 'Blockly.Workspace';
+import {Connection} from 'blockly/core/connection';
+import {ICopyable} from 'blockly/core/interfaces/i_copyable';
+import {Block} from 'blockly/core/block';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

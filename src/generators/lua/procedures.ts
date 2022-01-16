@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Lua.procedures');
+goog.module('blockly/generators/lua/procedures');
 
-import Lua from 'Blockly.Lua';
-import {NameType} from 'Blockly.Names';
+import Lua from 'blockly/generators/lua';
+import {NameType} from 'blockly/core/names';
 
 
 Lua['procedures_defreturn'] = function(block) {

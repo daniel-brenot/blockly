@@ -8,25 +8,25 @@
  * Object representing a code comment.
  * @class
  */
-goog.module('Blockly.Comment');
+goog.module('blockly/core/comment');
 
-import Css from 'Blockly.Css';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import userAgent from 'Blockly.utils.userAgent';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Block} from 'Blockly.Block';
-import {Bubble} from 'Blockly.Bubble';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Icon} from 'Blockly.Icon';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.BlockChange');
-goog.require('Blockly.Events.BubbleOpen');
-goog.require('Blockly.Warning');
+import Css from 'blockly/core/css';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import userAgent from 'blockly/core/utils/useragent';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Block} from 'blockly/core/block';
+import {Bubble} from 'blockly/core/bubble';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Icon} from 'blockly/core/icon';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_block_change');
+goog.require('blockly/core/events/events_bubble_open');
+goog.require('blockly/core/warning');
 
 
 /**

@@ -8,11 +8,11 @@
  * Methods animating a block on connection and disconnection.
  * @namespace Blockly.blockAnimations
  */
-goog.module('Blockly.blockAnimations');
+goog.module('blockly/core/block_animations');
 
-import dom from 'Blockly.utils.dom';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Svg} from 'Blockly.utils.Svg';
+import dom from 'blockly/core/utils/dom';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

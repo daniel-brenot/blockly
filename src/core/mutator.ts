@@ -9,28 +9,28 @@
  * user to change the shape of a block using a nested blocks editor.
  * @class
  */
-goog.module('Blockly.Mutator');
+goog.module('blockly/core/mutator');
 
-import Abstract from 'Blockly.Events.Abstract';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import object from 'Blockly.utils.object';
-import toolbox from 'Blockly.utils.toolbox';
-import xml from 'Blockly.utils.xml';
-import {BlockChange} from 'Blockly.Events.BlockChange';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {BlocklyOptions} from 'Blockly.BlocklyOptions';
-import {Block} from 'Blockly.Block';
-import {Bubble} from 'Blockly.Bubble';
-import {Connection} from 'Blockly.Connection';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Icon} from 'Blockly.Icon';
-import {Options} from 'Blockly.Options';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {Workspace} from 'Blockly.Workspace';
-goog.require('Blockly.Events.BubbleOpen');
+import Abstract from 'blockly/core/events/events_abstract';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import object from 'blockly/core/utils/object';
+import toolbox from 'blockly/core/utils/toolbox';
+import xml from 'blockly/core/utils/xml';
+import {BlockChange} from 'blockly/core/events/events_block_change';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {BlocklyOptions} from 'blockly/core/blockly_options';
+import {Block} from 'blockly/core/block';
+import {Bubble} from 'blockly/core/bubble';
+import {Connection} from 'blockly/core/connection';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Icon} from 'blockly/core/icon';
+import {Options} from 'blockly/core/options';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {Workspace} from 'blockly/core/workspace';
+goog.require('blockly/core/events/events_bubble_open');
 
 
 /**

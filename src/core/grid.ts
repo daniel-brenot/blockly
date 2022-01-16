@@ -9,11 +9,11 @@
  * Blockly.
  * @class
  */
-goog.module('Blockly.Grid');
+goog.module('blockly/core/grid');
 
-import dom from 'Blockly.utils.dom';
-import userAgent from 'Blockly.utils.userAgent';
-import {Svg} from 'Blockly.utils.Svg';
+import dom from 'blockly/core/utils/dom';
+import userAgent from 'blockly/core/utils/useragent';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

@@ -8,18 +8,18 @@
  * An object that provides constants for rendering blocks.
  * @class
  */
-goog.module('Blockly.blockRendering.ConstantProvider');
+goog.module('blockly/core/renderers/common/constants');
 
-import color from 'Blockly.utils.color';
-import dom from 'Blockly.utils.dom';
-import object from 'Blockly.utils.object';
-import svgPaths from 'Blockly.utils.svgPaths';
-import userAgent from 'Blockly.utils.userAgent';
-import parsing from 'Blockly.utils.parsing';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Svg} from 'Blockly.utils.Svg';
-import {Theme} from 'Blockly.Theme';
+import color from 'blockly/core/utils/colour';
+import dom from 'blockly/core/utils/dom';
+import object from 'blockly/core/utils/object';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import userAgent from 'blockly/core/utils/useragent';
+import parsing from 'blockly/core/utils/parsing';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Svg} from 'blockly/core/utils/svg';
+import {Theme} from 'blockly/core/theme';
 
 
 /**

@@ -4,20 +4,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.blocks.logic');
+goog.module('blockly/blocks/logic');
 
-import AbstractEvent from 'Blockly.Events.Abstract';
-import Events from 'Blockly.Events';
-import Extensions from 'Blockly.Extensions';
-import xmlUtils from 'Blockly.utils.xml';
-import {Block} from 'Blockly.Block';
-import {Msg} from 'Blockly.Msg';
-import {Mutator} from 'Blockly.Mutator';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Workspace} from 'Blockly.Workspace';
+import AbstractEvent from 'blockly/core/events/events_abstract';
+import Events from 'blockly/core/events/events';
+import Extensions from 'blockly/core/extensions';
+import xmlUtils from 'blockly/core/utils/xml';
+import {Block} from 'blockly/core/block';
+import {Msg} from 'blockly/core/msg';
+import {Mutator} from 'blockly/core/mutator';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Workspace} from 'blockly/core/workspace';
 import {defineBlocksWithJsonArray} from 'blockly/core/common';
-goog.require('Blockly.FieldDropdown');
-goog.require('Blockly.FieldLabel');
+goog.require('blockly/core/field_dropdown');
+goog.require('blockly/core/field_label');
 
 
 defineBlocksWithJsonArray([

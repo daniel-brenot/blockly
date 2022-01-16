@@ -8,20 +8,20 @@
  * Object representing a map of variables and their types.
  * @class
  */
-goog.module('Blockly.VariableMap');
+goog.module('blockly/core/variable_map');
 
-import arrayUtils from 'Blockly.utils.array';
-import dialog from 'Blockly.dialog';
-import eventUtils from 'Blockly.Events.utils';
-import idGenerator from 'Blockly.utils.idGenerator';
-import object from 'Blockly.utils.object';
-import {Block} from 'Blockly.Block';
-import {Msg} from 'Blockly.Msg';
-import {Names} from 'Blockly.Names';
-import {VariableModel} from 'Blockly.VariableModel';
-import {Workspace} from 'Blockly.Workspace';
-goog.require('Blockly.Events.VarDelete');
-goog.require('Blockly.Events.VarRename');
+import arrayUtils from 'blockly/core/utils/array';
+import dialog from 'blockly/core/dialog';
+import eventUtils from 'blockly/core/events/utils';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import object from 'blockly/core/utils/object';
+import {Block} from 'blockly/core/block';
+import {Msg} from 'blockly/core/msg';
+import {Names} from 'blockly/core/names';
+import {VariableModel} from 'blockly/core/variable_model';
+import {Workspace} from 'blockly/core/workspace';
+goog.require('blockly/core/events/events_var_delete');
+goog.require('blockly/core/events/events_var_rename');
 
 
 /**

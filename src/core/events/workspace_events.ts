@@ -8,13 +8,13 @@
  * Class for a finished loading workspace event.
  * @class
  */
-goog.module('Blockly.Events.FinishedLoading');
+goog.module('blockly/core/events/workspace_events');
 
-import Abstract from 'Blockly.Events.Abstract';
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {Workspace} from 'Blockly.Workspace';
+import Abstract from 'blockly/core/events/events_abstract';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

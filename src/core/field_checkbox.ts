@@ -8,13 +8,13 @@
  * Checkbox field.  Checked or not checked.
  * @class
  */
-goog.module('Blockly.FieldCheckbox');
+goog.module('blockly/core/field_checkbox');
 
-import dom from 'Blockly.utils.dom';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import object from 'Blockly.utils.object';
-import {Field} from 'Blockly.Field';
-goog.require('Blockly.Events.BlockChange');
+import dom from 'blockly/core/utils/dom';
+import fieldRegistry from 'blockly/core/field_registry';
+import object from 'blockly/core/utils/object';
+import {Field} from 'blockly/core/field';
+goog.require('blockly/core/events/events_block_change');
 
 
 /**

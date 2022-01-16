@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Python.math');
+goog.module('blockly/generators/python/math');
 
-import Python from 'Blockly.Python';
-import {NameType} from 'Blockly.Names';
+import Python from 'blockly/generators/python';
+import {NameType} from 'blockly/core/names';
 
 
 // If any new block imports any library, add that library name here.

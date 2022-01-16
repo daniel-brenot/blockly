@@ -4,23 +4,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.blocks.texts');
+goog.module('blockly/blocks/text');
 
-import Extensions from 'Blockly.Extensions';
-import {Msg} from 'Blockly.Msg';
-import xmlUtils from 'Blockly.utils.xml';
-import {Align} from 'Blockly.Input';
-import {Block} from 'Blockly.Block';
+import Extensions from 'blockly/core/extensions';
+import {Msg} from 'blockly/core/msg';
+import xmlUtils from 'blockly/core/utils/xml';
+import {Align} from 'blockly/core/input';
+import {Block} from 'blockly/core/block';
 import {Blocks} from 'blockly/core/blocks';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {FieldDropdown} from 'Blockly.FieldDropdown';
-import {FieldImage} from 'Blockly.FieldImage';
-import {FieldTextInput} from 'Blockly.FieldTextInput';
-import {Mutator} from 'Blockly.Mutator';
-import {Workspace} from 'Blockly.Workspace';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {FieldDropdown} from 'blockly/core/field_dropdown';
+import {FieldImage} from 'blockly/core/field_image';
+import {FieldTextInput} from 'blockly/core/field_textinput';
+import {Mutator} from 'blockly/core/mutator';
+import {Workspace} from 'blockly/core/workspace';
 import {defineBlocksWithJsonArray} from 'blockly/core/common';
-goog.require('Blockly.FieldMultilineInput');
-goog.require('Blockly.FieldVariable');
+goog.require('blockly/core/field_multilineinput');
+goog.require('blockly/core/field_variable');
 
 
 defineBlocksWithJsonArray([

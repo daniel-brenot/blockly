@@ -15,13 +15,13 @@
  * during rendering.
  * @class
  */
-goog.module('Blockly.blockRendering.OutputConnection');
+goog.module('blockly/core/renderers/measurables/output_connection');
 
-import object from 'Blockly.utils.object';
-import {Connection} from 'Blockly.blockRendering.Connection';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {Connection} from 'blockly/core/renderers/measurables/connection';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

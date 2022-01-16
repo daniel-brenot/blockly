@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Dart.logic');
+goog.module('blockly/generators/dart/logic');
 
-import Dart from 'Blockly.Dart';
+import Dart from 'blockly/generators/dart';
 
 
 Dart['controls_if'] = function(block) {

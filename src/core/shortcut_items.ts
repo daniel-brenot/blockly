@@ -8,15 +8,15 @@
  * Registers default keyboard shortcuts.
  * @namespace Blockly.ShortcutItems
  */
-goog.module('Blockly.ShortcutItems');
+goog.module('blockly/core/shortcut_items');
 
-import clipboard from 'Blockly.clipboard';
+import clipboard from 'blockly/core/clipboard';
 import common from 'blockly/core/common';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Gesture} from 'Blockly.Gesture';
-import {ICopyable} from 'Blockly.ICopyable';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Gesture} from 'blockly/core/gesture';
+import {ICopyable} from 'blockly/core/interfaces/i_copyable';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {ShortcutRegistry} from 'blockly/core/shortcut_registry';
 
 
 /**

@@ -8,74 +8,74 @@
  * Object representing a workspace rendered as SVG.
  * @class
  */
-goog.module('Blockly.WorkspaceSvg');
+goog.module('blockly/core/workspace_svg');
 
-import ContextMenu from 'Blockly.ContextMenu';
-import Procedures from 'Blockly.Procedures';
-import Tooltip from 'Blockly.Tooltip';
-import Variables from 'Blockly.Variables';
-import VariablesDynamic from 'Blockly.VariablesDynamic';
-import WidgetDiv from 'Blockly.WidgetDiv';
-import Xml from 'Blockly.Xml';
-import arrayUtils from 'Blockly.utils.array';
-import blockRendering from 'Blockly.blockRendering';
-import blocks from 'Blockly.serialization.blocks';
-import browserEvents from 'Blockly.browserEvents';
+import ContextMenu from 'blockly/core/contextmenu';
+import Procedures from 'blockly/core/procedures';
+import Tooltip from 'blockly/core/tooltip';
+import Variables from 'blockly/core/variables';
+import VariablesDynamic from 'blockly/core/variables_dynamic';
+import WidgetDiv from 'blockly/core/widgetdiv';
+import Xml from 'blockly/core/xml';
+import arrayUtils from 'blockly/core/utils/array';
+import blockRendering from 'blockly/core/renderers/common/block_rendering';
+import blocks from 'blockly/core/serialization/blocks';
+import browserEvents from 'blockly/core/browser_events';
 import common from 'blockly/core/common';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import svgMath from 'Blockly.utils.svgMath';
-import toolbox from 'Blockly.utils.toolbox';
-import userAgent from 'Blockly.utils.userAgent';
-import utils from 'Blockly.utils';
-import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {BlocklyOptions} from 'Blockly.BlocklyOptions';
-import {Block} from 'Blockly.Block';
-import {Classic} from 'Blockly.Themes.Classic';
-import {ComponentManager} from 'Blockly.ComponentManager';
-import {ConnectionDB} from 'Blockly.ConnectionDB';
-import {ContextMenuRegistry} from 'Blockly.ContextMenuRegistry';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Cursor} from 'Blockly.Cursor';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {FlyoutButton} from 'Blockly.FlyoutButton';
-import {Gesture} from 'Blockly.Gesture';
-import {Grid} from 'Blockly.Grid';
-import {IASTNodeLocationSvg} from 'Blockly.IASTNodeLocationSvg';
-import {IBoundedElement} from 'Blockly.IBoundedElement';
-import {IDragTarget} from 'Blockly.IDragTarget';
-import {IFlyout} from 'Blockly.IFlyout';
-import {IMetricsManager} from 'Blockly.IMetricsManager';
-import {IToolbox} from 'Blockly.IToolbox';
-import {MarkerManager} from 'Blockly.MarkerManager';
-import {Marker} from 'Blockly.Marker';
-import {Metrics} from 'Blockly.utils.Metrics';
-import {Options} from 'Blockly.Options';
-import {Rect} from 'Blockly.utils.Rect';
-import {Renderer} from 'Blockly.blockRendering.Renderer';
-import {ScrollbarPair} from 'Blockly.ScrollbarPair';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
-import {ThemeManager} from 'Blockly.ThemeManager';
-import {Theme} from 'Blockly.Theme';
-import {TouchGesture} from 'Blockly.TouchGesture';
-import {Trashcan} from 'Blockly.Trashcan';
-import {VariableModel} from 'Blockly.VariableModel';
-import {WorkspaceAudio} from 'Blockly.WorkspaceAudio';
-import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
-import {WorkspaceComment} from 'Blockly.WorkspaceComment';
-import {WorkspaceDragSurfaceSvg} from 'Blockly.WorkspaceDragSurfaceSvg';
-import {Workspace} from 'Blockly.Workspace';
-import {ZoomControls} from 'Blockly.ZoomControls';
-goog.require('Blockly.Events.BlockCreate');
-goog.require('Blockly.Events.ThemeChange');
-goog.require('Blockly.Events.ViewportChange');
-goog.require('Blockly.MetricsManager');
-goog.require('Blockly.Msg');
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import svgMath from 'blockly/core/utils/svg_math';
+import toolbox from 'blockly/core/utils/toolbox';
+import userAgent from 'blockly/core/utils/useragent';
+import utils from 'blockly/core/utils';
+import {BlockDragSurfaceSvg} from 'blockly/core/block_drag_surface';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {BlocklyOptions} from 'blockly/core/blockly_options';
+import {Block} from 'blockly/core/block';
+import {Classic} from 'blockly/core/theme/classic';
+import {ComponentManager} from 'blockly/core/component_manager';
+import {ConnectionDB} from 'blockly/core/connection_db';
+import {ContextMenuRegistry} from 'blockly/core/contextmenu_registry';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Cursor} from 'blockly/core/keyboard_nav/cursor';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {FlyoutButton} from 'blockly/core/flyout_button';
+import {Gesture} from 'blockly/core/gesture';
+import {Grid} from 'blockly/core/grid';
+import {IASTNodeLocationSvg} from 'blockly/core/interfaces/i_ast_node_location_svg';
+import {IBoundedElement} from 'blockly/core/interfaces/i_bounded_element';
+import {IDragTarget} from 'blockly/core/interfaces/i_drag_target';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {IMetricsManager} from 'blockly/core/interfaces/i_metrics_manager';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {MarkerManager} from 'blockly/core/marker_manager';
+import {Marker} from 'blockly/core/keyboard_nav/marker';
+import {Metrics} from 'blockly/core/utils/metrics';
+import {Options} from 'blockly/core/options';
+import {Rect} from 'blockly/core/utils/rect';
+import {Renderer} from 'blockly/core/renderers/common/renderer';
+import {ScrollbarPair} from 'blockly/core/scrollbar_pair';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
+import {ThemeManager} from 'blockly/core/theme_manager';
+import {Theme} from 'blockly/core/theme';
+import {TouchGesture} from 'blockly/core/touch_gesture';
+import {Trashcan} from 'blockly/core/trashcan';
+import {VariableModel} from 'blockly/core/variable_model';
+import {WorkspaceAudio} from 'blockly/core/workspace_audio';
+import {WorkspaceCommentSvg} from 'blockly/core/workspace_comment_svg';
+import {WorkspaceComment} from 'blockly/core/workspace_comment';
+import {WorkspaceDragSurfaceSvg} from 'blockly/core/workspace_drag_surface_svg';
+import {Workspace} from 'blockly/core/workspace';
+import {ZoomControls} from 'blockly/core/zoom_controls';
+goog.require('blockly/core/events/events_block_create');
+goog.require('blockly/core/events/events_theme_change');
+goog.require('blockly/core/events/events_viewport');
+goog.require('blockly/core/metrics_manager');
+goog.require('blockly/core/msg');
 
 
 /**
@@ -188,19 +188,19 @@ const WorkspaceSvg = function(
    */
   this.flyoutButtonCallbacks_ = Object.create(null);
 
-  const Variables = goog.module.get('Blockly.Variables');
+  const Variables = goog.module.get('blockly/core/variables');
   if (Variables && Variables.flyoutCategory) {
     this.registerToolboxCategoryCallback(
         Variables.CATEGORY_NAME, Variables.flyoutCategory);
   }
 
-  const VariablesDynamic = goog.module.get('Blockly.VariablesDynamic');
+  const VariablesDynamic = goog.module.get('blockly/core/variables_dynamic');
   if (VariablesDynamic && VariablesDynamic.flyoutCategory) {
     this.registerToolboxCategoryCallback(
         VariablesDynamic.CATEGORY_NAME, VariablesDynamic.flyoutCategory);
   }
 
-  const Procedures = goog.module.get('Blockly.Procedures');
+  const Procedures = goog.module.get('blockly/core/procedures');
   if (Procedures && Procedures.flyoutCategory) {
     this.registerToolboxCategoryCallback(
         Procedures.CATEGORY_NAME, Procedures.flyoutCategory);
@@ -1020,7 +1020,7 @@ WorkspaceSvg.prototype.newBlock = function(prototypeName, opt_id) {
  * @package
  */
 WorkspaceSvg.prototype.addTrashcan = function() {
-  const {Trashcan} = goog.module.get('Blockly.Trashcan');
+  const {Trashcan} = goog.module.get('blockly/core/trashcan');
   if (!Trashcan) {
     throw Error('Missing require for Blockly.Trashcan');
   }
@@ -1035,7 +1035,7 @@ WorkspaceSvg.prototype.addTrashcan = function() {
  * @package
  */
 WorkspaceSvg.prototype.addZoomControls = function() {
-  const {ZoomControls} = goog.module.get('Blockly.ZoomControls');
+  const {ZoomControls} = goog.module.get('blockly/core/zoom_controls');
   if (!ZoomControls) {
     throw Error('Missing require for Blockly.ZoomControls');
   }
@@ -1590,7 +1590,7 @@ WorkspaceSvg.prototype.pasteWorkspaceComment_ = function(xmlComment) {
   eventUtils.disable();
   let comment;
   try {
-    comment = goog.module.get('Blockly.WorkspaceCommentSvg')
+    comment = goog.module.get('blockly/core/workspace_comment_svg')
                   .fromXml(xmlComment, this);
     // Move the duplicate to original position.
     let commentX = parseInt(xmlComment.getAttribute('x'), 10);
@@ -1610,7 +1610,7 @@ WorkspaceSvg.prototype.pasteWorkspaceComment_ = function(xmlComment) {
     eventUtils.enable();
   }
   if (eventUtils.isEnabled()) {
-    goog.module.get('Blockly.WorkspaceComment').fireCreateEvent(comment);
+    goog.module.get('blockly/core/workspace_comment').fireCreateEvent(comment);
   }
   comment.select();
 };

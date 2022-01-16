@@ -8,13 +8,13 @@
  * Thrasos renderer.
  * @class
  */
-goog.module('Blockly.thrasos.Renderer');
+goog.module('blockly/core/renderers/thrasos/renderer.');
 
-import blockRendering from 'Blockly.blockRendering';
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {RenderInfo} from 'Blockly.thrasos.RenderInfo';
-import {Renderer: BaseRenderer} from 'Blockly.blockRendering.Renderer';
+import blockRendering from 'blockly/core/renderers/common/block_rendering';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {RenderInfo} from 'blockly/core/renderers/thrasos/info.';
+import {Renderer: BaseRenderer} from 'blockly/core/renderers/common/renderer';
 
 
 /**

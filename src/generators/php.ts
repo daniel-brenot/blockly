@@ -4,16 +4,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP');
+goog.module('blockly/generators/php');
 goog.module.declareLegacyNamespace();
 
-import objectUtils from 'Blockly.utils.object';
-import stringUtils from 'Blockly.utils.string';
-import {Block} from 'Blockly.Block';
-import {Generator} from 'Blockly.Generator';
-import {inputTypes} from 'Blockly.inputTypes';
-import {Names} from 'Blockly.Names';
-import {Workspace} from 'Blockly.Workspace';
+import objectUtils from 'blockly/core/utils/object';
+import stringUtils from 'blockly/core/utils/string';
+import {Block} from 'blockly/core/block';
+import {Generator} from 'blockly/core/generator';
+import {inputTypes} from 'blockly/core/input_types';
+import {Names} from 'blockly/core/names';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

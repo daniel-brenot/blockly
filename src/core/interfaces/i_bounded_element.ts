@@ -14,9 +14,9 @@
  * The interface for a bounded element.
  * @namespace Blockly.IBoundedElement
  */
-goog.module('Blockly.IBoundedElement');
+goog.module('blockly/core/interfaces/i_bounded_element');
 
-import {Rect} from 'Blockly.utils.Rect';
+import {Rect} from 'blockly/core/utils/rect';
 
 
 /**

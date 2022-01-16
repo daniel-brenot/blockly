@@ -14,12 +14,12 @@
  * block.
  * @class
  */
-goog.module('Blockly.blockRendering.Hat');
+goog.module('blockly/core/renderers/measurables/hat');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

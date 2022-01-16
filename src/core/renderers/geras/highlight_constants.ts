@@ -8,10 +8,10 @@
  * Objects for rendering highlights on blocks.
  * @class
  */
-goog.module('Blockly.geras.HighlightConstantProvider');
+goog.module('blockly/core/renderers/geras/highlight_constants');
 
-import svgPaths from 'Blockly.utils.svgPaths';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
 
 
 /**

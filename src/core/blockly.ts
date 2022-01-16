@@ -8,165 +8,165 @@
  * The top level namespace used to access the Blockly library.
  * @namespace Blockly
  */
-goog.module('Blockly');
+goog.module('blockly/core/blockly');
 goog.module.declareLegacyNamespace();
 
-import ContextMenu from 'Blockly.ContextMenu';
-import ContextMenuItems from 'Blockly.ContextMenuItems';
-import Css from 'Blockly.Css';
-import Events from 'Blockly.Events';
-import Extensions from 'Blockly.Extensions';
-import Procedures from 'Blockly.Procedures';
-import ShortcutItems from 'Blockly.ShortcutItems';
-import Themes from 'Blockly.Themes';
-import Tooltip from 'Blockly.Tooltip';
-import Touch from 'Blockly.Touch';
-import Variables from 'Blockly.Variables';
-import VariablesDynamic from 'Blockly.VariablesDynamic';
-import WidgetDiv from 'Blockly.WidgetDiv';
-import Xml from 'Blockly.Xml';
-import blockAnimations from 'Blockly.blockAnimations';
-import blockRendering from 'Blockly.blockRendering';
-import browserEvents from 'Blockly.browserEvents';
-import bumpObjects from 'Blockly.bumpObjects';
-import clipboard from 'Blockly.clipboard';
-import color from 'Blockly.utils.color';
+import ContextMenu from 'blockly/core/contextmenu';
+import ContextMenuItems from 'blockly/core/contextmenu_items';
+import Css from 'blockly/core/css';
+import Events from 'blockly/core/events/events';
+import Extensions from 'blockly/core/extensions';
+import Procedures from 'blockly/core/procedures';
+import ShortcutItems from 'blockly/core/shortcut_items';
+import Themes from 'blockly/core/theme/themes';
+import Tooltip from 'blockly/core/tooltip';
+import Touch from 'blockly/core/touch';
+import Variables from 'blockly/core/variables';
+import VariablesDynamic from 'blockly/core/variables_dynamic';
+import WidgetDiv from 'blockly/core/widgetdiv';
+import Xml from 'blockly/core/xml';
+import blockAnimations from 'blockly/core/block_animations';
+import blockRendering from 'blockly/core/renderers/common/block_rendering';
+import browserEvents from 'blockly/core/browser_events';
+import bumpObjects from 'blockly/core/bump_objects';
+import clipboard from 'blockly/core/clipboard';
+import color from 'blockly/core/utils/colour';
 import common from 'blockly/core/common';
-import constants from 'Blockly.constants';
-import deprecation from 'Blockly.utils.deprecation';
-import dialog from 'Blockly.dialog';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import geras from 'Blockly.geras';
-import internalConstants from 'Blockly.internalConstants';
-import minimalist from 'Blockly.minimalist';
-import registry from 'Blockly.registry';
-import serializationBlocks from 'Blockly.serialization.blocks';
-import serializationExceptions from 'Blockly.serialization.exceptions';
-import serializationPriorities from 'Blockly.serialization.priorities';
-import serializationRegistry from 'Blockly.serialization.registry';
-import serializationVariables from 'Blockly.serialization.variables';
-import serializationWorkspaces from 'Blockly.serialization.workspaces';
-import svgMath from 'Blockly.utils.svgMath';
-import thrasos from 'Blockly.thrasos';
-import toolbox from 'Blockly.utils.toolbox';
-import uiPosition from 'Blockly.uiPosition';
-import utils from 'Blockly.utils';
-import zelos from 'Blockly.zelos';
-import {Align, Input} from 'Blockly.Input';
-import {ASTNode} from 'Blockly.ASTNode';
-import {BasicCursor} from 'Blockly.BasicCursor';
-import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
-import {BlockDragger} from 'Blockly.BlockDragger';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {BlocklyOptions} from 'Blockly.BlocklyOptions';
+import constants from 'blockly/core/constants';
+import deprecation from 'blockly/core/utils/deprecation';
+import dialog from 'blockly/core/dialog';
+import fieldRegistry from 'blockly/core/field_registry';
+import geras from 'blockly/core/renderers/geras/geras';
+import internalConstants from 'blockly/core/internal_constants';
+import minimalist from 'blockly/core/renderers/minimalist/minimalist';
+import registry from 'blockly/core/registry';
+import serializationBlocks from 'blockly/core/serialization/blocks';
+import serializationExceptions from 'blockly/core/serialization/exceptions';
+import serializationPriorities from 'blockly/core/serialization/priorities';
+import serializationRegistry from 'blockly/core/serialization/registry';
+import serializationVariables from 'blockly/core/serialization/variables';
+import serializationWorkspaces from 'blockly/core/serialization/workspaces';
+import svgMath from 'blockly/core/utils/svg_math';
+import thrasos from 'blockly/core/renderers/thrasos/thrasos.';
+import toolbox from 'blockly/core/utils/toolbox';
+import uiPosition from 'blockly/core/positionable_helpers';
+import utils from 'blockly/core/utils';
+import zelos from 'blockly/core/renderers/zelos/zelos';
+import {Align, Input} from 'blockly/core/input';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
+import {BasicCursor} from 'blockly/core/keyboard_nav/basic_cursor';
+import {BlockDragSurfaceSvg} from 'blockly/core/block_drag_surface';
+import {BlockDragger} from 'blockly/core/block_dragger';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {BlocklyOptions} from 'blockly/core/blockly_options';
 import {Blocks} from 'blockly/core/blocks';
-import {Block} from 'Blockly.Block';
-import {BubbleDragger} from 'Blockly.BubbleDragger';
-import {Bubble} from 'Blockly.Bubble';
-import {CollapsibleToolboxCategory} from 'Blockly.CollapsibleToolboxCategory';
-import {Comment} from 'Blockly.Comment';
-import {ComponentManager} from 'Blockly.ComponentManager';
-import {ConnectionChecker} from 'Blockly.ConnectionChecker';
-import {ConnectionDB} from 'Blockly.ConnectionDB';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Connection} from 'Blockly.Connection';
-import {ContextMenuRegistry} from 'Blockly.ContextMenuRegistry';
-import {Cursor} from 'Blockly.Cursor';
-import {DeleteArea} from 'Blockly.DeleteArea';
-import {DragTarget} from 'Blockly.DragTarget';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {FieldAngle} from 'Blockly.FieldAngle';
-import {FieldCheckbox} from 'Blockly.FieldCheckbox';
-import {FieldColor} from 'Blockly.FieldColor';
-import {FieldDropdown} from 'Blockly.FieldDropdown';
-import {FieldImage} from 'Blockly.FieldImage';
-import {FieldLabelSerializable} from 'Blockly.FieldLabelSerializable';
-import {FieldLabel} from 'Blockly.FieldLabel';
-import {FieldMultilineInput} from 'Blockly.FieldMultilineInput';
-import {FieldNumber} from 'Blockly.FieldNumber';
-import {FieldTextInput} from 'Blockly.FieldTextInput';
-import {FieldVariable} from 'Blockly.FieldVariable';
-import {Field} from 'Blockly.Field';
-import {FlyoutButton} from 'Blockly.FlyoutButton';
-import {FlyoutMetricsManager} from 'Blockly.FlyoutMetricsManager';
-import {Flyout} from 'Blockly.Flyout';
-import {Generator} from 'Blockly.Generator';
-import {Gesture} from 'Blockly.Gesture';
-import {Grid} from 'Blockly.Grid';
-import {HorizontalFlyout} from 'Blockly.HorizontalFlyout';
-import {IASTNodeLocationSvg} from 'Blockly.IASTNodeLocationSvg';
-import {IASTNodeLocationWithBlock} from 'Blockly.IASTNodeLocationWithBlock';
-import {IASTNodeLocation} from 'Blockly.IASTNodeLocation';
-import {IAutoHideable} from 'Blockly.IAutoHideable';
-import {IBlockDragger} from 'Blockly.IBlockDragger';
-import {IBoundedElement} from 'Blockly.IBoundedElement';
-import {IBubble} from 'Blockly.IBubble';
-import {ICollapsibleToolboxItem} from 'Blockly.ICollapsibleToolboxItem';
-import {IComponent} from 'Blockly.IComponent';
-import {IConnectionChecker} from 'Blockly.IConnectionChecker';
-import {IContextMenu} from 'Blockly.IContextMenu';
-import {ICopyable} from 'Blockly.ICopyable';
-import {IDeletable} from 'Blockly.IDeletable';
-import {IDeleteArea} from 'Blockly.IDeleteArea';
-import {IDragTarget} from 'Blockly.IDragTarget';
-import {IDraggable} from 'Blockly.IDraggable';
-import {IFlyout} from 'Blockly.IFlyout';
-import {IKeyboardAccessible} from 'Blockly.IKeyboardAccessible';
-import {IMetricsManager} from 'Blockly.IMetricsManager';
-import {IMovable} from 'Blockly.IMovable';
-import {IPositionable} from 'Blockly.IPositionable';
-import {IRegistrableField} from 'Blockly.IRegistrableField';
-import {IRegistrable} from 'Blockly.IRegistrable';
-import {ISelectableToolboxItem} from 'Blockly.ISelectableToolboxItem';
-import {ISelectable} from 'Blockly.ISelectable';
-import {ISerializer} from 'Blockly.serialization.ISerializer';
-import {IStyleable} from 'Blockly.IStyleable';
-import {IToolboxItem} from 'Blockly.IToolboxItem';
-import {IToolbox} from 'Blockly.IToolbox';
-import {Icon} from 'Blockly.Icon';
-import {InsertionMarkerManager} from 'Blockly.InsertionMarkerManager';
-import {Marker} from 'Blockly.Marker';
-import {MarkerManager} from 'Blockly.MarkerManager';
-import {MenuItem} from 'Blockly.MenuItem';
-import {Menu} from 'Blockly.Menu';
-import {MetricsManager} from 'Blockly.MetricsManager';
-import {Mutator} from 'Blockly.Mutator';
-import {Msg} from 'Blockly.Msg';
-import {Names} from 'Blockly.Names';
-import {Options} from 'Blockly.Options';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {ScrollbarPair} from 'Blockly.ScrollbarPair';
-import {Scrollbar} from 'Blockly.Scrollbar';
-import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
-import {TabNavigateCursor} from 'Blockly.TabNavigateCursor';
-import {ThemeManager} from 'Blockly.ThemeManager';
-import {Theme} from 'Blockly.Theme';
-import {ToolboxCategory} from 'Blockly.ToolboxCategory';
-import {ToolboxItem} from 'Blockly.ToolboxItem';
-import {ToolboxSeparator} from 'Blockly.ToolboxSeparator';
-import {Toolbox} from 'Blockly.Toolbox';
-import {TouchGesture} from 'Blockly.TouchGesture';
-import {Trashcan} from 'Blockly.Trashcan';
-import {VariableMap} from 'Blockly.VariableMap';
-import {VariableModel} from 'Blockly.VariableModel';
-import {VerticalFlyout} from 'Blockly.VerticalFlyout';
-import {Warning} from 'Blockly.Warning';
-import {WorkspaceAudio} from 'Blockly.WorkspaceAudio';
-import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
-import {WorkspaceComment} from 'Blockly.WorkspaceComment';
-import {WorkspaceDragSurfaceSvg} from 'Blockly.WorkspaceDragSurfaceSvg';
-import {WorkspaceDragger} from 'Blockly.WorkspaceDragger';
-import {WorkspaceSvg, resizeSvgContents} from 'Blockly.WorkspaceSvg';
-import {Workspace} from 'Blockly.Workspace';
-import {ZoomControls} from 'Blockly.ZoomControls';
-import {globalThis} from 'Blockly.utils.global';
-import {inject} from 'Blockly.inject';
-import {inputTypes} from 'Blockly.inputTypes';
-goog.require('Blockly.Events.BlockCreate');
-goog.require('Blockly.Events.FinishedLoading');
-goog.require('Blockly.Events.Ui');
-goog.require('Blockly.Events.UiBase');
-goog.require('Blockly.Events.VarCreate');
+import {Block} from 'blockly/core/block';
+import {BubbleDragger} from 'blockly/core/bubble_dragger';
+import {Bubble} from 'blockly/core/bubble';
+import {CollapsibleToolboxCategory} from 'blockly/core/toolbox/collapsible_category';
+import {Comment} from 'blockly/core/comment';
+import {ComponentManager} from 'blockly/core/component_manager';
+import {ConnectionChecker} from 'blockly/core/connection_checker';
+import {ConnectionDB} from 'blockly/core/connection_db';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Connection} from 'blockly/core/connection';
+import {ContextMenuRegistry} from 'blockly/core/contextmenu_registry';
+import {Cursor} from 'blockly/core/keyboard_nav/cursor';
+import {DeleteArea} from 'blockly/core/delete_area';
+import {DragTarget} from 'blockly/core/drag_target';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {FieldAngle} from 'blockly/core/field_angle';
+import {FieldCheckbox} from 'blockly/core/field_checkbox';
+import {FieldColor} from 'blockly/core/field_colour';
+import {FieldDropdown} from 'blockly/core/field_dropdown';
+import {FieldImage} from 'blockly/core/field_image';
+import {FieldLabelSerializable} from 'blockly/core/field_label_serializable';
+import {FieldLabel} from 'blockly/core/field_label';
+import {FieldMultilineInput} from 'blockly/core/field_multilineinput';
+import {FieldNumber} from 'blockly/core/field_number';
+import {FieldTextInput} from 'blockly/core/field_textinput';
+import {FieldVariable} from 'blockly/core/field_variable';
+import {Field} from 'blockly/core/field';
+import {FlyoutButton} from 'blockly/core/flyout_button';
+import {FlyoutMetricsManager} from 'blockly/core/flyout_metrics_manager';
+import {Flyout} from 'blockly/core/flyout_base';
+import {Generator} from 'blockly/core/generator';
+import {Gesture} from 'blockly/core/gesture';
+import {Grid} from 'blockly/core/grid';
+import {HorizontalFlyout} from 'blockly/core/flyout_horizontal';
+import {IASTNodeLocationSvg} from 'blockly/core/interfaces/i_ast_node_location_svg';
+import {IASTNodeLocationWithBlock} from 'blockly/core/interfaces/i_ast_node_location_with_block';
+import {IASTNodeLocation} from 'blockly/core/interfaces/i_ast_node_location';
+import {IAutoHideable} from 'blockly/core/interfaces/i_autohideable';
+import {IBlockDragger} from 'blockly/core/interfaces/i_block_dragger';
+import {IBoundedElement} from 'blockly/core/interfaces/i_bounded_element';
+import {IBubble} from 'blockly/core/interfaces/i_bubble';
+import {ICollapsibleToolboxItem} from 'blockly/core/interfaces/i_collapsible_toolbox_item';
+import {IComponent} from 'blockly/core/interfaces/i_component';
+import {IConnectionChecker} from 'blockly/core/interfaces/i_connection_checker';
+import {IContextMenu} from 'blockly/core/interfaces/i_contextmenu';
+import {ICopyable} from 'blockly/core/interfaces/i_copyable';
+import {IDeletable} from 'blockly/core/interfaces/i_deletable';
+import {IDeleteArea} from 'blockly/core/interfaces/i_delete_area';
+import {IDragTarget} from 'blockly/core/interfaces/i_drag_target';
+import {IDraggable} from 'blockly/core/interfaces/i_draggable';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {IKeyboardAccessible} from 'blockly/core/interfaces/i_keyboard_accessible';
+import {IMetricsManager} from 'blockly/core/interfaces/i_metrics_manager';
+import {IMovable} from 'blockly/core/interfaces/i_movable';
+import {IPositionable} from 'blockly/core/interfaces/i_positionable';
+import {IRegistrableField} from 'blockly/core/interfaces/i_registrable_field';
+import {IRegistrable} from 'blockly/core/interfaces/i_registrable';
+import {ISelectableToolboxItem} from 'blockly/core/interfaces/i_selectable_toolbox_item';
+import {ISelectable} from 'blockly/core/interfaces/i_selectable';
+import {ISerializer} from 'blockly/core/interfaces/i_serializer';
+import {IStyleable} from 'blockly/core/interfaces/i_styleable';
+import {IToolboxItem} from 'blockly/core/interfaces/i_toolbox_item';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {Icon} from 'blockly/core/icon';
+import {InsertionMarkerManager} from 'blockly/core/insertion_marker_manager';
+import {Marker} from 'blockly/core/keyboard_nav/marker';
+import {MarkerManager} from 'blockly/core/marker_manager';
+import {MenuItem} from 'blockly/core/menuitem';
+import {Menu} from 'blockly/core/menu';
+import {MetricsManager} from 'blockly/core/metrics_manager';
+import {Mutator} from 'blockly/core/mutator';
+import {Msg} from 'blockly/core/msg';
+import {Names} from 'blockly/core/names';
+import {Options} from 'blockly/core/options';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {ScrollbarPair} from 'blockly/core/scrollbar_pair';
+import {Scrollbar} from 'blockly/core/scrollbar';
+import {ShortcutRegistry} from 'blockly/core/shortcut_registry';
+import {TabNavigateCursor} from 'blockly/core/keyboard_nav/tab_navigate_cursor';
+import {ThemeManager} from 'blockly/core/theme_manager';
+import {Theme} from 'blockly/core/theme';
+import {ToolboxCategory} from 'blockly/core/toolbox/category';
+import {ToolboxItem} from 'blockly/core/toolbox/toolbox_item';
+import {ToolboxSeparator} from 'blockly/core/toolbox/separator';
+import {Toolbox} from 'blockly/core/toolbox/toolbox';
+import {TouchGesture} from 'blockly/core/touch_gesture';
+import {Trashcan} from 'blockly/core/trashcan';
+import {VariableMap} from 'blockly/core/variable_map';
+import {VariableModel} from 'blockly/core/variable_model';
+import {VerticalFlyout} from 'blockly/core/flyout_vertical';
+import {Warning} from 'blockly/core/warning';
+import {WorkspaceAudio} from 'blockly/core/workspace_audio';
+import {WorkspaceCommentSvg} from 'blockly/core/workspace_comment_svg';
+import {WorkspaceComment} from 'blockly/core/workspace_comment';
+import {WorkspaceDragSurfaceSvg} from 'blockly/core/workspace_drag_surface_svg';
+import {WorkspaceDragger} from 'blockly/core/workspace_dragger';
+import {WorkspaceSvg, resizeSvgContents} from 'blockly/core/workspace_svg';
+import {Workspace} from 'blockly/core/workspace';
+import {ZoomControls} from 'blockly/core/zoom_controls';
+import {globalThis} from 'blockly/core/utils/global';
+import {inject} from 'blockly/core/inject';
+import {inputTypes} from 'blockly/core/input_types';
+goog.require('blockly/core/events/events_block_create');
+goog.require('blockly/core/events/workspace_events');
+goog.require('blockly/core/events/events_ui');
+goog.require('blockly/core/events/events_ui_base');
+goog.require('blockly/core/events/events_var_create');
 
 
 /**
@@ -850,8 +850,8 @@ exports.zelos = zelos;
 // This obviously only works if Blockly.Msg is the Msg export from the
 // Blockly.Msg module - so make sure it is, but only if there is not
 // yet a Blockly global variable.
-if (!('Blockly' in globalThis)) {
-  globalThis['Blockly'] = {'Msg': Msg};
+if (!('blockly/core/blockly' in globalThis)) {
+  globalThis['blockly/core/blockly'] = {'Msg': Msg};
 }
 
 // Temporary hack to copy accessor properties from exports to the
@@ -863,7 +863,7 @@ if (!('Blockly' in globalThis)) {
 //
 // This is only needed in uncompiled mode (see
 // google/blockly-samples#902); in compiled mode the exports object is
-// already the value of globalThis['Blockly'].
+// already the value of globalThis['blockly/core/blockly'].
 //
 // Note that this code will still attempt to redefine accessors on a
 // previously-imported copy of the Blockly library if both are
@@ -872,8 +872,8 @@ if (!('Blockly' in globalThis)) {
 // accessors on one copy would call get/set functions on the other
 // copy!)
 /* eslint-disable-next-line no-undef */
-if (!COMPILED && typeof globalThis['Blockly'] === 'object' &&
-    globalThis['Blockly'] !== exports) {
+if (!COMPILED && typeof globalThis['blockly/core/blockly'] === 'object' &&
+    globalThis['blockly/core/blockly'] !== exports) {
   const descriptors = Object.getOwnPropertyDescriptors(exports);
   const accessors = {};
   for (const key in descriptors) {
@@ -881,5 +881,5 @@ if (!COMPILED && typeof globalThis['Blockly'] === 'object' &&
       accessors[key] = descriptors[key];
     }
   }
-  Object.defineProperties(globalThis['Blockly'], accessors);
+  Object.defineProperties(globalThis['blockly/core/blockly'], accessors);
 }

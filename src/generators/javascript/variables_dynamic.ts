@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.JavaScript.variablesDynamic');
+goog.module('blockly/generators/javascript/variables_dynamic');
 
-import JavaScript from 'Blockly.JavaScript';
-goog.require('Blockly.JavaScript.variables');
+import JavaScript from 'blockly/generators/javascript';
+goog.require('blockly/generators/javascript/variables');
 
 
 // JavaScript is dynamically typed.

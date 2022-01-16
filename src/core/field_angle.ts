@@ -8,20 +8,20 @@
  * Angle input field.
  * @class
  */
-goog.module('Blockly.FieldAngle');
+goog.module('blockly/core/field_angle');
 
-import Css from 'Blockly.Css';
-import WidgetDiv from 'Blockly.WidgetDiv';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import math from 'Blockly.utils.math';
-import object from 'Blockly.utils.object';
-import userAgent from 'Blockly.utils.userAgent';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {FieldTextInput} from 'Blockly.FieldTextInput';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {Svg} from 'Blockly.utils.Svg';
+import Css from 'blockly/core/css';
+import WidgetDiv from 'blockly/core/widgetdiv';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import fieldRegistry from 'blockly/core/field_registry';
+import math from 'blockly/core/utils/math';
+import object from 'blockly/core/utils/object';
+import userAgent from 'blockly/core/utils/useragent';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {FieldTextInput} from 'blockly/core/field_textinput';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

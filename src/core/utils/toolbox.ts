@@ -8,13 +8,13 @@
  * Utility functions for the toolbox and flyout.
  * @namespace Blockly.utils.toolbox
  */
-goog.module('Blockly.utils.toolbox');
+goog.module('blockly/core/utils/toolbox');
 
-import Xml from 'Blockly.Xml';
-import userAgent from 'Blockly.utils.userAgent';
-import {ConnectionState} from 'Blockly.serialization.blocks';
-import {ToolboxCategory} from 'Blockly.ToolboxCategory';
-import {ToolboxSeparator} from 'Blockly.ToolboxSeparator';
+import Xml from 'blockly/core/xml';
+import userAgent from 'blockly/core/utils/useragent';
+import {ConnectionState} from 'blockly/core/serialization/blocks';
+import {ToolboxCategory} from 'blockly/core/toolbox/category';
+import {ToolboxSeparator} from 'blockly/core/toolbox/separator';
 
 /**
  * The information needed to create a block in the toolbox.

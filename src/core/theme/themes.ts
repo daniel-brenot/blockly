@@ -8,10 +8,10 @@
  * Namespace for themes.
  * @namespace Blockly.Themes
  */
-goog.module('Blockly.Themes');
+goog.module('blockly/core/theme/themes');
 
-import {Classic} from 'Blockly.Themes.Classic';
-import {Zelos} from 'Blockly.Themes.Zelos';
+import {Classic} from 'blockly/core/theme/classic';
+import {Zelos} from 'blockly/core/theme/zelos';
 
 
 exports.Classic = Classic;

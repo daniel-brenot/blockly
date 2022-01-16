@@ -8,20 +8,20 @@
  * Methods for rendering debug graphics.
  * @class
  */
-goog.module('Blockly.blockRendering.Debug');
+goog.module('blockly/core/renderers/common/debugger');
 
-import dom from 'Blockly.utils.dom';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {FieldLabel} from 'Blockly.FieldLabel';
-import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {RenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Row} from 'Blockly.blockRendering.Row';
-import {Svg} from 'Blockly.utils.Svg';
-import {Types} from 'Blockly.blockRendering.Types';
+import dom from 'blockly/core/utils/dom';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {FieldLabel} from 'blockly/core/field_label';
+import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {RenderInfo} from 'blockly/core/renderers/common/info';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Row} from 'blockly/core/renderers/measurables/row';
+import {Svg} from 'blockly/core/utils/svg';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

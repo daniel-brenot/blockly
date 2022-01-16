@@ -10,21 +10,21 @@
  * properties with the context menu.
  * @class
  */
-goog.module('Blockly.FieldDropdown');
+goog.module('blockly/core/field_dropdown');
 
-import aria from 'Blockly.utils.aria';
-import dom from 'Blockly.utils.dom';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import userAgent from 'Blockly.utils.userAgent';
-import utilsString from 'Blockly.utils.string';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {Field} from 'Blockly.Field';
-import {MenuItem} from 'Blockly.MenuItem';
-import {Menu} from 'Blockly.Menu';
-import {Svg} from 'Blockly.utils.Svg';
+import aria from 'blockly/core/utils/aria';
+import dom from 'blockly/core/utils/dom';
+import fieldRegistry from 'blockly/core/field_registry';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import userAgent from 'blockly/core/utils/useragent';
+import utilsString from 'blockly/core/utils/string';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {Field} from 'blockly/core/field';
+import {MenuItem} from 'blockly/core/menuitem';
+import {Menu} from 'blockly/core/menu';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

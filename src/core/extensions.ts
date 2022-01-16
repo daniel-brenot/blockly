@@ -11,11 +11,11 @@
  *      array attribute.
  * @namespace Blockly.Extensions
  */
-goog.module('Blockly.Extensions');
+goog.module('blockly/core/extensions');
 
-import parsing from 'Blockly.utils.parsing';
-import {Block} from 'Blockly.Block';
-goog.requireType('Blockly.Mutator');
+import parsing from 'blockly/core/utils/parsing';
+import {Block} from 'blockly/core/block';
+goog.requireType('blockly/core/mutator');
 
 
 /**
@@ -99,7 +99,7 @@ export function registerMutator(name, mixinObj, opt_helperFn, opt_blockList) {
       /** @this {Block} */
       function() {
         if (hasMutatorDialog) {
-          const {Mutator} = goog.module.get('Blockly.Mutator');
+          const {Mutator} = goog.module.get('blockly/core/mutator');
           if (!Mutator) {
             throw Error(errorPrefix + 'Missing require for Blockly.Mutator');
           }

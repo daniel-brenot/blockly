@@ -8,38 +8,38 @@
  * Toolbox from whence to create blocks.
  * @class
  */
-goog.module('Blockly.Toolbox');
+goog.module('blockly/core/toolbox/toolbox');
 
-import Css from 'Blockly.Css';
-import Touch from 'Blockly.Touch';
-import aria from 'Blockly.utils.aria';
-import browserEvents from 'Blockly.browserEvents';
+import Css from 'blockly/core/css';
+import Touch from 'blockly/core/touch';
+import aria from 'blockly/core/utils/aria';
+import browserEvents from 'blockly/core/browser_events';
 import common from 'blockly/core/common';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import toolbox from 'Blockly.utils.toolbox';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {BlocklyOptions} from 'Blockly.BlocklyOptions';
-import {CollapsibleToolboxCategory} from 'Blockly.CollapsibleToolboxCategory';
-import {ComponentManager} from 'Blockly.ComponentManager';
-import {DeleteArea} from 'Blockly.DeleteArea';
-import {IAutoHideable} from 'Blockly.IAutoHideable';
-import {ICollapsibleToolboxItem} from 'Blockly.ICollapsibleToolboxItem';
-import {IDraggable} from 'Blockly.IDraggable';
-import {IFlyout} from 'Blockly.IFlyout';
-import {IKeyboardAccessible} from 'Blockly.IKeyboardAccessible';
-import {ISelectableToolboxItem} from 'Blockly.ISelectableToolboxItem';
-import {IStyleable} from 'Blockly.IStyleable';
-import {IToolboxItem} from 'Blockly.IToolboxItem';
-import {IToolbox} from 'Blockly.IToolbox';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {Options} from 'Blockly.Options';
-import {Rect} from 'Blockly.utils.Rect';
-import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.ToolboxItemSelect');
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import toolbox from 'blockly/core/utils/toolbox';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {BlocklyOptions} from 'blockly/core/blockly_options';
+import {CollapsibleToolboxCategory} from 'blockly/core/toolbox/collapsible_category';
+import {ComponentManager} from 'blockly/core/component_manager';
+import {DeleteArea} from 'blockly/core/delete_area';
+import {IAutoHideable} from 'blockly/core/interfaces/i_autohideable';
+import {ICollapsibleToolboxItem} from 'blockly/core/interfaces/i_collapsible_toolbox_item';
+import {IDraggable} from 'blockly/core/interfaces/i_draggable';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {IKeyboardAccessible} from 'blockly/core/interfaces/i_keyboard_accessible';
+import {ISelectableToolboxItem} from 'blockly/core/interfaces/i_selectable_toolbox_item';
+import {IStyleable} from 'blockly/core/interfaces/i_styleable';
+import {IToolboxItem} from 'blockly/core/interfaces/i_toolbox_item';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {Options} from 'blockly/core/options';
+import {Rect} from 'blockly/core/utils/rect';
+import {ShortcutRegistry} from 'blockly/core/shortcut_registry';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_toolbox_item_select');
 
 
 /**

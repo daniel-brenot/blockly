@@ -9,21 +9,21 @@
  *    for registering and unregistering different types of classes.
  * @namespace Blockly.registry
  */
-goog.module('Blockly.registry');
+goog.module('blockly/core/registry');
 
-import Abstract from 'Blockly.Events.Abstract';
-import {Cursor} from 'Blockly.Cursor';
-import {Field} from 'Blockly.Field';
-import {IBlockDragger} from 'Blockly.IBlockDragger';
-import {IConnectionChecker} from 'Blockly.IConnectionChecker';
-import {IFlyout} from 'Blockly.IFlyout';
-import {IMetricsManager} from 'Blockly.IMetricsManager';
-import {ISerializer} from 'Blockly.serialization.ISerializer';
-import {IToolbox} from 'Blockly.IToolbox';
-import {Options} from 'Blockly.Options';
-import {Renderer} from 'Blockly.blockRendering.Renderer';
-import {Theme} from 'Blockly.Theme';
-import {ToolboxItem} from 'Blockly.ToolboxItem';
+import Abstract from 'blockly/core/events/events_abstract';
+import {Cursor} from 'blockly/core/keyboard_nav/cursor';
+import {Field} from 'blockly/core/field';
+import {IBlockDragger} from 'blockly/core/interfaces/i_block_dragger';
+import {IConnectionChecker} from 'blockly/core/interfaces/i_connection_checker';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {IMetricsManager} from 'blockly/core/interfaces/i_metrics_manager';
+import {ISerializer} from 'blockly/core/interfaces/i_serializer';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {Options} from 'blockly/core/options';
+import {Renderer} from 'blockly/core/renderers/common/renderer';
+import {Theme} from 'blockly/core/theme';
+import {ToolboxItem} from 'blockly/core/toolbox/toolbox_item';
 
 
 /**

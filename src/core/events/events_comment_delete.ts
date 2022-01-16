@@ -8,13 +8,13 @@
  * Class for comment deletion event.
  * @class
  */
-goog.module('Blockly.Events.CommentDelete');
+goog.module('blockly/core/events/events_comment_delete');
 
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {CommentBase} from 'Blockly.Events.CommentBase';
-import {WorkspaceComment} from 'Blockly.WorkspaceComment';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {CommentBase} from 'blockly/core/events/events_comment_base';
+import {WorkspaceComment} from 'blockly/core/workspace_comment';
 
 
 /**

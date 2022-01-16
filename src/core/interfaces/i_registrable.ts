@@ -16,7 +16,7 @@
  *    (Ex. Toolbox, Fields, Renderers)
  * @namespace Blockly.IRegistrable
  */
-goog.module('Blockly.IRegistrable');
+goog.module('blockly/core/interfaces/i_registrable');
 
 
 /**

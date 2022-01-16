@@ -8,11 +8,11 @@
  * Abstract class for a variable event.
  * @class
  */
-goog.module('Blockly.Events.VarBase');
+goog.module('blockly/core/events/events_var_base');
 
-import Abstract from 'Blockly.Events.Abstract';
-import object from 'Blockly.utils.object';
-import {VariableModel} from 'Blockly.VariableModel';
+import Abstract from 'blockly/core/events/events_abstract';
+import object from 'blockly/core/utils/object';
+import {VariableModel} from 'blockly/core/variable_model';
 
 
 /**

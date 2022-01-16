@@ -8,14 +8,14 @@
  * Class for comment move event.
  * @class
  */
-goog.module('Blockly.Events.CommentMove');
+goog.module('blockly/core/events/events_comment_move');
 
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {CommentBase} from 'Blockly.Events.CommentBase';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {WorkspaceComment} from 'Blockly.WorkspaceComment';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {CommentBase} from 'blockly/core/events/events_comment_base';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {WorkspaceComment} from 'blockly/core/workspace_comment';
 
 
 /**

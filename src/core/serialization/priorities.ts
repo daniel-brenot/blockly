@@ -18,7 +18,7 @@
  * priorities are deserialized first.
  * @namespace Blockly.serialization.priorities
  */
-goog.module('Blockly.serialization.priorities');
+goog.module('blockly/core/serialization/priorities');
 
 
 /**

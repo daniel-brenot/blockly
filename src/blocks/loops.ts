@@ -4,22 +4,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.blocks.loops');
+goog.module('blockly/blocks/loops');
 
-import AbstractEvent from 'Blockly.Events.Abstract';
-import ContextMenu from 'Blockly.ContextMenu';
-import Events from 'Blockly.Events';
-import Extensions from 'Blockly.Extensions';
-import Variables from 'Blockly.Variables';
+import AbstractEvent from 'blockly/core/events/events_abstract';
+import ContextMenu from 'blockly/core/contextmenu';
+import Events from 'blockly/core/events/events';
+import Extensions from 'blockly/core/extensions';
+import Variables from 'blockly/core/variables';
 import common from 'blockly/core/common';
-import xmlUtils from 'Blockly.utils.xml';
-import {Block} from 'Blockly.Block';
-import {Msg} from 'Blockly.Msg';
-goog.require('Blockly.FieldDropdown');
-goog.require('Blockly.FieldLabel');
-goog.require('Blockly.FieldNumber');
-goog.require('Blockly.FieldVariable');
-goog.require('Blockly.Warning');
+import xmlUtils from 'blockly/core/utils/xml';
+import {Block} from 'blockly/core/block';
+import {Msg} from 'blockly/core/msg';
+goog.require('blockly/core/field_dropdown');
+goog.require('blockly/core/field_label');
+goog.require('blockly/core/field_number');
+goog.require('blockly/core/field_variable');
+goog.require('blockly/core/warning');
 
 
 common.defineBlocksWithJsonArray([
@@ -277,7 +277,7 @@ Extensions.register(
  * loopTypes.push('custom_loop');
  *
  * // Else if using Closure Compiler and goog.modules:
- * import {loopTypes} from 'Blockly.blocks.loops';
+ * import {loopTypes} from 'blockly/blocks/loops';
  * loopTypes.push('custom_loop');
  *
  * @type {!Array<string>}

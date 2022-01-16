@@ -9,20 +9,20 @@
  * Geras: spirit of old age.
  * @class
  */
-goog.module('Blockly.geras.RenderInfo');
+goog.module('blockly/core/renderers/geras/info');
 
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ExternalValueInput} from 'Blockly.blockRendering.ExternalValueInput';
-import {Field} from 'Blockly.blockRendering.Field';
-import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
-import {InlineInput} from 'Blockly.geras.InlineInput';
-import {InputRow} from 'Blockly.blockRendering.InputRow';
-import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {Renderer} from 'Blockly.geras.Renderer';
-import {StatementInput} from 'Blockly.geras.StatementInput';
-import {Types} from 'Blockly.blockRendering.Types';
-import {inputTypes} from 'Blockly.inputTypes';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ExternalValueInput} from 'blockly/core/renderers/measurables/external_value_input';
+import {Field} from 'blockly/core/renderers/measurables/field';
+import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';
+import {InlineInput} from 'blockly/core/renderers/geras/measurables/inline_input';
+import {InputRow} from 'blockly/core/renderers/measurables/input_row';
+import {RenderInfo: BaseRenderInfo} from 'blockly/core/renderers/common/info';
+import {Renderer} from 'blockly/core/renderers/geras/renderer';
+import {StatementInput} from 'blockly/core/renderers/geras/measurables/statement_input';
+import {Types} from 'blockly/core/renderers/measurables/types';
+import {inputTypes} from 'blockly/core/input_types';
 
 
 /**

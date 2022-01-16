@@ -8,12 +8,12 @@
  * Components for the variable model.
  * @class
  */
-goog.module('Blockly.VariableModel');
+goog.module('blockly/core/variable_model');
 
-import eventUtils from 'Blockly.Events.utils';
-import idGenerator from 'Blockly.utils.idGenerator';
-import {Workspace} from 'Blockly.Workspace';
-goog.require('Blockly.Events.VarCreate');
+import eventUtils from 'blockly/core/events/utils';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import {Workspace} from 'blockly/core/workspace';
+goog.require('blockly/core/events/events_var_create');
 
 
 /**

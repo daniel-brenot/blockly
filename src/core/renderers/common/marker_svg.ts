@@ -9,23 +9,23 @@
  * Methods for graphically rendering a marker as SVG.
  * @class
  */
-goog.module('Blockly.blockRendering.MarkerSvg');
+goog.module('blockly/core/renderers/common/marker_svg');
 
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import svgPaths from 'Blockly.utils.svgPaths';
-import {ASTNode} from 'Blockly.ASTNode';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Connection} from 'Blockly.Connection';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Field} from 'Blockly.Field';
-import {IASTNodeLocationSvg} from 'Blockly.IASTNodeLocationSvg';
-import {Marker} from 'Blockly.Marker';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.MarkerMove');
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Connection} from 'blockly/core/connection';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Field} from 'blockly/core/field';
+import {IASTNodeLocationSvg} from 'blockly/core/interfaces/i_ast_node_location_svg';
+import {Marker} from 'blockly/core/keyboard_nav/marker';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_marker_move');
 
 
 /**

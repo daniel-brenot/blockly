@@ -9,15 +9,15 @@
  * mode.
  * @class
  */
-goog.module('Blockly.zelos.ConstantProvider');
+goog.module('blockly/core/renderers/zelos/constants');
 
-import dom from 'Blockly.utils.dom';
-import object from 'Blockly.utils.object';
-import svgPaths from 'Blockly.utils.svgPaths';
-import utilsColor from 'Blockly.utils.color';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {ConstantProvider: BaseConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Svg} from 'Blockly.utils.Svg';
+import dom from 'blockly/core/utils/dom';
+import object from 'blockly/core/utils/object';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import utilsColor from 'blockly/core/utils/colour';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {ConstantProvider: BaseConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

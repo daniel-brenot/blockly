@@ -9,10 +9,10 @@
  * Blockly's editor.
  * @class
  */
-goog.module('Blockly.Events.UiBase');
+goog.module('blockly/core/events/events_ui_base');
 
-import Abstract from 'Blockly.Events.Abstract';
-import object from 'Blockly.utils.object';
+import Abstract from 'blockly/core/events/events_abstract';
+import object from 'blockly/core/utils/object';
 
 
 /**

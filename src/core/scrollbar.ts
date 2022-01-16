@@ -8,16 +8,16 @@
  * Object representing a scrollbar.
  * @class
  */
-goog.module('Blockly.Scrollbar');
+goog.module('blockly/core/scrollbar');
 
-import Touch from 'Blockly.Touch';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import svgMath from 'Blockly.utils.svgMath';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Metrics} from 'Blockly.utils.Metrics';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import Touch from 'blockly/core/touch';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import svgMath from 'blockly/core/utils/svg_math';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Metrics} from 'blockly/core/utils/metrics';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

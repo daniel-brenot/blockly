@@ -8,11 +8,11 @@
  * An object representing the top row of a rendered block.
  * @class
  */
-goog.module('Blockly.zelos.TopRow');
+goog.module('blockly/core/renderers/zelos/measurables/top_row');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {TopRow: BaseTopRow} from 'Blockly.blockRendering.TopRow';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {TopRow: BaseTopRow} from 'blockly/core/renderers/measurables/top_row';
 
 
 /**

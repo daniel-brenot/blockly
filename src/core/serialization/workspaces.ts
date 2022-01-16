@@ -9,13 +9,13 @@
  * objects.
  * @namespace Blockly.serialization.workspaces
  */
-goog.module('Blockly.serialization.workspaces');
+goog.module('blockly/core/serialization/workspaces');
 
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import registry from 'Blockly.registry';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import registry from 'blockly/core/registry';
 // eslint-disable-next-line no-unused-vars
-import {Workspace} from 'Blockly.Workspace';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

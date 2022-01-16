@@ -8,18 +8,18 @@
  * Object representing a warning.
  * @class
  */
-goog.module('Blockly.Warning');
+goog.module('blockly/core/warning');
 
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Block} from 'Blockly.Block';
-import {Bubble} from 'Blockly.Bubble';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Icon} from 'Blockly.Icon';
-import {Svg} from 'Blockly.utils.Svg';
-goog.require('Blockly.Events.BubbleOpen');
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Block} from 'blockly/core/block';
+import {Bubble} from 'blockly/core/bubble';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Icon} from 'blockly/core/icon';
+import {Svg} from 'blockly/core/utils/svg';
+goog.require('blockly/core/events/events_bubble_open');
 
 
 /**

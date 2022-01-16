@@ -8,12 +8,12 @@
  * Touch handling for Blockly.
  * @namespace Blockly.Touch
  */
-goog.module('Blockly.Touch');
+goog.module('blockly/core/touch');
 
-import internalConstants from 'Blockly.internalConstants';
-import utilsString from 'Blockly.utils.string';
-import {Gesture} from 'Blockly.Gesture';
-import {globalThis} from 'Blockly.utils.global';
+import internalConstants from 'blockly/core/internal_constants';
+import utilsString from 'blockly/core/utils/string';
+import {Gesture} from 'blockly/core/gesture';
+import {globalThis} from 'blockly/core/utils/global';
 
 
 /**

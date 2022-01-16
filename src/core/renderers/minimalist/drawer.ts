@@ -8,12 +8,12 @@
  * Minimalist rendering drawer.
  * @class
  */
-goog.module('Blockly.minimalist.Drawer');
+goog.module('blockly/core/renderers/minimalist/drawer');
 
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Drawer: BaseDrawer} from 'Blockly.blockRendering.Drawer';
-import {RenderInfo} from 'Blockly.minimalist.RenderInfo';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Drawer: BaseDrawer} from 'blockly/core/renderers/common/drawer';
+import {RenderInfo} from 'blockly/core/renderers/minimalist/info';
 
 
 /**

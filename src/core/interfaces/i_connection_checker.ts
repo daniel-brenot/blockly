@@ -9,10 +9,10 @@
  * checking whether a potential connection is safe and valid.
  * @namespace Blockly.IConnectionChecker
  */
-goog.module('Blockly.IConnectionChecker');
+goog.module('blockly/core/interfaces/i_connection_checker');
 
-import {Connection} from 'Blockly.Connection';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
+import {Connection} from 'blockly/core/connection';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
 
 
 /**

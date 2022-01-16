@@ -8,18 +8,18 @@
  * Methods for graphically rendering a marker as SVG.
  * @class
  */
-goog.module('Blockly.zelos.MarkerSvg');
+goog.module('blockly/core/renderers/zelos/marker_svg');
 
-import dom from 'Blockly.utils.dom';
-import object from 'Blockly.utils.object';
-import {ASTNode} from 'Blockly.ASTNode';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Connection} from 'Blockly.Connection';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {MarkerSvg: BaseMarkerSvg} from 'Blockly.blockRendering.MarkerSvg';
-import {Marker} from 'Blockly.Marker';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import dom from 'blockly/core/utils/dom';
+import object from 'blockly/core/utils/object';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Connection} from 'blockly/core/connection';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {MarkerSvg: BaseMarkerSvg} from 'blockly/core/renderers/common/marker_svg';
+import {Marker} from 'blockly/core/keyboard_nav/marker';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

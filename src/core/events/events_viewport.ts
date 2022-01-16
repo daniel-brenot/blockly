@@ -8,12 +8,12 @@
  * Events fired as a result of a viewport change.
  * @class
  */
-goog.module('Blockly.Events.ViewportChange');
+goog.module('blockly/core/events/events_viewport');
 
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {UiBase} from 'Blockly.Events.UiBase';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {UiBase} from 'blockly/core/events/events_ui_base';
 
 
 /**

@@ -8,15 +8,15 @@
  * Image field.  Used for pictures, icons, etc.
  * @class
  */
-goog.module('Blockly.FieldImage');
+goog.module('blockly/core/field_image');
 
-import dom from 'Blockly.utils.dom';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import {Field} from 'Blockly.Field';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
+import dom from 'blockly/core/utils/dom';
+import fieldRegistry from 'blockly/core/field_registry';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import {Field} from 'blockly/core/field';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

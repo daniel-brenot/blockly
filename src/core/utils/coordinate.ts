@@ -10,7 +10,7 @@
  * a JavaScript framework such as Closure.
  * @class
  */
-goog.module('Blockly.utils.Coordinate');
+goog.module('blockly/core/utils/coordinate');
 
 /**
  * Class for representing coordinates and positions.

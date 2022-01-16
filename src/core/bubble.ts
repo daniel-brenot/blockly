@@ -8,23 +8,23 @@
  * Object representing a UI bubble.
  * @class
  */
-goog.module('Blockly.Bubble');
+goog.module('blockly/core/bubble');
 
-import Touch from 'Blockly.Touch';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import math from 'Blockly.utils.math';
-import userAgent from 'Blockly.utils.userAgent';
-import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {IBubble} from 'Blockly.IBubble';
-import {MetricsManager} from 'Blockly.MetricsManager';
-import {Scrollbar} from 'Blockly.Scrollbar';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Workspace');
+import Touch from 'blockly/core/touch';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import math from 'blockly/core/utils/math';
+import userAgent from 'blockly/core/utils/useragent';
+import {BlockDragSurfaceSvg} from 'blockly/core/block_drag_surface';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {IBubble} from 'blockly/core/interfaces/i_bubble';
+import {MetricsManager} from 'blockly/core/metrics_manager';
+import {Scrollbar} from 'blockly/core/scrollbar';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/workspace');
 
 
 /**

@@ -8,13 +8,13 @@
  * Events fired as a result of bubble open.
  * @class
  */
-goog.module('Blockly.Events.BubbleOpen');
+goog.module('blockly/core/events/events_bubble_open');
 
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {UiBase} from 'Blockly.Events.UiBase';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {UiBase} from 'blockly/core/events/events_ui_base';
 
 
 /**

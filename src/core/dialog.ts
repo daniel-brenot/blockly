@@ -15,7 +15,7 @@
  * Wrapper functions around JS functions for showing alert/confirmation dialogs.
  * @namespace Blockly.dialog
  */
-goog.module('Blockly.dialog');
+goog.module('blockly/core/dialog');
 
 let alertImplementation = function(message, opt_callback) {
   window.alert(message);

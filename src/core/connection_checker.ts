@@ -9,15 +9,15 @@
  * potential connection is safe and valid.
  * @class
  */
-goog.module('Blockly.ConnectionChecker');
+goog.module('blockly/core/connection_checker');
 
 import common from 'blockly/core/common';
-import internalConstants from 'Blockly.internalConstants';
-import registry from 'Blockly.registry';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Connection} from 'Blockly.Connection';
-import {IConnectionChecker} from 'Blockly.IConnectionChecker';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
+import internalConstants from 'blockly/core/internal_constants';
+import registry from 'blockly/core/registry';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Connection} from 'blockly/core/connection';
+import {IConnectionChecker} from 'blockly/core/interfaces/i_connection_checker';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
 
 
 /**

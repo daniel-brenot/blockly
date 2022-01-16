@@ -8,23 +8,23 @@
  * Zelos renderer.
  * @class
  */
-goog.module('Blockly.zelos.Renderer');
+goog.module('blockly/core/renderers/zelos/renderer');
 
-import blockRendering from 'Blockly.blockRendering';
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {ConstantProvider} from 'Blockly.zelos.ConstantProvider';
-import {Drawer} from 'Blockly.zelos.Drawer';
-import {InsertionMarkerManager} from 'Blockly.InsertionMarkerManager';
-import {MarkerSvg} from 'Blockly.zelos.MarkerSvg';
-import {Marker} from 'Blockly.Marker';
-import {PathObject} from 'Blockly.zelos.PathObject';
-import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {RenderInfo} from 'Blockly.zelos.RenderInfo';
-import {Renderer: BaseRenderer} from 'Blockly.blockRendering.Renderer';
-import {Theme} from 'Blockly.Theme';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import blockRendering from 'blockly/core/renderers/common/block_rendering';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {ConstantProvider} from 'blockly/core/renderers/zelos/constants';
+import {Drawer} from 'blockly/core/renderers/zelos/drawer';
+import {InsertionMarkerManager} from 'blockly/core/insertion_marker_manager';
+import {MarkerSvg} from 'blockly/core/renderers/zelos/marker_svg';
+import {Marker} from 'blockly/core/keyboard_nav/marker';
+import {PathObject} from 'blockly/core/renderers/zelos/path_object';
+import {RenderInfo: BaseRenderInfo} from 'blockly/core/renderers/common/info';
+import {RenderInfo} from 'blockly/core/renderers/zelos/info';
+import {Renderer: BaseRenderer} from 'blockly/core/renderers/common/renderer';
+import {Theme} from 'blockly/core/theme';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

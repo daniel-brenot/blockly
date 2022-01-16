@@ -16,11 +16,11 @@
  * elements.
  * @namespace Blockly.blockRendering.IPathObject
  */
-goog.module('Blockly.blockRendering.IPathObject');
+goog.module('blockly/core/renderers/common/i_path_object');
 
-import {Block} from 'Blockly.Block';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Theme} from 'Blockly.Theme';
+import {Block} from 'blockly/core/block';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Theme} from 'blockly/core/theme';
 
 
 /**

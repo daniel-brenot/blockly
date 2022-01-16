@@ -9,9 +9,9 @@
  * use these constants outside of the core library.
  * @namespace Blockly.internalConstants
  */
-goog.module('Blockly.internalConstants');
+goog.module('blockly/core/internal_constants');
 
-import {ConnectionType} from 'Blockly.ConnectionType';
+import {ConnectionType} from 'blockly/core/connection_type';
 
 
 /**

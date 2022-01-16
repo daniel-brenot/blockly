@@ -8,10 +8,10 @@
  * The class representing a theme.
  * @class
  */
-goog.module('Blockly.Theme');
+goog.module('blockly/core/theme');
 
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
 
 
 /**

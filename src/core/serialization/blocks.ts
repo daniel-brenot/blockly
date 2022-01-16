@@ -8,22 +8,22 @@
  * Handles serializing blocks to plain JavaScript objects only containing state.
  * @namespace Blockly.serialization.blocks
  */
-goog.module('Blockly.serialization.blocks');
+goog.module('blockly/core/serialization/blocks');
 
-import Xml from 'Blockly.Xml';
-import eventUtils from 'Blockly.Events.utils';
-import priorities from 'Blockly.serialization.priorities';
-import serializationRegistry from 'Blockly.serialization.registry';
-import {BadConnectionCheck, MissingBlockType, MissingConnection, RealChildOfShadow} from 'Blockly.serialization.exceptions';
-import {Block} from 'Blockly.Block';
+import Xml from 'blockly/core/xml';
+import eventUtils from 'blockly/core/events/utils';
+import priorities from 'blockly/core/serialization/priorities';
+import serializationRegistry from 'blockly/core/serialization/registry';
+import {BadConnectionCheck, MissingBlockType, MissingConnection, RealChildOfShadow} from 'blockly/core/serialization/exceptions';
+import {Block} from 'blockly/core/block';
 // eslint-disable-next-line no-unused-vars
-import {Connection} from 'Blockly.Connection';
+import {Connection} from 'blockly/core/connection';
 // eslint-disable-next-line no-unused-vars
-import {ISerializer} from 'Blockly.serialization.ISerializer';
-import {Size} from 'Blockly.utils.Size';
+import {ISerializer} from 'blockly/core/interfaces/i_serializer';
+import {Size} from 'blockly/core/utils/size';
 // eslint-disable-next-line no-unused-vars
-import {Workspace} from 'Blockly.Workspace';
-import {inputTypes} from 'Blockly.inputTypes';
+import {Workspace} from 'blockly/core/workspace';
+import {inputTypes} from 'blockly/core/input_types';
 
 
 // TODO(#5160): Remove this once lint is fixed.

@@ -8,7 +8,7 @@
  * Object that defines user-specified options for the workspace.
  * @namespace Blockly.BlocklyOptions
  */
-goog.module('Blockly.BlocklyOptions');
+goog.module('blockly/core/blockly_options');
 
 
 /**

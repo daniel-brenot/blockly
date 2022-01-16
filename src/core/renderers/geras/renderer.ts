@@ -8,20 +8,20 @@
  * Geras renderer.
  * @class
  */
-goog.module('Blockly.geras.Renderer');
+goog.module('blockly/core/renderers/geras/renderer');
 
-import blockRendering from 'Blockly.blockRendering';
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ConstantProvider: BaseConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {ConstantProvider} from 'Blockly.geras.ConstantProvider';
-import {Drawer} from 'Blockly.geras.Drawer';
-import {HighlightConstantProvider} from 'Blockly.geras.HighlightConstantProvider';
-import {PathObject} from 'Blockly.geras.PathObject';
-import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {RenderInfo} from 'Blockly.geras.RenderInfo';
-import {Renderer: BaseRenderer} from 'Blockly.blockRendering.Renderer';
-import {Theme} from 'Blockly.Theme';
+import blockRendering from 'blockly/core/renderers/common/block_rendering';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ConstantProvider: BaseConstantProvider} from 'blockly/core/renderers/common/constants';
+import {ConstantProvider} from 'blockly/core/renderers/geras/constants';
+import {Drawer} from 'blockly/core/renderers/geras/drawer';
+import {HighlightConstantProvider} from 'blockly/core/renderers/geras/highlight_constants';
+import {PathObject} from 'blockly/core/renderers/geras/path_object';
+import {RenderInfo: BaseRenderInfo} from 'blockly/core/renderers/common/info';
+import {RenderInfo} from 'blockly/core/renderers/geras/info';
+import {Renderer: BaseRenderer} from 'blockly/core/renderers/common/renderer';
+import {Theme} from 'blockly/core/theme';
 
 
 /**

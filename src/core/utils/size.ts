@@ -10,7 +10,7 @@
  * a JavaScript framework such as Closure.
  * @class
  */
-goog.module('Blockly.utils.Size');
+goog.module('blockly/core/utils/size');
 
 
 /**

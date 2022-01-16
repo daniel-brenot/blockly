@@ -8,18 +8,18 @@
  * A toolbox category used to organize blocks in the toolbox.
  * @class
  */
-goog.module('Blockly.CollapsibleToolboxCategory');
+goog.module('blockly/core/toolbox/collapsible_category');
 
-import aria from 'Blockly.utils.aria';
-import dom from 'Blockly.utils.dom';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import toolbox from 'Blockly.utils.toolbox';
-import {ICollapsibleToolboxItem} from 'Blockly.ICollapsibleToolboxItem';
-import {IToolboxItem} from 'Blockly.IToolboxItem';
-import {IToolbox} from 'Blockly.IToolbox';
-import {ToolboxCategory} from 'Blockly.ToolboxCategory';
-import {ToolboxSeparator} from 'Blockly.ToolboxSeparator';
+import aria from 'blockly/core/utils/aria';
+import dom from 'blockly/core/utils/dom';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import toolbox from 'blockly/core/utils/toolbox';
+import {ICollapsibleToolboxItem} from 'blockly/core/interfaces/i_collapsible_toolbox_item';
+import {IToolboxItem} from 'blockly/core/interfaces/i_toolbox_item';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {ToolboxCategory} from 'blockly/core/toolbox/category';
+import {ToolboxSeparator} from 'blockly/core/toolbox/separator';
 
 
 /**

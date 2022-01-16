@@ -9,9 +9,9 @@
  * Contains multi-colored border to create shadow effect.
  * @namespace Blockly.Themes.Classic
  */
-goog.module('Blockly.Themes.Classic');
+goog.module('blockly/core/theme/classic');
 
-import {Theme} from 'Blockly.Theme';
+import {Theme} from 'blockly/core/theme';
 
 
 const defaultBlockStyles = {

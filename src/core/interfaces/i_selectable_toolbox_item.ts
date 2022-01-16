@@ -14,10 +14,10 @@
  * The interface for a selectable toolbox item.
  * @namespace Blockly.ISelectableToolboxItem
  */
-goog.module('Blockly.ISelectableToolboxItem');
+goog.module('blockly/core/interfaces/i_selectable_toolbox_item');
 
-import toolbox from 'Blockly.utils.toolbox';
-import {IToolboxItem} from 'Blockly.IToolboxItem';
+import toolbox from 'blockly/core/utils/toolbox';
+import {IToolboxItem} from 'blockly/core/interfaces/i_toolbox_item';
 
 
 /**

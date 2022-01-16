@@ -9,10 +9,10 @@
  * minimalist renderer.
  * @class
  */
-goog.module('Blockly.minimalist.ConstantProvider');
+goog.module('blockly/core/renderers/minimalist/constants');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider: BaseConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider: BaseConstantProvider} from 'blockly/core/renderers/common/constants';
 
 
 /**

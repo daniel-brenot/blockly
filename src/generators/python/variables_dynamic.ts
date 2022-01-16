@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Python.variablesDynamic');
+goog.module('blockly/generators/python/variables_dynamic');
 
-import Python from 'Blockly.Python';
-goog.require('Blockly.Python.variables');
+import Python from 'blockly/generators/python';
+goog.require('blockly/generators/python/variables');
 
 
 // Python is dynamically typed.

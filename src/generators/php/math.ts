@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP.math');
+goog.module('blockly/generators/php/math');
 
-import PHP from 'Blockly.PHP';
-import {NameType} from 'Blockly.Names';
+import PHP from 'blockly/generators/php';
+import {NameType} from 'blockly/core/names';
 
 
 PHP['math_number'] = function(block) {

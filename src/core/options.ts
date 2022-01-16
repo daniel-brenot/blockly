@@ -8,16 +8,16 @@
  * Object that controls settings for the workspace.
  * @class
  */
-goog.module('Blockly.Options');
+goog.module('blockly/core/options');
 
-import idGenerator from 'Blockly.utils.idGenerator';
-import registry from 'Blockly.registry';
-import toolbox from 'Blockly.utils.toolbox';
-import {BlocklyOptions} from 'Blockly.BlocklyOptions';
-import {Classic} from 'Blockly.Themes.Classic';
-import {Metrics} from 'Blockly.utils.Metrics';
-import {Theme} from 'Blockly.Theme';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import registry from 'blockly/core/registry';
+import toolbox from 'blockly/core/utils/toolbox';
+import {BlocklyOptions} from 'blockly/core/blockly_options';
+import {Classic} from 'blockly/core/theme/classic';
+import {Metrics} from 'blockly/core/utils/metrics';
+import {Theme} from 'blockly/core/theme';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

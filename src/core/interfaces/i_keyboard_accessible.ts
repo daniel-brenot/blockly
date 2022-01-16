@@ -14,9 +14,9 @@
  * The interface for objects that handle keyboard shortcuts.
  * @namespace Blockly.IKeyboardAccessible
  */
-goog.module('Blockly.IKeyboardAccessible');
+goog.module('blockly/core/interfaces/i_keyboard_accessible');
 
-import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
+import {ShortcutRegistry} from 'blockly/core/shortcut_registry';
 
 
 /**

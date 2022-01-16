@@ -14,9 +14,9 @@
  * The interface for a Blockly field that can be registered.
  * @namespace Blockly.IRegistrableField
  */
-goog.module('Blockly.IRegistrableField');
+goog.module('blockly/core/interfaces/i_registrable_field');
 
-import {Field} from 'Blockly.Field';
+import {Field} from 'blockly/core/field';
 
 
 /**

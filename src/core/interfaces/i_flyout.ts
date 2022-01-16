@@ -14,14 +14,14 @@
  * The interface for a flyout.
  * @namespace Blockly.IFlyout
  */
-goog.module('Blockly.IFlyout');
+goog.module('blockly/core/interfaces/i_flyout');
 
-import toolbox from 'Blockly.utils.toolbox';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {IRegistrable} from 'Blockly.IRegistrable';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import toolbox from 'blockly/core/utils/toolbox';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {IRegistrable} from 'blockly/core/interfaces/i_registrable';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

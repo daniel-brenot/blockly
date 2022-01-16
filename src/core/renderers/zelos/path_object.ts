@@ -14,14 +14,14 @@
  * An object that owns a block's rendering SVG elements.
  * @class
  */
-goog.module('Blockly.zelos.PathObject');
+goog.module('blockly/core/renderers/zelos/path_object');
 
-import dom from 'Blockly.utils.dom';
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.zelos.ConstantProvider';
-import {PathObject: BasePathObject} from 'Blockly.blockRendering.PathObject';
-import {Svg} from 'Blockly.utils.Svg';
-import {Theme} from 'Blockly.Theme';
+import dom from 'blockly/core/utils/dom';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/zelos/constants';
+import {PathObject: BasePathObject} from 'blockly/core/renderers/common/path_object';
+import {Svg} from 'blockly/core/utils/svg';
+import {Theme} from 'blockly/core/theme';
 
 
 /**

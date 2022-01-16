@@ -8,35 +8,35 @@
  * Methods for graphically rendering a block as SVG.
  * @class
  */
-goog.module('Blockly.blockRendering.RenderInfo');
+goog.module('blockly/core/renderers/common/info');
 
-import {Align} from 'Blockly.Input';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {BottomRow} from 'Blockly.blockRendering.BottomRow';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {ExternalValueInput} from 'Blockly.blockRendering.ExternalValueInput';
-import {Field} from 'Blockly.blockRendering.Field';
-import {Hat} from 'Blockly.blockRendering.Hat';
-import {Icon} from 'Blockly.blockRendering.Icon';
-import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
-import {InlineInput} from 'Blockly.blockRendering.InlineInput';
-import {InputRow} from 'Blockly.blockRendering.InputRow';
-import {Input} from 'Blockly.Input';
-import {JaggedEdge} from 'Blockly.blockRendering.JaggedEdge';
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {NextConnection} from 'Blockly.blockRendering.NextConnection';
-import {OutputConnection} from 'Blockly.blockRendering.OutputConnection';
-import {PreviousConnection} from 'Blockly.blockRendering.PreviousConnection';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Renderer} from 'Blockly.blockRendering.Renderer';
-import {RoundCorner} from 'Blockly.blockRendering.RoundCorner';
-import {Row} from 'Blockly.blockRendering.Row';
-import {SpacerRow} from 'Blockly.blockRendering.SpacerRow';
-import {SquareCorner} from 'Blockly.blockRendering.SquareCorner';
-import {StatementInput} from 'Blockly.blockRendering.StatementInput';
-import {TopRow} from 'Blockly.blockRendering.TopRow';
-import {Types} from 'Blockly.blockRendering.Types';
-import {inputTypes} from 'Blockly.inputTypes';
+import {Align} from 'blockly/core/input';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {BottomRow} from 'blockly/core/renderers/measurables/bottom_row';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {ExternalValueInput} from 'blockly/core/renderers/measurables/external_value_input';
+import {Field} from 'blockly/core/renderers/measurables/field';
+import {Hat} from 'blockly/core/renderers/measurables/hat';
+import {Icon} from 'blockly/core/renderers/measurables/icon';
+import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';
+import {InlineInput} from 'blockly/core/renderers/measurables/inline_input';
+import {InputRow} from 'blockly/core/renderers/measurables/input_row';
+import {Input} from 'blockly/core/input';
+import {JaggedEdge} from 'blockly/core/renderers/measurables/jagged_edge';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {NextConnection} from 'blockly/core/renderers/measurables/next_connection';
+import {OutputConnection} from 'blockly/core/renderers/measurables/output_connection';
+import {PreviousConnection} from 'blockly/core/renderers/measurables/previous_connection';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Renderer} from 'blockly/core/renderers/common/renderer';
+import {RoundCorner} from 'blockly/core/renderers/measurables/round_corner';
+import {Row} from 'blockly/core/renderers/measurables/row';
+import {SpacerRow} from 'blockly/core/renderers/measurables/spacer_row';
+import {SquareCorner} from 'blockly/core/renderers/measurables/square_corner';
+import {StatementInput} from 'blockly/core/renderers/measurables/statement_input';
+import {TopRow} from 'blockly/core/renderers/measurables/top_row';
+import {Types} from 'blockly/core/renderers/measurables/types';
+import {inputTypes} from 'blockly/core/input_types';
 
 
 /**

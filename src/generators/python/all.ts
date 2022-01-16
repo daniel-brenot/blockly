@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Python.all');
+goog.module('blockly/generators/python/all');
 
-goog.require('Blockly.Python.color');
-goog.require('Blockly.Python.lists');
-goog.require('Blockly.Python.logic');
-goog.require('Blockly.Python.loops');
-goog.require('Blockly.Python.math');
-goog.require('Blockly.Python.procedures');
-goog.require('Blockly.Python.texts');
-goog.require('Blockly.Python.variables');
-goog.require('Blockly.Python.variablesDynamic');
+goog.require('blockly/generators/python/colour');
+goog.require('blockly/generators/python/lists');
+goog.require('blockly/generators/python/logic');
+goog.require('blockly/generators/python/loops');
+goog.require('blockly/generators/python/math');
+goog.require('blockly/generators/python/procedures');
+goog.require('blockly/generators/python/text');
+goog.require('blockly/generators/python/variables');
+goog.require('blockly/generators/python/variables_dynamic');
 

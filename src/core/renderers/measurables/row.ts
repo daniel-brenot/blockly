@@ -12,13 +12,13 @@
  * Object representing a single row on a rendered block.
  * @class
  */
-goog.module('Blockly.blockRendering.Row');
+goog.module('blockly/core/renderers/measurables/row');
 
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
-import {InputConnection} from 'Blockly.blockRendering.InputConnection';
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {Types} from 'Blockly.blockRendering.Types';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';
+import {InputConnection} from 'blockly/core/renderers/measurables/input_connection';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

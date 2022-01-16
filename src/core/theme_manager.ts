@@ -9,13 +9,13 @@
  *     and UI components.
  * @class
  */
-goog.module('Blockly.ThemeManager');
+goog.module('blockly/core/theme_manager');
 
-import arrayUtils from 'Blockly.utils.array';
-import dom from 'Blockly.utils.dom';
-import {Theme} from 'Blockly.Theme';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {Workspace} from 'Blockly.Workspace';
+import arrayUtils from 'blockly/core/utils/array';
+import dom from 'blockly/core/utils/dom';
+import {Theme} from 'blockly/core/theme';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

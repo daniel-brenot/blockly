@@ -10,10 +10,10 @@
  * a JavaScript framework such as Closure.
  * @namespace Blockly.utils.style
  */
-goog.module('Blockly.utils.style');
+goog.module('blockly/core/utils/style');
 
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Size} from 'Blockly.utils.Size';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Size} from 'blockly/core/utils/size';
 
 
 /**

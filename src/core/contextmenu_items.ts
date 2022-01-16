@@ -8,19 +8,19 @@
  * Registers default context menu items.
  * @namespace Blockly.ContextMenuItems
  */
-goog.module('Blockly.ContextMenuItems');
+goog.module('blockly/core/contextmenu_items');
 
-import Events from 'Blockly.Events';
-import clipboard from 'Blockly.clipboard';
-import dialog from 'Blockly.dialog';
-import eventUtils from 'Blockly.Events.utils';
-import idGenerator from 'Blockly.utils.idGenerator';
-import userAgent from 'Blockly.utils.userAgent';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ContextMenuRegistry} from 'Blockly.ContextMenuRegistry';
-import {Msg} from 'Blockly.Msg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {inputTypes} from 'Blockly.inputTypes';
+import Events from 'blockly/core/events/events';
+import clipboard from 'blockly/core/clipboard';
+import dialog from 'blockly/core/dialog';
+import eventUtils from 'blockly/core/events/utils';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import userAgent from 'blockly/core/utils/useragent';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ContextMenuRegistry} from 'blockly/core/contextmenu_registry';
+import {Msg} from 'blockly/core/msg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {inputTypes} from 'blockly/core/input_types';
 
 
 /**

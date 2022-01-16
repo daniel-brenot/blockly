@@ -8,36 +8,36 @@
  * Utility methods.
  * @namespace Blockly.utils
  */
-goog.module('Blockly.utils');
+goog.module('blockly/core/utils');
 
-import aria from 'Blockly.utils.aria';
-import arrayUtils from 'Blockly.utils.array';
-import browserEvents from 'Blockly.browserEvents';
-import colorUtils from 'Blockly.utils.color';
+import aria from 'blockly/core/utils/aria';
+import arrayUtils from 'blockly/core/utils/array';
+import browserEvents from 'blockly/core/browser_events';
+import colorUtils from 'blockly/core/utils/colour';
 import common from 'blockly/core/common';
-import deprecation from 'Blockly.utils.deprecation';
-import dom from 'Blockly.utils.dom';
-import extensions from 'Blockly.Extensions';
-import global from 'Blockly.utils.global';
-import idGenerator from 'Blockly.utils.idGenerator';
-import math from 'Blockly.utils.math';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import stringUtils from 'Blockly.utils.string';
-import style from 'Blockly.utils.style';
-import svgMath from 'Blockly.utils.svgMath';
-import svgPaths from 'Blockly.utils.svgPaths';
-import toolbox from 'Blockly.utils.toolbox';
-import userAgent from 'Blockly.utils.userAgent';
-import xmlUtils from 'Blockly.utils.xml';
-import {Block} from 'Blockly.Block';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {Metrics} from 'Blockly.utils.Metrics';
-import {Rect} from 'Blockly.utils.Rect';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import deprecation from 'blockly/core/utils/deprecation';
+import dom from 'blockly/core/utils/dom';
+import extensions from 'blockly/core/extensions';
+import global from 'blockly/core/utils/global';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import math from 'blockly/core/utils/math';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import stringUtils from 'blockly/core/utils/string';
+import style from 'blockly/core/utils/style';
+import svgMath from 'blockly/core/utils/svg_math';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import toolbox from 'blockly/core/utils/toolbox';
+import userAgent from 'blockly/core/utils/useragent';
+import xmlUtils from 'blockly/core/utils/xml';
+import {Block} from 'blockly/core/block';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {Metrics} from 'blockly/core/utils/metrics';
+import {Rect} from 'blockly/core/utils/rect';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 exports.aria = aria;

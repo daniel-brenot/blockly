@@ -5,7 +5,7 @@
  */
 
 import {defineBlocksWithJsonArray} from 'blockly/core/common';
-goog.require('Blockly.FieldColor');
+goog.require('blockly/core/field_colour');
 
 
 defineBlocksWithJsonArray([

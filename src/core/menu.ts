@@ -8,16 +8,16 @@
  * Blockly menu similar to Closure's goog.ui.Menu
  * @class
  */
-goog.module('Blockly.Menu');
+goog.module('blockly/core/menu');
 
-import aria from 'Blockly.utils.aria';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import style from 'Blockly.utils.style';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {MenuItem} from 'Blockly.MenuItem';
-import {Size} from 'Blockly.utils.Size';
+import aria from 'blockly/core/utils/aria';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import style from 'blockly/core/utils/style';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {MenuItem} from 'blockly/core/menuitem';
+import {Size} from 'blockly/core/utils/size';
 
 
 /**

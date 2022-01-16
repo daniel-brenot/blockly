@@ -8,37 +8,37 @@
  * Flyout tray containing blocks which may be created.
  * @class
  */
-goog.module('Blockly.Flyout');
+goog.module('blockly/core/flyout_base');
 
-import Tooltip from 'Blockly.Tooltip';
-import Variables from 'Blockly.Variables';
-import Xml from 'Blockly.Xml';
-import blocks from 'Blockly.serialization.blocks';
-import browserEvents from 'Blockly.browserEvents';
+import Tooltip from 'blockly/core/tooltip';
+import Variables from 'blockly/core/variables';
+import Xml from 'blockly/core/xml';
+import blocks from 'blockly/core/serialization/blocks';
+import browserEvents from 'blockly/core/browser_events';
 import common from 'blockly/core/common';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import idGenerator from 'Blockly.utils.idGenerator';
-import object from 'Blockly.utils.object';
-import toolbox from 'Blockly.utils.toolbox';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Block} from 'Blockly.Block';
-import {ComponentManager} from 'Blockly.ComponentManager';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {DeleteArea} from 'Blockly.DeleteArea';
-import {FlyoutButton} from 'Blockly.FlyoutButton';
-import {FlyoutMetricsManager} from 'Blockly.FlyoutMetricsManager';
-import {IFlyout} from 'Blockly.IFlyout';
-import {Options} from 'Blockly.Options';
-import {Rect} from 'Blockly.utils.Rect';
-import {ScrollbarPair} from 'Blockly.ScrollbarPair';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.BlockCreate');
-goog.require('Blockly.Events.VarCreate');
-goog.require('Blockly.Gesture');
-goog.require('Blockly.Touch');
-goog.require('Blockly.blockRendering');
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import object from 'blockly/core/utils/object';
+import toolbox from 'blockly/core/utils/toolbox';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Block} from 'blockly/core/block';
+import {ComponentManager} from 'blockly/core/component_manager';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {DeleteArea} from 'blockly/core/delete_area';
+import {FlyoutButton} from 'blockly/core/flyout_button';
+import {FlyoutMetricsManager} from 'blockly/core/flyout_metrics_manager';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {Options} from 'blockly/core/options';
+import {Rect} from 'blockly/core/utils/rect';
+import {ScrollbarPair} from 'blockly/core/scrollbar_pair';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_block_create');
+goog.require('blockly/core/events/events_var_create');
+goog.require('blockly/core/gesture');
+goog.require('blockly/core/touch');
+goog.require('blockly/core/renderers/common/block_rendering');
 
 
 /**
@@ -652,7 +652,7 @@ Flyout.prototype.getDynamicCategoryContents_ = function(categoryName) {
  * @private
  */
 Flyout.prototype.createButton_ = function(btnInfo, isLabel) {
-  const {FlyoutButton} = goog.module.get('Blockly.FlyoutButton');
+  const {FlyoutButton} = goog.module.get('blockly/core/flyout_button');
   if (!FlyoutButton) {
     throw Error('Missing require for Blockly.FlyoutButton');
   }

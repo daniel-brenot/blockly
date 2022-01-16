@@ -8,15 +8,15 @@
  * Class for a block creation event.
  * @class
  */
-goog.module('Blockly.Events.BlockCreate');
+goog.module('blockly/core/events/events_block_create');
 
-import Xml from 'Blockly.Xml';
-import blocks from 'Blockly.serialization.blocks';
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {BlockBase} from 'Blockly.Events.BlockBase';
-import {Block} from 'Blockly.Block';
+import Xml from 'blockly/core/xml';
+import blocks from 'blockly/core/serialization/blocks';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {BlockBase} from 'blockly/core/events/events_block_base';
+import {Block} from 'blockly/core/block';
 
 
 /**

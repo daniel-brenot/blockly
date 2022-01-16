@@ -8,12 +8,12 @@
  * Minimalist render info object.
  * @class
  */
-goog.module('Blockly.minimalist.RenderInfo');
+goog.module('blockly/core/renderers/minimalist/info');
 
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {Renderer} from 'Blockly.minimalist.Renderer';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {RenderInfo: BaseRenderInfo} from 'blockly/core/renderers/common/info';
+import {Renderer} from 'blockly/core/renderers/minimalist/renderer';
 
 
 /**

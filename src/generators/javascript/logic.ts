@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.JavaScript.logic');
+goog.module('blockly/generators/javascript/logic');
 
-import JavaScript from 'Blockly.JavaScript';
+import JavaScript from 'blockly/generators/javascript';
 
 
 JavaScript['controls_if'] = function(block) {

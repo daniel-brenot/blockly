@@ -9,12 +9,12 @@
  * rendered block.
  * @class
  */
-goog.module('Blockly.geras.InlineInput');
+goog.module('blockly/core/renderers/geras/measurables/inline_input');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {InlineInput: BaseInlineInput} from 'Blockly.blockRendering.InlineInput';
-import {Input} from 'Blockly.Input';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {InlineInput: BaseInlineInput} from 'blockly/core/renderers/measurables/inline_input';
+import {Input} from 'blockly/core/input';
 
 
 /**

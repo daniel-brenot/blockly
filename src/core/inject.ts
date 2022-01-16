@@ -8,30 +8,30 @@
  * Functions for injecting Blockly into a web page.
  * @namespace Blockly.inject
  */
-goog.module('Blockly.inject');
+goog.module('blockly/core/inject');
 
-import Css from 'Blockly.Css';
-import Tooltip from 'Blockly.Tooltip';
-import Touch from 'Blockly.Touch';
-import WidgetDiv from 'Blockly.WidgetDiv';
-import aria from 'Blockly.utils.aria';
-import browserEvents from 'Blockly.browserEvents';
-import bumpObjects from 'Blockly.bumpObjects';
+import Css from 'blockly/core/css';
+import Tooltip from 'blockly/core/tooltip';
+import Touch from 'blockly/core/touch';
+import WidgetDiv from 'blockly/core/widgetdiv';
+import aria from 'blockly/core/utils/aria';
+import browserEvents from 'blockly/core/browser_events';
+import bumpObjects from 'blockly/core/bump_objects';
 import common from 'blockly/core/common';
-import dom from 'Blockly.utils.dom';
-import userAgent from 'Blockly.utils.userAgent';
-import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
-import {BlocklyOptions} from 'Blockly.BlocklyOptions';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {Grid} from 'Blockly.Grid';
-import {Msg} from 'Blockly.Msg';
-import {Options} from 'Blockly.Options';
-import {ScrollbarPair} from 'Blockly.ScrollbarPair';
-import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceDragSurfaceSvg} from 'Blockly.WorkspaceDragSurfaceSvg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {Workspace} from 'Blockly.Workspace';
+import dom from 'blockly/core/utils/dom';
+import userAgent from 'blockly/core/utils/useragent';
+import {BlockDragSurfaceSvg} from 'blockly/core/block_drag_surface';
+import {BlocklyOptions} from 'blockly/core/blockly_options';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {Grid} from 'blockly/core/grid';
+import {Msg} from 'blockly/core/msg';
+import {Options} from 'blockly/core/options';
+import {ScrollbarPair} from 'blockly/core/scrollbar_pair';
+import {ShortcutRegistry} from 'blockly/core/shortcut_registry';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceDragSurfaceSvg} from 'blockly/core/workspace_drag_surface_svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**
@@ -212,7 +212,7 @@ const init = function(mainWorkspace) {
       browserEvents.conditionalBind(window, 'resize', null, function() {
         mainWorkspace.hideChaff(true);
         common.svgResize(mainWorkspace);
-        goog.module.get('Blockly.bumpObjects')
+        goog.module.get('blockly/core/bump_objects')
             .bumpTopObjectsIntoBounds(mainWorkspace);
       });
   mainWorkspace.setResizeHandlerWrapper(workspaceResizeHandler);

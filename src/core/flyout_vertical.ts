@@ -8,21 +8,21 @@
  * Layout code for a vertical variant of the flyout.
  * @class
  */
-goog.module('Blockly.VerticalFlyout');
+goog.module('blockly/core/flyout_vertical');
 
-import WidgetDiv from 'Blockly.WidgetDiv';
-import browserEvents from 'Blockly.browserEvents';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import toolbox from 'Blockly.utils.toolbox';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {Flyout} from 'Blockly.Flyout';
-import {Options} from 'Blockly.Options';
-import {Rect} from 'Blockly.utils.Rect';
-import {Scrollbar} from 'Blockly.Scrollbar';
-goog.require('Blockly.Block');
-goog.require('Blockly.constants');
+import WidgetDiv from 'blockly/core/widgetdiv';
+import browserEvents from 'blockly/core/browser_events';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import toolbox from 'blockly/core/utils/toolbox';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {Flyout} from 'blockly/core/flyout_base';
+import {Options} from 'blockly/core/options';
+import {Rect} from 'blockly/core/utils/rect';
+import {Scrollbar} from 'blockly/core/scrollbar';
+goog.require('blockly/core/block');
+goog.require('blockly/core/constants');
 
 
 /**

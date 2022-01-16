@@ -14,12 +14,12 @@
  * a rendered block.
  * @class
  */
-goog.module('Blockly.zelos.StatementInput');
+goog.module('blockly/core/renderers/zelos/measurables/inputs');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Input} from 'Blockly.Input';
-import {StatementInput: BaseStatementInput} from 'Blockly.blockRendering.StatementInput';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Input} from 'blockly/core/input';
+import {StatementInput: BaseStatementInput} from 'blockly/core/renderers/measurables/statement_input';
 
 
 /**

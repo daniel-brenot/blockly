@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP.texts');
+goog.module('blockly/generators/php/text');
 
-import PHP from 'Blockly.PHP';
-import {NameType} from 'Blockly.Names';
+import PHP from 'blockly/generators/php';
+import {NameType} from 'blockly/core/names';
 
 
 PHP['text'] = function(block) {

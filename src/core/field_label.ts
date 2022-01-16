@@ -9,13 +9,13 @@
  *    labels, etc.
  * @class
  */
-goog.module('Blockly.FieldLabel');
+goog.module('blockly/core/field_label');
 
-import dom from 'Blockly.utils.dom';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import {Field} from 'Blockly.Field';
+import dom from 'blockly/core/utils/dom';
+import fieldRegistry from 'blockly/core/field_registry';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import {Field} from 'blockly/core/field';
 
 
 /**

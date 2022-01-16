@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP.color');
+goog.module('blockly/generators/php/colour');
 
-import PHP from 'Blockly.PHP';
+import PHP from 'blockly/generators/php';
 
 
 PHP['color_picker'] = function(block) {

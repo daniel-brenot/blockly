@@ -14,12 +14,12 @@
  * The interface for an object that is selectable.
  * @namespace Blockly.ISelectable
  */
-goog.module('Blockly.ISelectable');
+goog.module('blockly/core/interfaces/i_selectable');
 
 // eslint-disable-next-line no-unused-vars
-import {IDeletable} from 'Blockly.IDeletable';
+import {IDeletable} from 'blockly/core/interfaces/i_deletable';
 // eslint-disable-next-line no-unused-vars
-import {IMovable} from 'Blockly.IMovable';
+import {IMovable} from 'blockly/core/interfaces/i_movable';
 
 
 /**

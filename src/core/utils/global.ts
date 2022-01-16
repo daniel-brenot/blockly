@@ -8,7 +8,7 @@
  * Provides a reference to the global object.
  * @namespace Blockly.utils.global
  */
-goog.module('Blockly.utils.global');
+goog.module('blockly/core/utils/global');
 
 
 /**

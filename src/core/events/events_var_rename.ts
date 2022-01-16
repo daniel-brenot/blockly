@@ -8,13 +8,13 @@
  * Class for a variable rename event.
  * @class
  */
-goog.module('Blockly.Events.VarRename');
+goog.module('blockly/core/events/events_var_rename');
 
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {VarBase} from 'Blockly.Events.VarBase';
-import {VariableModel} from 'Blockly.VariableModel';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {VarBase} from 'blockly/core/events/events_var_base';
+import {VariableModel} from 'blockly/core/variable_model';
 
 
 /**

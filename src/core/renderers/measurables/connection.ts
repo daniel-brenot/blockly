@@ -14,13 +14,13 @@
  * rendering.
  * @class
  */
-goog.module('Blockly.blockRendering.Connection');
+goog.module('blockly/core/renderers/measurables/connection');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

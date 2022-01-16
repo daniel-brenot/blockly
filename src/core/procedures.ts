@@ -8,21 +8,21 @@
  * Utility functions for handling procedures.
  * @namespace Blockly.Procedures
  */
-goog.module('Blockly.Procedures');
+goog.module('blockly/core/procedures');
 
-import Abstract from 'Blockly.Events.Abstract';
-import Variables from 'Blockly.Variables';
-import Xml from 'Blockly.Xml';
-import eventUtils from 'Blockly.Events.utils';
-import utilsXml from 'Blockly.utils.xml';
+import Abstract from 'blockly/core/events/events_abstract';
+import Variables from 'blockly/core/variables';
+import Xml from 'blockly/core/xml';
+import eventUtils from 'blockly/core/events/utils';
+import utilsXml from 'blockly/core/utils/xml';
 import {Blocks} from 'blockly/core/blocks';
-import {Block} from 'Blockly.Block';
-import {Field} from 'Blockly.Field';
-import {Msg} from 'Blockly.Msg';
-import {Names} from 'Blockly.Names';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {Workspace} from 'Blockly.Workspace';
-goog.require('Blockly.Events.BlockChange');
+import {Block} from 'blockly/core/block';
+import {Field} from 'blockly/core/field';
+import {Msg} from 'blockly/core/msg';
+import {Names} from 'blockly/core/names';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {Workspace} from 'blockly/core/workspace';
+goog.require('blockly/core/events/events_block_change');
 
 
 /**

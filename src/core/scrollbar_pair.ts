@@ -8,14 +8,14 @@
  * Object representing a pair of scrollbars.
  * @class
  */
-goog.module('Blockly.ScrollbarPair');
+goog.module('blockly/core/scrollbar_pair');
 
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import {Metrics} from 'Blockly.utils.Metrics';
-import {Scrollbar} from 'Blockly.Scrollbar';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import {Metrics} from 'blockly/core/utils/metrics';
+import {Scrollbar} from 'blockly/core/scrollbar';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

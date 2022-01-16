@@ -8,20 +8,20 @@
  * Text Area field.
  * @class
  */
-goog.module('Blockly.FieldMultilineInput');
+goog.module('blockly/core/field_multilineinput');
 
-import Css from 'Blockly.Css';
-import WidgetDiv from 'Blockly.WidgetDiv';
-import aria from 'Blockly.utils.aria';
-import dom from 'Blockly.utils.dom';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import userAgent from 'Blockly.utils.userAgent';
-import {FieldTextInput} from 'Blockly.FieldTextInput';
-import {Field} from 'Blockly.Field';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {Svg} from 'Blockly.utils.Svg';
+import Css from 'blockly/core/css';
+import WidgetDiv from 'blockly/core/widgetdiv';
+import aria from 'blockly/core/utils/aria';
+import dom from 'blockly/core/utils/dom';
+import fieldRegistry from 'blockly/core/field_registry';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import userAgent from 'blockly/core/utils/useragent';
+import {FieldTextInput} from 'blockly/core/field_textinput';
+import {Field} from 'blockly/core/field';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

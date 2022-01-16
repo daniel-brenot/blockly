@@ -10,12 +10,12 @@
  *    edited programmatically.
  * @class
  */
-goog.module('Blockly.FieldLabelSerializable');
+goog.module('blockly/core/field_label_serializable');
 
-import fieldRegistry from 'Blockly.fieldRegistry';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import {FieldLabel} from 'Blockly.FieldLabel';
+import fieldRegistry from 'blockly/core/field_registry';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import {FieldLabel} from 'blockly/core/field_label';
 
 
 /**

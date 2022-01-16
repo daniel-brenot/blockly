@@ -8,51 +8,51 @@
  * Methods for graphically rendering a block as SVG.
  * @class
  */
-goog.module('Blockly.BlockSvg');
+goog.module('blockly/core/block_svg');
 
-import ContextMenu from 'Blockly.ContextMenu';
-import Tooltip from 'Blockly.Tooltip';
-import blockAnimations from 'Blockly.blockAnimations';
-import blocks from 'Blockly.serialization.blocks';
-import browserEvents from 'Blockly.browserEvents';
+import ContextMenu from 'blockly/core/contextmenu';
+import Tooltip from 'blockly/core/tooltip';
+import blockAnimations from 'blockly/core/block_animations';
+import blocks from 'blockly/core/serialization/blocks';
+import browserEvents from 'blockly/core/browser_events';
 import common from 'blockly/core/common';
-import constants from 'Blockly.constants';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import object from 'Blockly.utils.object';
-import svgMath from 'Blockly.utils.svgMath';
-import userAgent from 'Blockly.utils.userAgent';
-import {ASTNode} from 'Blockly.ASTNode';
-import {Block} from 'Blockly.Block';
-import {Comment} from 'Blockly.Comment';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Connection} from 'Blockly.Connection';
-import {ContextMenuRegistry} from 'Blockly.ContextMenuRegistry';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Debug: BlockRenderingDebug} from 'Blockly.blockRendering.Debug';
-import {FieldLabel} from 'Blockly.FieldLabel';
-import {Field} from 'Blockly.Field';
-import {IASTNodeLocationSvg} from 'Blockly.IASTNodeLocationSvg';
-import {IBoundedElement} from 'Blockly.IBoundedElement';
-import {ICopyable} from 'Blockly.ICopyable';
-import {IDraggable} from 'Blockly.IDraggable';
-import {IPathObject} from 'Blockly.blockRendering.IPathObject';
-import {Icon} from 'Blockly.Icon';
-import {Input} from 'Blockly.Input';
-import {MarkerManager} from 'Blockly.MarkerManager';
-import {Msg} from 'Blockly.Msg';
-import {Mutator} from 'Blockly.Mutator';
-import {Rect} from 'Blockly.utils.Rect';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {Svg} from 'Blockly.utils.Svg';
-import {TabNavigateCursor} from 'Blockly.TabNavigateCursor';
-import {Theme} from 'Blockly.Theme';
-import {Warning} from 'Blockly.Warning';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.BlockMove');
-goog.require('Blockly.Events.Selected');
-goog.require('Blockly.Touch');
+import constants from 'blockly/core/constants';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import object from 'blockly/core/utils/object';
+import svgMath from 'blockly/core/utils/svg_math';
+import userAgent from 'blockly/core/utils/useragent';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
+import {Block} from 'blockly/core/block';
+import {Comment} from 'blockly/core/comment';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Connection} from 'blockly/core/connection';
+import {ContextMenuRegistry} from 'blockly/core/contextmenu_registry';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Debug: BlockRenderingDebug} from 'blockly/core/renderers/common/debugger';
+import {FieldLabel} from 'blockly/core/field_label';
+import {Field} from 'blockly/core/field';
+import {IASTNodeLocationSvg} from 'blockly/core/interfaces/i_ast_node_location_svg';
+import {IBoundedElement} from 'blockly/core/interfaces/i_bounded_element';
+import {ICopyable} from 'blockly/core/interfaces/i_copyable';
+import {IDraggable} from 'blockly/core/interfaces/i_draggable';
+import {IPathObject} from 'blockly/core/renderers/common/i_path_object';
+import {Icon} from 'blockly/core/icon';
+import {Input} from 'blockly/core/input';
+import {MarkerManager} from 'blockly/core/marker_manager';
+import {Msg} from 'blockly/core/msg';
+import {Mutator} from 'blockly/core/mutator';
+import {Rect} from 'blockly/core/utils/rect';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {Svg} from 'blockly/core/utils/svg';
+import {TabNavigateCursor} from 'blockly/core/keyboard_nav/tab_navigate_cursor';
+import {Theme} from 'blockly/core/theme';
+import {Warning} from 'blockly/core/warning';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_block_move');
+goog.require('blockly/core/events/events_selected');
+goog.require('blockly/core/touch');
 
 
 /**
@@ -1003,7 +1003,7 @@ BlockSvg.prototype.getCommentIcon = function() {
  * @param {?string} text The text, or null to delete.
  */
 BlockSvg.prototype.setCommentText = function(text) {
-  const {Comment} = goog.module.get('Blockly.Comment');
+  const {Comment} = goog.module.get('blockly/core/comment');
   if (!Comment) {
     throw Error('Missing require for Blockly.Comment');
   }
@@ -1041,7 +1041,7 @@ BlockSvg.prototype.setCommentText = function(text) {
  *     maintain multiple warnings.
  */
 BlockSvg.prototype.setWarningText = function(text, opt_id) {
-  const {Warning} = goog.module.get('Blockly.Warning');
+  const {Warning} = goog.module.get('blockly/core/warning');
   if (!Warning) {
     throw Error('Missing require for Blockly.Warning');
   }

@@ -14,13 +14,13 @@
  * block.
  * @class
  */
-goog.module('Blockly.blockRendering.InlineInput');
+goog.module('blockly/core/renderers/measurables/inline_input');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {InputConnection} from 'Blockly.blockRendering.InputConnection';
-import {Input} from 'Blockly.Input';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {InputConnection} from 'blockly/core/renderers/measurables/input_connection';
+import {Input} from 'blockly/core/input';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

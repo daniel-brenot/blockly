@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP.lists');
+goog.module('blockly/generators/php/lists');
 
-import PHP from 'Blockly.PHP';
-import stringUtils from 'Blockly.utils.string';
-import {NameType} from 'Blockly.Names';
+import PHP from 'blockly/generators/php';
+import stringUtils from 'blockly/core/utils/string';
+import {NameType} from 'blockly/core/names';
 
 
 PHP['lists_create_empty'] = function(block) {

@@ -8,17 +8,17 @@
  * Class for a button in the flyout.
  * @class
  */
-goog.module('Blockly.FlyoutButton');
+goog.module('blockly/core/flyout_button');
 
-import Css from 'Blockly.Css';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import style from 'Blockly.utils.style';
-import toolbox from 'Blockly.utils.toolbox';
-import parsing from 'Blockly.utils.parsing';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import Css from 'blockly/core/css';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import style from 'blockly/core/utils/style';
+import toolbox from 'blockly/core/utils/toolbox';
+import parsing from 'blockly/core/utils/parsing';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

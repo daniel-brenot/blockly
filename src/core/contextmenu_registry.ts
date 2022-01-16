@@ -8,10 +8,10 @@
  * Registry for context menu option items.
  * @class
  */
-goog.module('Blockly.ContextMenuRegistry');
+goog.module('blockly/core/contextmenu_registry');
 
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

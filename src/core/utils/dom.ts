@@ -10,10 +10,10 @@
  * a JavaScript framework such as Closure.
  * @namespace Blockly.utils.dom
  */
-goog.module('Blockly.utils.dom');
+goog.module('blockly/core/utils/dom');
 
-import userAgent from 'Blockly.utils.userAgent';
-import {Svg} from 'Blockly.utils.Svg';
+import userAgent from 'blockly/core/utils/useragent';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

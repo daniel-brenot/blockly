@@ -8,16 +8,16 @@
  * Minimalist renderer.
  * @class
  */
-goog.module('Blockly.minimalist.Renderer');
+goog.module('blockly/core/renderers/minimalist/renderer');
 
-import blockRendering from 'Blockly.blockRendering';
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ConstantProvider} from 'Blockly.minimalist.ConstantProvider';
-import {Drawer} from 'Blockly.minimalist.Drawer';
-import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {RenderInfo} from 'Blockly.minimalist.RenderInfo';
-import {Renderer: BaseRenderer} from 'Blockly.blockRendering.Renderer';
+import blockRendering from 'blockly/core/renderers/common/block_rendering';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ConstantProvider} from 'blockly/core/renderers/minimalist/constants';
+import {Drawer} from 'blockly/core/renderers/minimalist/drawer';
+import {RenderInfo: BaseRenderInfo} from 'blockly/core/renderers/common/info';
+import {RenderInfo} from 'blockly/core/renderers/minimalist/info';
+import {Renderer: BaseRenderer} from 'blockly/core/renderers/common/renderer';
 
 
 /**

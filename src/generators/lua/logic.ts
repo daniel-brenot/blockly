@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Lua.logic');
+goog.module('blockly/generators/lua/logic');
 
-import Lua from 'Blockly.Lua';
+import Lua from 'blockly/generators/lua';
 
 
 Lua['controls_if'] = function(block) {

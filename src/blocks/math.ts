@@ -4,17 +4,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.blocks.math');
+goog.module('blockly/blocks/math');
 
-import Extensions from 'Blockly.Extensions';
+import Extensions from 'blockly/core/extensions';
 // N.B.: Blockly.FieldDropdown needed for type AND side-effects.
-import FieldDropdown from 'Blockly.FieldDropdown';
-import xmlUtils from 'Blockly.utils.xml';
-import {Block} from 'Blockly.Block';
+import FieldDropdown from 'blockly/core/field_dropdown';
+import xmlUtils from 'blockly/core/utils/xml';
+import {Block} from 'blockly/core/block';
 import {defineBlocksWithJsonArray} from 'blockly/core/common';
-goog.require('Blockly.FieldLabel');
-goog.require('Blockly.FieldNumber');
-goog.require('Blockly.FieldVariable');
+goog.require('blockly/core/field_label');
+goog.require('blockly/core/field_number');
+goog.require('blockly/core/field_variable');
 
 
 defineBlocksWithJsonArray([

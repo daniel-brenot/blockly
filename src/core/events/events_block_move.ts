@@ -8,15 +8,15 @@
  * Class for a block move event.
  * @class
  */
-goog.module('Blockly.Events.BlockMove');
+goog.module('blockly/core/events/events_block_move');
 
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {BlockBase} from 'Blockly.Events.BlockBase';
-import {Block} from 'Blockly.Block';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Coordinate} from 'Blockly.utils.Coordinate';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {BlockBase} from 'blockly/core/events/events_block_base';
+import {Block} from 'blockly/core/block';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Coordinate} from 'blockly/core/utils/coordinate';
 
 
 /**

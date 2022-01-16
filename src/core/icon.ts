@@ -8,16 +8,16 @@
  * Object representing an icon on a block.
  * @class
  */
-goog.module('Blockly.Icon');
+goog.module('blockly/core/icon');
 
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import svgMath from 'Blockly.utils.svgMath';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Bubble} from 'Blockly.Bubble';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import svgMath from 'blockly/core/utils/svg_math';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Bubble} from 'blockly/core/bubble';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

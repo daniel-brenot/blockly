@@ -8,21 +8,21 @@
  * Methods for dragging a bubble visually.
  * @class
  */
-goog.module('Blockly.BubbleDragger');
+goog.module('blockly/core/bubble_dragger');
 
-import eventUtils from 'Blockly.Events.utils';
-import svgMath from 'Blockly.utils.svgMath';
-import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
-import {ComponentManager} from 'Blockly.ComponentManager';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {IBubble} from 'Blockly.IBubble';
-import {IDeleteArea} from 'Blockly.IDeleteArea';
-import {IDragTarget} from 'Blockly.IDragTarget';
-import {WorkspaceCommentSvg} from 'Blockly.WorkspaceCommentSvg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Bubble');
-goog.require('Blockly.Events.CommentMove');
-goog.require('Blockly.constants');
+import eventUtils from 'blockly/core/events/utils';
+import svgMath from 'blockly/core/utils/svg_math';
+import {BlockDragSurfaceSvg} from 'blockly/core/block_drag_surface';
+import {ComponentManager} from 'blockly/core/component_manager';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {IBubble} from 'blockly/core/interfaces/i_bubble';
+import {IDeleteArea} from 'blockly/core/interfaces/i_delete_area';
+import {IDragTarget} from 'blockly/core/interfaces/i_drag_target';
+import {WorkspaceCommentSvg} from 'blockly/core/workspace_comment_svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/bubble');
+goog.require('blockly/core/events/events_comment_move');
+goog.require('blockly/core/constants');
 
 
 /**

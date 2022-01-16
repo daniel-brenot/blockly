@@ -12,13 +12,13 @@
  * Object representing a spacer between two rows.
  * @class
  */
-goog.module('Blockly.blockRendering.SpacerRow');
+goog.module('blockly/core/renderers/measurables/spacer_row');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
-import {Row} from 'Blockly.blockRendering.Row';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';
+import {Row} from 'blockly/core/renderers/measurables/row';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

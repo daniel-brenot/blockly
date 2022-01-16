@@ -24,12 +24,12 @@
  * while dragging blocks.
  * @class
  */
-goog.module('Blockly.BlockDragSurfaceSvg');
+goog.module('blockly/core/block_drag_surface');
 
-import dom from 'Blockly.utils.dom';
-import svgMath from 'Blockly.utils.svgMath';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Svg} from 'Blockly.utils.Svg';
+import dom from 'blockly/core/utils/dom';
+import svgMath from 'blockly/core/utils/svg_math';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Svg} from 'blockly/core/utils/svg';
 
 
 /**

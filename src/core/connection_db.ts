@@ -10,13 +10,13 @@
  *    Sorted by y coordinate.
  * @class
  */
-goog.module('Blockly.ConnectionDB');
+goog.module('blockly/core/connection_db');
 
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {IConnectionChecker} from 'Blockly.IConnectionChecker';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-goog.require('Blockly.constants');
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {IConnectionChecker} from 'blockly/core/interfaces/i_connection_checker';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+goog.require('blockly/core/constants');
 
 
 /**

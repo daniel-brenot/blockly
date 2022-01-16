@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Dart.all');
+goog.module('blockly/generators/dart/all');
 
-goog.require('Blockly.Dart.color');
-goog.require('Blockly.Dart.lists');
-goog.require('Blockly.Dart.logic');
-goog.require('Blockly.Dart.loops');
-goog.require('Blockly.Dart.math');
-goog.require('Blockly.Dart.procedures');
-goog.require('Blockly.Dart.texts');
-goog.require('Blockly.Dart.variables');
-goog.require('Blockly.Dart.variablesDynamic');
+goog.require('blockly/generators/dart/colour');
+goog.require('blockly/generators/dart/lists');
+goog.require('blockly/generators/dart/logic');
+goog.require('blockly/generators/dart/loops');
+goog.require('blockly/generators/dart/math');
+goog.require('blockly/generators/dart/procedures');
+goog.require('blockly/generators/dart/text');
+goog.require('blockly/generators/dart/variables');
+goog.require('blockly/generators/dart/variables_dynamic');
 

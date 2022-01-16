@@ -8,15 +8,15 @@
  * Utility functions for handling variables.
  * @namespace Blockly.Variables
  */
-goog.module('Blockly.Variables');
+goog.module('blockly/core/variables');
 
-import Xml from 'Blockly.Xml';
-import dialog from 'Blockly.dialog';
-import utilsXml from 'Blockly.utils.xml';
+import Xml from 'blockly/core/xml';
+import dialog from 'blockly/core/dialog';
+import utilsXml from 'blockly/core/utils/xml';
 import {Blocks} from 'blockly/core/blocks';
-import {Msg} from 'Blockly.Msg';
-import {VariableModel} from 'Blockly.VariableModel';
-import {Workspace} from 'Blockly.Workspace';
+import {Msg} from 'blockly/core/msg';
+import {VariableModel} from 'blockly/core/variable_model';
+import {Workspace} from 'blockly/core/workspace';
 
 /**
  * String for use in the "custom" attribute of a category in toolbox XML.

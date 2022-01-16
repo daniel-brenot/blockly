@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP.variablesDynamic');
+goog.module('blockly/generators/php/variables_dynamic');
 
-import PHP from 'Blockly.PHP';
-goog.require('Blockly.PHP.variables');
+import PHP from 'blockly/generators/php';
+goog.require('blockly/generators/php/variables');
 
 
 // PHP is dynamically typed.

@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.JavaScript.procedures');
+goog.module('blockly/generators/javascript/procedures');
 
-import JavaScript from 'Blockly.JavaScript';
-import {NameType} from 'Blockly.Names';
+import JavaScript from 'blockly/generators/javascript';
+import {NameType} from 'blockly/core/names';
 
 
 JavaScript['procedures_defreturn'] = function(block) {

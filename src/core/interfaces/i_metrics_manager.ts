@@ -14,11 +14,11 @@
  * The interface for a metrics manager.
  * @namespace Blockly.IMetricsManager
  */
-goog.module('Blockly.IMetricsManager');
+goog.module('blockly/core/interfaces/i_metrics_manager');
 
-import {MetricsManager} from 'Blockly.MetricsManager';
-import {Metrics} from 'Blockly.utils.Metrics';
-import {Size} from 'Blockly.utils.Size';
+import {MetricsManager} from 'blockly/core/metrics_manager';
+import {Metrics} from 'blockly/core/utils/metrics';
+import {Size} from 'blockly/core/utils/size';
 
 
 /**

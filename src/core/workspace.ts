@@ -8,25 +8,25 @@
  * Object representing a workspace.
  * @class
  */
-goog.module('Blockly.Workspace');
+goog.module('blockly/core/workspace');
 
-import Abstract from 'Blockly.Events.Abstract';
-import arrayUtils from 'Blockly.utils.array';
-import eventUtils from 'Blockly.Events.utils';
-import idGenerator from 'Blockly.utils.idGenerator';
-import math from 'Blockly.utils.math';
-import registry from 'Blockly.registry';
-import toolbox from 'Blockly.utils.toolbox';
-import {BlocklyOptions} from 'Blockly.BlocklyOptions';
-import {Block} from 'Blockly.Block';
-import {ConnectionDB} from 'Blockly.ConnectionDB';
-import {IASTNodeLocation} from 'Blockly.IASTNodeLocation';
-import {IConnectionChecker} from 'Blockly.IConnectionChecker';
-import {Options} from 'Blockly.Options';
-import {VariableMap} from 'Blockly.VariableMap';
-import {VariableModel} from 'Blockly.VariableModel';
-import {WorkspaceComment} from 'Blockly.WorkspaceComment';
-goog.require('Blockly.ConnectionChecker');
+import Abstract from 'blockly/core/events/events_abstract';
+import arrayUtils from 'blockly/core/utils/array';
+import eventUtils from 'blockly/core/events/utils';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import math from 'blockly/core/utils/math';
+import registry from 'blockly/core/registry';
+import toolbox from 'blockly/core/utils/toolbox';
+import {BlocklyOptions} from 'blockly/core/blockly_options';
+import {Block} from 'blockly/core/block';
+import {ConnectionDB} from 'blockly/core/connection_db';
+import {IASTNodeLocation} from 'blockly/core/interfaces/i_ast_node_location';
+import {IConnectionChecker} from 'blockly/core/interfaces/i_connection_checker';
+import {Options} from 'blockly/core/options';
+import {VariableMap} from 'blockly/core/variable_map';
+import {VariableModel} from 'blockly/core/variable_model';
+import {WorkspaceComment} from 'blockly/core/workspace_comment';
+goog.require('blockly/core/connection_checker');
 
 
 /**
@@ -512,7 +512,7 @@ Workspace.prototype.getWidth = function() {
  * @return {!Block} The created block.
  */
 Workspace.prototype.newBlock = function(prototypeName, opt_id) {
-  const {Block} = goog.module.get('Blockly.Block');
+  const {Block} = goog.module.get('blockly/core/block');
   return new Block(this, prototypeName, opt_id);
 };
 

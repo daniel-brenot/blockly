@@ -9,28 +9,28 @@
  * or a tap.
  * @class
  */
-goog.module('Blockly.Gesture');
+goog.module('blockly/core/gesture');
 
-import Tooltip from 'Blockly.Tooltip';
-import Touch from 'Blockly.Touch';
-import blockAnimations from 'Blockly.blockAnimations';
-import browserEvents from 'Blockly.browserEvents';
+import Tooltip from 'blockly/core/tooltip';
+import Touch from 'blockly/core/touch';
+import blockAnimations from 'blockly/core/block_animations';
+import browserEvents from 'blockly/core/browser_events';
 import common from 'blockly/core/common';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import registry from 'Blockly.registry';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {BubbleDragger} from 'Blockly.BubbleDragger';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Field} from 'Blockly.Field';
-import {IBlockDragger} from 'Blockly.IBlockDragger';
-import {IBubble} from 'Blockly.IBubble';
-import {IFlyout} from 'Blockly.IFlyout';
-import {WorkspaceDragger} from 'Blockly.WorkspaceDragger';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {Workspace} from 'Blockly.Workspace';
-goog.require('Blockly.BlockDragger');
-goog.require('Blockly.Events.Click');
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import registry from 'blockly/core/registry';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {BubbleDragger} from 'blockly/core/bubble_dragger';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Field} from 'blockly/core/field';
+import {IBlockDragger} from 'blockly/core/interfaces/i_block_dragger';
+import {IBubble} from 'blockly/core/interfaces/i_bubble';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {WorkspaceDragger} from 'blockly/core/workspace_dragger';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {Workspace} from 'blockly/core/workspace';
+goog.require('blockly/core/block_dragger');
+goog.require('blockly/core/events/events_click');
 
 
 /**

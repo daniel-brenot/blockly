@@ -9,12 +9,12 @@
  *     workspace.
  * @class
  */
-goog.module('Blockly.WorkspaceAudio');
+goog.module('blockly/core/workspace_audio');
 
-import internalConstants from 'Blockly.internalConstants';
-import userAgent from 'Blockly.utils.userAgent';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {globalThis} from 'Blockly.utils.global';
+import internalConstants from 'blockly/core/internal_constants';
+import userAgent from 'blockly/core/utils/useragent';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {globalThis} from 'blockly/core/utils/global';
 
 
 /**

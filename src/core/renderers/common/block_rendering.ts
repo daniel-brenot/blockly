@@ -8,42 +8,42 @@
  * Namespace for block rendering functionality.
  * @namespace Blockly.blockRendering
  */
-goog.module('Blockly.blockRendering');
+goog.module('blockly/core/renderers/common/block_rendering');
 
-import debug from 'Blockly.blockRendering.debug';
-import deprecation from 'Blockly.utils.deprecation';
-import registry from 'Blockly.registry';
-import {BottomRow} from 'Blockly.blockRendering.BottomRow';
-import {Connection} from 'Blockly.blockRendering.Connection';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Debug} from 'Blockly.blockRendering.Debug';
-import {Drawer} from 'Blockly.blockRendering.Drawer';
-import {ExternalValueInput} from 'Blockly.blockRendering.ExternalValueInput';
-import {Field} from 'Blockly.blockRendering.Field';
-import {Hat} from 'Blockly.blockRendering.Hat';
-import {IPathObject} from 'Blockly.blockRendering.IPathObject';
-import {Icon} from 'Blockly.blockRendering.Icon';
-import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
-import {InlineInput} from 'Blockly.blockRendering.InlineInput';
-import {InputConnection} from 'Blockly.blockRendering.InputConnection';
-import {InputRow} from 'Blockly.blockRendering.InputRow';
-import {JaggedEdge} from 'Blockly.blockRendering.JaggedEdge';
-import {MarkerSvg} from 'Blockly.blockRendering.MarkerSvg';
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {NextConnection} from 'Blockly.blockRendering.NextConnection';
-import {OutputConnection} from 'Blockly.blockRendering.OutputConnection';
-import {PathObject} from 'Blockly.blockRendering.PathObject';
-import {PreviousConnection} from 'Blockly.blockRendering.PreviousConnection';
-import {RenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {Renderer} from 'Blockly.blockRendering.Renderer';
-import {RoundCorner} from 'Blockly.blockRendering.RoundCorner';
-import {Row} from 'Blockly.blockRendering.Row';
-import {SpacerRow} from 'Blockly.blockRendering.SpacerRow';
-import {SquareCorner} from 'Blockly.blockRendering.SquareCorner';
-import {StatementInput} from 'Blockly.blockRendering.StatementInput';
-import {Theme} from 'Blockly.Theme';
-import {TopRow} from 'Blockly.blockRendering.TopRow';
-import {Types} from 'Blockly.blockRendering.Types';
+import debug from 'blockly/core/renderers/common/debug';
+import deprecation from 'blockly/core/utils/deprecation';
+import registry from 'blockly/core/registry';
+import {BottomRow} from 'blockly/core/renderers/measurables/bottom_row';
+import {Connection} from 'blockly/core/renderers/measurables/connection';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Debug} from 'blockly/core/renderers/common/debugger';
+import {Drawer} from 'blockly/core/renderers/common/drawer';
+import {ExternalValueInput} from 'blockly/core/renderers/measurables/external_value_input';
+import {Field} from 'blockly/core/renderers/measurables/field';
+import {Hat} from 'blockly/core/renderers/measurables/hat';
+import {IPathObject} from 'blockly/core/renderers/common/i_path_object';
+import {Icon} from 'blockly/core/renderers/measurables/icon';
+import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';
+import {InlineInput} from 'blockly/core/renderers/measurables/inline_input';
+import {InputConnection} from 'blockly/core/renderers/measurables/input_connection';
+import {InputRow} from 'blockly/core/renderers/measurables/input_row';
+import {JaggedEdge} from 'blockly/core/renderers/measurables/jagged_edge';
+import {MarkerSvg} from 'blockly/core/renderers/common/marker_svg';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {NextConnection} from 'blockly/core/renderers/measurables/next_connection';
+import {OutputConnection} from 'blockly/core/renderers/measurables/output_connection';
+import {PathObject} from 'blockly/core/renderers/common/path_object';
+import {PreviousConnection} from 'blockly/core/renderers/measurables/previous_connection';
+import {RenderInfo} from 'blockly/core/renderers/common/info';
+import {Renderer} from 'blockly/core/renderers/common/renderer';
+import {RoundCorner} from 'blockly/core/renderers/measurables/round_corner';
+import {Row} from 'blockly/core/renderers/measurables/row';
+import {SpacerRow} from 'blockly/core/renderers/measurables/spacer_row';
+import {SquareCorner} from 'blockly/core/renderers/measurables/square_corner';
+import {StatementInput} from 'blockly/core/renderers/measurables/statement_input';
+import {Theme} from 'blockly/core/theme';
+import {TopRow} from 'blockly/core/renderers/measurables/top_row';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 /**
  * Returns whether the debugger is turned on.

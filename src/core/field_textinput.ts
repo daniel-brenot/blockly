@@ -8,26 +8,26 @@
  * Text input field.
  * @class
  */
-goog.module('Blockly.FieldTextInput');
+goog.module('blockly/core/field_textinput');
 
-import WidgetDiv from 'Blockly.WidgetDiv';
-import aria from 'Blockly.utils.aria';
-import browserEvents from 'Blockly.browserEvents';
-import dialog from 'Blockly.dialog';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import userAgent from 'Blockly.utils.userAgent';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {Field} from 'Blockly.Field';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {Msg} from 'Blockly.Msg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.BlockChange');
+import WidgetDiv from 'blockly/core/widgetdiv';
+import aria from 'blockly/core/utils/aria';
+import browserEvents from 'blockly/core/browser_events';
+import dialog from 'blockly/core/dialog';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import fieldRegistry from 'blockly/core/field_registry';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import userAgent from 'blockly/core/utils/useragent';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {Field} from 'blockly/core/field';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {Msg} from 'blockly/core/msg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_block_change');
 
 
 /**

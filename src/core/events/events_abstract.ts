@@ -9,10 +9,10 @@
  * Blockly's editor.
  * @class
  */
-goog.module('Blockly.Events.Abstract');
+goog.module('blockly/core/events/events_abstract');
 
-import eventUtils from 'Blockly.Events.utils';
-import {Workspace} from 'Blockly.Workspace';
+import eventUtils from 'blockly/core/events/utils';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**
@@ -100,7 +100,7 @@ Abstract.prototype.run = function(_forward) {
 Abstract.prototype.getEventWorkspace_ = function() {
   let workspace;
   if (this.workspaceId) {
-    const {Workspace} = goog.module.get('Blockly.Workspace');
+    const {Workspace} = goog.module.get('blockly/core/workspace');
     workspace = Workspace.getById(this.workspaceId);
   }
   if (!workspace) {

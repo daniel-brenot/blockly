@@ -8,11 +8,11 @@
  * Object in charge of managing markers and the cursor.
  * @class
  */
-goog.module('Blockly.MarkerManager');
+goog.module('blockly/core/marker_manager');
 
-import {Cursor} from 'Blockly.Cursor';
-import {Marker} from 'Blockly.Marker';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import {Cursor} from 'blockly/core/keyboard_nav/cursor';
+import {Marker} from 'blockly/core/keyboard_nav/marker';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

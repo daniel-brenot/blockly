@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP.logic');
+goog.module('blockly/generators/php/logic');
 
-import PHP from 'Blockly.PHP';
+import PHP from 'blockly/generators/php';
 
 
 PHP['controls_if'] = function(block) {

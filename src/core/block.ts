@@ -8,38 +8,38 @@
  * The class representing one block.
  * @class
  */
-goog.module('Blockly.Block');
+goog.module('blockly/core/block');
 
-import Abstract from 'Blockly.Events.Abstract';
-import Extensions from 'Blockly.Extensions';
-import Tooltip from 'Blockly.Tooltip';
-import arrayUtils from 'Blockly.utils.array';
+import Abstract from 'blockly/core/events/events_abstract';
+import Extensions from 'blockly/core/extensions';
+import Tooltip from 'blockly/core/tooltip';
+import arrayUtils from 'blockly/core/utils/array';
 import common from 'blockly/core/common';
-import constants from 'Blockly.constants';
-import eventUtils from 'Blockly.Events.utils';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import idGenerator from 'Blockly.utils.idGenerator';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import {Align, Input} from 'Blockly.Input';
-import {ASTNode} from 'Blockly.ASTNode';
+import constants from 'blockly/core/constants';
+import eventUtils from 'blockly/core/events/utils';
+import fieldRegistry from 'blockly/core/field_registry';
+import idGenerator from 'blockly/core/utils/idgenerator';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import {Align, Input} from 'blockly/core/input';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
 import {Blocks} from 'blockly/core/blocks';
-import {Comment} from 'Blockly.Comment';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Connection} from 'Blockly.Connection';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Field} from 'Blockly.Field';
-import {IASTNodeLocation} from 'Blockly.IASTNodeLocation';
-import {IDeletable} from 'Blockly.IDeletable';
-import {Mutator} from 'Blockly.Mutator';
-import {Size} from 'Blockly.utils.Size';
-import {VariableModel} from 'Blockly.VariableModel';
-import {Workspace} from 'Blockly.Workspace';
-import {inputTypes} from 'Blockly.inputTypes';
-goog.require('Blockly.Events.BlockChange');
-goog.require('Blockly.Events.BlockCreate');
-goog.require('Blockly.Events.BlockDelete');
-goog.require('Blockly.Events.BlockMove');
+import {Comment} from 'blockly/core/comment';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Connection} from 'blockly/core/connection';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Field} from 'blockly/core/field';
+import {IASTNodeLocation} from 'blockly/core/interfaces/i_ast_node_location';
+import {IDeletable} from 'blockly/core/interfaces/i_deletable';
+import {Mutator} from 'blockly/core/mutator';
+import {Size} from 'blockly/core/utils/size';
+import {VariableModel} from 'blockly/core/variable_model';
+import {Workspace} from 'blockly/core/workspace';
+import {inputTypes} from 'blockly/core/input_types';
+goog.require('blockly/core/events/events_block_change');
+goog.require('blockly/core/events/events_block_create');
+goog.require('blockly/core/events/events_block_delete');
+goog.require('blockly/core/events/events_block_move');
 
 
 /**
@@ -57,7 +57,7 @@ goog.require('Blockly.Events.BlockMove');
  * @alias Blockly.Block
  */
 const Block = function(workspace, prototypeName, opt_id) {
-  const {Generator} = goog.module.get('Blockly.Generator');
+  const {Generator} = goog.module.get('blockly/core/generator');
   if (Generator && typeof Generator.prototype[prototypeName] !== 'undefined') {
     // Occluding Generator class members is not allowed.
     throw Error(

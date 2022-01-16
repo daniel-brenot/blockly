@@ -14,9 +14,9 @@
  * The interface for an object that is draggable.
  * @namespace Blockly.IDraggable
  */
-goog.module('Blockly.IDraggable');
+goog.module('blockly/core/interfaces/i_draggable');
 
-import {IDeletable} from 'Blockly.IDeletable';
+import {IDeletable} from 'blockly/core/interfaces/i_deletable';
 
 
 /**

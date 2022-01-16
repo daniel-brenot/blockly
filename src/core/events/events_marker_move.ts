@@ -8,15 +8,15 @@
  * Events fired as a result of a marker move.
  * @class
  */
-goog.module('Blockly.Events.MarkerMove');
+goog.module('blockly/core/events/events_marker_move');
 
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {ASTNode} from 'Blockly.ASTNode';
-import {Block} from 'Blockly.Block';
-import {UiBase} from 'Blockly.Events.UiBase';
-import {Workspace} from 'Blockly.Workspace';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
+import {Block} from 'blockly/core/block';
+import {UiBase} from 'blockly/core/events/events_ui_base';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

@@ -8,23 +8,23 @@
  * XML reader and writer.
  * @namespace Blockly.Xml
  */
-goog.module('Blockly.Xml');
+goog.module('blockly/core/xml');
 
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import utilsXml from 'Blockly.utils.xml';
-import {Block} from 'Blockly.Block';
-import {Connection} from 'Blockly.Connection';
-import {Field} from 'Blockly.Field';
-import {Size} from 'Blockly.utils.Size';
-import {VariableModel} from 'Blockly.VariableModel';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-import {Workspace} from 'Blockly.Workspace';
-import {inputTypes} from 'Blockly.inputTypes';
-goog.requireType('Blockly.Comment');
-goog.requireType('Blockly.Variables');
-goog.requireType('Blockly.WorkspaceComment');
-goog.requireType('Blockly.WorkspaceCommentSvg');
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import utilsXml from 'blockly/core/utils/xml';
+import {Block} from 'blockly/core/block';
+import {Connection} from 'blockly/core/connection';
+import {Field} from 'blockly/core/field';
+import {Size} from 'blockly/core/utils/size';
+import {VariableModel} from 'blockly/core/variable_model';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+import {Workspace} from 'blockly/core/workspace';
+import {inputTypes} from 'blockly/core/input_types';
+goog.requireType('blockly/core/comment');
+goog.requireType('blockly/core/variables');
+goog.requireType('blockly/core/workspace_comment');
+goog.requireType('blockly/core/workspace_comment_svg');
 
 
 /**
@@ -37,7 +37,7 @@ goog.requireType('Blockly.WorkspaceCommentSvg');
 export function workspaceToDom(workspace, opt_noId) {
   const treeXml = utilsXml.createElement('xml');
   const variablesElement = variablesToDom(
-      goog.module.get('Blockly.Variables').allUsedVarModels(workspace));
+      goog.module.get('blockly/core/variables').allUsedVarModels(workspace));
   if (variablesElement.hasChildNodes()) {
     treeXml.appendChild(variablesElement);
   }
@@ -400,7 +400,7 @@ export function clearWorkspaceAndLoadFromXml(xml, workspace) {
  * @alias Blockly.Xml.domToWorkspace
  */
 export function domToWorkspace(xml, workspace) {
-  const {Workspace} = goog.module.get('Blockly.Workspace');
+  const {Workspace} = goog.module.get('blockly/core/workspace');
   if (xml instanceof Workspace) {
     const swap = xml;
     // Closure Compiler complains here because the arguments are reversed.
@@ -454,7 +454,7 @@ export function domToWorkspace(xml, workspace) {
       } else if (name === 'comment') {
         if (workspace.rendered) {
           const {WorkspaceCommentSvg} =
-              goog.module.get('Blockly.WorkspaceCommentSvg');
+              goog.module.get('blockly/core/workspace_comment_svg');
           if (!WorkspaceCommentSvg) {
             console.warn(
                 'Missing require for Blockly.WorkspaceCommentSvg, ' +
@@ -466,7 +466,7 @@ export function domToWorkspace(xml, workspace) {
           }
         } else {
           const {WorkspaceComment} =
-              goog.module.get('Blockly.WorkspaceComment');
+              goog.module.get('blockly/core/workspace_comment');
           if (!WorkspaceComment) {
             console.warn(
                 'Missing require for Blockly.WorkspaceComment, ' +
@@ -560,7 +560,7 @@ export function appendDomToWorkspace(xml, workspace) {
  * @alias Blockly.Xml.domToBlock
  */
 export function domToBlock(xmlBlock, workspace) {
-  const {Workspace} = goog.module.get('Blockly.Workspace');
+  const {Workspace} = goog.module.get('blockly/core/workspace');
   if (xmlBlock instanceof Workspace) {
     const swap = xmlBlock;
     // Closure Compiler complains here because the arguments are reversed.
@@ -610,7 +610,7 @@ export function domToBlock(xmlBlock, workspace) {
   }
   if (eventUtils.isEnabled()) {
     const newVariables =
-        goog.module.get('Blockly.Variables')
+        goog.module.get('blockly/core/variables')
             .getAddedVariables(workspace, variablesBeforeCreation);
     // Fire a VarCreate event for each (if any) new variable created.
     for (let i = 0; i < newVariables.length; i++) {
@@ -680,7 +680,7 @@ function mapSupportedXmlTags(xmlBlock) {
         childNodeMap.mutation.push(xmlChild);
         break;
       case 'comment':
-        if (!goog.module.get('Blockly.Comment')) {
+        if (!goog.module.get('blockly/core/comment')) {
           console.warn(
               'Missing require for Comment, ' +
               'ignoring block comment.');

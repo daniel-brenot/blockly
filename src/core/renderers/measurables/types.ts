@@ -14,10 +14,10 @@
  * Measurable types.
  * @namespace Blockly.blockRendering.Types
  */
-goog.module('Blockly.blockRendering.Types');
+goog.module('blockly/core/renderers/measurables/types');
 
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {Row} from 'Blockly.blockRendering.Row';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {Row} from 'blockly/core/renderers/measurables/row';
 
 
 /**

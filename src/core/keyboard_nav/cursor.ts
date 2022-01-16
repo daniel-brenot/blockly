@@ -9,12 +9,12 @@
  * Used primarily for keyboard navigation.
  * @class
  */
-goog.module('Blockly.Cursor');
+goog.module('blockly/core/keyboard_nav/cursor');
 
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {ASTNode} from 'Blockly.ASTNode';
-import {Marker} from 'Blockly.Marker';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
+import {Marker} from 'blockly/core/keyboard_nav/marker';
 
 /**
  * Class for a cursor.

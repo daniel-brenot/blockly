@@ -8,16 +8,16 @@
  * Renderer that preserves the look and feel of Blockly pre-2019.
  * @class
  */
-goog.module('Blockly.geras.Drawer');
+goog.module('blockly/core/renderers/geras/drawer');
 
-import debug from 'Blockly.blockRendering.debug';
-import object from 'Blockly.utils.object';
-import svgPaths from 'Blockly.utils.svgPaths';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Drawer: BaseDrawer} from 'Blockly.blockRendering.Drawer';
-import {Highlighter} from 'Blockly.geras.Highlighter';
-import {PathObject} from 'Blockly.geras.PathObject';
-import {RenderInfo} from 'Blockly.geras.RenderInfo';
+import debug from 'blockly/core/renderers/common/debug';
+import object from 'blockly/core/utils/object';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Drawer: BaseDrawer} from 'blockly/core/renderers/common/drawer';
+import {Highlighter} from 'blockly/core/renderers/geras/highlighter';
+import {PathObject} from 'blockly/core/renderers/geras/path_object';
+import {RenderInfo} from 'blockly/core/renderers/geras/info';
 
 
 /**

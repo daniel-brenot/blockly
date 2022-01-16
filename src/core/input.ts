@@ -8,7 +8,7 @@
  * Object representing an input (value, statement, or dummy).
  * @class
  */
-goog.module('Blockly.Input');
+goog.module('blockly/core/input');
 
 /**
  * Enum for alignment of inputs.
@@ -22,14 +22,14 @@ const Align = {
 };
 exports.Align = Align;
 
-import fieldRegistry from 'Blockly.fieldRegistry';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Block} from 'Blockly.Block';
-import {Connection} from 'Blockly.Connection';
-import {Field} from 'Blockly.Field';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {inputTypes} from 'Blockly.inputTypes';
-goog.require('Blockly.FieldLabel');
+import fieldRegistry from 'blockly/core/field_registry';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Block} from 'blockly/core/block';
+import {Connection} from 'blockly/core/connection';
+import {Field} from 'blockly/core/field';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {inputTypes} from 'blockly/core/input_types';
+goog.require('blockly/core/field_label');
 
 /**
  * Class for an input with an optional field.

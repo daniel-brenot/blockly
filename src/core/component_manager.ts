@@ -14,14 +14,14 @@
  * Manager for all items registered with the workspace.
  * @class
  */
-goog.module('Blockly.ComponentManager');
+goog.module('blockly/core/component_manager');
 
-import arrayUtils from 'Blockly.utils.array';
-import {IAutoHideable} from 'Blockly.IAutoHideable';
-import {IComponent} from 'Blockly.IComponent';
-import {IDeleteArea} from 'Blockly.IDeleteArea';
-import {IDragTarget} from 'Blockly.IDragTarget';
-import {IPositionable} from 'Blockly.IPositionable';
+import arrayUtils from 'blockly/core/utils/array';
+import {IAutoHideable} from 'blockly/core/interfaces/i_autohideable';
+import {IComponent} from 'blockly/core/interfaces/i_component';
+import {IDeleteArea} from 'blockly/core/interfaces/i_delete_area';
+import {IDragTarget} from 'blockly/core/interfaces/i_drag_target';
+import {IPositionable} from 'blockly/core/interfaces/i_positionable';
 
 
 /**

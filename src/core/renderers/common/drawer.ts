@@ -8,18 +8,18 @@
  * Methods for graphically rendering a block as SVG.
  * @class
  */
-goog.module('Blockly.blockRendering.Drawer');
+goog.module('blockly/core/renderers/common/drawer');
 
-import debug from 'Blockly.blockRendering.debug';
-import svgPaths from 'Blockly.utils.svgPaths';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Field} from 'Blockly.blockRendering.Field';
-import {Icon} from 'Blockly.blockRendering.Icon';
-import {InlineInput} from 'Blockly.blockRendering.InlineInput';
-import {RenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {Row} from 'Blockly.blockRendering.Row';
-import {Types} from 'Blockly.blockRendering.Types';
+import debug from 'blockly/core/renderers/common/debug';
+import svgPaths from 'blockly/core/utils/svg_paths';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Field} from 'blockly/core/renderers/measurables/field';
+import {Icon} from 'blockly/core/renderers/measurables/icon';
+import {InlineInput} from 'blockly/core/renderers/measurables/inline_input';
+import {RenderInfo} from 'blockly/core/renderers/common/info';
+import {Row} from 'blockly/core/renderers/measurables/row';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

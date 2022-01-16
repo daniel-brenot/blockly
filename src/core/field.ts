@@ -10,36 +10,36 @@
  * instances would be FieldTextInput, FieldDropdown, etc.
  * @class
  */
-goog.module('Blockly.Field');
+goog.module('blockly/core/field');
 
-import Tooltip from 'Blockly.Tooltip';
-import WidgetDiv from 'Blockly.WidgetDiv';
-import Xml from 'Blockly.Xml';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import parsing from 'Blockly.utils.parsing';
-import style from 'Blockly.utils.style';
-import userAgent from 'Blockly.utils.userAgent';
-import utilsXml from 'Blockly.utils.xml';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Block} from 'Blockly.Block';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {DropDownDiv} from 'Blockly.DropDownDiv';
-import {IASTNodeLocationSvg} from 'Blockly.IASTNodeLocationSvg';
-import {IASTNodeLocationWithBlock} from 'Blockly.IASTNodeLocationWithBlock';
-import {IKeyboardAccessible} from 'Blockly.IKeyboardAccessible';
-import {IRegistrable} from 'Blockly.IRegistrable';
-import {Input} from 'Blockly.Input';
-import {MarkerManager} from 'Blockly.MarkerManager';
-import {Rect} from 'Blockly.utils.Rect';
-import {ShortcutRegistry} from 'Blockly.ShortcutRegistry';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.BlockChange');
-goog.require('Blockly.Gesture');
+import Tooltip from 'blockly/core/tooltip';
+import WidgetDiv from 'blockly/core/widgetdiv';
+import Xml from 'blockly/core/xml';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import parsing from 'blockly/core/utils/parsing';
+import style from 'blockly/core/utils/style';
+import userAgent from 'blockly/core/utils/useragent';
+import utilsXml from 'blockly/core/utils/xml';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Block} from 'blockly/core/block';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {DropDownDiv} from 'blockly/core/dropdowndiv';
+import {IASTNodeLocationSvg} from 'blockly/core/interfaces/i_ast_node_location_svg';
+import {IASTNodeLocationWithBlock} from 'blockly/core/interfaces/i_ast_node_location_with_block';
+import {IKeyboardAccessible} from 'blockly/core/interfaces/i_keyboard_accessible';
+import {IRegistrable} from 'blockly/core/interfaces/i_registrable';
+import {Input} from 'blockly/core/input';
+import {MarkerManager} from 'blockly/core/marker_manager';
+import {Rect} from 'blockly/core/utils/rect';
+import {ShortcutRegistry} from 'blockly/core/shortcut_registry';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_block_change');
+goog.require('blockly/core/gesture');
 
 
 /**

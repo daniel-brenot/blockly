@@ -8,18 +8,18 @@
  * Components for creating connections between blocks.
  * @class
  */
-goog.module('Blockly.Connection');
+goog.module('blockly/core/connection');
 
-import Xml from 'Blockly.Xml';
-import blocks from 'Blockly.serialization.blocks';
-import eventUtils from 'Blockly.Events.utils';
-import {Block} from 'Blockly.Block';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {IASTNodeLocationWithBlock} from 'Blockly.IASTNodeLocationWithBlock';
-import {IConnectionChecker} from 'Blockly.IConnectionChecker';
-import {Input} from 'Blockly.Input';
-goog.require('Blockly.Events.BlockMove');
-goog.require('Blockly.constants');
+import Xml from 'blockly/core/xml';
+import blocks from 'blockly/core/serialization/blocks';
+import eventUtils from 'blockly/core/events/utils';
+import {Block} from 'blockly/core/block';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {IASTNodeLocationWithBlock} from 'blockly/core/interfaces/i_ast_node_location_with_block';
+import {IConnectionChecker} from 'blockly/core/interfaces/i_connection_checker';
+import {Input} from 'blockly/core/input';
+goog.require('blockly/core/events/events_block_move');
+goog.require('blockly/core/constants');
 
 
 /**

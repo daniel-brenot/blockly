@@ -8,16 +8,16 @@
  * Calculates and reports workspace metrics.
  * @class
  */
-goog.module('Blockly.MetricsManager');
+goog.module('blockly/core/metrics_manager');
 
-import registry from 'Blockly.registry';
-import toolboxUtils from 'Blockly.utils.toolbox';
-import {IFlyout} from 'Blockly.IFlyout';
-import {IMetricsManager} from 'Blockly.IMetricsManager';
-import {IToolbox} from 'Blockly.IToolbox';
-import {Metrics} from 'Blockly.utils.Metrics';
-import {Size} from 'Blockly.utils.Size';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import registry from 'blockly/core/registry';
+import toolboxUtils from 'blockly/core/utils/toolbox';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {IMetricsManager} from 'blockly/core/interfaces/i_metrics_manager';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {Metrics} from 'blockly/core/utils/metrics';
+import {Size} from 'blockly/core/utils/size';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

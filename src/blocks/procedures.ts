@@ -4,29 +4,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.blocks.procedures');
+goog.module('blockly/blocks/procedures');
 
-import AbstractEvent from 'Blockly.Events.Abstract';
-import ContextMenu from 'Blockly.ContextMenu';
-import Events from 'Blockly.Events';
-import Procedures from 'Blockly.Procedures';
-import Variables from 'Blockly.Variables';
-import Xml from 'Blockly.Xml';
-import internalConstants from 'Blockly.internalConstants';
-import xmlUtils from 'Blockly.utils.xml';
-import {Align} from 'Blockly.Input';
-import {Block} from 'Blockly.Block';
+import AbstractEvent from 'blockly/core/events/events_abstract';
+import ContextMenu from 'blockly/core/contextmenu';
+import Events from 'blockly/core/events/events';
+import Procedures from 'blockly/core/procedures';
+import Variables from 'blockly/core/variables';
+import Xml from 'blockly/core/xml';
+import internalConstants from 'blockly/core/internal_constants';
+import xmlUtils from 'blockly/core/utils/xml';
+import {Align} from 'blockly/core/input';
+import {Block} from 'blockly/core/block';
 import {Blocks} from 'blockly/core/blocks';
-import {FieldCheckbox} from 'Blockly.FieldCheckbox';
-import {FieldLabel} from 'Blockly.FieldLabel';
-import {FieldTextInput} from 'Blockly.FieldTextInput';
-import {Msg} from 'Blockly.Msg';
-import {Mutator} from 'Blockly.Mutator';
-import {Names} from 'Blockly.Names';
-import {VariableModel} from 'Blockly.VariableModel';
-import {Workspace} from 'Blockly.Workspace';
-goog.require('Blockly.Comment');
-goog.require('Blockly.Warning');
+import {FieldCheckbox} from 'blockly/core/field_checkbox';
+import {FieldLabel} from 'blockly/core/field_label';
+import {FieldTextInput} from 'blockly/core/field_textinput';
+import {Msg} from 'blockly/core/msg';
+import {Mutator} from 'blockly/core/mutator';
+import {Names} from 'blockly/core/names';
+import {VariableModel} from 'blockly/core/variable_model';
+import {Workspace} from 'blockly/core/workspace';
+goog.require('blockly/core/comment');
+goog.require('blockly/core/warning');
 
 
 /**

@@ -8,12 +8,12 @@
  * Number input field
  * @class
  */
-goog.module('Blockly.FieldNumber');
+goog.module('blockly/core/field_number');
 
-import aria from 'Blockly.utils.aria';
-import fieldRegistry from 'Blockly.fieldRegistry';
-import object from 'Blockly.utils.object';
-import {FieldTextInput} from 'Blockly.FieldTextInput';
+import aria from 'blockly/core/utils/aria';
+import fieldRegistry from 'blockly/core/field_registry';
+import object from 'blockly/core/utils/object';
+import {FieldTextInput} from 'blockly/core/field_textinput';
 
 
 /**

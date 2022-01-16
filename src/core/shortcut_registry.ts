@@ -9,11 +9,11 @@
  * key codes used to execute those shortcuts.
  * @class
  */
-goog.module('Blockly.ShortcutRegistry');
+goog.module('blockly/core/shortcut_registry');
 
-import object from 'Blockly.utils.object';
-import {KeyCodes} from 'Blockly.utils.KeyCodes';
-import {Workspace} from 'Blockly.Workspace';
+import object from 'blockly/core/utils/object';
+import {KeyCodes} from 'blockly/core/utils/keycodes';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

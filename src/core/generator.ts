@@ -9,13 +9,13 @@
  * Blockly code.
  * @class
  */
-goog.module('Blockly.Generator');
+goog.module('blockly/core/generator');
 
 import common from 'blockly/core/common';
-import deprecation from 'Blockly.utils.deprecation';
-import {Block} from 'Blockly.Block';
-import {Names, NameType} from 'Blockly.Names';
-import {Workspace} from 'Blockly.Workspace';
+import deprecation from 'blockly/core/utils/deprecation';
+import {Block} from 'blockly/core/block';
+import {Names, NameType} from 'blockly/core/names';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

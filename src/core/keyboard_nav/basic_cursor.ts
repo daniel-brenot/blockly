@@ -9,12 +9,12 @@
  * Used to demo switching between different cursors.
  * @class
  */
-goog.module('Blockly.BasicCursor');
+goog.module('blockly/core/keyboard_nav/basic_cursor');
 
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import {ASTNode} from 'Blockly.ASTNode';
-import {Cursor} from 'Blockly.Cursor';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
+import {Cursor} from 'blockly/core/keyboard_nav/cursor';
 
 
 /**

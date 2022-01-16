@@ -8,7 +8,7 @@
  * Workspace metrics definitions.
  * @namespace Blockly.utils.Metrics
  */
-goog.module('Blockly.utils.Metrics');
+goog.module('blockly/core/utils/metrics');
 
 
 /**

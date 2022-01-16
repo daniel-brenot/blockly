@@ -14,13 +14,13 @@
  * The interface for a toolbox.
  * @namespace Blockly.IToolbox
  */
-goog.module('Blockly.IToolbox');
+goog.module('blockly/core/interfaces/i_toolbox');
 
-import toolbox from 'Blockly.utils.toolbox';
-import {IFlyout} from 'Blockly.IFlyout';
-import {IRegistrable} from 'Blockly.IRegistrable';
-import {IToolboxItem} from 'Blockly.IToolboxItem';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import toolbox from 'blockly/core/utils/toolbox';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {IRegistrable} from 'blockly/core/interfaces/i_registrable';
+import {IToolboxItem} from 'blockly/core/interfaces/i_toolbox_item';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

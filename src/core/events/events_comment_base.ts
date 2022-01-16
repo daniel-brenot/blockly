@@ -8,16 +8,16 @@
  * Base class for comment events.
  * @class
  */
-goog.module('Blockly.Events.CommentBase');
+goog.module('blockly/core/events/events_comment_base');
 
-import AbstractEvents from 'Blockly.Events.Abstract';
-import Xml from 'Blockly.Xml';
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import utilsXml from 'Blockly.utils.xml';
-import {CommentCreate} from 'Blockly.Events.CommentCreate';
-import {CommentDelete} from 'Blockly.Events.CommentDelete';
-import {WorkspaceComment} from 'Blockly.WorkspaceComment';
+import AbstractEvents from 'blockly/core/events/events_abstract';
+import Xml from 'blockly/core/xml';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import utilsXml from 'blockly/core/utils/xml';
+import {CommentCreate} from 'blockly/core/events/events_comment_create';
+import {CommentDelete} from 'blockly/core/events/events_comment_delete';
+import {WorkspaceComment} from 'blockly/core/workspace_comment';
 
 
 /**

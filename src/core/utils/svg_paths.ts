@@ -8,7 +8,7 @@
  * Methods for creating parts of SVG path strings.  See
  * @namespace Blockly.utils.svgPaths
  */
-goog.module('Blockly.utils.svgPaths');
+goog.module('blockly/core/utils/svg_paths');
 
 
 /**

@@ -8,37 +8,37 @@
  * Events fired as a result of actions in Blockly's editor.
  * @namespace Blockly.Events
  */
-goog.module('Blockly.Events');
+goog.module('blockly/core/events/events');
 
-import Abstract from 'Blockly.Events.Abstract';
-import deprecation from 'Blockly.utils.deprecation';
-import eventUtils from 'Blockly.Events.utils';
-import {BlockBase} from 'Blockly.Events.BlockBase';
-import {BlockChange} from 'Blockly.Events.BlockChange';
-import {BlockCreate} from 'Blockly.Events.BlockCreate';
-import {BlockDelete} from 'Blockly.Events.BlockDelete';
-import {BlockDrag} from 'Blockly.Events.BlockDrag';
-import {BlockMove} from 'Blockly.Events.BlockMove';
-import {BubbleOpen} from 'Blockly.Events.BubbleOpen';
-import {Click} from 'Blockly.Events.Click';
-import {CommentBase} from 'Blockly.Events.CommentBase';
-import {CommentChange} from 'Blockly.Events.CommentChange';
-import {CommentCreate} from 'Blockly.Events.CommentCreate';
-import {CommentDelete} from 'Blockly.Events.CommentDelete';
-import {CommentMove} from 'Blockly.Events.CommentMove';
-import {FinishedLoading} from 'Blockly.Events.FinishedLoading';
-import {MarkerMove} from 'Blockly.Events.MarkerMove';
-import {Selected} from 'Blockly.Events.Selected';
-import {ThemeChange} from 'Blockly.Events.ThemeChange';
-import {ToolboxItemSelect} from 'Blockly.Events.ToolboxItemSelect';
-import {TrashcanOpen} from 'Blockly.Events.TrashcanOpen';
-import {UiBase} from 'Blockly.Events.UiBase';
-import {Ui} from 'Blockly.Events.Ui';
-import {VarBase} from 'Blockly.Events.VarBase';
-import {VarCreate} from 'Blockly.Events.VarCreate';
-import {VarDelete} from 'Blockly.Events.VarDelete';
-import {VarRename} from 'Blockly.Events.VarRename';
-import {ViewportChange} from 'Blockly.Events.ViewportChange';
+import Abstract from 'blockly/core/events/events_abstract';
+import deprecation from 'blockly/core/utils/deprecation';
+import eventUtils from 'blockly/core/events/utils';
+import {BlockBase} from 'blockly/core/events/events_block_base';
+import {BlockChange} from 'blockly/core/events/events_block_change';
+import {BlockCreate} from 'blockly/core/events/events_block_create';
+import {BlockDelete} from 'blockly/core/events/events_block_delete';
+import {BlockDrag} from 'blockly/core/events/events_block_drag';
+import {BlockMove} from 'blockly/core/events/events_block_move';
+import {BubbleOpen} from 'blockly/core/events/events_bubble_open';
+import {Click} from 'blockly/core/events/events_click';
+import {CommentBase} from 'blockly/core/events/events_comment_base';
+import {CommentChange} from 'blockly/core/events/events_comment_change';
+import {CommentCreate} from 'blockly/core/events/events_comment_create';
+import {CommentDelete} from 'blockly/core/events/events_comment_delete';
+import {CommentMove} from 'blockly/core/events/events_comment_move';
+import {FinishedLoading} from 'blockly/core/events/workspace_events';
+import {MarkerMove} from 'blockly/core/events/events_marker_move';
+import {Selected} from 'blockly/core/events/events_selected';
+import {ThemeChange} from 'blockly/core/events/events_theme_change';
+import {ToolboxItemSelect} from 'blockly/core/events/events_toolbox_item_select';
+import {TrashcanOpen} from 'blockly/core/events/events_trashcan_open';
+import {UiBase} from 'blockly/core/events/events_ui_base';
+import {Ui} from 'blockly/core/events/events_ui';
+import {VarBase} from 'blockly/core/events/events_var_base';
+import {VarCreate} from 'blockly/core/events/events_var_create';
+import {VarDelete} from 'blockly/core/events/events_var_delete';
+import {VarRename} from 'blockly/core/events/events_var_rename';
+import {ViewportChange} from 'blockly/core/events/events_viewport';
 
 
 // Events.

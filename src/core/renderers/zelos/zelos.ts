@@ -8,18 +8,18 @@
  * Re-exports of Blockly.zelos.* modules.
  * @namespace Blockly.zelos
  */
-goog.module('Blockly.zelos');
+goog.module('blockly/core/renderers/zelos/zelos');
 
-import {BottomRow} from 'Blockly.zelos.BottomRow';
-import {ConstantProvider} from 'Blockly.zelos.ConstantProvider';
-import {Drawer} from 'Blockly.zelos.Drawer';
-import {MarkerSvg} from 'Blockly.zelos.MarkerSvg';
-import {PathObject} from 'Blockly.zelos.PathObject';
-import {RenderInfo} from 'Blockly.zelos.RenderInfo';
-import {Renderer} from 'Blockly.zelos.Renderer';
-import {RightConnectionShape} from 'Blockly.zelos.RightConnectionShape';
-import {StatementInput} from 'Blockly.zelos.StatementInput';
-import {TopRow} from 'Blockly.zelos.TopRow';
+import {BottomRow} from 'blockly/core/renderers/zelos/measurables/bottom_row';
+import {ConstantProvider} from 'blockly/core/renderers/zelos/constants';
+import {Drawer} from 'blockly/core/renderers/zelos/drawer';
+import {MarkerSvg} from 'blockly/core/renderers/zelos/marker_svg';
+import {PathObject} from 'blockly/core/renderers/zelos/path_object';
+import {RenderInfo} from 'blockly/core/renderers/zelos/info';
+import {Renderer} from 'blockly/core/renderers/zelos/renderer';
+import {RightConnectionShape} from 'blockly/core/renderers/zelos/measurables/row_elements';
+import {StatementInput} from 'blockly/core/renderers/zelos/measurables/inputs';
+import {TopRow} from 'blockly/core/renderers/zelos/measurables/top_row';
 
 exports.BottomRow = BottomRow;
 exports.ConstantProvider = ConstantProvider;

@@ -10,14 +10,14 @@
  *     E.g. text input areas, color pickers, context menus.
  * @namespace Blockly.WidgetDiv
  */
-goog.module('Blockly.WidgetDiv');
+goog.module('blockly/core/widgetdiv');
 
 import common from 'blockly/core/common';
-import deprecation from 'Blockly.utils.deprecation';
-import dom from 'Blockly.utils.dom';
-import {Rect} from 'Blockly.utils.Rect';
-import {Size} from 'Blockly.utils.Size';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import deprecation from 'blockly/core/utils/deprecation';
+import dom from 'blockly/core/utils/dom';
+import {Rect} from 'blockly/core/utils/rect';
+import {Size} from 'blockly/core/utils/size';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

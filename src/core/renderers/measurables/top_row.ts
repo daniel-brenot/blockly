@@ -12,14 +12,14 @@
  * Object representing a top row on a rendered block.
  * @class
  */
-goog.module('Blockly.blockRendering.TopRow');
+goog.module('blockly/core/renderers/measurables/top_row');
 
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {PreviousConnection} from 'Blockly.blockRendering.PreviousConnection';
-import {Row} from 'Blockly.blockRendering.Row';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {PreviousConnection} from 'blockly/core/renderers/measurables/previous_connection';
+import {Row} from 'blockly/core/renderers/measurables/row';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

@@ -8,7 +8,7 @@
  * Generators for unique IDs.
  * @namespace Blockly.utils.idGenerator
  */
-goog.module('Blockly.utils.idGenerator');
+goog.module('blockly/core/utils/idgenerator');
 
 
 /**

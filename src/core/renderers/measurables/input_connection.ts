@@ -12,13 +12,13 @@
  * Class representing inputs with connections on a rendered block.
  * @class
  */
-goog.module('Blockly.blockRendering.InputConnection');
+goog.module('blockly/core/renderers/measurables/input_connection');
 
-import object from 'Blockly.utils.object';
-import {Connection} from 'Blockly.blockRendering.Connection';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Input} from 'Blockly.Input';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {Connection} from 'blockly/core/renderers/measurables/connection';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Input} from 'blockly/core/input';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

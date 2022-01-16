@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.PHP.all');
+goog.module('blockly/generators/php/all');
 
-goog.require('Blockly.PHP.color');
-goog.require('Blockly.PHP.lists');
-goog.require('Blockly.PHP.logic');
-goog.require('Blockly.PHP.loops');
-goog.require('Blockly.PHP.math');
-goog.require('Blockly.PHP.procedures');
-goog.require('Blockly.PHP.texts');
-goog.require('Blockly.PHP.variables');
-goog.require('Blockly.PHP.variablesDynamic');
+goog.require('blockly/generators/php/colour');
+goog.require('blockly/generators/php/lists');
+goog.require('blockly/generators/php/logic');
+goog.require('blockly/generators/php/loops');
+goog.require('blockly/generators/php/math');
+goog.require('blockly/generators/php/procedures');
+goog.require('blockly/generators/php/text');
+goog.require('blockly/generators/php/variables');
+goog.require('blockly/generators/php/variables_dynamic');
 

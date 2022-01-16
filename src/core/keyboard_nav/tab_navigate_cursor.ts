@@ -9,12 +9,12 @@
  * between tab navigable fields.
  * @class
  */
-goog.module('Blockly.TabNavigateCursor');
+goog.module('blockly/core/keyboard_nav/tab_navigate_cursor');
 
-import object from 'Blockly.utils.object';
-import {ASTNode} from 'Blockly.ASTNode';
-import {BasicCursor} from 'Blockly.BasicCursor';
-import {Field} from 'Blockly.Field';
+import object from 'blockly/core/utils/object';
+import {ASTNode} from 'blockly/core/keyboard_nav/ast_node';
+import {BasicCursor} from 'blockly/core/keyboard_nav/basic_cursor';
+import {Field} from 'blockly/core/field';
 
 
 /**

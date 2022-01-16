@@ -9,15 +9,15 @@
  * Thrasos: spirit of boldness.
  * @class
  */
-goog.module('Blockly.thrasos.RenderInfo');
+goog.module('blockly/core/renderers/thrasos/info.');
 
-import object from 'Blockly.utils.object';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {Field} from 'Blockly.blockRendering.Field';
-import {InRowSpacer} from 'Blockly.blockRendering.InRowSpacer';
-import {RenderInfo: BaseRenderInfo} from 'Blockly.blockRendering.RenderInfo';
-import {Renderer} from 'Blockly.thrasos.Renderer';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {Field} from 'blockly/core/renderers/measurables/field';
+import {InRowSpacer} from 'blockly/core/renderers/measurables/in_row_spacer';
+import {RenderInfo: BaseRenderInfo} from 'blockly/core/renderers/common/info';
+import {Renderer} from 'blockly/core/renderers/thrasos/renderer.';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

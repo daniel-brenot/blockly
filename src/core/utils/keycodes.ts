@@ -10,7 +10,7 @@
  * a JavaScript framework such as Closure.
  * @namespace Blockly.utils.KeyCodes
  */
-goog.module('Blockly.utils.KeyCodes');
+goog.module('blockly/core/utils/keycodes');
 
 
 /**

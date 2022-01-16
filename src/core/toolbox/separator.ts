@@ -8,15 +8,15 @@
  * A separator used for separating toolbox categories.
  * @class
  */
-goog.module('Blockly.ToolboxSeparator');
+goog.module('blockly/core/toolbox/separator');
 
-import Css from 'Blockly.Css';
-import dom from 'Blockly.utils.dom';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import toolbox from 'Blockly.utils.toolbox';
-import {IToolbox} from 'Blockly.IToolbox';
-import {ToolboxItem} from 'Blockly.ToolboxItem';
+import Css from 'blockly/core/css';
+import dom from 'blockly/core/utils/dom';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import toolbox from 'blockly/core/utils/toolbox';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {ToolboxItem} from 'blockly/core/toolbox/toolbox_item';
 
 
 /**

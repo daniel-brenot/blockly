@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Dart.texts');
+goog.module('blockly/generators/dart/text');
 
-import Dart from 'Blockly.Dart';
-import {NameType} from 'Blockly.Names';
+import Dart from 'blockly/generators/dart';
+import {NameType} from 'blockly/core/names';
 
 
 Dart.addReservedWords('Html,Math');

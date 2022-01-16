@@ -14,13 +14,13 @@
  * block.
  * @class
  */
-goog.module('Blockly.blockRendering.Icon');
+goog.module('blockly/core/renderers/measurables/icon');
 
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.blockRendering.ConstantProvider';
-import {Icon: BlocklyIcon} from 'Blockly.Icon';
-import {Measurable} from 'Blockly.blockRendering.Measurable';
-import {Types} from 'Blockly.blockRendering.Types';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/common/constants';
+import {Icon: BlocklyIcon} from 'blockly/core/icon';
+import {Measurable} from 'blockly/core/renderers/measurables/base';
+import {Types} from 'blockly/core/renderers/measurables/types';
 
 
 /**

@@ -8,20 +8,20 @@
  * A toolbox category used to organize blocks in the toolbox.
  * @class
  */
-goog.module('Blockly.ToolboxCategory');
+goog.module('blockly/core/toolbox/category');
 
-import Css from 'Blockly.Css';
-import aria from 'Blockly.utils.aria';
-import colorUtils from 'Blockly.utils.color';
-import dom from 'Blockly.utils.dom';
-import object from 'Blockly.utils.object';
-import parsing from 'Blockly.utils.parsing';
-import registry from 'Blockly.registry';
-import toolbox from 'Blockly.utils.toolbox';
-import {ICollapsibleToolboxItem} from 'Blockly.ICollapsibleToolboxItem';
-import {ISelectableToolboxItem} from 'Blockly.ISelectableToolboxItem';
-import {IToolbox} from 'Blockly.IToolbox';
-import {ToolboxItem} from 'Blockly.ToolboxItem';
+import Css from 'blockly/core/css';
+import aria from 'blockly/core/utils/aria';
+import colorUtils from 'blockly/core/utils/colour';
+import dom from 'blockly/core/utils/dom';
+import object from 'blockly/core/utils/object';
+import parsing from 'blockly/core/utils/parsing';
+import registry from 'blockly/core/registry';
+import toolbox from 'blockly/core/utils/toolbox';
+import {ICollapsibleToolboxItem} from 'blockly/core/interfaces/i_collapsible_toolbox_item';
+import {ISelectableToolboxItem} from 'blockly/core/interfaces/i_selectable_toolbox_item';
+import {IToolbox} from 'blockly/core/interfaces/i_toolbox';
+import {ToolboxItem} from 'blockly/core/toolbox/toolbox_item';
 
 
 /**

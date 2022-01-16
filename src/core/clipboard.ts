@@ -8,10 +8,10 @@
  * Blockly's internal clipboard for managing copy-paste.
  * @namespace Blockly.clipboard
  */
-goog.module('Blockly.clipboard');
+goog.module('blockly/core/clipboard');
 
-import eventUtils from 'Blockly.Events.utils';
-import {ICopyable} from 'Blockly.ICopyable';
+import eventUtils from 'blockly/core/events/utils';
+import {ICopyable} from 'blockly/core/interfaces/i_copyable';
 
 
 /**

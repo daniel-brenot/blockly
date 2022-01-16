@@ -9,17 +9,17 @@
  * Used to traverse the Blockly AST.
  * @class
  */
-goog.module('Blockly.ASTNode');
+goog.module('blockly/core/keyboard_nav/ast_node');
 
-import {Block} from 'Blockly.Block';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Connection} from 'Blockly.Connection';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {Field} from 'Blockly.Field';
-import {IASTNodeLocationWithBlock} from 'Blockly.IASTNodeLocationWithBlock';
-import {IASTNodeLocation} from 'Blockly.IASTNodeLocation';
-import {Input} from 'Blockly.Input';
-import {Workspace} from 'Blockly.Workspace';
+import {Block} from 'blockly/core/block';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Connection} from 'blockly/core/connection';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {Field} from 'blockly/core/field';
+import {IASTNodeLocationWithBlock} from 'blockly/core/interfaces/i_ast_node_location_with_block';
+import {IASTNodeLocation} from 'blockly/core/interfaces/i_ast_node_location';
+import {Input} from 'blockly/core/input';
+import {Workspace} from 'blockly/core/workspace';
 
 
 /**

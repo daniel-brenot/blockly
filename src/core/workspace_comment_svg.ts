@@ -8,30 +8,30 @@
  * Object representing a code comment on a rendered workspace.
  * @class
  */
-goog.module('Blockly.WorkspaceCommentSvg');
+goog.module('blockly/core/workspace_comment_svg');
 
-import ContextMenu from 'Blockly.ContextMenu';
-import Css from 'Blockly.Css';
-import Touch from 'Blockly.Touch';
-import browserEvents from 'Blockly.browserEvents';
+import ContextMenu from 'blockly/core/contextmenu';
+import Css from 'blockly/core/css';
+import Touch from 'blockly/core/touch';
+import browserEvents from 'blockly/core/browser_events';
 import common from 'blockly/core/common';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import object from 'Blockly.utils.object';
-import svgMath from 'Blockly.utils.svgMath';
-import {BlockDragSurfaceSvg} from 'Blockly.BlockDragSurfaceSvg';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {IBoundedElement} from 'Blockly.IBoundedElement';
-import {IBubble} from 'Blockly.IBubble';
-import {ICopyable} from 'Blockly.ICopyable';
-import {Rect} from 'Blockly.utils.Rect';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceComment} from 'Blockly.WorkspaceComment';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.CommentCreate');
-goog.require('Blockly.Events.CommentDelete');
-goog.require('Blockly.Events.CommentMove');
-goog.require('Blockly.Events.Selected');
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import object from 'blockly/core/utils/object';
+import svgMath from 'blockly/core/utils/svg_math';
+import {BlockDragSurfaceSvg} from 'blockly/core/block_drag_surface';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {IBoundedElement} from 'blockly/core/interfaces/i_bounded_element';
+import {IBubble} from 'blockly/core/interfaces/i_bubble';
+import {ICopyable} from 'blockly/core/interfaces/i_copyable';
+import {Rect} from 'blockly/core/utils/rect';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceComment} from 'blockly/core/workspace_comment';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_comment_create');
+goog.require('blockly/core/events/events_comment_delete');
+goog.require('blockly/core/events/events_comment_move');
+goog.require('blockly/core/events/events_selected');
 
 
 /**

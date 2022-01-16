@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-goog.module('Blockly.Lua.color');
+goog.module('blockly/generators/lua/colour');
 
-import Lua from 'Blockly.Lua';
+import Lua from 'blockly/generators/lua';
 
 
 Lua['color_picker'] = function(block) {

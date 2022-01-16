@@ -8,21 +8,21 @@
  * Class that controls updates to connections during drags.
  * @class
  */
-goog.module('Blockly.InsertionMarkerManager');
+goog.module('blockly/core/insertion_marker_manager');
 
-import blockAnimations from 'Blockly.blockAnimations';
+import blockAnimations from 'blockly/core/block_animations';
 import common from 'blockly/core/common';
-import constants from 'Blockly.constants';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import {BlockSvg} from 'Blockly.BlockSvg';
-import {ComponentManager} from 'Blockly.ComponentManager';
-import {ConnectionType} from 'Blockly.ConnectionType';
-import {Coordinate} from 'Blockly.utils.Coordinate';
-import {IDeleteArea} from 'Blockly.IDeleteArea';
-import {IDragTarget} from 'Blockly.IDragTarget';
-import {RenderedConnection} from 'Blockly.RenderedConnection';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
+import constants from 'blockly/core/constants';
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import {BlockSvg} from 'blockly/core/block_svg';
+import {ComponentManager} from 'blockly/core/component_manager';
+import {ConnectionType} from 'blockly/core/connection_type';
+import {Coordinate} from 'blockly/core/utils/coordinate';
+import {IDeleteArea} from 'blockly/core/interfaces/i_delete_area';
+import {IDragTarget} from 'blockly/core/interfaces/i_drag_target';
+import {RenderedConnection} from 'blockly/core/rendered_connection';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
 
 
 /**

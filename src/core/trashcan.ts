@@ -8,32 +8,32 @@
  * Object representing a trash can icon.
  * @class
  */
-goog.module('Blockly.Trashcan');
+goog.module('blockly/core/trashcan');
 
-import Abstract from 'Blockly.Events.Abstract';
-import blocks from 'Blockly.serialization.blocks';
-import browserEvents from 'Blockly.browserEvents';
-import dom from 'Blockly.utils.dom';
-import eventUtils from 'Blockly.Events.utils';
-import internalConstants from 'Blockly.internalConstants';
-import object from 'Blockly.utils.object';
-import registry from 'Blockly.registry';
-import toolbox from 'Blockly.utils.toolbox';
-import uiPosition from 'Blockly.uiPosition';
-import {BlocklyOptions} from 'Blockly.BlocklyOptions';
-import {ComponentManager} from 'Blockly.ComponentManager';
-import {DeleteArea} from 'Blockly.DeleteArea';
-import {IAutoHideable} from 'Blockly.IAutoHideable';
-import {IDraggable} from 'Blockly.IDraggable';
-import {IFlyout} from 'Blockly.IFlyout';
-import {IPositionable} from 'Blockly.IPositionable';
-import {MetricsManager} from 'Blockly.MetricsManager';
-import {Options} from 'Blockly.Options';
-import {Rect} from 'Blockly.utils.Rect';
-import {Size} from 'Blockly.utils.Size';
-import {Svg} from 'Blockly.utils.Svg';
-import {WorkspaceSvg} from 'Blockly.WorkspaceSvg';
-goog.require('Blockly.Events.TrashcanOpen');
+import Abstract from 'blockly/core/events/events_abstract';
+import blocks from 'blockly/core/serialization/blocks';
+import browserEvents from 'blockly/core/browser_events';
+import dom from 'blockly/core/utils/dom';
+import eventUtils from 'blockly/core/events/utils';
+import internalConstants from 'blockly/core/internal_constants';
+import object from 'blockly/core/utils/object';
+import registry from 'blockly/core/registry';
+import toolbox from 'blockly/core/utils/toolbox';
+import uiPosition from 'blockly/core/positionable_helpers';
+import {BlocklyOptions} from 'blockly/core/blockly_options';
+import {ComponentManager} from 'blockly/core/component_manager';
+import {DeleteArea} from 'blockly/core/delete_area';
+import {IAutoHideable} from 'blockly/core/interfaces/i_autohideable';
+import {IDraggable} from 'blockly/core/interfaces/i_draggable';
+import {IFlyout} from 'blockly/core/interfaces/i_flyout';
+import {IPositionable} from 'blockly/core/interfaces/i_positionable';
+import {MetricsManager} from 'blockly/core/metrics_manager';
+import {Options} from 'blockly/core/options';
+import {Rect} from 'blockly/core/utils/rect';
+import {Size} from 'blockly/core/utils/size';
+import {Svg} from 'blockly/core/utils/svg';
+import {WorkspaceSvg} from 'blockly/core/workspace_svg';
+goog.require('blockly/core/events/events_trashcan_open');
 
 
 /**

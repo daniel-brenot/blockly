@@ -8,13 +8,13 @@
  * Utility functions for handling variable and procedure names.
  * @class
  */
-goog.module('Blockly.Names');
+goog.module('blockly/core/names');
 
-import Variables from 'Blockly.Variables';
-import {Msg} from 'Blockly.Msg';
-import {VariableMap} from 'Blockly.VariableMap';
-import {Workspace} from 'Blockly.Workspace';
-goog.requireType('Blockly.Procedures');
+import Variables from 'blockly/core/variables';
+import {Msg} from 'blockly/core/msg';
+import {VariableMap} from 'blockly/core/variable_map';
+import {Workspace} from 'blockly/core/workspace';
+goog.requireType('blockly/core/procedures');
 
 
 /**
@@ -125,7 +125,7 @@ Names.prototype.populateVariables = function(workspace) {
  */
 Names.prototype.populateProcedures = function(workspace) {
   let procedures =
-      goog.module.get('Blockly.Procedures').allProcedures(workspace);
+      goog.module.get('blockly/core/procedures').allProcedures(workspace);
   // Flatten the return vs no-return procedure lists.
   procedures = procedures[0].concat(procedures[1]);
   for (let i = 0; i < procedures.length; i++) {

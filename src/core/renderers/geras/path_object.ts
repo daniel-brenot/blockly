@@ -14,15 +14,15 @@
  * An object that owns a block's rendering SVG elements.
  * @class
  */
-goog.module('Blockly.geras.PathObject');
+goog.module('blockly/core/renderers/geras/path_object');
 
-import color from 'Blockly.utils.color';
-import dom from 'Blockly.utils.dom';
-import object from 'Blockly.utils.object';
-import {ConstantProvider} from 'Blockly.geras.ConstantProvider';
-import {PathObject: BasePathObject} from 'Blockly.blockRendering.PathObject';
-import {Svg} from 'Blockly.utils.Svg';
-import {Theme} from 'Blockly.Theme';
+import color from 'blockly/core/utils/colour';
+import dom from 'blockly/core/utils/dom';
+import object from 'blockly/core/utils/object';
+import {ConstantProvider} from 'blockly/core/renderers/geras/constants';
+import {PathObject: BasePathObject} from 'blockly/core/renderers/common/path_object';
+import {Svg} from 'blockly/core/utils/svg';
+import {Theme} from 'blockly/core/theme';
 
 
 /**
