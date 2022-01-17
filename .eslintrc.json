@@ -58,7 +58,7 @@
         "indent": ["off"],
         // Blockly uses capital letters for some non-constructor namespaces.
         // Keep them for legacy reasons.
-        "new-cap": ["off"],
+        "new-cap": ["on"],
         // Mostly use default rules for brace style, but allow single-line blocks.
         "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
         // Blockly uses objects as maps, but uses Object.create(null) to
@@ -76,11 +76,6 @@
     "env": {
         "es2020": true,
         "browser": true
-    },
-    "globals": {
-        "Blockly": true,
-        "goog": true,
-        "exports": true
     },
     "extends": [
         "eslint:recommended", "google"
